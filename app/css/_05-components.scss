@@ -1,0 +1,40 @@
+// * NAVIGATION-BAR
+
+.nav__mobile {
+  background-color: var(--color-bg-dk);
+  color: var(--color-body-dk);
+  padding: 1.5rem 3rem 1.5rem 2rem;
+  display: flex;
+}
+
+.nav__desktop {
+  display: none;
+}
+
+@media screen and (min-width: 400px) {
+  .nav__mobile {
+    display: none;
+  }
+  .nav__desktop {
+    padding: 1rem 2rem;
+    display: flex;
+    background-color: var(--color-bg-dk);
+    .nav__links {
+      font-size: 2.5vw;
+      color: var(--color-font-dk);
+      counter-reset: section;
+      list-style-type: none;
+      li {
+        margin: 0 1rem;
+      }
+      li::before {
+        counter-increment: section;
+        content: counters(section, ".") ". ";
+        color: var(--color-font_accent);
+      }
+      li:last-child::before {
+        content: unset;
+      }
+    }
+  }
+}

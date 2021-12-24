@@ -1,0 +1,54 @@
+// & navBar mobile - TOGGLE btwn BURGER n X
+
+.burger__frame {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger__btn {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger__btn::before,
+.burger__btn::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger__btn::before {
+  transform: translateY(-8px);
+}
+
+.burger__btn::after {
+  transform: translateY(8px);
+}
+
+// & navBar mobile - TOGGLE => Animation
+
+.burger__frame.open .burger__btn {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.burger__frame.open .burger__btn::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.burger__frame.open .burger__btn::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
