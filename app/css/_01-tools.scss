@@ -1,11 +1,6 @@
-// * Animations
+// * Tools from third-party resources
 
-.on {
-  opacity: 1;
-}
-.off {
-  opacity: 0;
-}
+// ! switch model - got it from w3school
 
 .switch {
   position: relative;
@@ -27,7 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--color-bg-dk);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -39,23 +34,19 @@
   width: 13px;
   left: 5px;
   bottom: 3.5px;
-  background-color: white;
+  background-color: var(--color-header-dk);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: var(--color-accent);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  background-color: var(--color-font-dk);
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
 }
 
 /* Rounded sliders */
