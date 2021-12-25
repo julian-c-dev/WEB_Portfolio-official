@@ -1,4 +1,30 @@
-//& navBar
+// &  NAVBAR
+
+// * Fliping logo ANIMATION onmouseOver
+function flipping(element) {
+  element.classList.add("flip");
+  setTimeout(() => {
+    element.setAttribute("src", "/images/logo-acc-lg.svg");
+  }, 200);
+  setTimeout(() => {
+    element.setAttribute("src", "/images/logo-acc.svg");
+  }, 400);
+  setTimeout(() => {
+    element.setAttribute("src", "/images/logo-acc-lg.svg");
+  }, 600);
+  setTimeout(() => {
+    element.setAttribute("src", "/images/logo-acc.svg");
+  }, 800);
+  setTimeout(() => {
+    element.setAttribute("src", "/images/logo-acc-lg.svg");
+  }, 1000);
+  setTimeout(() => {
+    element.setAttribute("src", "/images/logo.svg");
+  }, 1200);
+  setTimeout(() => {
+    element.classList.remove("flip");
+  }, 1400);
+}
 
 let menuOpen = false;
 let flagClicked = false;

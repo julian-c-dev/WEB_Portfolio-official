@@ -1,1 +1,49 @@
-/* Mixins*/
+// * Animations
+
+.triangle1 {
+  border: 0 solid transparent;
+  border-top-width: 30px;
+  border-bottom-width: 30px;
+  border-right: 30px solid var(--color-font-accent);
+}
+
+.triangle2 {
+  border: 0 solid transparent;
+  border-bottom-width: 30px;
+  border-top-width: 30px;
+  border-left: 30px solid var(--color-font-accent);
+}
+
+.position1 {
+  position: absolute;
+}
+.position2 {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.on {
+  opacity: 1;
+}
+.off {
+  opacity: 0;
+}
+
+.flip {
+  -webkit-animation: spin 0.2s linear infinite;
+  animation: spin 0.2s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
