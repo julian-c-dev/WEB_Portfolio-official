@@ -9,17 +9,23 @@
 
 .nav__desktop {
   display: none;
+  &-bg2 {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 636px) {
   .nav__mobile {
     display: none;
   }
   .nav__desktop {
     padding: 1rem 2rem;
     display: flex;
-
     background-color: var(--color-bg-dk);
+    &-bg2 {
+      display: flex;
+      background-color: var(--color-bg-dk2);
+    }
     .nav__links {
       padding: 1rem;
       font-size: 2.5vw;

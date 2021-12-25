@@ -52,3 +52,22 @@
 .burger__frame.open .burger__btn::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
+
+// & navBar DESKTOP - flipping animation - Logo
+.flip {
+  -webkit-animation: spin 0.2s linear infinite;
+  animation: spin 0.2s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}

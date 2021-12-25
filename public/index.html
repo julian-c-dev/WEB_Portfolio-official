@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="/app/css/import.css" />
   </head>
   <body>
-    <!-- * NAV-BAR  -->
-
+    <!-- * NAy-BAR  -->
     <!-- & visible on Phone-->
     <nav class="nav__mobile flex-sb flex-center">
       <a href="#">
@@ -21,14 +20,17 @@
     </nav>
     <!-- & visible in DESKTOP-->
     <nav class="nav__desktop flex-sb flex-center">
-      <a href="#">
-        <img
-          id="logo"
-          onmouseover="flipping(this)"
-          src="/images/logo.svg"
-          width="65"
-        />
-      </a>
+      <div class="flex flex-center">
+        <a href="#">
+          <img
+            id="logo"
+            onmouseover="flipping(this)"
+            src="/images/logo.svg"
+            width="65"
+          />
+        </a>
+      </div>
+
       <ul class="nav__links flex">
         <li><a href="#">About me</a></li>
         <li><a href="#">Experience</a></li>
@@ -36,6 +38,34 @@
         <li><a href="#">Conctact</a></li>
         <li><a href="#">Resume</a></li>
       </ul>
+    </nav>
+    <nav class="nav__desktop-bg2 flex flex-end flex-center">
+      <div class="flex flex-center mg-x-1">
+        <p
+          id="music"
+          class="font-light center mg-y-1"
+          style="font-size: 1.4rem"
+        >
+          Music
+        </p>
+        <label id="theme_music" class="switch mg-x-1">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="flex flex-center mg-xr-4">
+        <p
+          id="theme"
+          class="font-light center mg-y-1"
+          style="font-size: 1.4rem"
+        >
+          Theme Dark / Light
+        </p>
+        <label id="theme_swith" class="switch mg-x-1">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
     </nav>
 
     <!-- * MAIN CONTENT-->

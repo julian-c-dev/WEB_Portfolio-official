@@ -1,0 +1,99 @@
+// & Displays:
+.on {
+  display: block;
+}
+
+.off {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.flex-clmn {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.flex-sb {
+  justify-content: space-between;
+}
+
+.flex-ar {
+  justify-content: space-around;
+}
+
+.flex-st {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+}
+
+// & Margins
+
+.mg-1 {
+  margin: 1rem;
+}
+.mg-y-1 {
+  margin: 1rem 0;
+}
+
+.mg-x-1 {
+  margin: 0 1rem;
+}
+
+.mg-2 {
+  margin: 2rem;
+}
+.mg-y-2 {
+  margin: 2rem 0;
+}
+
+.mg-x-2 {
+  margin: 0 2rem;
+}
+
+.mg-3 {
+  margin: 3rem;
+}
+.mg-y-3 {
+  margin: 3rem 0;
+}
+
+.mg-x-3 {
+  margin: 0 3rem;
+}
+
+.mg-4 {
+  margin: 4rem;
+}
+.mg-y-4 {
+  margin: 4rem 0;
+}
+
+.mg-x-4 {
+  margin: 0 4rem;
+}
+
+.mg-xr-4 {
+  margin-right: 4rem;
+}
+
+// fonts
+
+.font-light {
+  color: var(--color-header-dk);
+}
