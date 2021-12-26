@@ -1,0 +1,16 @@
+{
+  "en": {
+    "navItem1": "About me",
+    "navItem2": "Experience",
+    "navItem3": "Skills",
+    "navItem4": "Conctact",
+    "navItem5": "Resume"
+  },
+  "es": {
+    "navItem1": "Acerca de mí",
+    "navItem2": "Experiencia",
+    "navItem3": "Habilidades",
+    "navItem4": "Conctacto",
+    "navItem5": "Currículum"
+  }
+}

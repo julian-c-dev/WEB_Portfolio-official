@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="/app/css/import.css" />
   </head>
   <body>
-    <!-- * NAy-BAR  -->
+    <!-- * NavBars  -->
+
     <!-- & visible on Phone-->
-    <nav class="nav__mobile flex-sb flex-center">
+    <nav class="nav__mobile flex-sb flex-center dark">
       <a href="#">
         <img src="/images/logo.svg" width="50" alt="Julian's rombo Logo" />
       </a>
@@ -18,8 +19,12 @@
         <div class="burger__btn"></div>
       </div>
     </nav>
+
     <!-- & visible in DESKTOP-->
-    <nav class="nav__desktop flex-sb flex-center">
+
+    <!-- * Nav => MAIN-->
+
+    <nav class="nav__desktop flex-sb flex-center dark">
       <div class="flex flex-center">
         <a href="#">
           <img
@@ -30,61 +35,69 @@
           />
         </a>
       </div>
-
       <ul class="nav__links flex">
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Experience</a></li>
-        <li><a href="#">Skills</a></li>
-
-        <li><a href="#">Conctact</a></li>
-        <li><a href="#">Resume</a></li>
+        <li><a id="navItem1" class="" href="#">About me</a></li>
+        <li><a id="navItem2" href="#">Experience</a></li>
+        <li><a id="navItem3" href="#">Skills</a></li>
+        <li><a id="navItem4" href="#">Conctact</a></li>
+        <li><a id="navItem5" href="#">Resume</a></li>
       </ul>
     </nav>
-    <nav class="nav__desktop-bg2 flex flex-end flex-center">
-      <div class="flex flex-center mg-x-1">
-        <p
-          id="music"
-          class="font-light center mg-y-1"
-          style="font-size: 1.4rem"
-        >
-          Lang English / Spanish
-        </p>
-        <label id="theme_music" class="switch mg-x-1">
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label>
+
+    <!-- * Nav => SETTINGS-->
+    <nav class="nav__desktop-bg2 flex flex-sb flex-center">
+      <div id="scroll-container">
+        <div id="scroll-text">
+          You can costumize some few settings. Welcome to my Portfolio!
+        </div>
       </div>
-      <div class="flex flex-center mg-xr-4">
-        <p
-          id="theme"
-          class="font-light center mg-y-1"
-          style="font-size: 1.4rem"
-        >
-          Theme Dark / Light
-        </p>
-        <label id="theme_swith" class="switch mg-x-1">
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label>
+      <div class="flex">
+        <div class="flex flex-center mg-x-1">
+          <p
+            id="langLabel"
+            class="label center mg-y-1"
+            style="font-size: 1.4rem"
+          >
+            Lang English / Spanish
+          </p>
+          <label class="switch mg-x-1">
+            <input type="checkbox" id="handlerLang" value="false" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="flex flex-center mg-xr-4">
+          <p
+            id="themeLabel"
+            class="label center mg-y-1"
+            style="font-size: 1.4rem"
+          >
+            Theme Dark / Light
+          </p>
+          <label id="theme_swith" class="switch mg-x-1">
+            <input type="checkbox" id="handlerTheme" />
+            <span class="slider round"></span>
+          </label>
+        </div>
       </div>
     </nav>
 
     <!-- * MAIN CONTENT-->
-    <main style="display: none">
-      <header>
+    <main>
+      <header class="section dark">
         <div class="hero">
           <h1>
-            <span>Welcome to my site, I am</span><br />
-            <span> Julian Cantera </span><br />
-            <span>Junior Front-End Developer</span>
+            <span class="overTitle">Hi, I am</span><br />
+            <span class="title">Julian Cantera </span><br />
+            <span class="subTitle">Junior Web Developer</span>
           </h1>
-          <p>
-            I&#39;m an apprentice of software engineer specializing in building
-            components for Websites and Destop Applications. Currently, I&#39;m
-            focused on improving my tecnical expertice with the JS library:
-            React.
+          <p class="hero__content">
+            I specialize in building Web components as an apprentice software
+            engineer. My current focus is on increasing my knowledge of
+            <span class="highlight">JavaScript</span>. Soon, I will start using
+            <span class="highlight">React JS library</span>.
           </p>
-          <a> Check out if my skills fits your needs! </a>
+
+          <a class="hero__btn"> Check out if my skills fits your needs! </a>
         </div>
       </header>
       <section></section>
@@ -95,5 +108,6 @@
     <footer></footer>
 
     <script src="/app/js/main.js"></script>
+    <script src="/app/js/functions.js"></script>
   </body>
 </html>

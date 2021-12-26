@@ -1,12 +1,17 @@
 /* @fontface */
 /* Global variables */
 :root {
-  --color-bg-dk: rgba(10, 27, 51, 0.85);
-  --color-bg-dk2: rgba(24, 49, 83, 0.6);
-  --color-font-dk: rgb(176, 183, 204);
-  --color-header-dk: rgb(246, 246, 246);
   --color-font-accent: rgb(251, 120, 32);
-  --color-font-accent-lighter: rgba(250, 163, 104, 0.3);
+  --color-font-accent-dk: rgb(255, 112, 16);
+  --color-font-accent-lg: rgba(250, 163, 104, 0.3);
+  --color-light: rgba(250, 250, 250, 0.911);
+  --color-bg-dk: rgba(10, 27, 51, 0.85);
+  --color-bg2-dk: rgba(24, 49, 83, 0.6);
+  --color-font-dk: rgb(176, 183, 204);
+  --color-bg-lg: rgba(166, 214, 253, 0.85);
+  --color-bg2-lg: rgba(96, 155, 233, 0.6);
+  --color-font-lg: rgb(33, 38, 54);
+  --shadow: 1px 1px 2px var(--color-bg-dk);
 }
 
 .switch {
@@ -41,7 +46,7 @@
   width: 13px;
   left: 5px;
   bottom: 3.5px;
-  background-color: var(--color-header-dk);
+  background-color: var(--color-light);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -62,6 +67,44 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#scroll-container {
+  margin-left: 0;
+  overflow: hidden;
+  width: 700px;
+}
+
+#scroll-text {
+  text-align: right;
+  /* animation properties */
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+/* for Firefox */
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+@keyframes my-animation {
+  from {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
 }
 
 /* normalize or reset */
@@ -538,13 +581,8 @@ html {
   margin-right: 4rem;
 }
 
-.font-light {
-  color: var(--color-header-dk);
-}
-
 .nav__mobile {
-  background-color: var(--color-bg-dk);
-  color: var(--color-body-dk);
+  background-color: var(--color-bg-lg);
   padding: 1.5rem 3rem 1.5rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -568,13 +606,13 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: var(--color-bg-dk);
+    background-color: var(--color-bg-lg);
   }
   .nav__desktop-bg2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: var(--color-bg-dk2);
+    background-color: var(--color-bg2-lg);
   }
   .nav__desktop .nav__links {
     padding: 1rem;
@@ -591,16 +629,18 @@ html {
     color: var(--color-font-accent);
   }
   .nav__desktop .nav__links li:last-child {
-    margin: -1rem 2rem 0 2.5rem;
-    padding: 1rem;
-    outline: 1px dotted var(--color-font-accent);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: -1.7rem 2rem 0 2.5rem;
+    color: var(--color-font-accent-dk);
+    padding: 1.3rem;
+    border: 2px solid var(--color-font-accent-dk);
+    border-radius: 10px;
   }
   .nav__desktop .nav__links li:last-child:hover {
-    background: var(--color-font-accent-lighter);
-    outline: 1px dotted var(--color-font-accent);
+    background: var(--color-font-accent-lg);
   }
   .nav__desktop .nav__links li:last-child a:hover {
-    color: var(--color-font-dk);
+    color: var(--color-font-lg);
   }
   .nav__desktop .nav__links li:last-child::before {
     content: unset;
@@ -609,13 +649,12 @@ html {
   .nav__desktop .nav__links li > a:link,
   .nav__desktop .nav__links li > a:visited,
   .nav__desktop .nav__links li > a:active {
-    color: var(--color-font-dk);
     text-decoration: none;
-    -webkit-transition: color 0.5s, smooth;
-    transition: color 0.5s, smooth;
+    -webkit-transition: color 0.4s, smooth;
+    transition: color 0.4s, smooth;
   }
   .nav__desktop .nav__links li > a:hover {
-    color: var(--color-font-accent);
+    color: var(--color-font-accent-dk);
   }
 }
 
@@ -623,6 +662,84 @@ html {
   .nav__desktop .nav__links {
     font-size: 2rem;
   }
+}
+
+.section {
+  padding: 1rem 2rem;
+  background-color: var(--color-bg-lg);
+}
+
+.section .hero {
+  margin: 5rem 0 10rem 25rem;
+}
+
+.section .hero h1 .overTitle {
+  color: var(--color-font-accent);
+  font-size: 2rem;
+}
+
+.section .hero h1 .title {
+  font-size: 8rem;
+}
+
+.section .hero h1 .subTitle {
+  font-size: 6rem;
+}
+
+.section .hero .hero__content {
+  font-size: 2rem;
+  max-width: 40%;
+  white-space: normal;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.section .hero .hero__btn {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-font-accent-dk);
+  margin: 2rem 0;
+  padding: 1.3rem;
+  border: 2px solid var(--color-font-accent-dk);
+  border-radius: 10px;
+}
+
+.section .hero .hero__btn:hover {
+  background-color: var(--color-font-accent-lg);
+}
+
+.light {
+  background: var(--color-bg-lg);
+  color: var(--color-font-lg);
+}
+
+.light li > a,
+.light li > a:link,
+.light li > a:visited,
+.light li > a:active {
+  color: var(--color-font-lg);
+}
+
+.dark {
+  background: var(--color-bg-dk);
+  color: var(--color-font-dk);
+}
+
+.dark li > a,
+.dark li > a:link,
+.dark li > a:visited,
+.dark li > a:active {
+  color: var(--color-font-dk);
+}
+
+.highlight {
+  color: var(--color-accent-dk);
+}
+
+.shadow {
+  text-shadow: var(--shawdow);
 }
 
 .burger__frame {

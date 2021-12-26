@@ -1,8 +1,7 @@
 // * NAVIGATION-BAR
 
 .nav__mobile {
-  background-color: var(--color-bg-dk);
-  color: var(--color-body-dk);
+  background-color: var(--color-bg-lg);
   padding: 1.5rem 3rem 1.5rem 2rem;
   display: flex;
 }
@@ -21,10 +20,10 @@
   .nav__desktop {
     padding: 1rem 2rem;
     display: flex;
-    background-color: var(--color-bg-dk);
+    background-color: var(--color-bg-lg);
     &-bg2 {
       display: flex;
-      background-color: var(--color-bg-dk2);
+      background-color: var(--color-bg2-lg);
     }
     .nav__links {
       padding: 1rem;
@@ -40,16 +39,18 @@
         color: var(--color-font-accent);
       }
       li:last-child {
-        margin: -1rem 2rem 0 2.5rem;
-        padding: 1rem;
-        outline: 1px dotted var(--color-font-accent);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: -1.7rem 2rem 0 2.5rem;
+        color: var(--color-font-accent-dk);
+        padding: 1.3rem;
+        border: 2px solid var(--color-font-accent-dk);
+        border-radius: 10px;
       }
       li:last-child:hover {
-        background: var(--color-font-accent-lighter);
-        outline: 1px dotted var(--color-font-accent);
+        background: var(--color-font-accent-lg);
       }
       li:last-child a:hover {
-        color: var(--color-font-dk);
+        color: var(--color-font-lg);
       }
 
       li:last-child::before {
@@ -59,12 +60,11 @@
       li > a:link,
       li > a:visited,
       li > a:active {
-        color: var(--color-font-dk);
         text-decoration: none;
-        transition: color 0.5s, smooth;
+        transition: color 0.4s, smooth;
       }
       li > a:hover {
-        color: var(--color-font-accent);
+        color: var(--color-font-accent-dk);
       }
     }
   }
@@ -76,4 +76,80 @@
       font-size: 2rem;
     }
   }
+}
+
+.section {
+  padding: 1rem 2rem;
+  background-color: var(--color-bg-lg);
+  .hero {
+    margin: 5rem 0 10rem 25rem;
+    h1 {
+      .overTitle {
+        color: var(--color-font-accent);
+
+        font-size: 2rem;
+      }
+      .title {
+        font-size: 8rem;
+      }
+      .subTitle {
+        font-size: 6rem;
+      }
+    }
+    .hero__content {
+      font-size: 2rem;
+      max-width: 40%;
+      white-space: normal;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .hero__btn {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--color-font-accent-dk);
+      margin: 2rem 0;
+      padding: 1.3rem;
+      border: 2px solid var(--color-font-accent-dk);
+      border-radius: 10px;
+      &:hover {
+        background-color: var(--color-font-accent-lg);
+      }
+    }
+  }
+}
+
+//& THEMES
+
+.light {
+  background: var(--color-bg-lg);
+  color: var(--color-font-lg);
+  li > a,
+  li > a:link,
+  li > a:visited,
+  li > a:active {
+    color: var(--color-font-lg);
+  }
+}
+
+.dark {
+  background: var(--color-bg-dk);
+  color: var(--color-font-dk);
+  li > a,
+  li > a:link,
+  li > a:visited,
+  li > a:active {
+    color: var(--color-font-dk);
+  }
+}
+
+//& fonts
+
+.highlight {
+  color: var(--color-accent-dk);
+}
+
+.shadow {
+  text-shadow: var(--shawdow);
 }
