@@ -2,7 +2,7 @@
 
 .nav__mobile {
   background-color: var(--color-bg-lg);
-  padding: 1.5rem 3rem 1.5rem 2rem;
+  padding: 1.5rem 5rem 1.5rem 3rem;
   display: flex;
 }
 
@@ -18,16 +18,17 @@
     display: none;
   }
   .nav__desktop {
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     display: flex;
     background-color: var(--color-bg-lg);
     &-bg2 {
       display: flex;
       background-color: var(--color-bg2-lg);
+      font-size: 1rem;
     }
     .nav__links {
       padding: 1rem;
-      font-size: 2.5vw;
+      font-size: 1.5rem;
       counter-reset: section;
       list-style-type: none;
       li {
@@ -70,7 +71,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 800px) {
   .nav__desktop {
     .nav__links {
       font-size: 2rem;
@@ -79,42 +80,157 @@
 }
 
 .section {
-  padding: 1rem 2rem;
   background-color: var(--color-bg-lg);
+  padding: 1rem 3rem 2rem 3rem;
+  margin: 0 auto;
+
   .hero {
-    margin: 5rem 0 10rem 25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    line-height: 1.4;
+    margin: 0 1rem;
+    white-space: initial;
     h1 {
       .overTitle {
         color: var(--color-font-accent);
-
-        font-size: 2rem;
+        font-size: 6.5vw;
       }
       .title {
-        font-size: 8rem;
+        font-size: 10vw;
       }
       .subTitle {
-        font-size: 6rem;
+        font-size: 7vw;
       }
     }
     .hero__content {
-      font-size: 2rem;
-      max-width: 40%;
+      font-size: 6vw;
+      max-width: 95%;
       white-space: normal;
       margin-bottom: 2rem;
-      line-height: 1.6;
+      line-height: 1.5;
     }
     .hero__btn {
       display: inline-block;
-      font-size: 2rem;
+      font-size: 4vw;
       font-weight: bold;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: var(--color-font-accent-dk);
-      margin: 2rem 0;
+      margin: 2rem auto;
       padding: 1.3rem;
       border: 2px solid var(--color-font-accent-dk);
       border-radius: 10px;
       &:hover {
         background-color: var(--color-font-accent-lg);
+      }
+    }
+  }
+}
+
+@media screen and(min-width:410px) {
+  .section {
+    .hero {
+      h1 {
+        .overTitle {
+          font-size: 2rem;
+        }
+        .title {
+          font-size: 4rem;
+        }
+        .subTitle {
+          font-size: 3rem;
+        }
+      }
+      .hero__content {
+        font-size: 2rem;
+        max-width: 95%;
+        white-space: normal;
+        margin-bottom: 2rem;
+      }
+      .hero__btn {
+        font-size: 1.8rem;
+        margin: 2rem auto;
+        padding: 1.3rem;
+      }
+    }
+  }
+}
+@media screen and(min-width:600px) {
+  .section {
+    .hero {
+      h1 {
+        .title {
+          font-size: 6.5vw;
+        }
+        .subTitle {
+          font-size: 5.5vw;
+        }
+      }
+      .hero__btn {
+        font-size: 1.8rem;
+        margin: 2rem auto;
+        padding: 1.6rem;
+      }
+    }
+  }
+}
+
+@media screen and(min-width:800px) {
+  .section {
+    padding: 1rem 6rem;
+    .hero {
+      line-height: 1.2;
+      h1 {
+        .overTitle {
+          font-size: 2rem;
+        }
+        .title {
+          font-size: 8rem;
+        }
+        .subTitle {
+          font-size: 6rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width:1024px) {
+  .section {
+    .hero {
+      margin: 3rem auto;
+      h1 {
+        .overTitle {
+          color: var(--color-font-accent);
+
+          font-size: 2rem;
+        }
+        .title {
+          font-size: 8rem;
+        }
+        .subTitle {
+          font-size: 6rem;
+        }
+      }
+      .hero__content {
+        font-size: 2rem;
+        max-width: 40%;
+        white-space: normal;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+      .hero__btn {
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--color-font-accent-dk);
+        margin: 2rem 0;
+        padding: 1.3rem;
+        border: 2px solid var(--color-font-accent-dk);
+        border-radius: 10px;
+        &:hover {
+          background-color: var(--color-font-accent-lg);
+        }
       }
     }
   }

@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio: Julian C DEV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/app/css/import.css" />
   </head>
   <body>
@@ -13,7 +19,7 @@
     <!-- & visible on Phone-->
     <nav class="nav__mobile flex-sb flex-center dark">
       <a href="#">
-        <img src="/images/logo.svg" width="50" alt="Julian's rombo Logo" />
+        <img src="/images/logo-acc.svg" width="45" alt="Julian's rombo Logo" />
       </a>
       <div class="burger__frame">
         <div class="burger__btn"></div>
@@ -21,7 +27,34 @@
     </nav>
 
     <!-- & visible in DESKTOP-->
-
+    <!-- * Nav => SETTINGS-->
+    <nav class="nav__desktop-bg2 flex flex-sb flex-center">
+      <div id="scroll-container">
+        <div id="scroll-text">
+          Welcome to my Portfolio! &nbsp;&nbsp;&nbsp;&nbsp; --
+          &nbsp;&nbsp;&nbsp;&nbsp;You will find some switch settings in this top
+          navigation bar. &nbsp;&nbsp;&nbsp;&nbsp; --
+        </div>
+      </div>
+      <div class="flex">
+        <div class="flex flex-center mg-x-1">
+          <p id="langLabel" class="label center mg-y-1">
+            Lang English / Spanish
+          </p>
+          <label class="switch mg-x-1">
+            <input type="checkbox" id="handlerLang" value="false" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="flex flex-center mg-xr-4">
+          <p id="themeLabel" class="label center mg-y-1">Theme Dark / Light</p>
+          <label id="theme_swith" class="switch mg-x-1">
+            <input type="checkbox" id="handlerTheme" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </nav>
     <!-- * Nav => MAIN-->
 
     <nav class="nav__desktop flex-sb flex-center dark">
@@ -30,8 +63,8 @@
           <img
             id="logo"
             onmouseover="flipping(this)"
-            src="/images/logo.svg"
-            width="65"
+            src="/images/logo-acc.svg"
+            width="55"
           />
         </a>
       </div>
@@ -42,43 +75,6 @@
         <li><a id="navItem4" href="#">Conctact</a></li>
         <li><a id="navItem5" href="#">Resume</a></li>
       </ul>
-    </nav>
-
-    <!-- * Nav => SETTINGS-->
-    <nav class="nav__desktop-bg2 flex flex-sb flex-center">
-      <div id="scroll-container">
-        <div id="scroll-text">
-          You can costumize some few settings. Welcome to my Portfolio!
-        </div>
-      </div>
-      <div class="flex">
-        <div class="flex flex-center mg-x-1">
-          <p
-            id="langLabel"
-            class="label center mg-y-1"
-            style="font-size: 1.4rem"
-          >
-            Lang English / Spanish
-          </p>
-          <label class="switch mg-x-1">
-            <input type="checkbox" id="handlerLang" value="false" />
-            <span class="slider round"></span>
-          </label>
-        </div>
-        <div class="flex flex-center mg-xr-4">
-          <p
-            id="themeLabel"
-            class="label center mg-y-1"
-            style="font-size: 1.4rem"
-          >
-            Theme Dark / Light
-          </p>
-          <label id="theme_swith" class="switch mg-x-1">
-            <input type="checkbox" id="handlerTheme" />
-            <span class="slider round"></span>
-          </label>
-        </div>
-      </div>
     </nav>
 
     <!-- * MAIN CONTENT-->

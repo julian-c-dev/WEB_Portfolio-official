@@ -13,17 +13,23 @@ function flipping(element) {
     element.setAttribute("src", "/images/logo-acc-lg.svg");
   }, 600);
   setTimeout(() => {
-    element.setAttribute("src", "/images/logo-acc.svg");
+    element.setAttribute("src", "/images/logo.svg");
   }, 800);
   setTimeout(() => {
     element.setAttribute("src", "/images/logo-acc-lg.svg");
   }, 1000);
   setTimeout(() => {
-    element.setAttribute("src", "/images/logo.svg");
+    element.setAttribute("src", "/images/logo-acc.svg");
   }, 1200);
   setTimeout(() => {
-    element.classList.remove("flip");
+    element.setAttribute("src", "/images/logo-acc-lg.svg");
+  }, 1300);
+  setTimeout(() => {
+    element.setAttribute("src", "/images/logo-acc.svg");
   }, 1400);
+  setTimeout(() => {
+    element.classList.remove("flip");
+  }, 1600);
 }
 
 let menuOpen = false;
