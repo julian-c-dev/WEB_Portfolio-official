@@ -27,8 +27,8 @@
 
 .nav__mobile {
   background-color: var(--color-bg-lg);
-  padding: 3rem 4rem 10rem 3rem;
   display: flex;
+  padding: 3rem 4rem 5rem 3rem;
 }
 
 .nav__desktop {
@@ -43,19 +43,19 @@
     display: none;
   }
   .nav__desktop {
-    padding: 0 3rem;
-    display: flex;
     background-color: var(--color-bg-lg);
+    display: flex;
+    padding: 0 3rem 3rem 3rem;
     &-bg2 {
-      display: flex;
       background-color: var(--color-bg2-lg);
+      display: flex;
       font-size: 1.5rem;
     }
     .nav__links {
-      padding: 1rem;
-      font-size: 1.5rem;
       counter-reset: section;
+      font-size: 1.5rem;
       list-style-type: none;
+      padding: 1rem;
       li {
         margin: 0 1rem;
       }
@@ -101,7 +101,7 @@
 
 .section {
   background-color: var(--color-bg-lg);
-  padding: 1rem 3rem 2rem 3rem;
+  padding: 0 2rem 10rem 2rem;
   margin: 0 auto;
 
   .hero {
@@ -138,6 +138,7 @@
 
 @media screen and (min-width: 448px) {
   .section {
+    padding: 1rem 3rem 10rem 3rem;
     .hero {
       h1 {
         line-height: 1.4;
@@ -166,6 +167,7 @@
 
 @media screen and(min-width:636px) {
   .section {
+    padding: 0 3rem 10rem 3rem;
     .hero {
       margin: 0 auto;
       display: flex;
@@ -237,5 +239,35 @@
     .hero {
       margin: 0 0 0 30rem;
     }
+  }
+}
+
+// * Sections
+
+.inner-section {
+  align-items: flex-start;
+  counter-reset: section;
+  display: flex;
+  flex-flow: column nowrap;
+  line-height: 1.4;
+  margin: 0 1rem;
+  white-space: initial;
+}
+.number-heading {
+  margin-top: 5rem;
+  font-size: 2rem;
+  align-items: center;
+  &::before {
+    color: var(--color-font-accent-dk);
+    counter-increment: section;
+    content: counters(section, " . ") ". ";
+    margin-right: 1rem;
+  }
+  &::after {
+    border-bottom: 1px solid var(--color-font-accent-dk);
+    opacity: 0.3;
+    width: 150px;
+    content: "";
+    margin-left: 1rem;
   }
 }

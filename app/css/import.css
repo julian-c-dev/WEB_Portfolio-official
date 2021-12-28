@@ -462,10 +462,10 @@ html {
 
 .nav__mobile {
   background-color: var(--color-bg-lg);
-  padding: 3rem 4rem 10rem 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 3rem 4rem 5rem 3rem;
 }
 
 .nav__desktop {
@@ -481,24 +481,24 @@ html {
     display: none;
   }
   .nav__desktop {
-    padding: 0 3rem;
+    background-color: var(--color-bg-lg);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: var(--color-bg-lg);
+    padding: 0 3rem 3rem 3rem;
   }
   .nav__desktop-bg2 {
+    background-color: var(--color-bg2-lg);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: var(--color-bg2-lg);
     font-size: 1.5rem;
   }
   .nav__desktop .nav__links {
-    padding: 1rem;
-    font-size: 1.5rem;
     counter-reset: section;
+    font-size: 1.5rem;
     list-style-type: none;
+    padding: 1rem;
   }
   .nav__desktop .nav__links li {
     margin: 0 1rem;
@@ -539,7 +539,7 @@ html {
 
 .section {
   background-color: var(--color-bg-lg);
-  padding: 1rem 3rem 2rem 3rem;
+  padding: 0 2rem 10rem 2rem;
   margin: 0 auto;
 }
 
@@ -583,6 +583,9 @@ html {
 }
 
 @media screen and (min-width: 448px) {
+  .section {
+    padding: 1rem 3rem 10rem 3rem;
+  }
   .section .hero h1 {
     line-height: 1.4;
   }
@@ -607,6 +610,9 @@ html {
 }
 
 @media screen and (min-width: 636px) {
+  .section {
+    padding: 0 3rem 10rem 3rem;
+  }
   .section .hero {
     margin: 0 auto;
     display: -webkit-box;
@@ -671,6 +677,46 @@ html {
   .section .hero {
     margin: 0 0 0 30rem;
   }
+}
+
+.inner-section {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  counter-reset: section;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  line-height: 1.4;
+  margin: 0 1rem;
+  white-space: initial;
+}
+
+.number-heading {
+  margin-top: 5rem;
+  font-size: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.number-heading::before {
+  color: var(--color-font-accent-dk);
+  counter-increment: section;
+  content: counters(section, " . ") ". ";
+  margin-right: 1rem;
+}
+
+.number-heading::after {
+  border-bottom: 1px solid var(--color-font-accent-dk);
+  opacity: 0.3;
+  width: 150px;
+  content: "";
+  margin-left: 1rem;
 }
 
 .burger__frame {
