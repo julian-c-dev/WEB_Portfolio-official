@@ -28,6 +28,13 @@
 }
 
 //& FONTS
+.darkest {
+  color: var(--color-font-lg-darker);
+}
+
+.bold {
+  font-weight: bold;
+}
 
 .highlight {
   color: var(--color-accent-dk);
@@ -115,6 +122,9 @@
 .mg-x-3 {
   margin: 0 3rem;
 }
+.mg-xl-3 {
+  margin-left: 3rem;
+}
 
 .mg-4 {
   margin: 4rem;
@@ -129,4 +139,8 @@
 
 .mg-xr-4 {
   margin-right: 4rem;
+}
+
+.mg-xl-4 {
+  margin-left: 4rem;
 }
