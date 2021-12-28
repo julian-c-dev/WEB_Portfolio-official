@@ -68,51 +68,7 @@ input:checked + .slider:before {
   padding: -1rem;
   overflow: hidden;
   width: 80%;
-  background-color: var(--color-bg-dk);
-  color: aliceblue;
-  font-family: "Darker Grotesque", sans-serif;
-}
-
-#scroll-text {
-  /* animation properties */
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-
-  -moz-animation: my-animation 15s linear;
-  -webkit-animation: my-animation 15s linear;
-  animation: my-animation 15s linear;
-}
-
-/* for Firefox */
-@-moz-keyframes my-animation {
-  from {
-    -moz-transform: translateX(100%);
-  }
-  to {
-    -moz-transform: translateX(-100%);
-  }
-}
-
-/* for Chrome */
-@-webkit-keyframes my-animation {
-  from {
-    -webkit-transform: translateX(100%);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-  }
-}
-
-@keyframes my-animation {
-  from {
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  to {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
+  background-color: var(--color-b2-lg);
+  color: var(--color-bg-dk);
+  font-weight: 600;
 }

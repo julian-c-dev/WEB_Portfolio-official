@@ -17,7 +17,7 @@
     <!-- * NavBars  -->
 
     <!-- & visible on Phone-->
-    <nav class="nav__mobile flex-sb flex-center dark">
+    <nav class="nav__mobile flex-sb flex-center light dark">
       <a href="#">
         <img src="/images/logo-acc.svg" width="45" alt="Julian's rombo Logo" />
       </a>
@@ -28,14 +28,7 @@
 
     <!-- & visible in DESKTOP-->
     <!-- * Nav => SETTINGS-->
-    <nav class="nav__desktop-bg2 flex flex-sb flex-center">
-      <div id="scroll-container">
-        <div id="scroll-text">
-          Welcome to my Portfolio! &nbsp;&nbsp;&nbsp;&nbsp; --
-          &nbsp;&nbsp;&nbsp;&nbsp;You will find some switch settings in this top
-          navigation bar. &nbsp;&nbsp;&nbsp;&nbsp; --
-        </div>
-      </div>
+    <nav class="nav__desktop-bg2 flex-end flex-center">
       <div class="flex">
         <div class="flex flex-center mg-x-1">
           <p id="langLabel" class="label center mg-y-1">
@@ -55,9 +48,9 @@
         </div>
       </div>
     </nav>
-    <!-- * Nav => MAIN-->
 
-    <nav class="nav__desktop flex-sb flex-center dark">
+    <!-- * Nav => MAIN-->
+    <nav class="nav__desktop flex-sb flex-center light dark">
       <div class="flex flex-center">
         <a href="#">
           <img
@@ -68,18 +61,20 @@
           />
         </a>
       </div>
-      <ul class="nav__links flex">
+      <ul class="nav__links flex flex-center">
         <li><a id="navItem1" class="" href="#">About me</a></li>
         <li><a id="navItem2" href="#">Experience</a></li>
         <li><a id="navItem3" href="#">Skills</a></li>
         <li><a id="navItem4" href="#">Conctact</a></li>
-        <li><a id="navItem5" href="#">Resume</a></li>
+        <li>
+          <button class="btn">Resume</button>
+        </li>
       </ul>
     </nav>
 
     <!-- * MAIN CONTENT-->
     <main>
-      <header class="section dark">
+      <header class="section light dark">
         <div class="hero">
           <h1>
             <span class="overTitle">Hi, I am</span><br />
@@ -93,7 +88,7 @@
             <span class="highlight">React JS library</span>.
           </p>
 
-          <a class="hero__btn"> Check out if my skills fits your needs! </a>
+          <a class="btn"> Check out if my skills fits your needs! </a>
         </div>
       </header>
       <section></section>

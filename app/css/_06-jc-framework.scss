@@ -1,4 +1,43 @@
-// & Displays:
+//* - Themes
+//* - Fonts
+//* - Displays
+//* - Margins
+
+//& THEMES
+
+.light {
+  background: var(--color-bg-lg);
+  color: var(--color-font-lg);
+  li > a,
+  li > a:link,
+  li > a:visited,
+  li > a:active {
+    color: var(--color-font-lg);
+  }
+}
+
+.dark {
+  background: var(--color-bg-dk);
+  color: var(--color-font-dk);
+  li > a,
+  li > a:link,
+  li > a:visited,
+  li > a:active {
+    color: var(--color-font-dk);
+  }
+}
+
+//& FONTS
+
+.highlight {
+  color: var(--color-accent-dk);
+}
+
+.shadow {
+  text-shadow: var(--shawdow);
+}
+
+// & DISPLAYS:
 .on {
   display: block;
 }
@@ -42,7 +81,7 @@
   text-align: center;
 }
 
-// & Margins
+// & MARGINS
 
 .mg-1 {
   margin: 1rem;
