@@ -60,15 +60,26 @@ input:checked + .slider:before {
 
 // scrolling text
 
-#scroll-container {
-  border: 1px solid var(--color-bg-dk);
-  border-radius: 15px;
-  margin-left: 1rem;
-  font-size: 1.5rem;
-  padding: -1rem;
-  overflow: hidden;
-  width: 80%;
-  background-color: var(--color-b2-lg);
-  color: var(--color-bg-dk);
-  font-weight: 600;
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  padding: 1rem 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
