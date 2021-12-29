@@ -786,6 +786,18 @@ html {
             align-items: center;
     gap: 5rem;
   }
+  .inner-image img {
+    -webkit-filter: sepia(100%);
+            filter: sepia(100%);
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .inner-image img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-filter: sepia(0.05%);
+            filter: sepia(0.05%);
+  }
 }
 
 .burger__frame {

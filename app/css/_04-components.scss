@@ -328,4 +328,17 @@
     align-items: center;
     gap: 5rem;
   }
+
+  .inner-image img {
+    filter: sepia(100%);
+    transition: all 0.3s linear;
+    &:hover {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      filter: sepia(0.05%);
+    }
+  }
 }
