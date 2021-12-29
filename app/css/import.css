@@ -739,12 +739,19 @@ html {
   margin: 2rem auto;
 }
 
+.inner-image img {
+  border-radius: 5%;
+}
+
 @media screen and (min-width: 448px) {
   .number-heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   .inner-content > p {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .inner-image {
+    cursor: pointer;
   }
 }
 
@@ -766,6 +773,7 @@ html {
 @media screen and (min-width: 1200px) {
   .inner-section {
     margin: 0 0 0 35rem;
+    padding-top: 3rem;
     max-width: 85rem;
   }
   .inner {
