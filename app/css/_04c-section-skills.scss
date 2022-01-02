@@ -5,7 +5,13 @@
 }
 
 .skill-table {
-  padding: 2rem;
+  padding: 1rem;
+
+  border-radius: 20px;
+  margin: 2rem 0;
+}
+
+.html-colors {
   background: rgb(218, 73, 18);
   background: linear-gradient(
     90deg,
@@ -13,30 +19,14 @@
     rgba(230, 163, 89, 1) 50%,
     rgba(214, 121, 11, 1) 94%
   );
-  border-radius: 20px;
-  margin: 2rem 0;
 }
 
-th,
-td {
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  color: var(--color-darkest);
+.css-colors {
+  background: rgb(18, 135, 218);
+  background: linear-gradient(
+    90deg,
+    rgba(18, 135, 218, 1) 0%,
+    rgba(89, 176, 230, 1) 50%,
+    rgba(11, 171, 214, 1) 94%
+  );
 }
-
-/*.skills-container {
-    width: 500px;
-  }
-  .section-skills {
-    padding: 0 0 0 12rem;
-  }
-
-  .skills_logos {
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 1000px;
-    gap: 5rem;
-  }
-  .frame-logo > img {
-    filter: blur(50%);
-  }*/

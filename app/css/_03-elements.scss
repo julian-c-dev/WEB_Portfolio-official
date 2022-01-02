@@ -14,3 +14,17 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
 }
+
+th {
+  text-align: end;
+}
+td {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-darkest);
+}
