@@ -828,13 +828,13 @@ main {
 }
 
 .frame-logos .frame-logo > p {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .skill-table {
   padding: 1rem;
   border-radius: 20px;
-  margin: 2rem 0;
+  margin: 2rem 0 4rem 0;
 }
 
 .html-colors {
@@ -847,6 +847,24 @@ main {
   background: #1287da;
   background: -webkit-gradient(linear, left top, right top, from(#1287da), color-stop(50%, #59b0e6), color-stop(94%, #0babd6));
   background: linear-gradient(90deg, #1287da 0%, #59b0e6 50%, #0babd6 94%);
+}
+
+.sass-colors {
+  background: #a04ba3;
+  background: -webkit-gradient(linear, left top, right top, from(#a04ba3), color-stop(50%, #c675c8), color-stop(94%, #ab6997));
+  background: linear-gradient(90deg, #a04ba3 0%, #c675c8 50%, #ab6997 94%);
+}
+
+.js-colors {
+  background: #dee01a;
+  background: -webkit-gradient(linear, left top, right top, from(#dee01a), color-stop(38%, #f3ff55), color-stop(82%, #fbff8e));
+  background: linear-gradient(90deg, #dee01a 0%, #f3ff55 38%, #fbff8e 82%);
+}
+
+.sql-colors {
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(51%, #e6e7e0), to(#e2eeff));
+  background: linear-gradient(90deg, white 0%, #e6e7e0 51%, #e2eeff 100%);
 }
 
 .burger__frame {
