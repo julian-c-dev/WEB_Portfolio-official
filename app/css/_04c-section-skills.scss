@@ -1,13 +1,52 @@
 .frame-logos {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   & .frame-logo > p {
     font-size: 2rem;
   }
 }
 
 .skill-table {
+  display: inline-block;
   padding: 1rem;
   border-radius: 20px;
   margin: 2rem 0 4rem 0;
+}
+
+@media screen and(min-width:636px) {
+  .frame-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    align-items: flex-start;
+    gap: 8rem 10rem;
+
+    & .frame-logo > p {
+      font-size: 2.2rem;
+    }
+    .skill-table {
+      display: none;
+    }
+  }
+}
+
+@media screen and(min-width: 708px) {
+  .frame-logos {
+    margin: 0 auto;
+  }
+}
+
+@media screen and(min-width: 1200px) {
+  .skills-title {
+    margin-left: 3.5rem;
+  }
+
+  .frame-logos {
+    margin: 0 5rem 0 25rem;
+    gap: 3rem 15rem;
+    cursor: pointer;
+  }
 }
 
 // * Table Colors

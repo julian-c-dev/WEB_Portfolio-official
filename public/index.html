@@ -16,6 +16,22 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/app/css/import.css" />
+    <script>
+      const table = document.querySelectorAll(".skill-table");
+      console.log(table);
+
+      document.onload = tooltipOn;
+
+      function tooltipOn() {
+        if (window.screen.width >= 636) {
+          for (let i = 0; i < table.legth; i++) {
+            table[i].classList.remove("skill-table");
+          }
+        } else {
+          table[i].classList.add("skill-table");
+        }
+      }
+    </script>
   </head>
   <body>
     <!-- * NavBars  -->
@@ -141,13 +157,13 @@
       <!-- * Section: Skills -->
       <section id="sec_Skills" class="section section-skills light dark">
         <div class="inner-section">
-          <h2 class="number-heading flex">Skills</h2>
+          <h2 class="number-heading skills-title flex">Skills</h2>
         </div>
-        <div class="frame-logos flex flex-clmn flex-center">
-          <div class="frame-logo border flex flex-clmn">
+        <div class="frame-logos">
+          <div class="frame-logo border flex flex-clmn tooltip1">
             <p>HTML</p>
-            <img src="/images/logo_html.png" width="85px" alt="" />
-            <table class="skill-table html-colors">
+            <img src="/images/logo_html.png" width="85px" alt="Logo HTML" />
+            <table class="skill-table html-colors tooltipHTML">
               <thead>
                 <tr>
                   <th></th>
@@ -194,10 +210,10 @@
               </tbody>
             </table>
           </div>
-          <div class="frame-logo flex flex-clmn">
+          <div class="frame-logo flex flex-clmn tooltip2">
             <p>CSS</p>
-            <img src="/images/logo_css.png" width="95px" alt="" />
-            <table class="skill-table css-colors">
+            <img src="/images/logo_css.png" width="95px" alt="Logo CSS" />
+            <table class="skill-table css-colors tooltipCSS">
               <thead>
                 <tr>
                   <th></th>
@@ -244,10 +260,10 @@
               </tbody>
             </table>
           </div>
-          <div class="frame-logo flex flex-clmn">
+          <div class="frame-logo flex flex-clmn tooltip3">
             <p>Sass</p>
-            <img src="/images/logo_sass.png" width="105px" alt="" />
-            <table class="skill-table sass-colors">
+            <img src="/images/logo_sass.png" width="123px" alt="Logo SASS" />
+            <table class="skill-table sass-colors tooltipSASS">
               <thead>
                 <tr>
                   <th></th>
@@ -294,10 +310,10 @@
               </tbody>
             </table>
           </div>
-          <div class="frame-logo flex flex-clmn">
+          <div class="frame-logo flex flex-clmn tooltip4">
             <p>JavaScript</p>
-            <img src="/images/logo_js.png" width="95px" alt="" />
-            <table class="skill-table js-colors">
+            <img src="/images/logo_js.png" width="100px" alt="Logo JS" />
+            <table class="skill-table js-colors tooltipJS">
               <thead>
                 <tr>
                   <th></th>
@@ -345,10 +361,14 @@
               </tbody>
             </table>
           </div>
-          <div class="frame-logo flex flex-clmn">
+          <div class="frame-logo flex flex-clmn tooltip5">
             <p>React</p>
-            <img src="/images/logo_react.png" width="105px" alt="" />
-            <table class="skill-table css-colors">
+            <img
+              src="/images/logo_react.png"
+              width="110px"
+              alt="Logo React Library"
+            />
+            <table class="skill-table css-colors tooltipREACT">
               <thead>
                 <tr>
                   <th></th>
@@ -373,6 +393,15 @@
                     ><i class="far fa-star"></i>
                   </td>
                 </tr>
+                <tr></tr>
+                <tr>
+                  <th>React Hooks</th>
+                  <td>
+                    <i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
                 <tr>
                   <th>Advanced</th>
                   <td>
@@ -388,10 +417,10 @@
               </tbody>
             </table>
           </div>
-          <div class="frame-logo flex flex-clmn">
+          <div class="frame-logo flex flex-clmn tooltip6">
             <p>SQL</p>
-            <img src="/images/logo_MySQL.png" width="105px" alt="" />
-            <table class="skill-table sql-colors">
+            <img src="/images/logo_MySQL.png" width="125px" alt="Logo MySQL" />
+            <table class="skill-table sql-colors tooltipSQL">
               <thead>
                 <tr>
                   <th></th>
@@ -424,6 +453,14 @@
                   </td>
                 </tr>
                 <tr>
+                  <th>Advanced</th>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="far fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
                   <th>Experience</th>
                   <td>&#62; 1 year</td>
                 </tr>
@@ -431,39 +468,6 @@
             </table>
           </div>
         </div>
-
-        <!-- <div class="tooltip">
-              Hover over me
-              <table class="tooltiptext">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>-->
       </section>
 
       <!-- * Section: Experience -->
@@ -519,5 +523,6 @@
 
     <script src="/app/js/main.js"></script>
     <script src="/app/js/functions.js"></script>
+    <script src="/app/js/tooltip.js"></script>
   </body>
 </html>

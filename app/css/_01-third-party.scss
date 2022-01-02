@@ -60,26 +60,39 @@ input:checked + .slider:before {
 
 // scrolling text
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
+@media screen and(min-width: 636px) {
+  .tooltip1,
+  .tooltip2,
+  .tooltip3,
+  .tooltip4,
+  .tooltip5,
+  .tooltip6 {
+    position: relative;
+    display: inline-block;
+  }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 220px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  text-align: center;
-  border-radius: 6px;
-  padding: 1rem 0;
+  .tooltip1 .tooltipHTML,
+  .tooltip2 .tooltipCSS,
+  .tooltip3 .tooltipSASS,
+  .tooltip4 .tooltipJS,
+  .tooltip5 .tooltipREACT,
+  .tooltip6 .tooltipSQL {
+    visibility: hidden;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 2rem 0 4rem 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    margin-top: 18rem;
+  }
 
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+  .tooltip1:hover .tooltipHTML,
+  .tooltip2:hover .tooltipCSS,
+  .tooltip3:hover .tooltipSASS,
+  .tooltip4:hover .tooltipJS,
+  .tooltip5:hover .tooltipREACT,
+  .tooltip6:hover .tooltipSQL {
+    visibility: visible;
+  }
 }

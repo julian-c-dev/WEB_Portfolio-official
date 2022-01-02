@@ -71,27 +71,39 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 220px;
-  background-color: white;
-  color: black;
-  text-align: center;
-  border-radius: 6px;
-  padding: 1rem 0;
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+@media screen and (min-width: 636px) {
+  .tooltip1,
+  .tooltip2,
+  .tooltip3,
+  .tooltip4,
+  .tooltip5,
+  .tooltip6 {
+    position: relative;
+    display: inline-block;
+  }
+  .tooltip1 .tooltipHTML,
+  .tooltip2 .tooltipCSS,
+  .tooltip3 .tooltipSASS,
+  .tooltip4 .tooltipJS,
+  .tooltip5 .tooltipREACT,
+  .tooltip6 .tooltipSQL {
+    visibility: hidden;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 2rem 0 4rem 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    margin-top: 18rem;
+  }
+  .tooltip1:hover .tooltipHTML,
+  .tooltip2:hover .tooltipCSS,
+  .tooltip3:hover .tooltipSASS,
+  .tooltip4:hover .tooltipJS,
+  .tooltip5:hover .tooltipREACT,
+  .tooltip6:hover .tooltipSQL {
+    visibility: visible;
+  }
 }
 
 /* normalize or reset */
@@ -827,14 +839,67 @@ main {
   }
 }
 
+.frame-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .frame-logos .frame-logo > p {
   font-size: 2rem;
 }
 
 .skill-table {
+  display: inline-block;
   padding: 1rem;
   border-radius: 20px;
   margin: 2rem 0 4rem 0;
+}
+
+@media screen and (min-width: 636px) {
+  .frame-logos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (100px)[3];
+        grid-template-columns: repeat(3, 100px);
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 8rem 10rem;
+  }
+  .frame-logos .frame-logo > p {
+    font-size: 2.2rem;
+  }
+  .frame-logos .skill-table {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 708px) {
+  .frame-logos {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skills-title {
+    margin-left: 3.5rem;
+  }
+  .frame-logos {
+    margin: 0 5rem 0 25rem;
+    gap: 3rem 15rem;
+    cursor: pointer;
+  }
 }
 
 .html-colors {
