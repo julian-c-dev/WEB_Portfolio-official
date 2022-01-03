@@ -1,0 +1,24 @@
+@media screen and(min-width:636px) {
+  .about-image {
+    margin: 2rem auto;
+    img {
+      border-radius: 5%;
+    }
+  }
+}
+
+@media screen and(min-width:1200px) {
+  .about-image img {
+    filter: sepia(100%);
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      filter: sepia(0.05%);
+    }
+  }
+}

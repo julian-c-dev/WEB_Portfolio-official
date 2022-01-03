@@ -16,22 +16,6 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/app/css/import.css" />
-    <script>
-      const table = document.querySelectorAll(".skill-table");
-      console.log(table);
-
-      document.onload = tooltipOn;
-
-      function tooltipOn() {
-        if (window.screen.width >= 636) {
-          for (let i = 0; i < table.legth; i++) {
-            table[i].classList.remove("skill-table");
-          }
-        } else {
-          table[i].classList.add("skill-table");
-        }
-      }
-    </script>
   </head>
   <body>
     <!-- * NavBars  -->
@@ -47,7 +31,7 @@
     </nav>
 
     <!-- & visible in DESKTOP-->
-    <!-- * Nav => SETTINGS-->
+    <!-- * Nav-TOP => SETTINGS-->
     <nav class="nav__desktop-bg2 flex-end flex-center">
       <div class="flex">
         <div class="flex flex-center mg-x-1">
@@ -69,7 +53,7 @@
       </div>
     </nav>
 
-    <!-- * Nav => MAIN-->
+    <!-- * Nav-BOTTOM => PRINCIPAL-->
     <nav class="nav__desktop flex-sb flex-center light dark">
       <div class="flex flex-center mg-xl-3">
         <a href="#">
@@ -92,7 +76,7 @@
       </ul>
     </nav>
 
-    <!-- * MAIN CONTENT-->
+    <!-- ^ MAIN CONTENT ^ -->
     <!-- * Hero -->
     <main>
       <header class="section light dark">
@@ -116,10 +100,10 @@
 
       <!-- * Section: About -->
       <section id="sec_About" class="section light dark">
-        <div class="inner-section">
-          <h2 class="number-heading flex">About</h2>
-          <div class="inner">
-            <div class="inner-content">
+        <div class="section-container">
+          <h2 class="section-heading flex">About</h2>
+          <div class="section-content-frame">
+            <div class="section-content">
               <p>
                 Hello! I am a professional who enjoys building components for
                 Websites and desktop applications.
@@ -147,7 +131,7 @@
                 forever, I know I will walk along with a smile on my face.
               </p>
             </div>
-            <div class="inner-image">
+            <div class="about-image">
               <img src="/images/picture.jpg" width="240" alt="Myself picture" />
             </div>
           </div>
@@ -155,9 +139,9 @@
       </section>
 
       <!-- * Section: Skills -->
-      <section id="sec_Skills" class="section section-skills light dark">
-        <div class="inner-section">
-          <h2 class="number-heading skills-title flex">Skills</h2>
+      <section id="sec_Skills" class="section light dark">
+        <div class="section-container">
+          <h2 class="section-heading skills-title flex">Skills</h2>
         </div>
         <div class="frame-logos">
           <div class="frame-logo border flex flex-clmn tooltip1">
@@ -469,60 +453,10 @@
           </div>
         </div>
       </section>
-
-      <!-- * Section: Experience -->
-      <section
-        style="padding-top: 35rem"
-        id="sec_Skills"
-        class="section light dark"
-      >
-        <div class="inner-section">
-          <h2 class="number-heading flex">Skills</h2>
-          <div class="inner">
-            <div class="inner-content">
-              <p>
-                Hello! My name is Julian and I enjoy building components for
-                Websites and desktop applications. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit. Provident nisi distinctio quaerat,
-                vel blanditiis libero quis minus aspernatur soluta, aperiam
-                recusandae maiores voluptatem neque aut quam ratione odio
-                temporibus in.
-              </p>
-              <p>
-                Hello! My name is Julian and I enjoy building components for
-                Websites and desktop applications. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit. Provident nisi distinctio quaerat,
-                vel blanditiis libero quis minus aspernatur soluta, aperiam
-                recusandae maiores voluptatem neque aut quam ratione odio
-                temporibus in.
-              </p>
-              <p>
-                Hello! My name is Julian and I enjoy building components for
-                Websites and desktop applications. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit. Provident nisi distinctio quaerat,
-                vel blanditiis libero quis minus aspernatur soluta, aperiam
-                recusandae maiores voluptatem neque aut quam ratione odio
-                temporibus in.
-              </p>
-              <p>
-                Hello! My name is Julian and I enjoy building components for
-                Websites and desktop applications. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit. Provident nisi distinctio quaerat,
-                vel blanditiis libero quis minus aspernatur soluta, aperiam
-                recusandae maiores voluptatem neque aut quam ratione odio
-                temporibus in.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- * Section: Experience -->
-      <section id="sec_Experience" class="section light dark"></section>
     </main>
     <footer></footer>
 
     <script src="/app/js/main.js"></script>
     <script src="/app/js/functions.js"></script>
-    <script src="/app/js/tooltip.js"></script>
   </body>
 </html>
