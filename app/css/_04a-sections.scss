@@ -11,55 +11,47 @@ main {
   margin: 0 auto;
 }
 
+.section-container {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  line-height: 1.4;
+  margin: 0 1rem;
+  white-space: initial;
+}
+.section-heading {
+  margin-top: 7rem;
+  font-size: 8vw;
+  align-items: baseline;
+  &::before {
+    color: var(--color-font-accent-dk);
+    counter-increment: section;
+    content: counters(section, ".") ". ";
+    margin-right: 1rem;
+  }
+  &::after {
+    border-bottom: 1px solid var(--color-font-accent-dk);
+    opacity: 0.3;
+    width: 150px;
+    content: "";
+    margin-left: 1rem;
+  }
+}
+.section-content-frame {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.section-content > p {
+  font-size: 4.5vw;
+  white-space: initial;
+  max-width: 95%;
+}
+
 @media screen and (min-width: 448px) {
   .section {
     padding: 1rem 3rem 10rem 3rem;
   }
-}
-
-@media screen and(min-width:636px) {
-  .section {
-    padding: 0 3rem 8rem 3rem;
-  }
-  .section-container {
-    align-items: flex-start;
-    display: flex;
-    flex-flow: column nowrap;
-    line-height: 1.4;
-    margin: 0 1rem;
-    white-space: initial;
-  }
-  .section-heading {
-    margin-top: 7rem;
-    font-size: 8vw;
-    align-items: baseline;
-    &::before {
-      color: var(--color-font-accent-dk);
-      counter-increment: section;
-      content: counters(section, ".") ". ";
-      margin-right: 1rem;
-    }
-    &::after {
-      border-bottom: 1px solid var(--color-font-accent-dk);
-      opacity: 0.3;
-      width: 150px;
-      content: "";
-      margin-left: 1rem;
-    }
-  }
-  .section-content-frame {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  .section-content > p {
-    font-size: 4.5vw;
-    white-space: initial;
-    max-width: 95%;
-  }
-}
-
-@media screen and (min-width: 448px) {
   .section-heading {
     font-size: 3rem;
   }
@@ -69,6 +61,9 @@ main {
 }
 
 @media screen and(min-width:636px) {
+  .section {
+    padding: 0 3rem 8rem 3rem;
+  }
   .section-container {
     margin: 0 auto;
     max-width: 55rem;
@@ -81,6 +76,11 @@ main {
     text-justify: auto;
     max-width: 66rem;
   }
+  .section-content-frame {
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 5rem;
+  }
 }
 
 @media screen and(min-width:1200px) {
@@ -89,9 +89,8 @@ main {
     padding-top: 3rem;
     max-width: 85rem;
   }
-  .section-content-frame {
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 5rem;
+
+  .section-heading {
+    margin-top: 5rem;
   }
 }

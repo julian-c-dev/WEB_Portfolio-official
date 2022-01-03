@@ -1,13 +1,11 @@
-@media screen and(min-width:636px) {
-  .about-image {
-    margin: 2rem auto;
-    img {
-      border-radius: 5%;
-    }
+.about-image {
+  margin: 2rem auto;
+  img {
+    border-radius: 5%;
   }
 }
 
-@media screen and(min-width:1200px) {
+@media screen and(min-width:1024px) {
   .about-image img {
     filter: sepia(100%);
     cursor: pointer;
