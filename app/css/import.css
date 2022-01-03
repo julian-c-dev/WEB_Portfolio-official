@@ -71,6 +71,17 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.tooltipHTML,
+.tooltipCSS,
+.tooltipSASS,
+.tooltipJS,
+.tooltipREACT,
+.tooltipSQL {
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 2rem 0 4rem 0;
+}
+
 @media screen and (min-width: 636px) {
   .tooltip1,
   .tooltip2,
@@ -875,7 +886,7 @@ main {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 8rem 10rem;
+    gap: 4rem 11rem;
   }
   .frame-logos .frame-logo > p {
     font-size: 2.2rem;
