@@ -1,0 +1,43 @@
+.frame-jobs {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  & .frame-logo > p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and(min-width:636px) {
+  .frame-jobs {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    align-items: flex-start;
+    cursor: pointer;
+    gap: 4rem 11rem;
+
+    & .frame-logo > p {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+@media screen and(min-width: 708px) {
+  .frame-jobs {
+    margin: 0 auto;
+  }
+}
+
+@media screen and(min-width: 1200px) {
+  .experience-title {
+    margin-left: 7.5rem;
+  }
+  .experience-content {
+    margin: 2rem 0 2rem 30rem;
+  }
+
+  .frame-jobs {
+    margin: 0 5rem 15rem 25rem;
+    gap: 3rem 15rem;
+  }
+}

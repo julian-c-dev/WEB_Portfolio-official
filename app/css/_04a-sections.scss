@@ -84,6 +84,12 @@ main {
 }
 
 @media screen and(min-width:1200px) {
+  @-moz-document url-prefix() {
+    .section {
+      padding: 0 5rem 25rem 10rem;
+    }
+  }
+
   .section-container {
     margin: 0 0 0 35rem;
     padding-top: 3rem;
