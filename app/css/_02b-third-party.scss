@@ -88,14 +88,12 @@ input:checked + .slider:before {
   .tooltip4 .tooltipJS,
   .tooltip5 .tooltipREACT,
   .tooltip6 .tooltipSQL {
-    visibility: hidden;
-    padding: 1rem;
     border-radius: 20px;
-    margin: 2rem 0 4rem 0;
-    /* Position the tooltip */
+    margin: 18rem 0 4rem 0;
+    padding: 1rem;
     position: absolute;
+    visibility: hidden;
     z-index: 1;
-    margin-top: 18rem;
   }
 
   .tooltip1:hover .tooltipHTML,
