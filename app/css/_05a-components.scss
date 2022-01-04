@@ -40,7 +40,7 @@
     right: 7rem;
     writing-mode: vertical-lr;
     &::after {
-      border-right: 2px solid var(--color-font-dk);
+      border-right: 2px solid var(--color-font-dk2);
       height: 90px;
       content: "";
       margin: 2rem 1rem 0 1rem;
@@ -59,7 +59,7 @@
     &:active {
       text-decoration: none;
       font-family: monospace;
-      color: var(--color-font-dk);
+      color: var(--color-font-dk2);
       letter-spacing: 0.2ch;
       font-size: 1.3rem;
     }

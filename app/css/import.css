@@ -11,6 +11,7 @@
   --color-bg-dk: rgba(10, 25, 47, 0.85);
   --color-bg2-dk: rgba(24, 49, 83, 0.6);
   --color-font-dk: rgb(176, 183, 204);
+  --color-font-dk2: rgb(104, 115, 153);
   --color-bg-lg: rgba(170, 170, 170, 0.5);
   --color-font-lg: rgb(35, 61, 129);
   --color-font-lg-darker: rgb(7, 34, 102);
@@ -500,7 +501,7 @@ button {
   background-color: transparent;
   border: none;
   margin: 0;
-  color: var(--color-font-dk);
+  color: var(--color-font-dk2);
   cursor: pointer;
 }
 
@@ -1085,7 +1086,7 @@ main {
   }
   .credit-r_side::after,
   .credit-l_side::after {
-    border-right: 2px solid var(--color-font-dk);
+    border-right: 2px solid var(--color-font-dk2);
     height: 90px;
     content: "";
     margin: 2rem 1rem 0 1rem;
@@ -1098,7 +1099,7 @@ main {
   .credit-content:link, .credit-content:visited, .credit-content:active {
     text-decoration: none;
     font-family: monospace;
-    color: var(--color-font-dk);
+    color: var(--color-font-dk2);
     letter-spacing: 0.2ch;
     font-size: 1.3rem;
   }
