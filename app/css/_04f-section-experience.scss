@@ -67,6 +67,9 @@
   max-width: 36.8rem;
   & li {
     font-size: 1.7rem;
+    & a:hover {
+      color: var(--color-font-accent);
+    }
   }
 }
 
