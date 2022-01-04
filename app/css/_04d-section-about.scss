@@ -7,7 +7,6 @@
 
 @media screen and(min-width:1024px) {
   .about-image img {
-    filter: sepia(100%);
     cursor: pointer;
     transition: all 0.3s linear;
     &:hover {
@@ -16,7 +15,6 @@
       -o-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1);
-      filter: sepia(0.05%);
     }
   }
 }

@@ -60,7 +60,7 @@ main {
   }
 }
 
-@media screen and(min-width:636px) {
+@media screen and(min-width:680px) {
   .section {
     padding: 0 3rem 8rem 3rem;
   }
@@ -88,6 +88,10 @@ main {
     .section {
       padding: 0 5rem 25rem 10rem;
     }
+  }
+
+  .section {
+    padding: 0 5rem 17rem 10rem;
   }
 
   .section-container {

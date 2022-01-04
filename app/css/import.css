@@ -1,5 +1,3 @@
-/* @fontface */
-/* Global variables */
 :root {
   --color-font-accent: rgb(251, 120, 32);
   --color-font-accent-dk: rgb(255, 112, 16);
@@ -410,7 +408,6 @@ input:checked + .slider:before {
   transform: translateX(18px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 30px;
 }
@@ -430,7 +427,7 @@ input:checked + .slider:before {
   margin: 2rem 0 4rem 0;
 }
 
-@media screen and (min-width: 636px) {
+@media screen and (min-width: 680px) {
   .tooltip1,
   .tooltip2,
   .tooltip3,
@@ -582,7 +579,7 @@ main {
   }
 }
 
-@media screen and (min-width: 636px) {
+@media screen and (min-width: 680px) {
   .section {
     padding: 0 3rem 8rem 3rem;
   }
@@ -616,6 +613,9 @@ main {
       padding: 0 5rem 25rem 10rem;
     }
   }
+  .section {
+    padding: 0 5rem 17rem 10rem;
+  }
   .section-container {
     margin: 0 0 0 35rem;
     padding-top: 3rem;
@@ -638,7 +638,7 @@ main {
   display: none;
 }
 
-@media screen and (min-width: 636px) {
+@media screen and (min-width: 680px) {
   .nav__mobile {
     display: none;
   }
@@ -755,7 +755,7 @@ main {
   }
 }
 
-@media screen and (min-width: 636px) {
+@media screen and (min-width: 680px) {
   .hero {
     margin: 0 auto;
     display: -webkit-box;
@@ -832,8 +832,6 @@ main {
 
 @media screen and (min-width: 1024px) {
   .about-image img {
-    -webkit-filter: sepia(100%);
-            filter: sepia(100%);
     cursor: pointer;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
@@ -841,8 +839,6 @@ main {
   .about-image img:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-    -webkit-filter: sepia(0.05%);
-            filter: sepia(0.05%);
   }
 }
 
@@ -866,7 +862,7 @@ main {
   font-size: 2rem;
 }
 
-@media screen and (min-width: 636px) {
+@media screen and (min-width: 680px) {
   .frame-logos {
     display: -ms-grid;
     display: grid;

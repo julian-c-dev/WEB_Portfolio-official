@@ -48,6 +48,6 @@ burgerFrame.addEventListener("click", () => {
   }
 });
 
-// * .frame-logos from flex-clm to grid at 636px
+// * .frame-logos from flex-clm to grid at 680px
 
 const containerLogos = document.querySelector(".frame-logos ");
