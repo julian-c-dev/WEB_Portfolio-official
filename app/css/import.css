@@ -391,16 +391,18 @@ template {
   position: absolute;
   content: "";
   height: 13px;
-  width: 13px;
+  width: 12px;
   left: 5px;
   bottom: 3.5px;
-  background-color: var(--color-light);
+  background: #aaaaaa;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #aaaaaa), color-stop(50%, #fafafa));
+  background: linear-gradient(90deg, #aaaaaa 50%, #fafafa 50%);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: var(--color-font-dk);
+  background-color: var(--color-font-lg);
 }
 
 input:checked + .slider:before {
@@ -636,10 +638,6 @@ main {
   display: none;
 }
 
-.nav__desktop-bg2 {
-  display: none;
-}
-
 @media screen and (min-width: 636px) {
   .nav__mobile {
     display: none;
@@ -650,13 +648,6 @@ main {
     display: -ms-flexbox;
     display: flex;
     padding: 0 3rem 3rem 3rem;
-  }
-  .nav__desktop-bg2 {
-    background-color: var(--color-bg2-lg);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 1.5rem;
   }
   .nav__desktop .nav__links {
     counter-reset: section;

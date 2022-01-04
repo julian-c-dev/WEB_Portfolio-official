@@ -31,16 +31,21 @@
   position: absolute;
   content: "";
   height: 13px;
-  width: 13px;
+  width: 12px;
   left: 5px;
   bottom: 3.5px;
-  background-color: var(--color-light);
+  background: rgb(170, 170, 170);
+  background: linear-gradient(
+    90deg,
+    rgba(170, 170, 170, 1) 50%,
+    rgba(250, 250, 250, 1) 50%
+  );
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: var(--color-font-dk);
+  background-color: var(--color-font-lg);
 }
 
 input:checked + .slider:before {
