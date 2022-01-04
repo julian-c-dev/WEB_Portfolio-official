@@ -476,6 +476,11 @@ html {
   scroll-behavior: smooth;
 }
 
+ul,
+li {
+  list-style-type: none;
+}
+
 th {
   text-align: end;
 }
@@ -887,11 +892,7 @@ main {
 }
 
 @media screen and (min-width: 1200px) {
-  .skills-title {
-    margin-left: 3.5rem;
-  }
   .frame-logos {
-    margin: 0 5rem 15rem 25rem;
     gap: 3rem 15rem;
   }
 }
@@ -987,14 +988,27 @@ main {
           transform: translateX(-50px);
 }
 
-.card-sub-tech {
+.card-sub-tech,
+.card-sub-icon {
   list-style-type: none;
+}
+
+.card-sub-tech li,
+.card-sub-icon li {
+  font-size: 1.5rem;
+  margin: 0 2rem 0 0;
+}
+
+.card-sub-tech {
   padding-left: 2rem;
 }
 
-.card-sub-tech li {
-  font-size: 1.5rem;
-  margin: 0 2rem 0 0;
+.card-sub-icon {
+  max-width: 36.8rem;
+}
+
+.card-sub-icon li {
+  font-size: 1.7rem;
 }
 
 @media screen and (min-width: 708px) {
@@ -1004,11 +1018,8 @@ main {
 }
 
 @media screen and (min-width: 1200px) {
-  .exp-title {
-    margin-left: 7.5rem;
-  }
   .exp-content {
-    margin: 2rem 0 2rem 20rem;
+    margin: 4rem 0 2rem 8rem;
   }
 }
 
@@ -1029,6 +1040,64 @@ main {
 
 .btn:hover {
   background-color: var(--color-font-accent-lg);
+}
+
+.credit-r_side,
+.credit-l_side {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  position: fixed;
+  right: 7rem;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+.credit-r_side::after,
+.credit-l_side::after {
+  border-right: 2px solid var(--color-font-dk);
+  height: 90px;
+  content: "";
+  margin: 2rem 1rem 0 1rem;
+  opacity: 0.5;
+}
+
+.credit-l_side {
+  right: inherit;
+  left: 6rem;
+}
+
+.credit-content:link, .credit-content:visited, .credit-content:active {
+  text-decoration: none;
+  font-family: monospace;
+  color: var(--color-font-dk);
+  letter-spacing: 0.2ch;
+  font-size: 1.3rem;
+}
+
+.credit-content:hover {
+  color: var(--color-font-accent-dk);
+}
+
+.fa-github-square,
+.fa-linkedin,
+.fa-js,
+.fa-phone-square {
+  font-size: 2.5rem;
+  margin: 1rem 0;
 }
 
 .burger__frame {

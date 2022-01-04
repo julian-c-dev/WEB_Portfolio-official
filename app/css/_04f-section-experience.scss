@@ -50,12 +50,23 @@
   transform: translateX(-50px);
 }
 
-.card-sub-tech {
+.card-sub-tech,
+.card-sub-icon {
   list-style-type: none;
-  padding-left: 2rem;
   & li {
     font-size: 1.5rem;
     margin: 0 2rem 0 0;
+  }
+}
+
+.card-sub-tech {
+  padding-left: 2rem;
+}
+
+.card-sub-icon {
+  max-width: 36.8rem;
+  & li {
+    font-size: 1.7rem;
   }
 }
 
@@ -69,10 +80,7 @@
 }
 
 @media screen and(min-width: 1200px) {
-  .exp-title {
-    margin-left: 7.5rem;
-  }
   .exp-content {
-    margin: 2rem 0 2rem 20rem;
+    margin: 4rem 0 2rem 8rem;
   }
 }
