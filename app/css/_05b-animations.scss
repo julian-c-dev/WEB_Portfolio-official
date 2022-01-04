@@ -71,3 +71,22 @@
     transform: rotateY(360deg);
   }
 }
+
+// & zoom effect over img (section About)
+/*
+.zoom {
+  overflow: hidden;
+  padding: 0;
+}
+
+.zoom img {
+  transition: all ease-in-out;
+  transition-duration: 0.5s;
+  margin: 0 auto;
+  display: block;
+}
+.zoom img:hover {
+  transform: scale(1.1);
+  z-index: 0;
+  cursor: pointer;
+}*/

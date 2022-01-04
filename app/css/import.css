@@ -1185,6 +1185,23 @@ main {
   }
 }
 
+/*
+.zoom {
+  overflow: hidden;
+  padding: 0;
+}
+
+.zoom img {
+  transition: all ease-in-out;
+  transition-duration: 0.5s;
+  margin: 0 auto;
+  display: block;
+}
+.zoom img:hover {
+  transform: scale(1.1);
+  z-index: 0;
+  cursor: pointer;
+}*/
 .light {
   background: var(--color-bg-lg);
   color: var(--color-font-lg);
