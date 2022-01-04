@@ -8,9 +8,6 @@
 
 .nav__desktop {
   display: none;
-  &-bg2 {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 636px) {
@@ -21,11 +18,7 @@
     background-color: var(--color-bg-lg);
     display: flex;
     padding: 0 3rem 3rem 3rem;
-    &-bg2 {
-      background-color: var(--color-bg2-lg);
-      display: flex;
-      font-size: 1.5rem;
-    }
+
     .nav__links {
       counter-reset: section;
       font-size: 1.5rem;
