@@ -32,7 +32,7 @@ main {
   &::after {
     border-bottom: 1px solid var(--color-font-accent-dk);
     opacity: 0.3;
-    width: 150px;
+    width: 90px;
     content: "";
     margin-left: 1rem;
   }
@@ -57,6 +57,11 @@ main {
   }
   .section-content > p {
     font-size: 1.8rem;
+  }
+  .section-heading {
+    &::after {
+      width: 150px;
+    }
   }
 }
 
