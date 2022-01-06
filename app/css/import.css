@@ -475,7 +475,8 @@ input:checked + .slider:before {
 }
 
 .dropdown-content {
-  margin: -3.6rem 0 0 7rem;
+  margin: -3.7rem 0 0 7rem;
+  border: 2px solid var(--color-font-accent);
   display: none;
   position: absolute;
   border-radius: 10px;
@@ -1093,6 +1094,10 @@ main {
 }
 
 @media screen and (min-width: 500px) {
+  .exp-content {
+    margin-top: 5rem;
+    gap: 3rem;
+  }
   .card-description {
     font-size: 1.6rem;
     padding-bottom: 1rem;
@@ -1126,14 +1131,18 @@ main {
 }
 
 @media screen and (min-width: 1200px) {
+  .exp-content {
+    gap: 15rem;
+  }
   .card {
-    margin: 6rem 0 0 -5rem;
+    padding: 2rem 0 3rem 0;
+    margin: 0;
     background-color: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
     width: 100rem;
-    height: 50rem;
-    border-radius: 10px;
+    height: 35rem;
+    border-radius: 0;
     position: relative;
     z-index: 1;
   }
@@ -1214,6 +1223,29 @@ main {
   .fa-github:hover,
   .fa-globe:hover {
     color: var(--color-font-accent);
+  }
+  .reversed .card-img {
+    right: initial;
+    left: 0;
+    top: 0;
+  }
+  .reversed .card-role,
+  .reversed .card-overtitle,
+  .reversed .card-title {
+    margin: 1rem 0rem 1rem 65rem;
+  }
+  .reversed .card-role {
+    margin-top: -1.5rem;
+  }
+  .reversed .card-description {
+    margin-left: 45rem;
+  }
+  .reversed .card-img:hover + .card-description {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  .reversed .card-sub-tech {
+    margin-left: 65rem;
   }
 }
 

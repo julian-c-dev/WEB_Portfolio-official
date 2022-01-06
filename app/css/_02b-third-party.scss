@@ -112,7 +112,9 @@ input:checked + .slider:before {
   }
 }
 
-// drop-down menu for Exp section
+// * drop-down menu   (Exp section)
+// ! got it from w3school (I modified it)
+
 .dropbtn {
   background-color: transparent;
   color: var(--color-font-accent);
@@ -126,7 +128,8 @@ input:checked + .slider:before {
 }
 
 .dropdown-content {
-  margin: -3.6rem 0 0 7rem;
+  margin: -3.7rem 0 0 7rem;
+  border: 2px solid var(--color-font-accent);
   display: none;
   position: absolute;
   border-radius: 10px;
