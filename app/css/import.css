@@ -1191,7 +1191,20 @@ main {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .job-swiper-frame {
+    margin: 0 0 0 -10rem;
+  }
+}
+
 @media screen and (min-width: 700px) {
+  .swiper {
+    width: 80rem;
+    height: 100%;
+  }
+  .job-swiper-frame {
+    margin: 0 0 0 -18rem;
+  }
   .job-overtitle {
     font-size: 1.9rem;
     font-weight: 600;
@@ -1204,6 +1217,31 @@ main {
   }
   .job-sub-tech {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 868px) {
+  .swiper {
+    width: 80rem;
+    height: 100%;
+  }
+  .job-swiper-frame {
+    margin: 0 0 0 -22rem;
+  }
+  .job {
+    width: 50rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .job-swiper-frame {
+    margin: 0 0 0 -24rem;
+  }
+}
+
+@media screen and (min-width: 1138px) {
+  .job-swiper-frame {
+    margin: 0 0 0 -28rem;
   }
 }
 
