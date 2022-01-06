@@ -998,12 +998,12 @@ main {
           align-items: center;
 }
 
-.card,
-.card-description {
+.job,
+.job-description {
   white-space: initial;
 }
 
-.card {
+.job {
   margin: 0;
   background-color: var(--color-dark-slate);
   padding: 1rem;
@@ -1012,41 +1012,41 @@ main {
           box-shadow: 2px 2px 15px var(--color-light-slate);
 }
 
-.card-overtitle,
-.card-sub-tech {
+.job-overtitle,
+.job-sub-tech {
   font-family: monospace;
   color: var(--color-font-accent);
 }
 
-.card-overtitle {
+.job-overtitle {
   font-size: 1.7rem;
 }
 
-.card-title,
-.card-role {
+.job-title,
+.job-role {
   font-size: 2.2rem;
   margin-top: 0;
 }
 
-.card-img {
+.job-img {
   margin: 0 auto;
 }
 
-.card-img img {
+.job-img img {
   width: 100%;
   border-radius: 15px;
   -webkit-filter: sepia(50%);
           filter: sepia(50%);
 }
 
-.card-description {
+.job-description {
   margin: 1rem 0;
   font-size: 3.5vw;
   width: 90%;
 }
 
-.card-sub-tech,
-.card-sub-icon {
+.job-sub-tech,
+.job-sub-icon {
   padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1057,38 +1057,38 @@ main {
           flex-flow: row wrap;
 }
 
-.card-sub-tech {
+.job-sub-tech {
   font-size: 1rem;
   margin: 0;
 }
 
-.card-sub-tech li {
+.job-sub-tech li {
   margin-right: 1rem;
 }
 
-.card-sub-icon {
+.job-sub-icon {
   font-size: 1.5rem;
   margin: 0;
 }
 
-.card-sub-icon li {
+.job-sub-icon li {
   margin: 1rem 1rem 0.5rem 0;
 }
 
 @media screen and (min-width: 360px) {
-  .card {
+  .job {
     padding: 2rem;
   }
-  .card-description {
+  .job-description {
     width: 95%;
   }
-  .card-sub-tech {
+  .job-sub-tech {
     font-size: 1.5rem;
   }
-  .card-sub-icon {
+  .job-sub-icon {
     font-size: 1.8rem;
   }
-  .card-sub-icon li {
+  .job-sub-icon li {
     margin: 1rem 1.5rem 0.5rem 0;
   }
 }
@@ -1098,28 +1098,28 @@ main {
     margin-top: 5rem;
     gap: 3rem;
   }
-  .card-description {
+  .job-description {
     font-size: 1.6rem;
     padding-bottom: 1rem;
     width: 98%;
   }
-  .card-sub-tech {
+  .job-sub-tech {
     font-size: 1.6rem;
   }
 }
 
 @media screen and (min-width: 680px) {
-  .card-overtitle {
+  .job-overtitle {
     font-size: 1.9rem;
     font-weight: 600;
   }
-  .card-title {
+  .job-title {
     font-size: 2.5rem;
   }
-  .card-description {
+  .job-description {
     font-size: 1.7rem;
   }
-  .card-sub-tech {
+  .job-sub-tech {
     font-size: 1.6rem;
   }
 }
@@ -1134,7 +1134,7 @@ main {
   .exp-content {
     gap: 15rem;
   }
-  .card {
+  .job {
     padding: 2rem 0 3rem 0;
     margin: 0;
     background-color: transparent;
@@ -1146,21 +1146,21 @@ main {
     position: relative;
     z-index: 1;
   }
-  .card-overtitle,
-  .card-sub-tech {
+  .job-overtitle,
+  .job-sub-tech {
     font-family: monospace;
     font-size: 1.7rem;
     color: var(--color-font-accent);
   }
-  .card-role,
-  .card-overtitle,
-  .card-title {
+  .job-role,
+  .job-overtitle,
+  .job-title {
     margin: 1rem 0 1rem 15rem;
   }
-  .card-role {
+  .job-role {
     margin: -2rem 0 0 15rem;
   }
-  .card-description {
+  .job-description {
     background-color: var(--color-dark-slate);
     padding: 2rem;
     width: 50rem;
@@ -1172,7 +1172,7 @@ main {
     -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
   }
-  .card-img {
+  .job-img {
     cursor: pointer;
     position: absolute;
     right: 0;
@@ -1180,71 +1180,71 @@ main {
     width: 580px;
     z-index: -1;
   }
-  .card-img img {
+  .job-img img {
     border-radius: 15px;
     -webkit-filter: blur(0.3px) grayscale(100%) contrast(1) brightness(90%) sepia(100%);
             filter: blur(0.3px) grayscale(100%) contrast(1) brightness(90%) sepia(100%);
     -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
   }
-  .card-img img:hover {
+  .job-img img:hover {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
     -webkit-filter: initial;
             filter: initial;
   }
-  .card-img:hover + .card-description {
+  .job-img:hover + .job-description {
     -webkit-transform: translateX(-50px);
             transform: translateX(-50px);
   }
-  .card-sub-tech,
-  .card-sub-icon {
+  .job-sub-tech,
+  .job-sub-icon {
     list-style-type: none;
   }
-  .card-sub-tech li,
-  .card-sub-icon li {
+  .job-sub-tech li,
+  .job-sub-icon li {
     font-size: 1.5rem;
     margin: 0 2rem 0 0;
   }
-  .card-sub-tech {
+  .job-sub-tech {
     padding-right: 2rem;
     margin-left: 2rem;
   }
-  .card-sub-icon {
+  .job-sub-icon {
     max-width: 36.7rem;
     margin-top: 1rem;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .card-sub-icon li {
+  .job-sub-icon li {
     font-size: 1.9rem;
   }
   .fa-github:hover,
   .fa-globe:hover {
     color: var(--color-font-accent);
   }
-  .reversed .card-img {
+  .reversed .job-img {
     right: initial;
     left: 0;
     top: 0;
   }
-  .reversed .card-role,
-  .reversed .card-overtitle,
-  .reversed .card-title {
+  .reversed .job-role,
+  .reversed .job-overtitle,
+  .reversed .job-title {
     margin: 1rem 0rem 1rem 65rem;
   }
-  .reversed .card-role {
+  .reversed .job-role {
     margin-top: -1.5rem;
   }
-  .reversed .card-description {
+  .reversed .job-description {
     margin-left: 45rem;
   }
-  .reversed .card-img:hover + .card-description {
+  .reversed .job-img:hover + .job-description {
     -webkit-transform: translateX(50px);
             transform: translateX(50px);
   }
-  .reversed .card-sub-tech {
+  .reversed .job-sub-tech {
     margin-left: 65rem;
   }
 }

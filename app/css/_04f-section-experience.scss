@@ -10,12 +10,12 @@
   align-items: center;
 }
 
-.card,
-.card-description {
+.job,
+.job-description {
   white-space: initial;
 }
 
-.card {
+.job {
   margin: 0;
   background-color: var(--color-dark-slate);
   padding: 1rem;
@@ -23,20 +23,20 @@
   box-shadow: 2px 2px 15px var(--color-light-slate);
 }
 
-.card-overtitle,
-.card-sub-tech {
+.job-overtitle,
+.job-sub-tech {
   font-family: monospace;
   color: var(--color-font-accent);
 }
-.card-overtitle {
+.job-overtitle {
   font-size: 1.7rem;
 }
-.card-title,
-.card-role {
+.job-title,
+.job-role {
   font-size: 2.2rem;
   margin-top: 0;
 }
-.card-img {
+.job-img {
   margin: 0 auto;
   & img {
     width: 100%;
@@ -45,25 +45,25 @@
   }
 }
 
-.card-description {
+.job-description {
   margin: 1rem 0;
   font-size: 3.5vw;
   width: 90%;
 }
-.card-sub-tech,
-.card-sub-icon {
+.job-sub-tech,
+.job-sub-icon {
   padding-left: 0;
   display: flex;
   flex-flow: row wrap;
 }
-.card-sub-tech {
+.job-sub-tech {
   font-size: 1rem;
   margin: 0;
   & li {
     margin-right: 1rem;
   }
 }
-.card-sub-icon {
+.job-sub-icon {
   font-size: 1.5rem;
   margin: 0;
   & li {
@@ -72,17 +72,17 @@
 }
 
 @media screen and(min-width:360px) {
-  .card {
+  .job {
     padding: 2rem;
   }
-  .card-description {
+  .job-description {
     width: 95%;
   }
 
-  .card-sub-tech {
+  .job-sub-tech {
     font-size: 1.5rem;
   }
-  .card-sub-icon {
+  .job-sub-icon {
     font-size: 1.8rem;
     & li {
       margin: 1rem 1.5rem 0.5rem 0;
@@ -96,28 +96,28 @@
     gap: 3rem;
   }
 
-  .card-description {
+  .job-description {
     font-size: 1.6rem;
     padding-bottom: 1rem;
     width: 98%;
   }
-  .card-sub-tech {
+  .job-sub-tech {
     font-size: 1.6rem;
   }
 }
 
 @media screen and(min-width:680px) {
-  .card-overtitle {
+  .job-overtitle {
     font-size: 1.9rem;
     font-weight: 600;
   }
-  .card-title {
+  .job-title {
     font-size: 2.5rem;
   }
-  .card-description {
+  .job-description {
     font-size: 1.7rem;
   }
-  .card-sub-tech {
+  .job-sub-tech {
     font-size: 1.6rem;
   }
 }
@@ -132,7 +132,7 @@
   .exp-content {
     gap: 15rem;
   }
-  .card {
+  .job {
     padding: 2rem 0 3rem 0;
     margin: 0;
     background-color: transparent;
@@ -144,23 +144,23 @@
     z-index: 1;
   }
 
-  .card-overtitle,
-  .card-sub-tech {
+  .job-overtitle,
+  .job-sub-tech {
     font-family: monospace;
     font-size: 1.7rem;
     color: var(--color-font-accent);
   }
 
-  .card-role,
-  .card-overtitle,
-  .card-title {
+  .job-role,
+  .job-overtitle,
+  .job-title {
     margin: 1rem 0 1rem 15rem;
   }
-  .card-role {
+  .job-role {
     margin: -2rem 0 0 15rem;
   }
 
-  .card-description {
+  .job-description {
     background-color: var(--color-dark-slate);
     padding: 2rem;
     width: 50rem;
@@ -172,7 +172,7 @@
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
   }
 
-  .card-img {
+  .job-img {
     cursor: pointer;
     position: absolute;
     right: 0;
@@ -190,12 +190,12 @@
       }
     }
   }
-  .card-img:hover + .card-description {
+  .job-img:hover + .job-description {
     transform: translateX(-50px);
   }
 
-  .card-sub-tech,
-  .card-sub-icon {
+  .job-sub-tech,
+  .job-sub-icon {
     list-style-type: none;
     & li {
       font-size: 1.5rem;
@@ -203,12 +203,12 @@
     }
   }
 
-  .card-sub-tech {
+  .job-sub-tech {
     padding-right: 2rem;
     margin-left: 2rem;
   }
 
-  .card-sub-icon {
+  .job-sub-icon {
     max-width: 36.7rem;
     margin-top: 1rem;
     justify-content: flex-end;
@@ -222,29 +222,29 @@
   }
 
   .reversed {
-    .card-img {
+    .job-img {
       right: initial;
       left: 0;
       top: 0;
     }
 
-    .card-role,
-    .card-overtitle,
-    .card-title {
+    .job-role,
+    .job-overtitle,
+    .job-title {
       margin: 1rem 0rem 1rem 65rem;
     }
-    .card-role {
+    .job-role {
       margin-top: -1.5rem;
     }
-    .card-description {
+    .job-description {
       margin-left: 45rem;
     }
 
-    .card-img:hover + .card-description {
+    .job-img:hover + .job-description {
       transform: translateX(50px);
     }
 
-    .card-sub-tech {
+    .job-sub-tech {
       margin-left: 65rem;
     }
   }
