@@ -16,3 +16,10 @@ function themeEvent() {
     section[i].classList.toggle("dark");
   }
 }
+
+// & REMOVE CLASSES after 1200px
+const swiper1 = document.querySelector(".job-swiper-frame");
+const swiper2 = document.querySelector(".swiper");
+const swiper3 = document.querySelectorAll(".mySwiper");
+const swiper4 = document.querySelector(".swiper-wrapper");
+const swiper5 = document.querySelector(".swiper-slide");

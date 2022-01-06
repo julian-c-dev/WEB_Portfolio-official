@@ -15,6 +15,10 @@
       src="https://kit.fontawesome.com/804d1be908.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/app/css/import.css" />
   </head>
   <body>
@@ -487,76 +491,84 @@
       <section id="sec_Experience" class="section light dark">
         <div class="section-container">
           <h2 class="section-heading flex exp-title">Experience</h2>
-          <div class="dropdown btn">
-            <button class="dropbtn">Select:</button>
-            <div class="dropdown-content">
-              <a href="#">IT Jobs</a>
-              <a href="#">Dev Practices</a>
+          <h3 class="section-exp_subHeading">IT Jobs:</h3>
+
+          <div class="exp-content">
+            <div class="job-swiper-frame">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <article class="job swiper-slide">
+                    <p class="job-role">Web Developer Role</p>
+                    <p class="job-overtitle">Sep - Dec <time>2021</time></p>
+                    <h3 class="job-title">Blubale Website</h3>
+                    <a
+                      class="job-img"
+                      href="https://blubale.com/"
+                      target="_blank"
+                    >
+                      <img
+                        src="/images/blubale-screenshot.webp"
+                        alt="Blubale screenshot"
+                      />
+                    </a>
+                    <div class="job-description">
+                      My first job as a professional Web Developer was to build
+                      a landing page from scratch based on a Figma design
+                      provided by the client. It was a freelance project.
+                    </div>
+                    <ul class="job-sub-tech">
+                      <li>HTML5</li>
+                      <li>CSS/Sass</li>
+                      <li>JS(ES6)</li>
+                      <li>VS-Code</li>
+                      <li>Git</li>
+                    </ul>
+                    <ul class="job-sub-icon">
+                      <li>
+                        <a
+                          href="https://github.com/julian-c-dev/WEB_Blubale_backup"
+                          target="_blank"
+                          ><i class="fab fa-github"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="https://blubale.com/" target="_blank"
+                          ><i class="fas fa-globe"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </article>
+                  <article class="job swiper-slide reversed">
+                    <p class="job-role">QA Tester Role</p>
+                    <p class="job-overtitle">
+                      Oct <time>2018</time> - Apr <time>2019</time>
+                    </p>
+                    <h3 class="job-title">Amelco Ltd.</h3>
+                    <a
+                      class="job-img"
+                      href="https://www.amelco.co.uk/en/"
+                      target="_blank"
+                    >
+                      <img src="/images/amelco-sreenshot.webp" />
+                    </a>
+                    <div class="job-description">
+                      My first experience working as part of an Agile
+                      development team involved manual testing on multiple
+                      devices and browsers. I had to apply my technical skills
+                      to a variety of scenarios.
+                    </div>
+                    <ul class="job-sub-tech">
+                      <li>Jira</li>
+                      <li>Browsers dev-tools</li>
+                      <li>PhpMyAdmin</li>
+                    </ul>
+                  </article>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="exp-content">
-            <article class="job">
-              <p class="job-role">Web Developer Role</p>
-              <p class="job-overtitle">Sep - Dec <time>2021</time></p>
-              <h3 class="job-title">Blubale Website</h3>
-              <a class="job-img" href="https://blubale.com/" target="_blank">
-                <img
-                  src="/images/blubale-screenshot.webp"
-                  alt="Blubale screenshot"
-                />
-              </a>
-              <div class="job-description">
-                My first job as a professional Web Developer was to build a
-                landing page from scratch based on a Figma design provided by
-                the client. It was a freelance project.
-              </div>
-              <ul class="job-sub-tech">
-                <li>HTML5</li>
-                <li>CSS/Sass</li>
-                <li>JS(ES6)</li>
-                <li>VS-Code</li>
-                <li>Git</li>
-              </ul>
-              <ul class="job-sub-icon">
-                <li>
-                  <a
-                    href="https://github.com/julian-c-dev/WEB_Blubale_backup"
-                    target="_blank"
-                    ><i class="fab fa-github"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://blubale.com/" target="_blank"
-                    ><i class="fas fa-globe"></i
-                  ></a>
-                </li>
-              </ul>
-            </article>
-            <article class="job reversed">
-              <p class="job-role">QA Tester Role</p>
-              <p class="job-overtitle">
-                Oct <time>2018</time> - Apr <time>2019</time>
-              </p>
-              <h3 class="job-title">Amelco Ltd.</h3>
-              <a
-                class="job-img"
-                href="https://www.amelco.co.uk/en/"
-                target="_blank"
-              >
-                <img src="/images/amelco-sreenshot.webp" />
-              </a>
-              <div class="job-description">
-                My first experience working as part of an Agile development team
-                involved manual testing on multiple devices and browsers. I had
-                to apply my technical skills to a variety of scenarios.
-              </div>
-              <ul class="job-sub-tech">
-                <li>Jira</li>
-                <li>Browsers dev-tools</li>
-                <li>PhpMyAdmin</li>
-              </ul>
-            </article>
-          </div>
+
+          <h3 class="section-exp_subHeading">Dev Practices</h3>
         </div>
       </section>
     </main>
@@ -564,5 +576,97 @@
 
     <script src="/app/js/main.js"></script>
     <script src="/app/js/functions.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+        },
+      });
+    </script>
   </body>
 </html>
+
+<!--<div class="job-swiper-frame">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card_sliderText">
+                      <h3>Slide One</h3>
+                    </div>
+                    <div class="card_content">
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Minima totam odio quo incidunt porro. Quas neque
+                        dignissimos et laudantium placeat voluptate ipsa
+                      </p>
+                      <a href="#" class="btn">Read More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card_sliderText">
+                      <h3>Slide Two</h3>
+                    </div>
+                    <div class="card_content">
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Minima totam odio quo incidunt porro. Quas neque
+                        dignissimos et laudantium placeat voluptate ipsa
+                      </p>
+                      <a href="#" class="btn">Read More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card_sliderText">
+                      <h3>Slide Three</h3>
+                    </div>
+                    <div class="card_content">
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Minima totam odio quo incidunt porro. Quas neque
+                        dignissimos et laudantium placeat voluptate ipsa
+                      </p>
+                      <a href="#" class="btn">Read More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card_sliderText">
+                      <h3>Slide Four</h3>
+                    </div>
+                    <div class="card_content">
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Minima totam odio quo incidunt porro. Quas neque
+                        dignissimos et laudantium placeat voluptate ipsa
+                      </p>
+                      <a href="#" class="btn">Read More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>-->

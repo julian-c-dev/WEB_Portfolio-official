@@ -5,9 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/app/css/import.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
-    .job
+    <div class="playground">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card_sliderText">
+                <h3>Slide One</h3>
+              </div>
+              <div class="card_content">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Minima totam odio quo incidunt porro. Quas neque dignissimos
+                  et laudantium placeat voluptate ipsa eligendi ducimus quos
+                  eius voluptatem omnis esse, repellat perferendis doloremque
+                  consequuntur quam veniam dolor nesciunt ratione, sit
+                  reprehenderit.
+                </p>
+                <a href="#" class="btn">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card_sliderText">
+                <h3>Slide Two</h3>
+              </div>
+              <div class="card_content">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Minima totam odio quo incidunt porro. Quas neque dignissimos
+                  et laudantium placeat voluptate ipsa eligendi ducimus quos
+                  eius voluptatem omnis esse, repellat perferendis doloremque
+                  consequuntur quam veniam dolor nesciunt ratione, sit
+                  reprehenderit.
+                </p>
+                <a href="#" class="btn">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card_sliderText">
+                <h3>Slide Three</h3>
+              </div>
+              <div class="card_content">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Minima totam odio quo incidunt porro. Quas neque dignissimos
+                  et laudantium placeat voluptate ipsa eligendi ducimus quos
+                  eius voluptatem omnis esse, repellat perferendis doloremque
+                  consequuntur quam veniam dolor nesciunt ratione, sit
+                  reprehenderit.
+                </p>
+                <a href="#" class="btn">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card_sliderText">
+                <h3>Slide Four</h3>
+              </div>
+              <div class="card_content">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Minima totam odio quo incidunt porro. Quas neque dignissimos
+                  et laudantium placeat voluptate ipsa eligendi ducimus quos
+                  eius voluptatem omnis esse, repellat perferendis doloremque
+                  consequuntur quam veniam dolor nesciunt ratione, sit
+                  reprehenderit.
+                </p>
+                <a href="#" class="btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
