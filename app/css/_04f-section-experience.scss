@@ -31,7 +31,8 @@
 .card-overtitle {
   font-size: 1.7rem;
 }
-.card-title {
+.card-title,
+.card-role {
   font-size: 2.2rem;
   margin-top: 0;
 }
@@ -91,7 +92,8 @@
 
 @media screen and(min-width:500px) {
   .card-description {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
     width: 98%;
   }
   .card-sub-tech {
@@ -108,7 +110,7 @@
     font-size: 2.5rem;
   }
   .card-description {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
   .card-sub-tech {
     font-size: 1.6rem;
@@ -124,11 +126,10 @@
 @media screen and(min-width: 1200px) {
   .card {
     margin: 6rem 0 0 -5rem;
-
     background-color: transparent;
     box-shadow: none;
     width: 100rem;
-    height: 40rem;
+    height: 50rem;
     border-radius: 10px;
     position: relative;
     z-index: 1;
@@ -141,9 +142,13 @@
     color: var(--color-font-accent);
   }
 
+  .card-role,
   .card-overtitle,
   .card-title {
     margin: 1rem 0 1rem 15rem;
+  }
+  .card-role {
+    margin: -2rem 0 0 15rem;
   }
 
   .card-description {
@@ -160,11 +165,10 @@
 
   .card-img {
     cursor: pointer;
-    height: 300px;
     position: absolute;
     right: 0;
     top: 0;
-    width: 560px;
+    width: 580px;
     z-index: -1;
     & img {
       border-radius: 15px;
