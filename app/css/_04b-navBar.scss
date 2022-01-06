@@ -6,13 +6,19 @@
   padding: 3rem 4rem 5rem 3rem;
 }
 
-.nav__desktop {
+.nav__desktop,
+.fa-lightbulb {
   display: none;
 }
 
 @media screen and (min-width: 680px) {
   .nav__mobile {
     display: none;
+  }
+  .fa-lightbulb {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0 0 0 1.5rem;
   }
   .nav__desktop {
     background-color: var(--color-bg-lg);
