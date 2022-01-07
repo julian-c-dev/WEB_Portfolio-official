@@ -657,7 +657,7 @@ main {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   .section {
     padding: 0 5rem 17rem 10rem;
   }
@@ -872,7 +872,7 @@ main {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   .hero {
     margin: 0 0 0 30rem;
   }
@@ -934,7 +934,7 @@ main {
         -ms-flex-align: start;
             align-items: flex-start;
     cursor: pointer;
-    gap: 4rem 11rem;
+    gap: 4rem 10rem;
   }
   .frame-logos .frame-logo > p {
     font-size: 2.2rem;
@@ -947,7 +947,7 @@ main {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   .frame-logos {
     gap: 3rem 15rem;
   }
@@ -1209,7 +1209,7 @@ main {
     height: 100%;
   }
   .job-swiper-frame {
-    margin: 0 0 0 -18rem;
+    margin: 0 0 0 -20rem;
   }
   .job-overtitle {
     font-size: 1.9rem;
@@ -1232,7 +1232,7 @@ main {
     height: 100%;
   }
   .job-swiper-frame {
-    margin: 0 0 0 -22rem;
+    margin: 0 0 0 -24rem;
   }
   .job {
     width: 50rem;
@@ -1241,17 +1241,17 @@ main {
 
 @media screen and (min-width: 990px) {
   .job-swiper-frame {
-    margin: 0 0 0 -24rem;
+    margin: 0 0 0 -26rem;
   }
 }
 
 @media screen and (min-width: 1138px) {
   .job-swiper-frame {
-    margin: 0 0 0 -28rem;
+    margin: 0 0 0 -30rem;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   .exp-content {
     gap: 15rem;
   }
@@ -1427,6 +1427,7 @@ main {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
+  text-decoration: none;
   margin: 2rem 0;
   max-width: 300px;
   padding: 1.3rem;

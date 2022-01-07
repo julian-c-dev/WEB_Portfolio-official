@@ -17,7 +17,7 @@ function themeEvent() {
   }
 }
 
-// & REMOVE CLASSES after 1200px (Exp section, normal => slider cards)
+// & REMOVE CLASSES after 1250px (Exp section, normal => slider cards)
 const swiper1 = document.querySelector(".swiper1");
 const swiper2 = document.querySelector(".swiper2");
 const swiper3 = document.querySelector(".swiper3");
@@ -25,7 +25,7 @@ const swiper4 = document.querySelector(".swiper4");
 let swiper = null;
 
 window.onload = function () {
-  if (window.screen.width >= 1200 && window.innerWidth >= 1200) {
+  if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
     swiper1.classList.remove("job-swiper-frame");
     swiper2.classList.remove("swiper");
     swiper2.classList.remove("mySwiper");
@@ -56,7 +56,7 @@ window.onload = function () {
 
 window.addEventListener("resize", onResizeFunction);
 function onResizeFunction() {
-  if (window.screen.width >= 1200 && window.innerWidth >= 1200) {
+  if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
     swiper1.classList.remove("job-swiper-frame");
     swiper2.classList.remove("swiper");
     swiper2.classList.remove("mySwiper");

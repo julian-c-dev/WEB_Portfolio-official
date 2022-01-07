@@ -14,7 +14,7 @@
     grid-template-columns: repeat(3, 100px);
     align-items: flex-start;
     cursor: pointer;
-    gap: 4rem 11rem;
+    gap: 4rem 10rem;
 
     & .frame-logo > p {
       font-size: 2.2rem;
@@ -28,7 +28,7 @@
   }
 }
 
-@media screen and(min-width: 1200px) {
+@media screen and(min-width: 1250px) {
   .frame-logos {
     gap: 3rem 15rem;
   }
