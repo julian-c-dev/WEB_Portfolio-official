@@ -236,10 +236,11 @@
     gap: 15rem;
   }
   .job {
-    padding: 2rem 0 3rem 0;
-    margin: 0;
+    padding: 1.5rem 0 3rem 0;
+    margin: 8rem 0 10rem -10rem;
     background-color: transparent;
     box-shadow: none;
+    cursor: initial;
     width: 100rem;
     height: 35rem;
     border-radius: 0;
@@ -259,12 +260,16 @@
   .job-title {
     margin: 1rem 0 1rem 15rem;
   }
+  .job-title {
+    margin-top: 0;
+  }
   .job-role {
     margin: -2rem 0 0 15rem;
   }
 
   .job-description {
     background-color: var(--color-dark-slate);
+    margin-top: 0.5rem;
     padding: 2rem;
     width: 50rem;
     font-size: 1.5rem;
@@ -336,11 +341,15 @@
     .job-title {
       margin: 1rem 0rem 1rem 65rem;
     }
+    .job-title {
+      margin-top: 0;
+    }
     .job-role {
       margin-top: -1.5rem;
+      margin-bottom: 0;
     }
     .job-description {
-      margin-left: 45rem;
+      margin-left: 50rem;
     }
 
     .job-img:hover + .job-description {

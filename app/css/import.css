@@ -669,7 +669,7 @@ main {
   .section-container {
     margin: 0 auto;
     padding-top: 3rem;
-    max-width: 85rem;
+    max-width: 90rem;
   }
   .section-heading {
     margin-top: 5rem;
@@ -1250,11 +1250,12 @@ main {
     gap: 15rem;
   }
   .job {
-    padding: 2rem 0 3rem 0;
-    margin: 0;
+    padding: 1.5rem 0 3rem 0;
+    margin: 8rem 0 10rem -10rem;
     background-color: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
+    cursor: initial;
     width: 100rem;
     height: 35rem;
     border-radius: 0;
@@ -1272,11 +1273,15 @@ main {
   .job-title {
     margin: 1rem 0 1rem 15rem;
   }
+  .job-title {
+    margin-top: 0;
+  }
   .job-role {
     margin: -2rem 0 0 15rem;
   }
   .job-description {
     background-color: var(--color-dark-slate);
+    margin-top: 0.5rem;
     padding: 2rem;
     width: 50rem;
     font-size: 1.5rem;
@@ -1349,11 +1354,15 @@ main {
   .reversed .job-title {
     margin: 1rem 0rem 1rem 65rem;
   }
+  .reversed .job-title {
+    margin-top: 0;
+  }
   .reversed .job-role {
     margin-top: -1.5rem;
+    margin-bottom: 0;
   }
   .reversed .job-description {
-    margin-left: 45rem;
+    margin-left: 50rem;
   }
   .reversed .job-img:hover + .job-description {
     -webkit-transform: translateX(50px);
