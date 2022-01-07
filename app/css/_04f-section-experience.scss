@@ -248,6 +248,15 @@
     z-index: 1;
   }
 
+  // ! just for mozilla
+  @-moz-document url-prefix() {
+    .job {
+      padding: 1.5rem 0 3rem 0;
+      margin: 8rem 0 10rem -5rem;
+    }
+  }
+  // ! ----------------
+
   .job-overtitle,
   .job-sub-tech {
     font-family: monospace;

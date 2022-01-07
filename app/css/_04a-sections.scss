@@ -89,12 +89,6 @@ main {
 }
 
 @media screen and(min-width:1200px) {
-  @-moz-document url-prefix() {
-    .section {
-      padding: 0 5rem 25rem 10rem;
-    }
-  }
-
   .section {
     padding: 0 5rem 17rem 10rem;
   }
@@ -107,5 +101,11 @@ main {
 
   .section-heading {
     margin-top: 5rem;
+  }
+  // ! just for mozilla
+  @-moz-document url-prefix() {
+    .section {
+      padding: 0 5rem 35rem 10rem;
+    }
   }
 }

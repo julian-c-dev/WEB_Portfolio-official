@@ -126,4 +126,11 @@
   .hero {
     margin: 0 0 0 30rem;
   }
+  // ! just for mozilla
+  @-moz-document url-prefix() {
+    .hero {
+      margin: 0rem 0 0 35rem;
+      padding-top: 5rem;
+    }
+  }
 }

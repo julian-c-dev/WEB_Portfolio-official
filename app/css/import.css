@@ -658,11 +658,6 @@ main {
 }
 
 @media screen and (min-width: 1200px) {
-  @-moz-document url-prefix() {
-    .section {
-      padding: 0 5rem 25rem 10rem;
-    }
-  }
   .section {
     padding: 0 5rem 17rem 10rem;
   }
@@ -673,6 +668,11 @@ main {
   }
   .section-heading {
     margin-top: 5rem;
+  }
+  @-moz-document url-prefix() {
+    .section {
+      padding: 0 5rem 35rem 10rem;
+    }
   }
 }
 
@@ -875,6 +875,12 @@ main {
 @media screen and (min-width: 1200px) {
   .hero {
     margin: 0 0 0 30rem;
+  }
+  @-moz-document url-prefix() {
+    .hero {
+      margin: 0rem 0 0 35rem;
+      padding-top: 5rem;
+    }
   }
 }
 
@@ -1261,6 +1267,12 @@ main {
     border-radius: 0;
     position: relative;
     z-index: 1;
+  }
+  @-moz-document url-prefix() {
+    .job {
+      padding: 1.5rem 0 3rem 0;
+      margin: 8rem 0 10rem -5rem;
+    }
   }
   .job-overtitle,
   .job-sub-tech {
