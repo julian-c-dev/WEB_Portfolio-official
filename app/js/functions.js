@@ -3,7 +3,6 @@ const desktopNav = document.querySelector(".nav__desktop");
 const mobileNav = document.querySelector(".nav__mobile");
 const section = document.querySelectorAll(".section");
 const title = document.querySelector(".title");
-
 const stwch_Theme = document.querySelector("#handlerTheme");
 
 stwch_Theme.addEventListener("click", themeEvent);
