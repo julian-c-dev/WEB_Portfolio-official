@@ -535,43 +535,6 @@ li {
   list-style-type: none;
 }
 
-table {
-  margin-top: 1rem;
-}
-
-th {
-  text-align: end;
-  font-weight: 400;
-}
-
-td {
-  text-align: center;
-}
-
-th,
-td {
-  padding: 0.5rem;
-  font-size: 1.2rem;
-}
-
-@media screen and (min-width: 400px) {
-  table {
-    margin-top: 2rem;
-  }
-  th {
-    text-align: end;
-    font-weight: 400;
-  }
-  td {
-    text-align: center;
-  }
-  th,
-  td {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-  }
-}
-
 main {
   counter-reset: section;
 }
@@ -1038,7 +1001,7 @@ td {
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .container-logos {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1047,29 +1010,57 @@ td {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin: 0 auto;
     gap: 4rem 2rem;
   }
   .container-logos .card-logo {
-    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
   }
   .container-logos .card-logo > h3 {
     font-size: 1.8rem;
   }
-  .frame-subTable {
-    text-align: center;
-    font-size: 1.2rem;
+  .card-logo-frame {
+    max-width: 65rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5rem;
   }
-}
-
-@media screen and (min-width: 708px) {
-  .container-logos {
-    margin: 0 auto;
+  .card-logo_clmLeft {
+    margin-top: 3.2rem;
+    font-size: 1.5rem;
   }
-}
-
-@media screen and (min-width: 1250px) {
-  .container-logos {
-    gap: 5rem 2rem;
+  .card-logo_clmLeft .selfTaugh {
+    font-weight: 300;
+    margin-bottom: -1rem;
+  }
+  .card-logo_clmLeft a {
+    font-weight: 200;
+  }
+  .card-logo_clmLeft a:hover {
+    color: var(--color-font-accent);
+  }
+  .card-logo_clmLeft ul > li > a:hover {
+    color: var(--color-font-accent);
+  }
+  .card-logo_clmLeft i {
+    color: var(--color-font-dk);
+  }
+  .card-logo_clmLeft span {
+    font-weight: 300;
+    white-space: initial;
+  }
+  .card-logo_clmLeft p,
+  .card-logo_clmLeft ul,
+  .card-logo_clmLeft li,
+  .card-logo_clmLeft a {
+    margin: 0.5rem 0;
+    white-space: initial;
+    text-decoration: none;
+  }
+  .card-logo_clmLeft ul {
+    padding: 0 0 1.5rem 2rem;
   }
 }
 
@@ -1836,8 +1827,17 @@ td {
   border-bottom: 2px dotted var(--color-accent-dk);
 }
 
+.hlgt {
+  color: var(--color-accent-dk);
+  font-weight: bold;
+}
+
 .shadow {
   text-shadow: var(--shawdow);
+}
+
+.italic {
+  font-style: italic;
 }
 
 .on {

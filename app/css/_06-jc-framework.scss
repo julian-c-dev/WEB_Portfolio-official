@@ -40,8 +40,17 @@
   border-bottom: 2px dotted var(--color-accent-dk);
 }
 
+.hlgt {
+  color: var(--color-accent-dk);
+  font-weight: bold;
+}
+
 .shadow {
   text-shadow: var(--shawdow);
+}
+
+.italic {
+  font-style: italic;
 }
 
 // & DISPLAYS:

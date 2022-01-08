@@ -86,7 +86,7 @@ function onResizeFunction() {
 
 //* Slide for Skills Section
 
-let slideIndex = 3;
+let slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {

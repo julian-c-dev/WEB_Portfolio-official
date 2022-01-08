@@ -90,36 +90,68 @@ td {
   }
 }
 
-@media screen and(min-width:700px) {
+@media screen and(min-width:800px) {
   .container-logos {
     flex-flow: row wrap;
     align-items: flex-start;
-
+    margin: 0 auto;
     gap: 4rem 2rem;
 
     & .card-logo {
-      cursor: pointer;
+      cursor: zoom-in;
       & > h3 {
         font-size: 1.8rem;
       }
     }
   }
 
-  .frame-subTable {
-    text-align: center;
-    font-size: 1.2rem;
+  .card-logo-frame {
+    max-width: 65rem;
+    display: flex;
+    gap: 5rem;
+  }
+
+  .card-logo_clmLeft {
+    margin-top: 3.2rem;
+    font-size: 1.5rem;
+    .selfTaugh {
+      font-weight: 300;
+      margin-bottom: -1rem;
+    }
+    a {
+      font-weight: 200;
+      &:hover {
+        color: var(--color-font-accent);
+      }
+    }
+
+    ul > li > a:hover {
+      color: var(--color-font-accent);
+    }
+
+    i {
+      color: var(--color-font-dk);
+    }
+    span {
+      font-weight: 300;
+      white-space: initial;
+    }
+    p,
+    ul,
+    li,
+    a {
+      margin: 0.5rem 0;
+      white-space: initial;
+      text-decoration: none;
+    }
+    ul {
+      padding: 0 0 1.5rem 2rem;
+    }
   }
 }
 
-@media screen and(min-width: 708px) {
-  .container-logos {
-    margin: 0 auto;
-  }
-}
-
-@media screen and(min-width: 1250px) {
-  .container-logos {
-    gap: 5rem 2rem;
+@media screen and(min-width:1200px) {
+  .card-logo-frame {
   }
 }
 
