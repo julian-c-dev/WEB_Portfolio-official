@@ -10,11 +10,10 @@
 
 @media screen and(min-width:700px) {
   .frame-logos {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    align-items: flex-start;
+    flex-flow: row wrap;
+    align-items: center;
     cursor: pointer;
-    gap: 4rem 10rem;
+    gap: 4rem 2rem;
 
     & .frame-logo > p {
       font-size: 2.2rem;
@@ -30,58 +29,51 @@
 
 @media screen and(min-width: 1250px) {
   .frame-logos {
-    gap: 3rem 15rem;
+    gap: 5rem 2rem;
   }
 }
 
 // * Table Colors
 
 .html-colors {
-  background: rgb(218, 73, 18);
-  background: linear-gradient(
-    90deg,
-    rgba(218, 73, 18, 1) 0%,
-    rgba(230, 163, 89, 1) 50%,
-    rgba(214, 121, 11, 1) 94%
-  );
+  border: 2px solid rgb(218, 73, 18);
+  transition: transform 0.3s linear;
+  &:hover {
+    color: var(--color-darkest);
+    transform: scale(1.08);
+    background: linear-gradient(
+      90deg,
+      rgba(218, 73, 18, 1) 0%,
+      rgba(230, 163, 89, 1) 50%,
+      rgba(214, 121, 11, 1) 94%
+    );
+  }
 }
-
 .css-colors {
-  background: rgb(18, 135, 218);
-  background: linear-gradient(
-    90deg,
-    rgba(18, 135, 218, 1) 0%,
-    rgba(89, 176, 230, 1) 50%,
-    rgba(11, 171, 214, 1) 94%
-  );
-}
-
-.sass-colors {
-  background: rgb(160, 75, 163);
-  background: linear-gradient(
-    90deg,
-    rgba(160, 75, 163, 1) 0%,
-    rgba(198, 117, 200, 1) 50%,
-    rgba(171, 105, 151, 1) 94%
-  );
+  border: 2px solid rgb(18, 135, 218);
+  transition: transform 0.3s linear;
+  &:hover {
+    color: var(--color-darkest);
+    background: linear-gradient(
+      90deg,
+      rgba(18, 135, 218, 1) 0%,
+      rgba(89, 176, 230, 1) 50%,
+      rgba(11, 171, 214, 1) 94%
+    );
+  }
 }
 
 .js-colors {
-  background: rgb(222, 224, 26);
-  background: linear-gradient(
-    90deg,
-    rgba(222, 224, 26, 1) 0%,
-    rgba(243, 255, 85, 1) 38%,
-    rgba(251, 255, 142, 1) 82%
-  );
-}
-
-.sql-colors {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(230, 231, 224, 1) 51%,
-    rgba(226, 238, 255, 1) 100%
-  );
+  border: 2px solid rgb(222, 224, 26);
+  transition: transform 0.3s linear;
+  &:hover {
+    color: var(--color-darkest);
+    transform: scale(1.08);
+    background: linear-gradient(
+      90deg,
+      rgba(222, 224, 26, 1) 0%,
+      rgba(243, 255, 85, 1) 38%,
+      rgba(251, 255, 142, 1) 82%
+    );
+  }
 }
