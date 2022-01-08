@@ -1,25 +1,28 @@
-.frame-logos {
+.container-logos {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  & .frame-logo > p {
+  & .card-logo > p {
     font-size: 2rem;
   }
-  .frame-logo {
+  .card-logo {
     height: 40rem;
   }
 }
 
 @media screen and(min-width:700px) {
-  .frame-logos {
+  .container-logos {
     flex-flow: row wrap;
     align-items: flex-start;
-    cursor: pointer;
+
     gap: 4rem 2rem;
 
-    & .frame-logo > h3 {
-      font-size: 1.8rem;
+    & .card-logo {
+      cursor: pointer;
+      & > h3 {
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -30,61 +33,42 @@
 }
 
 @media screen and(min-width: 708px) {
-  .frame-logos {
+  .container-logos {
     margin: 0 auto;
   }
 }
 
 @media screen and(min-width: 1250px) {
-  .frame-logos {
+  .container-logos {
     gap: 5rem 2rem;
   }
 }
 
 // * Table Colors
 
-.html-colors {
-  border: 2px solid rgb(218, 73, 18);
-  transition: transform 0.3s linear;
-  &:hover {
-    color: var(--color-darkest);
-    transform: scale(1.07);
-    background: linear-gradient(
-      90deg,
-      rgba(218, 73, 18, 1) 0%,
-      rgba(230, 163, 89, 1) 50%,
-      rgba(214, 121, 11, 1) 94%
-    );
-  }
+.fa-star {
+  font-size: 1.2rem;
+  color: var(--color-font-dk2);
 }
 
+.html-colors,
+.css-colors,
+.js-colors,
 .sql-colors {
-  border: 2px solid rgb(240, 240, 240);
+  box-shadow: 1px 1px 5px var(--color-bg-dk);
   transition: transform 0.3s linear;
   &:hover {
-    color: var(--color-darkest);
+    color: var(--color-font-accent);
     transform: scale(1.07);
-
-    background: linear-gradient(
-      90deg,
-      rgba(168, 188, 214, 1) 0%,
-      rgba(250, 250, 250, 1) 100%
-    );
+    background-color: var(--color-bg-dk);
+    .group-starts > .fa-star {
+      color: var(--color-font-accent);
+    }
   }
 }
 
 .css-colors {
-  border: 2px solid rgb(18, 135, 218);
-  transition: transform 0.3s linear;
   &:hover {
-    color: var(--color-darkest);
-    transform: scale(1.07);
-    background: linear-gradient(
-      90deg,
-      rgba(18, 135, 218, 1) 0%,
-      rgba(89, 176, 230, 1) 50%,
-      rgba(11, 171, 214, 1) 94%
-    );
     .fa-sass {
       color: rgb(235, 88, 235);
     }
@@ -95,20 +79,17 @@
 }
 
 .js-colors {
-  border: 2px solid rgb(222, 224, 26);
-  transition: transform 0.3s linear;
   &:hover {
-    color: var(--color-darkest);
-    transform: scale(1.07);
-    background: linear-gradient(
-      90deg,
-      rgba(222, 224, 26, 1) 0%,
-      rgba(243, 255, 85, 1) 38%,
-      rgba(251, 255, 142, 1) 82%
-    );
     .fa-react {
       color: rgb(36, 115, 168);
     }
+  }
+}
+
+.sql-colors {
+  transition: transform 0.3s linear;
+  &:hover {
+    transform: scale(1.07);
   }
 }
 
@@ -123,3 +104,35 @@
     color: var(--color-font-dk);
   }
 }
+
+// ! colors of background customize logos
+// HTML
+/*background: linear-gradient(
+      90deg,
+      rgba(218, 73, 18, 1) 0%,
+      rgba(230, 163, 89, 1) 50%,
+      rgba(214, 121, 11, 1) 94%
+    );*/
+
+// CSS
+/*background: linear-gradient(
+      90deg,
+      rgba(18, 135, 218, 1) 0%,
+      rgba(89, 176, 230, 1) 50%,
+      rgba(11, 171, 214, 1) 94%
+    );*/
+
+// JS
+/*background: linear-gradient(
+      90deg,
+      rgba(222, 224, 26, 1) 0%,
+      rgba(243, 255, 85, 1) 38%,
+      rgba(251, 255, 142, 1) 82%
+    );*/
+
+// SQL
+/*   background: linear-gradient(
+      90deg,
+      rgba(168, 188, 214, 1) 0%,
+      rgba(250, 250, 250, 1) 100%
+    ); */
