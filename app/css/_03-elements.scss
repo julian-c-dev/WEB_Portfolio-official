@@ -22,6 +22,7 @@ li {
 
 th {
   text-align: end;
+  font-weight: 400;
 }
 td {
   text-align: center;
@@ -31,7 +32,7 @@ th,
 td {
   padding: 0.5rem;
   font-size: 1.5rem;
-  color: var(--color-darkest);
+  color: var(--color-font-dk);
 }
 
 button {

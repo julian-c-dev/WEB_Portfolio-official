@@ -429,7 +429,7 @@ input:checked + .slider:before {
   margin: 2rem 0 4rem 0;
 }
 
-@media screen and (min-width: 700px) {
+/*@media screen and(min-width: 700px) {
   .tooltip1,
   .tooltip2,
   .tooltip3,
@@ -439,6 +439,7 @@ input:checked + .slider:before {
     position: relative;
     display: inline-block;
   }
+
   .tooltip1 .tooltipHTML,
   .tooltip2 .tooltipCSS,
   .tooltip3 .tooltipSASS,
@@ -446,12 +447,13 @@ input:checked + .slider:before {
   .tooltip5 .tooltipREACT,
   .tooltip6 .tooltipSQL {
     border-radius: 20px;
-    margin: 18rem 0 4rem 0;
+    margin: 0 0 4rem 35rem;
     padding: 1rem;
     position: absolute;
     visibility: hidden;
     z-index: 1;
   }
+
   .tooltip1:hover .tooltipHTML,
   .tooltip2:hover .tooltipCSS,
   .tooltip3:hover .tooltipSASS,
@@ -461,7 +463,7 @@ input:checked + .slider:before {
     visibility: visible;
   }
 }
-
+*/
 .dropbtn {
   background-color: transparent;
   color: var(--color-font-accent);
@@ -528,6 +530,7 @@ li {
 
 th {
   text-align: end;
+  font-weight: 400;
 }
 
 td {
@@ -538,7 +541,7 @@ th,
 td {
   padding: 0.5rem;
   font-size: 1.5rem;
-  color: var(--color-darkest);
+  color: var(--color-font-dk);
 }
 
 button {
@@ -904,85 +907,133 @@ main {
   }
 }
 
-.frame-logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.frame-logos .frame-logo > p {
+.logos .frame-logo > p {
   font-size: 2rem;
 }
 
 @media screen and (min-width: 700px) {
-  .frame-logos {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (100px)[3];
-        grid-template-columns: repeat(3, 100px);
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    cursor: pointer;
-    gap: 4rem 10rem;
-  }
-  .frame-logos .frame-logo > p {
+  .frame-logo > p {
     font-size: 2.2rem;
   }
 }
 
 @media screen and (min-width: 708px) {
-  .frame-logos {
+  .logos {
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 1250px) {
-  .frame-logos {
-    gap: 3rem 15rem;
+  .logos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 2rem 3rem;
+  }
+  .fa-star {
+    font-size: small;
+  }
+  .frame-others > p {
+    font-size: 1.8rem;
+    margin-left: 30rem;
+  }
+  .frame-others > ul {
+    padding-left: 0;
+    -webkit-column-count: 3;
+            column-count: 3;
+  }
+  .frame-others > ul li {
+    margin: 0 10rem 0 0;
   }
 }
 
 .html-colors {
-  background: #da4912;
+  border: 2px solid #da4912;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.html-colors:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background: -webkit-gradient(linear, left top, right top, from(#da4912), color-stop(50%, #e6a359), color-stop(94%, #d6790b));
   background: linear-gradient(90deg, #da4912 0%, #e6a359 50%, #d6790b 94%);
 }
 
+.html-colors:hover td,
+.html-colors:hover th {
+  color: var(--color-darkest);
+}
+
 .css-colors {
-  background: #1287da;
+  border: 2px solid #1287da;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.css-colors:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background: -webkit-gradient(linear, left top, right top, from(#1287da), color-stop(50%, #59b0e6), color-stop(94%, #0babd6));
   background: linear-gradient(90deg, #1287da 0%, #59b0e6 50%, #0babd6 94%);
 }
 
-.sass-colors {
-  background: #a04ba3;
-  background: -webkit-gradient(linear, left top, right top, from(#a04ba3), color-stop(50%, #c675c8), color-stop(94%, #ab6997));
-  background: linear-gradient(90deg, #a04ba3 0%, #c675c8 50%, #ab6997 94%);
+.css-colors:hover td,
+.css-colors:hover th {
+  color: var(--color-darkest);
 }
 
 .js-colors {
-  background: #dee01a;
+  border: 2px solid #dee01a;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.js-colors:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background: -webkit-gradient(linear, left top, right top, from(#dee01a), color-stop(38%, #f3ff55), color-stop(82%, #fbff8e));
   background: linear-gradient(90deg, #dee01a 0%, #f3ff55 38%, #fbff8e 82%);
 }
 
-.sql-colors {
-  background: white;
-  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(51%, #e6e7e0), to(#e2eeff));
-  background: linear-gradient(90deg, white 0%, #e6e7e0 51%, #e2eeff 100%);
+.js-colors:hover td,
+.js-colors:hover th {
+  color: var(--color-darkest);
 }
 
+.html-colors,
+.css-colors,
+.js-colors {
+  cursor: pointer;
+}
+
+/*
+.sql-colors {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(230, 231, 224, 1) 51%,
+    rgba(226, 238, 255, 1) 100%
+  );
+}
+
+.sass-colors {
+  background: rgb(160, 75, 163);
+  background: linear-gradient(
+    90deg,
+    rgba(160, 75, 163, 1) 0%,
+    rgba(198, 117, 200, 1) 50%,
+    rgba(171, 105, 151, 1) 94%
+  );
+}*/
 .exp-subtitle {
   font-size: 2rem;
   margin-top: 0;

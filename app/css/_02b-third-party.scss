@@ -77,7 +77,7 @@ input:checked + .slider:before {
   margin: 2rem 0 4rem 0;
 }
 
-@media screen and(min-width: 700px) {
+/*@media screen and(min-width: 700px) {
   .tooltip1,
   .tooltip2,
   .tooltip3,
@@ -95,7 +95,7 @@ input:checked + .slider:before {
   .tooltip5 .tooltipREACT,
   .tooltip6 .tooltipSQL {
     border-radius: 20px;
-    margin: 18rem 0 4rem 0;
+    margin: 0 0 4rem 35rem;
     padding: 1rem;
     position: absolute;
     visibility: hidden;
@@ -111,7 +111,7 @@ input:checked + .slider:before {
     visibility: visible;
   }
 }
-
+*/
 // * drop-down menu   (Exp section)
 // ! got it from w3school (I modified it)
 
