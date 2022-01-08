@@ -1043,13 +1043,16 @@ main {
 .fa-bootstrap,
 .fa-react {
   font-size: 3.5rem;
-}
-
-.fa-react {
   color: var(--color-font-dk);
 }
 
-.fa-react:link, .fa-react:visited, .fa-react:active {
+.fa-sass:link, .fa-sass:visited, .fa-sass:active,
+.fa-bootstrap:link,
+.fa-bootstrap:visited,
+.fa-bootstrap:active,
+.fa-react:link,
+.fa-react:visited,
+.fa-react:active {
   color: var(--color-font-dk);
 }
 
