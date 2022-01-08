@@ -180,7 +180,9 @@
         </div>
 
         <div class="container-logos">
-          <article class="card-logo html-colors tooltipHTML flex flex-clmn">
+          <article
+            class="card-logo html-colors tooltipHTML mySlides flex flex-clmn center"
+          >
             <h3>HTML</h3>
             <img src="/images/logo_html.png" width="60px" alt="Logo HTML" />
             <table>
@@ -223,8 +225,11 @@
                 </tr>
               </tbody>
             </table>
+            <button class="btn btn-skills">Training</button>
           </article>
-          <article class="card-logo css-colors tooltipCSS flex flex-clmn">
+          <article
+            class="card-logo css-colors tooltipCSS mySlides flex flex-clmn center"
+          >
             <h3>CSS</h3>
             <img src="/images/logo_css.png" width="70px" alt="Logo CSS" />
             <table>
@@ -269,15 +274,19 @@
             </table>
             <h4 class="frame-subTable">Good knowledge using:</h4>
             <div class="flex flex-centered">
-              <a href="https://sass-lang.com/"
+              <a href="https://sass-lang.com/" target="_blank"
                 ><i class="fab fa-sass mg-x-1"></i
               ></a>
-              <a href="https://getbootstrap.com/"
+              <a href="https://getbootstrap.com/" target="_blank"
                 ><i class="fab fa-bootstrap mg-x-1"></i
               ></a>
             </div>
+            <button class="btn btn-skills">Training</button>
           </article>
-          <article class="card-logo js-colors tooltipJS flex flex-clmn">
+
+          <article
+            class="card-logo js-colors tooltipJS mySlides flex flex-clmn center"
+          >
             <h3>JavaScript</h3>
             <img src="/images/logo_js.png" width="70px" alt="Logo JS" />
             <table>
@@ -323,12 +332,16 @@
             </table>
             <h4 class="frame-subTable">Currently learning:</h4>
             <div class="flex flex-centered">
-              <a href="https://reactjs.org/"><i class="fab fa-react"></i></a>
+              <a href="https://reactjs.org/" target="_blank"><i class="fab fa-react"></i></a>
             </div>
+            <button class="btn btn-skills">Training</button>
           </article>
-          <article class="card-logo sql-colors tooltipSQL flex flex-clmn">
-            <p>SQL</p>
-            <img src="/images/logo_MySQL.png" width="125px" alt="Logo MySQL" />
+
+          <article
+            class="card-logo sql-colors tooltipSQL mySlides flex flex-clmn center"
+          >
+            <h3>SQL</h3>
+            <img src="/images/logo_MySQL.png" width="135px" alt="Logo MySQL" />
             <table>
               <tbody>
                 <tr>
@@ -372,9 +385,31 @@
                 </tr>
               </tbody>
             </table>
+            <h4 class="frame-subTable">Currently learning:</h4>
+            <div class="flex flex-centered">
+              <a href="https://www.phpmyadmin.net/" target="_blank"><img width="50px" src="/images/phpmyadmin-icon-5607-Windows.ico"></img></a>
+            </div>
+            <button class="btn btn-skills" style="margin-top: 0.35rem">Training</button>
           </article>
         </div>
-        <br />
+        <div class="arrows-container">
+          <div class="arrows">
+            <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
+            <button class="btn" onclick="plusDivs(1)">Next ❯</button>
+          </div>
+        </div>
+
+        <div class="js-training">
+        <!--
+
+     <h4>JavaScript formation:</h4>
+
+          https://developer.mozilla.org/en-US/docs/Web/JavaScript
+          https://edabit.com/challenges/javascript
+          https://codewithmosh.com/p/object-oriented-programming-in-javascript
+          https://www.city.ac.uk/prospective-students/courses/short-courses/javascript-2-advanced-javascript-for-websites-and-web-applications
+          Currently: 
+        </div> --> 
 
         <!-- <div class="frame-others">
           <p>

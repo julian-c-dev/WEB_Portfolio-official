@@ -3,11 +3,90 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  & .card-logo > p {
-    font-size: 2rem;
-  }
   .card-logo {
-    height: 40rem;
+    height: 43rem;
+    & > p {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+table {
+  margin-top: 1rem;
+}
+
+th {
+  text-align: end;
+  font-weight: 400;
+}
+td {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.fa-star {
+  font-size: 0.8rem;
+  color: var(--color-font-dk2);
+}
+
+.html-colors,
+.css-colors,
+.js-colors,
+.sql-colors {
+  transform: scale(1);
+  background-color: var(--color-bg-dk);
+  .group-starts > .fa-star {
+    color: var(--color-bg2-lg);
+  }
+}
+
+.arrows-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.arrows {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.css-colors {
+  .fa-sass {
+    color: rgb(235, 88, 235);
+  }
+  .fa-bootstrap {
+    color: rgb(163, 1, 163);
+  }
+}
+
+.js-colors {
+  .fa-react {
+    color: rgb(36, 115, 168);
+  }
+}
+
+@media screen and (min-width: 400px) {
+  table {
+    margin-top: 2rem;
+  }
+
+  th {
+    text-align: end;
+    font-weight: 400;
+  }
+  td {
+    text-align: center;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+    font-size: 1.5rem;
   }
 }
 

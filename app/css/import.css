@@ -464,6 +464,7 @@ input:checked + .slider:before {
   }
 }
 */
+/*
 .dropbtn {
   background-color: transparent;
   color: var(--color-font-accent);
@@ -484,8 +485,7 @@ input:checked + .slider:before {
   border-radius: 10px;
   background-color: var(--color-font-accent-lg);
   min-width: 160px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -507,8 +507,7 @@ input:checked + .slider:before {
 
 .dropdown:hover .dropbtn {
   background-color: transparent;
-}
-
+}*/
 *,
 *::before,
 *::after {
@@ -523,13 +522,21 @@ html {
   scroll-behavior: smooth;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  color: var(--color-font-dk2);
+  cursor: pointer;
+}
+
 ul,
 li {
   list-style-type: none;
 }
 
 table {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 th {
@@ -544,15 +551,25 @@ td {
 th,
 td {
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
-button {
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  color: var(--color-font-dk2);
-  cursor: pointer;
+@media screen and (min-width: 400px) {
+  table {
+    margin-top: 2rem;
+  }
+  th {
+    text-align: end;
+    font-weight: 400;
+  }
+  td {
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
 }
 
 main {
@@ -926,12 +943,99 @@ main {
           align-items: center;
 }
 
+.container-logos .card-logo {
+  height: 43rem;
+}
+
 .container-logos .card-logo > p {
+  font-size: 1.4rem;
+}
+
+table {
+  margin-top: 1rem;
+}
+
+th {
+  text-align: end;
+  font-weight: 400;
+}
+
+td {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.fa-star {
+  font-size: 0.8rem;
+  color: var(--color-font-dk2);
+}
+
+.html-colors,
+.css-colors,
+.js-colors,
+.sql-colors {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-color: var(--color-bg-dk);
+}
+
+.html-colors .group-starts > .fa-star,
+.css-colors .group-starts > .fa-star,
+.js-colors .group-starts > .fa-star,
+.sql-colors .group-starts > .fa-star {
+  color: var(--color-bg2-lg);
+}
+
+.arrows-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.arrows {
+  margin-top: 0;
   font-size: 2rem;
 }
 
-.container-logos .card-logo {
-  height: 40rem;
+.css-colors .fa-sass {
+  color: #eb58eb;
+}
+
+.css-colors .fa-bootstrap {
+  color: #a301a3;
+}
+
+.js-colors .fa-react {
+  color: #2473a8;
+}
+
+@media screen and (min-width: 400px) {
+  table {
+    margin-top: 2rem;
+  }
+  th {
+    text-align: end;
+    font-weight: 400;
+  }
+  td {
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -1518,6 +1622,19 @@ main {
 }
 
 .btn:hover {
+  background-color: var(--color-font-accent-lg);
+}
+
+.btn-skills {
+  border: 1px solid var(--color-bg2-lg);
+  color: var(--color-bg2-lg);
+  font-size: 1.3rem;
+  margin: 2rem 0;
+  max-width: 300px;
+  padding: 1rem;
+}
+
+.btn-skills:hover {
   background-color: var(--color-font-accent-lg);
 }
 
