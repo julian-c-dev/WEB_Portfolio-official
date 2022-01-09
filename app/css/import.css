@@ -608,7 +608,7 @@ main {
     font-size: 3rem;
   }
   .section-content > p {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   .section-heading::after {
     width: 150px;
@@ -762,7 +762,7 @@ main {
 }
 
 .hero .hero__content {
-  font-size: 5vw;
+  font-size: 4vw;
   max-width: 95%;
   white-space: normal;
   margin-bottom: 2rem;
@@ -787,7 +787,7 @@ main {
     font-size: 8vw;
   }
   .hero .hero__content {
-    font-size: 2rem;
+    font-size: 1.7rem;
     max-width: 95%;
     white-space: normal;
     margin-bottom: 2rem;
@@ -823,7 +823,6 @@ main {
     font-size: 5.1rem;
   }
   .hero .hero__content {
-    font-size: 2rem;
     max-width: 95%;
     white-space: normal;
     margin-bottom: 2rem;
@@ -853,7 +852,6 @@ main {
     font-size: 4.5rem;
   }
   .hero .hero__content {
-    font-size: 2rem;
     text-justify: auto;
   }
 }
@@ -1095,6 +1093,9 @@ main {
   }
   .card-logo_clmLeft ul {
     padding: 0 0 1.5rem 2rem;
+  }
+  .card-logo_clmLeft .card-logo_clmLeft > ul > li {
+    margin-bottom: 1rem;
   }
 }
 
