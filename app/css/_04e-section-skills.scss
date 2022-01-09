@@ -60,6 +60,9 @@
   gap: 4rem 2rem;
 
   & .card-logo {
+    padding: 1.3rem;
+    border-radius: 20px;
+    margin: 2rem 0 4rem 0;
     cursor: zoom-in;
     height: 43rem;
     & > h3 {
@@ -97,7 +100,7 @@
 }
 
 .pagination {
-  margin-top: 0;
+  margin-top: -1rem;
   font-size: 2rem;
 }
 .disc {
