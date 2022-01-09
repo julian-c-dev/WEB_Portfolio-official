@@ -1932,4 +1932,8 @@ main {
 .mg-xl-4 {
   margin-left: 4rem;
 }
+
+.selfTaugh i:hover {
+  color: inherit;
+}
 /*# sourceMappingURL=import.css.map */

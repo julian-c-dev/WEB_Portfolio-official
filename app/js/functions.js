@@ -18,7 +18,7 @@ function themeEvent() {
 
 // & [Skill Section] Slider
 
-let slideIndex = 1;
+let slideIndex = 2;
 showDivs(slideIndex);
 
 function plusDivs(n) {
