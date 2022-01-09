@@ -890,54 +890,6 @@ main {
   }
 }
 
-.container-logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container-logos .card-logo {
-  height: 43rem;
-}
-
-.container-logos .card-logo > p {
-  font-size: 1.4rem;
-}
-
-table {
-  margin-top: 1rem;
-}
-
-th {
-  text-align: end;
-  font-weight: 400;
-}
-
-td {
-  text-align: center;
-}
-
-th,
-td {
-  padding: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.fa-star {
-  font-size: 0.8rem;
-  color: var(--color-font-dk2);
-}
-
 .html-colors,
 .css-colors,
 .js-colors,
@@ -945,6 +897,12 @@ td {
   -webkit-transform: scale(1);
           transform: scale(1);
   background-color: var(--color-bg-dk);
+  -webkit-box-shadow: 1px 1px 5px var(--color-bg-dk);
+          box-shadow: 1px 1px 5px var(--color-bg-dk);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
 .html-colors .group-starts > .fa-star,
@@ -954,21 +912,21 @@ td {
   color: var(--color-bg2-lg);
 }
 
-.arrows-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+.html-colors:hover,
+.css-colors:hover,
+.js-colors:hover,
+.sql-colors:hover {
+  color: var(--color-font-accent);
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  background-color: var(--color-bg-dk);
 }
 
-.arrows {
-  margin-top: 0;
-  font-size: 2rem;
+.html-colors:hover .group-starts > .fa-star,
+.css-colors:hover .group-starts > .fa-star,
+.js-colors:hover .group-starts > .fa-star,
+.sql-colors:hover .group-starts > .fa-star {
+  color: var(--color-font-accent);
 }
 
 .css-colors .fa-sass {
@@ -983,51 +941,127 @@ td {
   color: #2473a8;
 }
 
-@media screen and (min-width: 400px) {
-  table {
-    margin-top: 2rem;
-  }
-  th {
-    text-align: end;
-    font-weight: 400;
-  }
-  td {
-    text-align: center;
-  }
-  th,
-  td {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-  }
+.fa-sass,
+.fa-bootstrap,
+.fa-react {
+  font-size: 3.5rem;
+  color: var(--color-font-dk);
 }
 
-@media screen and (min-width: 800px) {
-  .container-logos {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin: 0 auto;
-    gap: 4rem 2rem;
-  }
-  .container-logos .card-logo {
-    cursor: -webkit-zoom-in;
-    cursor: zoom-in;
-  }
-  .container-logos .card-logo > h3 {
-    font-size: 1.8rem;
-  }
+.fa-sass:link, .fa-sass:visited, .fa-sass:active,
+.fa-bootstrap:link,
+.fa-bootstrap:visited,
+.fa-bootstrap:active,
+.fa-react:link,
+.fa-react:visited,
+.fa-react:active {
+  color: var(--color-font-dk);
+}
+
+.container-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 auto;
+  gap: 4rem 2rem;
+}
+
+.container-logos .card-logo {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  height: 43rem;
+}
+
+.container-logos .card-logo > h3 {
+  font-size: 1.8rem;
+}
+
+.logo-table {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.logo-table th {
+  text-align: end;
+  font-weight: 400;
+}
+
+.logo-table td {
+  text-align: center;
+}
+
+.logo-table th,
+.logo-table td {
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.logo-table .fa-star {
+  font-size: 1rem;
+  color: var(--color-font-dk2);
+}
+
+.pagination-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.pagination {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.disc {
+  font-size: 1.5rem;
+}
+
+.card-logo-frame {
+  max-width: 65rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+.card-logo_clmLeft {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
   .card-logo-frame {
-    max-width: 65rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 5rem;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .card-logo_clmLeft {
+    display: block;
     margin-top: 3.2rem;
     font-size: 1.5rem;
   }
@@ -1062,81 +1096,6 @@ td {
   .card-logo_clmLeft ul {
     padding: 0 0 1.5rem 2rem;
   }
-}
-
-.fa-star {
-  font-size: 1.2rem;
-  color: var(--color-font-dk2);
-}
-
-.html-colors,
-.css-colors,
-.js-colors,
-.sql-colors {
-  -webkit-box-shadow: 1px 1px 5px var(--color-bg-dk);
-          box-shadow: 1px 1px 5px var(--color-bg-dk);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  transition: -webkit-transform 0.3s linear;
-  transition: transform 0.3s linear;
-  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
-}
-
-.html-colors:hover,
-.css-colors:hover,
-.js-colors:hover,
-.sql-colors:hover {
-  color: var(--color-font-accent);
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-  background-color: var(--color-bg-dk);
-}
-
-.html-colors:hover .group-starts > .fa-star,
-.css-colors:hover .group-starts > .fa-star,
-.js-colors:hover .group-starts > .fa-star,
-.sql-colors:hover .group-starts > .fa-star {
-  color: var(--color-font-accent);
-}
-
-.css-colors:hover .fa-sass {
-  color: #eb58eb;
-}
-
-.css-colors:hover .fa-bootstrap {
-  color: #a301a3;
-}
-
-.js-colors:hover .fa-react {
-  color: #2473a8;
-}
-
-.sql-colors {
-  -webkit-transition: -webkit-transform 0.3s linear;
-  transition: -webkit-transform 0.3s linear;
-  transition: transform 0.3s linear;
-  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
-}
-
-.sql-colors:hover {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-}
-
-.fa-sass,
-.fa-bootstrap,
-.fa-react {
-  font-size: 3.5rem;
-  color: var(--color-font-dk);
-}
-
-.fa-sass:link, .fa-sass:visited, .fa-sass:active,
-.fa-bootstrap:link,
-.fa-bootstrap:visited,
-.fa-bootstrap:active,
-.fa-react:link,
-.fa-react:visited,
-.fa-react:active {
-  color: var(--color-font-dk);
 }
 
 /*background: linear-gradient(

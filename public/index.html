@@ -186,8 +186,8 @@
                 class="card-logo html-colors tooltipHTML flex flex-clmn center"
               >
                 <h3>HTML</h3>
-                <img src="/images/logo_html.png" width="60px" alt="Logo HTML" />
-                <table>
+                <img src="/images/logo_html.png" width="61.5" alt="Logo HTML" />
+                <table class="logo-table">
                   <tbody>
                     <tr>
                       <th>Fundamentals</th>
@@ -223,7 +223,7 @@
                     </tr>
                     <tr>
                       <th>Experience</th>
-                      <td>&#62; 2 years</td>
+                      <td>&#62; 1 year</td>
                     </tr>
                   </tbody>
                 </table>
@@ -309,8 +309,8 @@
                 class="card-logo css-colors tooltipCSS flex flex-clmn center"
               >
                 <h3>CSS</h3>
-                <img src="/images/logo_css.png" width="70px" alt="Logo CSS" />
-                <table>
+                <img src="/images/logo_css.png" width="70" alt="Logo CSS" />
+                <table class="logo-table">
                   <tbody>
                     <tr>
                       <th>Fundamentals</th>
@@ -436,8 +436,8 @@
             <div class="card-logo-frame">
               <div class="card-logo js-colors tooltipJS flex flex-clmn center">
                 <h3>JavaScript</h3>
-                <img src="/images/logo_js.png" width="70px" alt="Logo JS" />
-                <table>
+                <img src="/images/logo_js.png" width="70" alt="Logo JS" />
+                <table class="logo-table">
                   <tbody>
                     <tr>
                       <th>Fundamentals</th>
@@ -535,13 +535,13 @@
                     <span style="line-height: 1.1">
                       - I have begun a course called: JavaScript 2: Advanced
                       JavaScript for Websites and Web Applications. Imparted by
-                      Aris Markogiannakis, City University of London (from
-                      18-Jan to 22-Mar, 2022).
+                      Aris Markogiannakis, City University of London (Jan -
+                      Mar).
                     </span>
                   </li>
                   <li>
                     <span style="line-height: 1.1">
-                      - It is my intention to continue to do
+                      - Continue doing
                       <a
                         href="https://edabit.com/user/TAMxX5h3LggMLsijj/"
                         target="_blank"
@@ -549,8 +549,8 @@
                       >
                         Edabit</a
                       >
-                      challenges, with my first goal being to achieve 10.000 XP
-                      in JS exercises (Q1 & Q2, 2022).
+                      challenges, my first milestone is to achieve 5.000 XP in
+                      JS exercises (Q1 2022).
                     </span>
                   </li>
                 </ul>
@@ -566,10 +566,10 @@
                 <h3>SQL</h3>
                 <img
                   src="/images/logo_MySQL.png"
-                  width="135px"
+                  width="135"
                   alt="Logo MySQL"
                 />
-                <table>
+                <table class="logo-table">
                   <tbody>
                     <tr>
                       <th>Fundamentals</th>
@@ -616,7 +616,7 @@
                 <div class="flex flex-centered">
                   <a href="https://www.phpmyadmin.net/" target="_blank"
                     ><img
-                      width="50px"
+                      width="50"
                       src="/images/phpmyadmin-icon-5607-Windows.ico"
                   /></a>
                 </div>
@@ -668,15 +668,9 @@
                 <ul>
                   <li>
                     <span style="line-height: 1.1">
-                      - Continue building websites through the challenges
-                      offered on the
-                      <a
-                        class="italic hlgt"
-                        href="https://www.frontendmentor.io/home"
-                        target="_blank"
-                        >Frontend Mentor</a
-                      >
-                      platform (Q1 & Q2, 2022).
+                      - Working on a personal project which consist of a UI
+                      system that sorts books from a personal DB (Q1 & Q2,
+                      2022).
                     </span>
                   </li>
                 </ul>
@@ -684,43 +678,27 @@
             </div>
           </article>
         </div>
-        <div class="arrows-container">
-          <div class="arrows">
+        <div class="pagination-container">
+          <div class="pagination">
             <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
             <button class="btn" onclick="plusDivs(1)">Next ❯</button>
           </div>
         </div>
-
-        <div class="js-training">
-          <!--
-
-     <h4>JavaScript formation:</h4>
-
-          https://developer.mozilla.org/en-US/docs/Web/JavaScript
-          https://edabit.com/challenges/javascript
-          https://codewithmosh.com/p/object-oriented-programming-in-javascript
-          https://www.city.ac.uk/prospective-students/courses/short-courses/javascript-2-advanced-javascript-for-websites-and-web-applications
-          Currently: 
-        </div> -->
-
-          <!-- <div class="frame-others">
-          <p>
-            Here are a few technologies and platforms I have ve been working
-            with recently:
-          </p>
-          <ul>
-            <li>Git</li>
-            <li>Github</li>
-            <li>NPM</li>
-            <li>Parcel</li>
-            <li>Netlify</li>
-            <li>Figma</li>
-            <li>Jira</li>
-            <li>Bootstrap 5</li>
-            <li>GIMP</li>
-            <li>PhpMyAdmin</li>
-          </ul>
-        </div>-->
+        <div class="pagination-container">
+          <div class="pagination">
+            <button class="slide-circle" onclick="currentDiv(1)">
+              <i class="disc far fa-circle"></i>
+            </button>
+            <button class="slide-circle" onclick="currentDiv(2)">
+              <i class="disc far fa-circle"></i>
+            </button>
+            <button class="slide-circle" onclick="currentDiv(3)">
+              <i class="disc far fa-circle"></i>
+            </button>
+            <button class="slide-circle" onclick="currentDiv(4)">
+              <i class="disc far fa-circle"></i>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -817,3 +795,22 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
+
+<!-- <div class="frame-others">
+          <p>
+            Here are a few technologies and platforms I have ve been working
+            with recently:
+          </p>
+          <ul>
+            <li>Git</li>
+            <li>Github</li>
+            <li>NPM</li>
+            <li>Parcel</li>
+            <li>Netlify</li>
+            <li>Figma</li>
+            <li>Jira</li>
+            <li>Bootstrap 5</li>
+            <li>GIMP</li>
+            <li>PhpMyAdmin</li>
+          </ul>
+        </div>-->

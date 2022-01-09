@@ -1,37 +1,4 @@
-.container-logos {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  .card-logo {
-    height: 43rem;
-    & > p {
-      font-size: 1.4rem;
-    }
-  }
-}
-
-table {
-  margin-top: 1rem;
-}
-
-th {
-  text-align: end;
-  font-weight: 400;
-}
-td {
-  text-align: center;
-}
-
-th,
-td {
-  padding: 0.5rem;
-  font-size: 1.2rem;
-}
-.fa-star {
-  font-size: 0.8rem;
-  color: var(--color-font-dk2);
-}
+// * Table Colors
 
 .html-colors,
 .css-colors,
@@ -39,21 +6,22 @@ td {
 .sql-colors {
   transform: scale(1);
   background-color: var(--color-bg-dk);
-  .group-starts > .fa-star {
+  & .group-starts > .fa-star {
     color: var(--color-bg2-lg);
+  }
+  box-shadow: 1px 1px 5px var(--color-bg-dk);
+  transition: transform 0.3s linear;
+  &:hover {
+    color: var(--color-font-accent);
+    transform: scale(1.08);
+    background-color: var(--color-bg-dk);
+    .group-starts > .fa-star {
+      color: var(--color-font-accent);
+    }
   }
 }
 
-.arrows-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.arrows {
-  margin-top: 0;
-  font-size: 2rem;
-}
+// * Icons
 
 .css-colors {
   .fa-sass {
@@ -70,11 +38,39 @@ td {
   }
 }
 
-@media screen and (min-width: 400px) {
-  table {
-    margin-top: 2rem;
+.fa-sass,
+.fa-bootstrap,
+.fa-react {
+  font-size: 3.5rem;
+  color: var(--color-font-dk);
+  &:link,
+  &:visited,
+  &:active {
+    color: var(--color-font-dk);
   }
+}
 
+// * Cards
+.container-logos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  gap: 4rem 2rem;
+
+  & .card-logo {
+    cursor: zoom-in;
+    height: 43rem;
+    & > h3 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.logo-table {
+  margin-top: 1rem;
+  padding: 1rem;
   th {
     text-align: end;
     font-weight: 400;
@@ -86,32 +82,48 @@ td {
   th,
   td {
     padding: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+  .fa-star {
+    font-size: 1rem;
+    color: var(--color-font-dk2);
   }
 }
 
-@media screen and(min-width:800px) {
-  .container-logos {
-    flex-flow: row wrap;
-    align-items: flex-start;
-    margin: 0 auto;
-    gap: 4rem 2rem;
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
-    & .card-logo {
-      cursor: zoom-in;
-      & > h3 {
-        font-size: 1.8rem;
-      }
-    }
-  }
+.pagination {
+  margin-top: 0;
+  font-size: 2rem;
+}
+.disc {
+  font-size: 1.5rem;
+}
 
+.card-logo-frame {
+  max-width: 65rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.card-logo_clmLeft {
+  display: none;
+}
+
+@media screen and(min-width:700px) {
   .card-logo-frame {
-    max-width: 65rem;
-    display: flex;
-    gap: 5rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
   }
-
   .card-logo_clmLeft {
+    display: block;
     margin-top: 3.2rem;
     font-size: 1.5rem;
     .selfTaugh {
@@ -147,72 +159,6 @@ td {
     ul {
       padding: 0 0 1.5rem 2rem;
     }
-  }
-}
-
-@media screen and(min-width:1200px) {
-  .card-logo-frame {
-  }
-}
-
-// * Table Colors
-
-.fa-star {
-  font-size: 1.2rem;
-  color: var(--color-font-dk2);
-}
-
-.html-colors,
-.css-colors,
-.js-colors,
-.sql-colors {
-  box-shadow: 1px 1px 5px var(--color-bg-dk);
-  transition: transform 0.3s linear;
-  &:hover {
-    color: var(--color-font-accent);
-    transform: scale(1.07);
-    background-color: var(--color-bg-dk);
-    .group-starts > .fa-star {
-      color: var(--color-font-accent);
-    }
-  }
-}
-
-.css-colors {
-  &:hover {
-    .fa-sass {
-      color: rgb(235, 88, 235);
-    }
-    .fa-bootstrap {
-      color: rgb(163, 1, 163);
-    }
-  }
-}
-
-.js-colors {
-  &:hover {
-    .fa-react {
-      color: rgb(36, 115, 168);
-    }
-  }
-}
-
-.sql-colors {
-  transition: transform 0.3s linear;
-  &:hover {
-    transform: scale(1.07);
-  }
-}
-
-.fa-sass,
-.fa-bootstrap,
-.fa-react {
-  font-size: 3.5rem;
-  color: var(--color-font-dk);
-  &:link,
-  &:visited,
-  &:active {
-    color: var(--color-font-dk);
   }
 }
 

@@ -100,6 +100,7 @@ function currentDiv(n) {
 function showDivs(n) {
   let i;
   let x = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("slide-circle");
 
   if (n > x.length) {
     slideIndex = 1;
@@ -110,7 +111,11 @@ function showDivs(n) {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" hlgt", "");
+  }
   x[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " hlgt";
 }
 
 window.onload = function () {
