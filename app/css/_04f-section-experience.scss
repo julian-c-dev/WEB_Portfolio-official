@@ -29,8 +29,11 @@
   position: relative;
   top: 1rem;
   width: 25rem;
+
   display: flex;
   flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .job-overtitle,
@@ -48,7 +51,7 @@
   margin-top: 0;
 }
 .job-img {
-  margin: -4rem auto 0 auto;
+  margin: 0 auto;
   & img {
     width: 100%;
     border-radius: 15px;
@@ -57,7 +60,7 @@
 }
 
 .job-description {
-  margin: -2rem 0 1rem 0;
+  margin: 1rem 0;
   font-size: 3.5vw;
   width: 90%;
 }
@@ -99,18 +102,38 @@
   align-content: flex-start;
 }
 
-.exp-practices {
-  margin: 0 auto 5rem auto;
+.section-practices-frame {
+  margin-top: 0;
+  max-width: 100%;
+  padding: 0 auto 25rem auto;
+  background-color: var(--color-bg-dk);
+  & h3 {
+    margin-top: 0;
+    display: inline;
+    color: var(--color-font-dk);
+  }
+}
+
+.section-practices {
+  padding: 1rem auto 15rem auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-practices {
   display: grid;
-  gap: 14rem 3rem;
-  grid-auto-rows: 22rem;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 17rem 1rem;
+  grid-auto-rows: 20rem;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 }
 
 .card {
   background: var(--color-bg-dk);
   border-radius: 15px;
   margin: 3rem 0;
+
   height: 35rem;
   display: flex;
   flex-flow: column nowrap;
@@ -118,25 +141,20 @@
   align-items: center;
 
   & .card_header {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     padding: 1rem auto 0 auto;
+    white-space: initial;
   }
 
   & .card_content {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
     color: var(--color-font-dk);
-    padding: 0 2rem;
-
-    & > p {
-      font-size: 1.5rem;
-      white-space: initial;
-    }
-    & > .btn {
-      margin: 1rem auto 3rem auto;
-    }
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    white-space: initial;
+  }
+  & .card_footer {
+    margin: 1rem auto 3rem auto;
+    white-space: initial;
   }
 }
 
@@ -369,7 +387,7 @@
   .job-sub-icon {
     max-width: 36.7rem;
     margin-top: 1rem;
-    justify-content: flex-end;
+    margin-left: 29rem;
     & li {
       font-size: 1.9rem;
     }
