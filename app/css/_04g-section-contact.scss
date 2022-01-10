@@ -41,7 +41,8 @@
   background-size: 300% 100%;
   transition: all 0.5s linear;
   &:hover {
-    box-shadow: 0 4px 15px 0 rgba(248, 142, 42, 0.75);
+    box-shadow: 0 4px 45px 0 rgba(248, 142, 42, 0.75);
+    color: var(--color-darkest);
   }
 }
 

@@ -1538,8 +1538,9 @@ main {
 }
 
 .contact-banner:hover {
-  -webkit-box-shadow: 0 4px 15px 0 rgba(248, 142, 42, 0.75);
-          box-shadow: 0 4px 15px 0 rgba(248, 142, 42, 0.75);
+  -webkit-box-shadow: 0 4px 45px 0 rgba(248, 142, 42, 0.75);
+          box-shadow: 0 4px 45px 0 rgba(248, 142, 42, 0.75);
+  color: var(--color-darkest);
 }
 
 @media screen and (min-width: 420px) {
@@ -1653,7 +1654,7 @@ main {
   .fa-github-square,
   .fa-linkedin,
   .fa-js,
-  .fa-phone-square {
+  .fa-stack-overflow {
     font-size: 2.5rem;
     margin: 1rem 0;
   }
