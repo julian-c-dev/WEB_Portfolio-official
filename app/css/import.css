@@ -418,96 +418,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.tooltipHTML,
-.tooltipCSS,
-.tooltipSASS,
-.tooltipJS,
-.tooltipREACT,
-.tooltipSQL {
-  padding: 1.3rem;
-  border-radius: 20px;
-  margin: 2rem 0 4rem 0;
-}
-
-/*@media screen and(min-width: 700px) {
-  .tooltip1,
-  .tooltip2,
-  .tooltip3,
-  .tooltip4,
-  .tooltip5,
-  .tooltip6 {
-    position: relative;
-    display: inline-block;
-  }
-
-  .tooltip1 .tooltipHTML,
-  .tooltip2 .tooltipCSS,
-  .tooltip3 .tooltipSASS,
-  .tooltip4 .tooltipJS,
-  .tooltip5 .tooltipREACT,
-  .tooltip6 .tooltipSQL {
-    border-radius: 20px;
-    margin: 0 0 4rem 35rem;
-    padding: 1rem;
-    position: absolute;
-    visibility: hidden;
-    z-index: 1;
-  }
-
-  .tooltip1:hover .tooltipHTML,
-  .tooltip2:hover .tooltipCSS,
-  .tooltip3:hover .tooltipSASS,
-  .tooltip4:hover .tooltipJS,
-  .tooltip5:hover .tooltipREACT,
-  .tooltip6:hover .tooltipSQL {
-    visibility: visible;
-  }
-}
-*/
-/*
-.dropbtn {
-  background-color: transparent;
-  color: var(--color-font-accent);
-  font-size: 1.6rem;
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  margin: -3.7rem 0 0 7rem;
-  border: 2px solid var(--color-font-accent);
-  display: none;
-  position: absolute;
-  border-radius: 10px;
-  background-color: var(--color-font-accent-lg);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  border-radius: 10px;
-  color: var(--color-font-accent);
-  padding: 1.2rem 1.6rem;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: transparent;
-}*/
 *,
 *::before,
 *::after {
@@ -598,6 +508,31 @@ main {
   font-size: 4.5vw;
   white-space: initial;
   max-width: 95%;
+}
+
+.footer {
+  height: 9rem;
+  background-color: var(--color-darker-slate);
+}
+
+.footer .footer-content {
+  padding-top: 0;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.footer .footer-content p {
+  margin-top: 0;
+  color: var(--color-bg-lg);
+}
+
+.footer .brittany {
+  color: var(--color-bg-lg);
+  text-decoration: none;
+}
+
+.footer .brittany:hover {
+  color: var(--color-font-accent-dk);
 }
 
 @media screen and (min-width: 448px) {
@@ -1560,6 +1495,77 @@ main {
     }
   }
 }*/
+.section-contact > p {
+  max-width: 90%;
+  white-space: initial;
+}
+
+.section-contact > ul {
+  padding-left: 1rem;
+  max-width: 90%;
+  white-space: initial;
+}
+
+.section-contact > ul > li {
+  max-width: 90%;
+  white-space: initial;
+  list-style-type: circle;
+  font-size: 4vw;
+}
+
+.section-contact > ul > li > a:link,
+.section-contact > ul > li > a:visited,
+.section-contact > ul > li > a:hover,
+.section-contact > ul > li > a:active {
+  color: var(--color-font-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-banner {
+  margin: 3rem auto;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.7rem;
+  border-radius: 15px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f07510), color-stop(#ff9a44), color-stop(#ef9d43), to(#e75516));
+  background-image: linear-gradient(to right, #f07510, #ff9a44, #ef9d43, #e75516);
+  max-width: 30rem;
+  color: var(--color-bg-dk);
+  background-size: 300% 100%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.contact-banner:hover {
+  -webkit-box-shadow: 0 4px 15px 0 rgba(248, 142, 42, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(248, 142, 42, 0.75);
+}
+
+@media screen and (min-width: 420px) {
+  .section-contact > ul > li {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .section-contact {
+    padding-bottom: 1rem;
+  }
+  .section-contact > p {
+    margin: 1rem 0 3rem 0;
+  }
+  .section-contact > ul {
+    padding-left: 2rem;
+  }
+  .section-contact > ul > li {
+    margin-bottom: 1rem;
+  }
+  .contact-banner {
+    margin: 4rem auto 5rem auto;
+  }
+}
+
 .btn {
   background-color: transparent;
   border-radius: 10px;

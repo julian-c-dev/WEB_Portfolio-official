@@ -48,6 +48,28 @@ main {
   max-width: 95%;
 }
 
+.footer {
+  height: 9rem;
+  background-color: var(--color-darker-slate);
+
+  .footer-content {
+    padding-top: 0;
+    text-align: center;
+    padding-top: 3rem;
+    & p {
+      margin-top: 0;
+      color: var(--color-bg-lg);
+    }
+  }
+  .brittany {
+    color: var(--color-bg-lg);
+    text-decoration: none;
+    &:hover {
+      color: var(--color-font-accent-dk);
+    }
+  }
+}
+
 @media screen and (min-width: 448px) {
   .section {
     padding: 1rem 3rem 10rem 3rem;
