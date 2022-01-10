@@ -1204,42 +1204,31 @@ main {
 }
 
 .section-practices-frame {
-  margin-top: 0;
   max-width: 100%;
-  padding: 0 auto 25rem auto;
+  padding: 0 0 25rem 0;
   background-color: var(--color-bg-dk);
 }
 
-.section-practices-frame h3 {
+.section-practices-frame .section-exp_subHeading {
   margin-top: 0;
   display: inline;
   color: var(--color-font-dk);
 }
 
 .section-practices {
-  padding: 1rem auto 15rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  max-width: 100rem;
+  margin: 0 auto 15rem auto;
+  padding: 0 8rem;
 }
 
 .grid-practices {
   display: -ms-grid;
   display: grid;
-  gap: 17rem 1rem;
+  gap: 17rem 3rem;
   grid-auto-rows: 20rem;
   -ms-grid-columns: (minmax(18rem, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  justify-items: center;
 }
 
 .card {

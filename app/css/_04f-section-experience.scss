@@ -103,11 +103,10 @@
 }
 
 .section-practices-frame {
-  margin-top: 0;
   max-width: 100%;
-  padding: 0 auto 25rem auto;
+  padding: 0 0 25rem 0;
   background-color: var(--color-bg-dk);
-  & h3 {
+  & .section-exp_subHeading {
     margin-top: 0;
     display: inline;
     color: var(--color-font-dk);
@@ -115,25 +114,23 @@
 }
 
 .section-practices {
-  padding: 1rem auto 15rem auto;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  max-width: 100rem;
+  margin: 0 auto 15rem auto;
+  padding: 0 8rem;
 }
 
 .grid-practices {
   display: grid;
-  gap: 17rem 1rem;
+  gap: 17rem 3rem;
   grid-auto-rows: 20rem;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  justify-items: center;
 }
 
 .card {
   background: var(--color-bg-dk);
   border-radius: 15px;
   margin: 3rem 0;
-
   height: 35rem;
   display: flex;
   flex-flow: column nowrap;
