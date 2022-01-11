@@ -335,7 +335,8 @@
 
   .section-practices-frame {
     max-width: 100%;
-    padding: 0 0 20rem 0;
+    margin-top: 0;
+    padding: -30rem 0 20rem 0;
     & .section-container {
       & .section-exp_subHeading {
         margin-left: 0;
@@ -447,6 +448,9 @@
   }
 
   .reversed {
+    .job {
+      margin: 8rem 0 -5rem -10rem;
+    }
     .job-img {
       right: initial;
       left: 0;
