@@ -582,10 +582,6 @@ main {
   .section {
     padding: 0 5rem 15rem 10rem;
   }
-  .section-small {
-    margin-bottom: 0;
-    padding: 0 5rem -15rem 10rem;
-  }
   .section-container {
     margin: 0 auto;
     padding-top: 3rem;
@@ -1209,7 +1205,7 @@ main {
 
 .section-practices-frame {
   max-width: 100%;
-  padding: 0 0 25rem 0;
+  padding: 0 0 15rem 0;
   background-color: var(--color-bg-dk);
 }
 
@@ -1331,6 +1327,8 @@ main {
   }
   .section-practices-frame .section-container .section-exp_subHeading {
     margin-left: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
 }
 
@@ -1439,6 +1437,13 @@ main {
 @media screen and (min-width: 1250px) {
   .exp-content {
     gap: 15rem;
+  }
+  .section-practices-frame {
+    max-width: 100%;
+    padding: 0 0 20rem 0;
+  }
+  .section-practices-frame .section-container .section-exp_subHeading {
+    margin-left: 0;
   }
   .job {
     padding: 1.5rem 04rem 0;
