@@ -67,3 +67,32 @@
     }
   }
 }
+
+// * hidden-menu
+.hidden-menu {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 10rem;
+  width: 75vw;
+  z-index: 11;
+  visibility: initial;
+  background-color: var(--color-bg-dk);
+  padding: 5rem;
+
+  opacity: 1;
+  & ul {
+    padding-left: 0;
+    & li {
+      font-size: 1.8rem;
+      margin: 5rem;
+      & a {
+        text-decoration: none;
+        color: var(--color-font-dk);
+      }
+    }
+  }
+  .fa-lightbulb {
+    margin-left: 0;
+  }
+}

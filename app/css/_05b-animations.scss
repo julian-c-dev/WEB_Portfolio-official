@@ -1,4 +1,24 @@
-// & navBar mobile - TOGGLE btwn BURGER n X
+// * in navBar
+// & navBar DESKTOP - flipping animation - Logo
+.flip {
+  -webkit-animation: spin 0.2s linear infinite;
+  animation: spin 0.2s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+// & navBar MOBILE - TOGGLE btwn BURGER n X
 
 .burger__frame {
   position: relative;
@@ -38,7 +58,7 @@
   transform: translateY(8px);
 }
 
-// & navBar mobile - TOGGLE => Animation
+// & navBar MOBILE - TOGGLE => Animation
 
 .burger__frame.open .burger__btn {
   transform: translateX(-50px);
@@ -53,40 +73,22 @@
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
-// & navBar DESKTOP - flipping animation - Logo
-.flip {
-  -webkit-animation: spin 0.2s linear infinite;
-  animation: spin 0.2s linear infinite;
-  transform-style: preserve-3d;
-}
+// & navBar MOBILE - Menu Slide animation (right to left)
 
-@-webkit-keyframes spin {
+@keyframes slideMenuOn {
+  0% {
+    transform: translateX(100%);
+  }
   100% {
-    -webkit-transform: rotateY(360deg);
+    transform: translateX(0%);
   }
 }
 
-@keyframes spin {
+@keyframes slideMenuOff {
+  0% {
+    transform: translateX(0%);
+  }
   100% {
-    transform: rotateY(360deg);
+    transform: translateX(100%);
   }
 }
-
-// & zoom effect over img (section About)
-/*
-.zoom {
-  overflow: hidden;
-  padding: 0;
-}
-
-.zoom img {
-  transition: all ease-in-out;
-  transition-duration: 0.5s;
-  margin: 0 auto;
-  display: block;
-}
-.zoom img:hover {
-  transform: scale(1.1);
-  z-index: 0;
-  cursor: pointer;
-}*/

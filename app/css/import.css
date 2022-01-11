@@ -665,6 +665,37 @@ main {
   }
 }
 
+.hidden-menu {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 10rem;
+  width: 75vw;
+  z-index: 11;
+  visibility: initial;
+  background-color: var(--color-bg-dk);
+  padding: 5rem;
+  opacity: 1;
+}
+
+.hidden-menu ul {
+  padding-left: 0;
+}
+
+.hidden-menu ul li {
+  font-size: 1.8rem;
+  margin: 5rem;
+}
+
+.hidden-menu ul li a {
+  text-decoration: none;
+  color: var(--color-font-dk);
+}
+
+.hidden-menu .fa-lightbulb {
+  margin-left: 0;
+}
+
 .title {
   color: var(--color-light);
 }
@@ -1787,6 +1818,26 @@ main {
   }
 }
 
+.flip {
+  -webkit-animation: spin 0.2s linear infinite;
+  animation: spin 0.2s linear infinite;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
 .burger__frame {
   position: relative;
   display: -webkit-box;
@@ -1852,43 +1903,50 @@ main {
           transform: rotate(-45deg) translate(35px, 35px);
 }
 
-.flip {
-  -webkit-animation: spin 0.2s linear infinite;
-  animation: spin 0.2s linear infinite;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-@-webkit-keyframes spin {
+@-webkit-keyframes slideMenuOn {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
   100% {
-    -webkit-transform: rotateY(360deg);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
-@keyframes spin {
+@keyframes slideMenuOn {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
   100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
-/*
-.zoom {
-  overflow: hidden;
-  padding: 0;
+@-webkit-keyframes slideMenuOff {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
 
-.zoom img {
-  transition: all ease-in-out;
-  transition-duration: 0.5s;
-  margin: 0 auto;
-  display: block;
+@keyframes slideMenuOff {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
-.zoom img:hover {
-  transform: scale(1.1);
-  z-index: 0;
-  cursor: pointer;
-}*/
+
 .light {
   background: var(--color-bg-lg);
   color: var(--color-font-lg);

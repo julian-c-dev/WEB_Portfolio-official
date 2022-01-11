@@ -47,3 +47,25 @@ burgerFrame.addEventListener("click", () => {
     menuOpen = false;
   }
 });
+
+// * slide sidebar on & off
+
+let menuDiv = document.getElementById("menu");
+let menuBtnToggle = document.querySelector(".burger__frame");
+let menuBoolean = true;
+
+let menuTimeout = 800;
+
+menuBtnToggle.addEventListener("click", () => {
+  if (menuBoolean) {
+    menuDiv.style.display = "block";
+    menuDiv.style.animation = `slideMenuOn ${menuTimeout / 1000}s ease`;
+    menuBoolean = false;
+  } else {
+    menuDiv.style.animation = `slideMenuOff ${menuTimeout / 800}s ease`;
+    setTimeout(() => {
+      menuDiv.style.display = "none";
+    }, menuTimeout);
+    menuBoolean = true;
+  }
+});
