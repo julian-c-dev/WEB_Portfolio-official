@@ -136,21 +136,25 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
 
   & .card_header {
+    text-align: center;
     font-size: 1.6rem;
     padding: 1rem auto 0 auto;
     white-space: initial;
+    height: 5rem;
   }
 
   & .card_content {
     color: var(--color-font-dk);
-    padding: 0 1rem;
+    padding: 0 1rem 1rem 1rem;
+    height: 25rem;
     font-size: 1.5rem;
     white-space: initial;
+    text-align: left;
   }
   & .card_footer {
+    height: 5rem;
     margin: 1rem auto 3rem auto;
     white-space: initial;
   }
@@ -480,5 +484,31 @@
     .job-sub-tech {
       margin-left: 65rem;
     }
+  }
+  .card {
+    background: var(--color-bg-dk);
+    border-radius: 15px;
+    margin: 3rem 0;
+    height: 35rem;
+    display: flex;
+    cursor: pointer;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s linear;
+
+    & .card_header {
+      font-size: 1.6rem;
+    }
+
+    & .card_content {
+      padding: 0 2rem;
+      font-size: 1.7rem;
+    }
+  }
+  .card:hover {
+    transform: translateY(-20px);
+
+    box-shadow: 2px 3px 2px var(--color-font-accent);
   }
 }
