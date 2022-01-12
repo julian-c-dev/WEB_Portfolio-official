@@ -107,6 +107,11 @@
 
 // & MARGINS
 
+.trans {
+  transition: transform 0.2s ease-in;
+  transform: translateY(2rem);
+}
+
 .mg-1 {
   margin: 1rem;
 }

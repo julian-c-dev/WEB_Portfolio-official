@@ -135,6 +135,7 @@ window.addEventListener("scroll", () => {
     lastScrollY < window.scrollY
   ) {
     nav.classList.add("navBar--hidden");
+    navDesk.classList.remove("trans");
   }
   if (lastScrollY > window.scrollY) {
     nav.classList.remove("navBar--hidden");
@@ -143,6 +144,9 @@ window.addEventListener("scroll", () => {
     navDesk.classList.add("darkShadow");
   } else {
     navDesk.classList.remove("darkShadow");
+  }
+  if (window.scrollY === 0) {
+    navDesk.classList.add("trans");
   }
 
   lastScrollY = window.scrollY;

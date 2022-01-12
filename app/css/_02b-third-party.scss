@@ -23,7 +23,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-font-dk);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -38,7 +38,7 @@
   background: rgb(170, 170, 170);
   background: linear-gradient(
     90deg,
-    rgba(170, 170, 170, 1) 50%,
+    rgba(10, 25, 47, 0.85) 50%,
     rgba(250, 250, 250, 1) 50%
   );
   -webkit-transition: 0.4s;
@@ -46,7 +46,7 @@
 }
 
 input:checked + .slider {
-  background-color: var(--color-font-lg);
+  background-color: var(--color-bg2-lg);
 }
 
 input:checked + .slider:before {

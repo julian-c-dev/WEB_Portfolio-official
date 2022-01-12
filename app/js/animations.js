@@ -16,20 +16,11 @@ function flipping(element) {
     element.setAttribute("src", "/images/logo.svg");
   }, 800);
   setTimeout(() => {
-    element.setAttribute("src", "/images/logo-acc-lg.svg");
+    element.setAttribute("src", "/images/logo-acc.svg");
   }, 1000);
   setTimeout(() => {
-    element.setAttribute("src", "/images/logo-acc.svg");
-  }, 1200);
-  setTimeout(() => {
-    element.setAttribute("src", "/images/logo-acc-lg.svg");
-  }, 1300);
-  setTimeout(() => {
-    element.setAttribute("src", "/images/logo-acc.svg");
-  }, 1400);
-  setTimeout(() => {
     element.classList.remove("flip");
-  }, 1600);
+  }, 1200);
 }
 
 let menuOpen = false;

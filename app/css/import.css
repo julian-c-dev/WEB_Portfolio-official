@@ -382,7 +382,7 @@ template {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-font-dk);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -395,14 +395,14 @@ template {
   left: 5px;
   bottom: 3.5px;
   background: #aaaaaa;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #aaaaaa), color-stop(50%, #fafafa));
-  background: linear-gradient(90deg, #aaaaaa 50%, #fafafa 50%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(10, 25, 47, 0.85)), color-stop(50%, #fafafa));
+  background: linear-gradient(90deg, rgba(10, 25, 47, 0.85) 50%, #fafafa 50%);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: var(--color-font-lg);
+  background-color: var(--color-bg2-lg);
 }
 
 input:checked + .slider:before {
@@ -603,10 +603,8 @@ main {
   left: 0;
   width: 100%;
   z-index: 11;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .navBar--hidden {
@@ -735,7 +733,8 @@ main {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   line-height: 1.4;
-  margin: 4rem 1rem 0 1rem;
+  margin: 0 1rem 0 1rem;
+  padding-top: 15rem;
   white-space: initial;
 }
 
@@ -791,7 +790,8 @@ main {
 
 @media screen and (min-width: 700px) {
   .hero {
-    margin: 4rem auto 0 auto;
+    margin: 0 auto 0 auto;
+    padding-top: 15rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2100,6 +2100,15 @@ main {
 
 .center {
   text-align: center;
+}
+
+.trans {
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  -webkit-transform: translateY(2rem);
+          transform: translateY(2rem);
 }
 
 .mg-1 {
