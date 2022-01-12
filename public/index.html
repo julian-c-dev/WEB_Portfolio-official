@@ -81,25 +81,20 @@
     </nav>
 
     <!-- & Side menu after clicking Menu mobile view-->
-    <aside id="hiddenMenuFrame" class="overlay">
+    <aside id="hiddenMenuFrame" class="">
       <div id="hiddenMenu" class="hidden-menu solid">
         <ul>
-          <li><a id="navItem1" href="#sec_About">About</a></li>
-          <li><a id="navItem2" href="#sec_Skills">Skills</a></li>
-          <li><a id="navItem3" href="#sec_Experience">Experience</a></li>
-          <li><a id="navItem4" href="#sec_Contact">Conctact</a></li>
-          <li></li>
-          <li>
-            <div class="flex flex-clm flex-st">
-              <div class="flex">
-                <i class="far fa-lightbulb"></i>
-                <label id="theme_swith" class="switch mg-x-1">
-                  <input type="checkbox" id="handlerTheme" />
-                  <span class="slider round"></span>
-                </label>
-              </div>
-            </div>
-          </li>
+          <li><a class="sideLinks" href="#sec_About">About</a></li>
+          <li><a class="sideLinks" href="#sec_Skills">Skills</a></li>
+          <li><a class="sideLinks" href="#sec_Experience">Experience</a></li>
+          <li><a class="sideLinks" href="#sec_Contact">Conctact</a></li>
+          <p>Theme Dark / Light</p>
+          <div class="flex flex-st">
+            <label id="theme_swith" class="switch mg-x-1">
+              <input type="checkbox" id="handlerTheme" />
+              <span class="slider round"></span>
+            </label>
+          </div>
         </ul>
       </div>
     </aside>

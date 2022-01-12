@@ -619,7 +619,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   padding: 3rem 4rem 3rem 3rem;
-  height: 10rem;
+  height: 8rem;
   z-index: 11;
 }
 
@@ -692,7 +692,7 @@ main {
   display: none;
   position: fixed;
   right: 0;
-  top: 10rem;
+  top: 8rem;
   width: 70vw;
   height: 100vh;
   z-index: 11;
@@ -703,17 +703,36 @@ main {
 }
 
 .hidden-menu ul {
+  counter-reset: section;
   padding-left: 0;
 }
 
 .hidden-menu ul li {
-  font-size: 1.8rem;
   margin: 5rem;
 }
 
+.hidden-menu ul li ::before {
+  counter-increment: section;
+  content: counters(section, ".") ". ";
+  color: var(--color-font-accent);
+}
+
 .hidden-menu ul li a {
+  font-size: 2.5rem;
   text-decoration: none;
   color: var(--color-font-dk);
+}
+
+.hidden-menu ul p,
+.hidden-menu ul div {
+  margin: 2rem 0 2rem 5rem;
+  font-size: 2.5rem;
+  color: var(--color-font-dk);
+}
+
+.hidden-menu ul p label,
+.hidden-menu ul div label {
+  margin-left: 0;
 }
 
 .hidden-menu .fa-lightbulb {

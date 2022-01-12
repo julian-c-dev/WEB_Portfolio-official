@@ -54,7 +54,7 @@ burgerBtn.addEventListener("click", () => {
   }
 });
 
-// * slide ASIDE BAR on & off
+// & slide ASIDE BAR on & off
 
 burgerBtn.addEventListener("click", () => {
   if (menuBoolean) {
@@ -70,8 +70,10 @@ burgerBtn.addEventListener("click", () => {
   }
 });
 
-window.addEventListener("resize", closeHiddenMenu);
-function closeHiddenMenu() {
+// & slide ASIDE BAR off if resize over 700px
+
+window.addEventListener("resize", closeMenuDueResize);
+function closeMenuDueResize() {
   if (window.screen.width >= 700 && window.innerWidth >= 700) {
     hiddenMenu.style.display = "none";
     menuBoolean = true;
@@ -79,4 +81,19 @@ function closeHiddenMenu() {
     menuOpen = false;
     hiddenMenuFrame.classList.remove("overlay");
   }
+}
+
+// & slide ASIDE BAR off if clicking over any link
+const sideLinks = document.querySelectorAll(".sideLinks");
+
+for (let i = 0; 0 < sideLinks.length; i++) {
+  sideLinks[i].addEventListener("click", closeMenuDueClick);
+}
+
+function closeMenuDueClick() {
+  hiddenMenu.style.display = "none";
+  menuBoolean = true;
+  burgerBtn.classList.remove("open");
+  menuOpen = false;
+  hiddenMenuFrame.classList.remove("overlay");
 }
