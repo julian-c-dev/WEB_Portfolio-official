@@ -7,7 +7,7 @@
   display: flex;
   flex-flow: column nowrap;
   line-height: 1.4;
-  margin: 0 1rem;
+  margin: 4rem 1rem 0 1rem;
   white-space: initial;
   h1 {
     .overTitle {
@@ -62,7 +62,7 @@
 
 @media screen and(min-width:700px) {
   .hero {
-    margin: 0 auto;
+    margin: 4rem auto 0 auto;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
@@ -123,6 +123,7 @@
 @media screen and(min-width:1250px) {
   .hero {
     margin: 0 0 0 30rem;
+    padding-top: 20rem;
   }
   // ! just for mozilla
   @-moz-document url-prefix() {

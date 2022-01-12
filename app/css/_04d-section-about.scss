@@ -8,7 +8,8 @@
 @media screen and(min-width:1024px) {
   .about-image img {
     transition: all 0.5s linear;
-    filter: sepia(80%);
+    filter: sepia(100%);
+
     &:hover {
       filter: sepia(0%);
     }

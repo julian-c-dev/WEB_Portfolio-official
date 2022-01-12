@@ -25,57 +25,63 @@
     <!-- * NavBars  -->
 
     <!-- & visible on Phone-->
-    <nav class="nav__mobile flex-sb flex-center light dark">
-      <a href="#">
-        <img src="/images/logo-acc.svg" width="45" alt="Julian's rombo Logo" />
-      </a>
-      <div class="burger__frame">
-        <div class="burger__btn"></div>
-      </div>
-    </nav>
-
-    <!-- & visible in DESKTOP-->
-
-    <!-- * Nav-BOTTOM => PRINCIPAL-->
-    <nav class="nav__desktop flex-sb flex-center light dark">
-      <div class="flex flex-center mg-xl-3">
+    <nav class="navBar">
+      <div class="nav__mobile flex-sb flex-center">
         <a href="#">
           <img
-            id="logo"
-            onmouseover="flipping(this)"
             src="/images/logo-acc.svg"
-            width="55"
+            width="45"
+            alt="Julian's rombo Logo"
           />
         </a>
-        <i class="far fa-lightbulb"></i>
-        <div class="flex flex-clm">
-          <div class="flex flex-center">
-            <label id="theme_swith" class="switch mg-x-1">
-              <input type="checkbox" id="handlerTheme" />
-              <span class="slider round"></span>
-            </label>
-          </div>
+        <div class="burger__frame">
+          <div class="burger__btn"></div>
         </div>
       </div>
 
-      <ul class="nav__links flex flex-center">
-        <li><a id="navItem1" href="#sec_About">About</a></li>
-        <li><a id="navItem2" href="#sec_Skills">Skills</a></li>
-        <li><a id="navItem3" href="#sec_Experience">Experience</a></li>
-        <li><a id="navItem4" href="#sec_Contact">Conctact</a></li>
-        <li>
-          <a
-            href="/app/downloads/RESUME_Julian_cantera_DEV.pdf"
-            download="RESUME_Julian_cantera_DEV.pdf"
-            class="btn"
-            >Resume</a
-          >
-        </li>
-      </ul>
+      <!-- & visible in DESKTOP-->
+
+      <!-- * Nav-BOTTOM => PRINCIPAL-->
+      <div class="nav__desktop flex-sb flex-center">
+        <div class="flex flex-center mg-xl-3">
+          <a href="#">
+            <img
+              id="logo"
+              onmouseover="flipping(this)"
+              src="/images/logo-acc.svg"
+              width="55"
+            />
+          </a>
+          <i class="far fa-lightbulb"></i>
+          <div class="flex flex-clm">
+            <div class="flex flex-center">
+              <label id="theme_swith" class="switch mg-x-1">
+                <input type="checkbox" id="handlerTheme" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <ul class="nav__links flex flex-center">
+          <li><a id="navItem1" href="#sec_About">About</a></li>
+          <li><a id="navItem2" href="#sec_Skills">Skills</a></li>
+          <li><a id="navItem3" href="#sec_Experience">Experience</a></li>
+          <li><a id="navItem4" href="#sec_Contact">Conctact</a></li>
+          <li>
+            <a
+              href="/app/downloads/RESUME_Julian_cantera_DEV.pdf"
+              download="RESUME_Julian_cantera_DEV.pdf"
+              class="btn"
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- & Side menu after clicking Menu mobile view-->
-    <aside id="menu" class="hidden-menu light dark">
+    <aside id="menu" class="hidden-menu">
       <ul>
         <li><a id="navItem1" href="#sec_About">About</a></li>
         <li><a id="navItem2" href="#sec_Skills">Skills</a></li>

@@ -35,7 +35,7 @@ function flipping(element) {
 let menuOpen = false;
 let flagClicked = false;
 
-// * menu-btn animation = menu icon to X
+// * menu-btn animation = burger icon to X
 const burgerFrame = document.querySelector(".burger__frame");
 
 burgerFrame.addEventListener("click", () => {

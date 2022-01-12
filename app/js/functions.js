@@ -118,3 +118,32 @@ function onResizeFunction() {
     });
   }
 }
+
+// * navBar
+
+let menuOpened = false;
+
+// * enable hidden navBar
+const nav = document.querySelector(".navBar");
+const navDesk = document.querySelector(".nav__desktop");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  if (
+    menuOpened === false &&
+    window.scrollY > 150 &&
+    lastScrollY < window.scrollY
+  ) {
+    nav.classList.add("navBar--hidden");
+  }
+  if (lastScrollY > window.scrollY) {
+    nav.classList.remove("navBar--hidden");
+  }
+  if (window.scrollY > 150) {
+    navDesk.classList.add("darkShadow");
+  } else {
+    navDesk.classList.remove("darkShadow");
+  }
+
+  lastScrollY = window.scrollY;
+});

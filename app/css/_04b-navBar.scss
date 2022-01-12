@@ -1,9 +1,23 @@
 // * NAVIGATION-BAR
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navBar--hidden {
+  transform: translateY(-10rem);
+}
 
 .nav__mobile {
-  background-color: var(--color-bg-lg);
+  background-color: var(--color-bg-dk);
+  backdrop-filter: blur(2px);
   display: flex;
   padding: 3rem 4rem 5rem 3rem;
+  height: 7rem;
 }
 
 .nav__desktop,
@@ -20,16 +34,19 @@
     font-size: 2rem;
     margin: 0 0 0 1.5rem;
   }
+
   .nav__desktop {
-    background-color: var(--color-bg-lg);
+    background-color: transparent;
+    backdrop-filter: blur(2px);
     display: flex;
-    padding: 0 3rem 3rem 3rem;
+    padding: 2rem 3rem;
+    height: 7.5rem;
 
     .nav__links {
       counter-reset: section;
       font-size: 1.5rem;
       list-style-type: none;
-      padding: 1rem;
+
       li {
         margin: 0 1rem;
       }
@@ -52,18 +69,22 @@
       li > a:active {
         text-decoration: none;
         transition: color 0.4s, smooth;
+        color: var(--color-font-dk);
       }
       li > a:hover {
         color: var(--color-font-accent-dk);
       }
     }
   }
+  .nav__desktop--trans {
+    background-color: transparent;
+  }
 }
 
 @media screen and (min-width: 800px) {
   .nav__desktop {
     .nav__links {
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
   }
 }

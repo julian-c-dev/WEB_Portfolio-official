@@ -597,12 +597,32 @@ main {
   }
 }
 
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.navBar--hidden {
+  -webkit-transform: translateY(-10rem);
+          transform: translateY(-10rem);
+}
+
 .nav__mobile {
-  background-color: var(--color-bg-lg);
+  background-color: var(--color-bg-dk);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 3rem 4rem 5rem 3rem;
+  height: 7rem;
 }
 
 .nav__desktop,
@@ -620,17 +640,19 @@ main {
     margin: 0 0 0 1.5rem;
   }
   .nav__desktop {
-    background-color: var(--color-bg-lg);
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 3rem 3rem 3rem;
+    padding: 2rem 3rem;
+    height: 7.5rem;
   }
   .nav__desktop .nav__links {
     counter-reset: section;
     font-size: 1.5rem;
     list-style-type: none;
-    padding: 1rem;
   }
   .nav__desktop .nav__links li {
     margin: 0 1rem;
@@ -653,15 +675,19 @@ main {
     text-decoration: none;
     -webkit-transition: color 0.4s, smooth;
     transition: color 0.4s, smooth;
+    color: var(--color-font-dk);
   }
   .nav__desktop .nav__links li > a:hover {
     color: var(--color-font-accent-dk);
+  }
+  .nav__desktop--trans {
+    background-color: transparent;
   }
 }
 
 @media screen and (min-width: 800px) {
   .nav__desktop .nav__links {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -709,7 +735,7 @@ main {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   line-height: 1.4;
-  margin: 0 1rem;
+  margin: 4rem 1rem 0 1rem;
   white-space: initial;
 }
 
@@ -765,7 +791,7 @@ main {
 
 @media screen and (min-width: 700px) {
   .hero {
-    margin: 0 auto;
+    margin: 4rem auto 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -825,6 +851,7 @@ main {
 @media screen and (min-width: 1250px) {
   .hero {
     margin: 0 0 0 30rem;
+    padding-top: 20rem;
   }
   @-moz-document url-prefix() {
     .hero {
@@ -846,8 +873,8 @@ main {
   .about-image img {
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
-    -webkit-filter: sepia(80%);
-            filter: sepia(80%);
+    -webkit-filter: sepia(100%);
+            filter: sepia(100%);
   }
   .about-image img:hover {
     -webkit-filter: sepia(0%);
@@ -1969,6 +1996,12 @@ main {
 .dark li > a:visited,
 .dark li > a:active {
   color: var(--color-font-dk);
+}
+
+.darkShadow {
+  background-color: var(--color-bg-dk);
+  -webkit-box-shadow: 3px 0 15px var(--color-darkest);
+          box-shadow: 3px 0 15px var(--color-darkest);
 }
 
 .darkest {

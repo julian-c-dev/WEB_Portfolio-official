@@ -26,7 +26,10 @@
     color: var(--color-font-dk);
   }
 }
-
+.darkShadow {
+  background-color: var(--color-bg-dk);
+  box-shadow: 3px 0 15px var(--color-darkest);
+}
 //& FONTS
 .darkest {
   color: var(--color-font-lg-darker);
