@@ -4,8 +4,10 @@ const mobileNav = document.querySelector(".nav__mobile");
 const section = document.querySelectorAll(".section");
 const title = document.querySelector(".title");
 const stwch_Theme = document.querySelector("#handlerTheme");
+const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
 
 stwch_Theme.addEventListener("click", themeEvent);
+stwch_ThemeHidden.addEventListener("click", themeEvent);
 
 function themeEvent() {
   mobileNav.classList.toggle("dark");
