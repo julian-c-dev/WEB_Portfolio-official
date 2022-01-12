@@ -13,11 +13,12 @@
 }
 
 .nav__mobile {
-  background-color: var(--color-bg-dk);
-  backdrop-filter: blur(2px);
+  background-color: var(--color-bg-dk-solid);
+
   display: flex;
-  padding: 3rem 4rem 5rem 3rem;
-  height: 7rem;
+  padding: 3rem 4rem 3rem 3rem;
+  height: 10rem;
+  z-index: 11;
 }
 
 .nav__desktop,
@@ -33,11 +34,12 @@
     display: inline-block;
     font-size: 2rem;
     margin: 0 0 0 1.5rem;
+    color: var(--color-font-dk);
   }
 
   .nav__desktop {
-    background-color: transparent;
-    backdrop-filter: blur(2px);
+    background-color: var(--color-bg-dk-solid);
+
     display: flex;
     padding: 2rem 3rem;
     height: 7.5rem;
@@ -95,13 +97,14 @@
   position: fixed;
   right: 0;
   top: 10rem;
-  width: 75vw;
+  width: 70vw;
+  height: 100vh;
   z-index: 11;
   visibility: initial;
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-bg-dk-solid);
   padding: 5rem;
+  z-index: 11;
 
-  opacity: 1;
   & ul {
     padding-left: 0;
     & li {
