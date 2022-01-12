@@ -48,6 +48,7 @@
 .darkShadow {
   background-color: var(--color-bg-dk);
   box-shadow: 3px 0 15px var(--color-darkest);
+  backdrop-filter: blur(2px);
 }
 
 .blue {

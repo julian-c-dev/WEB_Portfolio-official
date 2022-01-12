@@ -2045,6 +2045,8 @@ main {
   background-color: var(--color-bg-dk);
   -webkit-box-shadow: 3px 0 15px var(--color-darkest);
           box-shadow: 3px 0 15px var(--color-darkest);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 
 .blue {
