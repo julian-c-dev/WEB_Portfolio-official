@@ -26,9 +26,32 @@
     color: var(--color-font-dk);
   }
 }
+
+.overlay {
+  position: fixed;
+  background-color: var(--color-bg-dk);
+  backdrop-filter: blur(2px);
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 9;
+}
+
+.trans {
+  transition: transform 0.2s ease-in;
+  transform: translateY(2rem);
+}
+
+.solid {
+  background-color: var(--color-bg-dk-solid);
+}
 .darkShadow {
   background-color: var(--color-bg-dk);
   box-shadow: 3px 0 15px var(--color-darkest);
+}
+
+.blue {
+  background-color: var(--color-bg-dk);
 }
 //& FONTS
 .darkest {
@@ -106,11 +129,6 @@
 }
 
 // & MARGINS
-
-.trans {
-  transition: transform 0.2s ease-in;
-  transform: translateY(2rem);
-}
 
 .mg-1 {
   margin: 1rem;

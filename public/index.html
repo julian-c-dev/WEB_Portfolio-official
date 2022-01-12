@@ -42,7 +42,7 @@
       <!-- & visible in DESKTOP-->
 
       <!-- * Nav-BOTTOM => PRINCIPAL-->
-      <div class="nav__desktop trans flex-sb flex-center">
+      <div class="nav__desktop solid flex-sb flex-center">
         <div class="flex flex-center mg-xl-3">
           <a href="#">
             <img
@@ -81,30 +81,32 @@
     </nav>
 
     <!-- & Side menu after clicking Menu mobile view-->
-    <aside id="menu" class="hidden-menu">
-      <ul>
-        <li><a id="navItem1" href="#sec_About">About</a></li>
-        <li><a id="navItem2" href="#sec_Skills">Skills</a></li>
-        <li><a id="navItem3" href="#sec_Experience">Experience</a></li>
-        <li><a id="navItem4" href="#sec_Contact">Conctact</a></li>
-        <li></li>
-        <li>
-          <div class="flex flex-clm flex-st">
-            <div class="flex">
-              <i class="far fa-lightbulb"></i>
-              <label id="theme_swith" class="switch mg-x-1">
-                <input type="checkbox" id="handlerTheme" />
-                <span class="slider round"></span>
-              </label>
+    <aside id="hiddenMenuFrame" class="overlay">
+      <div id="hiddenMenu" class="hidden-menu solid">
+        <ul>
+          <li><a id="navItem1" href="#sec_About">About</a></li>
+          <li><a id="navItem2" href="#sec_Skills">Skills</a></li>
+          <li><a id="navItem3" href="#sec_Experience">Experience</a></li>
+          <li><a id="navItem4" href="#sec_Contact">Conctact</a></li>
+          <li></li>
+          <li>
+            <div class="flex flex-clm flex-st">
+              <div class="flex">
+                <i class="far fa-lightbulb"></i>
+                <label id="theme_swith" class="switch mg-x-1">
+                  <input type="checkbox" id="handlerTheme" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </aside>
 
     <!-- ^ MAIN CONTENT ^ -->
     <!-- * Hero -->
-    <main>
+    <main class="main">
       <header class="section light dark">
         <div class="hero">
           <h1>
@@ -137,11 +139,12 @@
           class="credit-content"
           href="https://github.com/julian-c-dev/"
           target="_blank"
-          ><i class="fab fa-github-square"></i
+          ><i class="fab fa-github-square"></i>
+        </a>
+
+        <a class="credit-content" href="javascript:void(0)">
+          <i class="fab fa-linkedin"></i
         ></a>
-        <button class="credit-content">
-          <i class="fab fa-linkedin"></i>
-        </button>
 
         <a
           class="credit-content"
@@ -943,6 +946,7 @@
 
     <script src="/app/js/animations.js"></script>
     <script src="/app/js/functions.js"></script>
+    <script src="/app/js/navBar.js"></script>
     <!-- * Swiper JS [Experience Section] -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>

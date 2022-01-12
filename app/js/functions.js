@@ -1,4 +1,4 @@
-// & TOGGLE Theme dark/light
+// & [NavBar] TOGGLE btwn Theme dark/light
 const desktopNav = document.querySelector(".nav__desktop");
 const mobileNav = document.querySelector(".nav__mobile");
 const section = document.querySelectorAll(".section");
@@ -50,7 +50,7 @@ function showDivs(n) {
   dots[slideIndex - 1].className += " hlgt";
 }
 
-// & REMOVE CLASSES after 1250px (Exp section, normal => slider cards)
+// & [Experience Section] REMOVE CLASSES after 1250px (normal => slider cards)
 const swiper1 = document.querySelector(".swiper1");
 const swiper2 = document.querySelector(".swiper2");
 const swiper3 = document.querySelector(".swiper3");
@@ -118,36 +118,3 @@ function onResizeFunction() {
     });
   }
 }
-
-// * navBar
-
-let menuOpened = false;
-
-// * enable hidden navBar
-const nav = document.querySelector(".navBar");
-const navDesk = document.querySelector(".nav__desktop");
-let lastScrollY = window.scrollY;
-
-window.addEventListener("scroll", () => {
-  if (
-    menuOpened === false &&
-    window.scrollY > 150 &&
-    lastScrollY < window.scrollY
-  ) {
-    nav.classList.add("navBar--hidden");
-    navDesk.classList.remove("trans");
-  }
-  if (lastScrollY > window.scrollY) {
-    nav.classList.remove("navBar--hidden");
-  }
-  if (window.scrollY > 150) {
-    navDesk.classList.add("darkShadow");
-  } else {
-    navDesk.classList.remove("darkShadow");
-  }
-  if (window.scrollY === 0) {
-    navDesk.classList.add("trans");
-  }
-
-  lastScrollY = window.scrollY;
-});

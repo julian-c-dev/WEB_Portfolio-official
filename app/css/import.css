@@ -9,10 +9,11 @@
   --color-dark-slate: rgb(28, 72, 129);
   --color-darker-slate: rgb(5, 25, 53);
   --color-bg-dk: rgba(10, 25, 47, 0.85);
+  --color-bg-dk-solid: rgb(10, 25, 47);
   --color-bg2-dk: rgba(24, 49, 83, 0.6);
   --color-font-dk: rgb(176, 183, 204);
   --color-font-dk2: rgb(104, 115, 153);
-  --color-bg-lg: rgba(170, 170, 170, 0.5);
+  --color-bg-lg: rgba(106, 105, 116, 0.5);
   --color-font-lg: rgb(35, 61, 129);
   --color-font-lg-darker: rgb(7, 34, 102);
   --shadow: 1px 1px 2px var(--color-bg-dk);
@@ -394,9 +395,9 @@ template {
   width: 12px;
   left: 5px;
   bottom: 3.5px;
-  background: #aaaaaa;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(10, 25, 47, 0.85)), color-stop(50%, #fafafa));
-  background: linear-gradient(90deg, rgba(10, 25, 47, 0.85) 50%, #fafafa 50%);
+  background: #414141;
+  background: -webkit-gradient(linear, left top, right top, to(rgba(10, 25, 47, 0.85)));
+  background: linear-gradient(90deg, rgba(10, 25, 47, 0.85) 100%);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -613,14 +614,13 @@ main {
 }
 
 .nav__mobile {
-  background-color: var(--color-bg-dk);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  background-color: var(--color-bg-dk-solid);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 3rem 4rem 5rem 3rem;
-  height: 7rem;
+  padding: 3rem 4rem 3rem 3rem;
+  height: 10rem;
+  z-index: 11;
 }
 
 .nav__desktop,
@@ -636,11 +636,10 @@ main {
     display: inline-block;
     font-size: 2rem;
     margin: 0 0 0 1.5rem;
+    color: var(--color-font-dk);
   }
   .nav__desktop {
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
+    background-color: var(--color-bg-dk-solid);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -694,12 +693,13 @@ main {
   position: fixed;
   right: 0;
   top: 10rem;
-  width: 75vw;
+  width: 70vw;
+  height: 100vh;
   z-index: 11;
   visibility: initial;
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-bg-dk-solid);
   padding: 5rem;
-  opacity: 1;
+  z-index: 11;
 }
 
 .hidden-menu ul {
@@ -1816,7 +1816,7 @@ main {
   }
   .credit-r_side::after,
   .credit-l_side::after {
-    border-right: 2px solid var(--color-font-dk2);
+    border-right: 2px solid var(--color-font-dk);
     height: 90px;
     content: "";
     margin: 2rem 1rem 0 1rem;
@@ -1829,9 +1829,10 @@ main {
   .credit-content:link, .credit-content:visited, .credit-content:active {
     text-decoration: none;
     font-family: monospace;
-    color: var(--color-font-dk2);
+    color: var(--color-font-dk);
     letter-spacing: 0.2ch;
     font-size: 1.3rem;
+    font-weight: 100;
   }
   .credit-content:hover {
     color: var(--color-font-accent-dk);
@@ -1998,10 +1999,37 @@ main {
   color: var(--color-font-dk);
 }
 
+.overlay {
+  position: fixed;
+  background-color: var(--color-bg-dk);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+}
+
+.trans {
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  -webkit-transform: translateY(2rem);
+          transform: translateY(2rem);
+}
+
+.solid {
+  background-color: var(--color-bg-dk-solid);
+}
+
 .darkShadow {
   background-color: var(--color-bg-dk);
   -webkit-box-shadow: 3px 0 15px var(--color-darkest);
           box-shadow: 3px 0 15px var(--color-darkest);
+}
+
+.blue {
+  background-color: var(--color-bg-dk);
 }
 
 .darkest {
@@ -2100,15 +2128,6 @@ main {
 
 .center {
   text-align: center;
-}
-
-.trans {
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-  -webkit-transform: translateY(2rem);
-          transform: translateY(2rem);
 }
 
 .mg-1 {

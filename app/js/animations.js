@@ -1,5 +1,3 @@
-// &  NAVBAR
-
 // * Fliping logo ANIMATION onmouseOver
 function flipping(element) {
   element.classList.add("flip");
@@ -22,41 +20,3 @@ function flipping(element) {
     element.classList.remove("flip");
   }, 1200);
 }
-
-let menuOpen = false;
-let flagClicked = false;
-
-// * menu-btn animation = burger icon to X
-const burgerFrame = document.querySelector(".burger__frame");
-
-burgerFrame.addEventListener("click", () => {
-  if (!menuOpen) {
-    burgerFrame.classList.add("open");
-    menuOpen = true;
-  } else {
-    burgerFrame.classList.remove("open");
-    menuOpen = false;
-  }
-});
-
-// * slide sidebar on & off
-
-let menuDiv = document.getElementById("menu");
-let menuBtnToggle = document.querySelector(".burger__frame");
-let menuBoolean = true;
-
-let menuTimeout = 800;
-
-menuBtnToggle.addEventListener("click", () => {
-  if (menuBoolean) {
-    menuDiv.style.display = "block";
-    menuDiv.style.animation = `slideMenuOn ${menuTimeout / 1000}s ease`;
-    menuBoolean = false;
-  } else {
-    menuDiv.style.animation = `slideMenuOff ${menuTimeout / 800}s ease`;
-    setTimeout(() => {
-      menuDiv.style.display = "none";
-    }, menuTimeout);
-    menuBoolean = true;
-  }
-});
