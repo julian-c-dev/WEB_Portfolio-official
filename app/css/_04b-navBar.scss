@@ -101,24 +101,28 @@
   z-index: 11;
   visibility: initial;
   background-color: var(--color-bg-dk-solid);
-  padding: 5rem;
+  padding: 3rem;
   z-index: 11;
 
   & ul {
     counter-reset: section;
     padding-left: 0;
     & li {
-      margin: 5rem;
+      margin: 4rem;
       ::before {
         counter-increment: section;
         content: counters(section, ".") ". ";
         color: var(--color-font-accent);
       }
+
       & a {
         font-size: 2.5rem;
         text-decoration: none;
         color: var(--color-font-dk);
       }
+    }
+    #resumeHidden::before {
+      content: unset;
     }
     & p,
     div {

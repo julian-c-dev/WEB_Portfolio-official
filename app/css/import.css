@@ -698,7 +698,7 @@ main {
   z-index: 11;
   visibility: initial;
   background-color: var(--color-bg-dk-solid);
-  padding: 5rem;
+  padding: 3rem;
   z-index: 11;
 }
 
@@ -708,7 +708,7 @@ main {
 }
 
 .hidden-menu ul li {
-  margin: 5rem;
+  margin: 4rem;
 }
 
 .hidden-menu ul li ::before {
@@ -721,6 +721,10 @@ main {
   font-size: 2.5rem;
   text-decoration: none;
   color: var(--color-font-dk);
+}
+
+.hidden-menu ul #resumeHidden::before {
+  content: unset;
 }
 
 .hidden-menu ul p,
