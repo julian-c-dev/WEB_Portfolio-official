@@ -14,6 +14,9 @@
   li > a:active {
     color: var(--color-font-lg);
   }
+  li > a:hover {
+    color: var(--color-accent);
+  }
 }
 
 .dark {
@@ -68,7 +71,7 @@
 }
 
 .hlgt {
-  color: var(--color-accent-dk);
+  color: var(--color-primary);
   font-weight: bold;
 }
 

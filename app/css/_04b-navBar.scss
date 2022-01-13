@@ -58,7 +58,8 @@
       }
 
       li:last-child a:hover {
-        color: var(--color-font-lg);
+        transition: all 0.05s;
+        color: var(--color-accent);
       }
 
       li:last-child::before {

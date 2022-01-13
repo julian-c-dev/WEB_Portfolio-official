@@ -18,7 +18,8 @@
   max-width: 300px;
   padding: 1.3rem;
   &:hover {
-    background-color: var(--color-accent-lighter);
+    background-color: var(--color-accent-lightest);
+    text-shadow: 1px 1px 5px var(--color-darkest);
   }
 }
 
@@ -30,7 +31,7 @@
   max-width: 300px;
   padding: 1rem;
   &:hover {
-    background-color: var(--color-accent-lighter);
+    background-color: var(--color-accent-lightest);
   }
 }
 

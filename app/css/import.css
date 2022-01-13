@@ -7,7 +7,7 @@
   --color-secondary: rgba(96, 155, 233, 0.6);
   --color-accent: rgb(255, 122, 34);
   --color-accent-lighter: rgb(255, 149, 78);
-  --color-accent-lightest: rgb(255, 175, 122);
+  --color-accent-lightest: rgba(255, 175, 122, 0.2);
   --color-accent-darker: rgb(231, 92, 0);
   --color-accent-darkerst: rgb(173, 69, 0);
   --color-font: rgb(177, 180, 192);
@@ -661,7 +661,9 @@ main {
     color: var(--color-accent);
   }
   .nav__desktop .nav__links li:last-child a:hover {
-    color: var(--color-font-lg);
+    -webkit-transition: all 0.05s;
+    transition: all 0.05s;
+    color: var(--color-accent);
   }
   .nav__desktop .nav__links li:last-child::before {
     content: unset;
@@ -1792,7 +1794,8 @@ main {
 }
 
 .btn:hover {
-  background-color: var(--color-accent-lighter);
+  background-color: var(--color-accent-lightest);
+  text-shadow: 1px 1px 5px var(--color-darkest);
 }
 
 .btn-skills {
@@ -1805,7 +1808,7 @@ main {
 }
 
 .btn-skills:hover {
-  background-color: var(--color-accent-lighter);
+  background-color: var(--color-accent-lightest);
 }
 
 .credit-r_side,
@@ -2010,6 +2013,10 @@ main {
   color: var(--color-font-lg);
 }
 
+.light li > a:hover {
+  color: var(--color-accent);
+}
+
 .dark {
   background: var(--color-primary-opacity);
   color: var(--color-font);
@@ -2070,7 +2077,7 @@ main {
 }
 
 .hlgt {
-  color: var(--color-accent-dk);
+  color: var(--color-primary);
   font-weight: bold;
 }
 
