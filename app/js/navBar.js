@@ -4,6 +4,8 @@ const navMobile = document.querySelector(".nav__mobile");
 const hiddenMenu = document.getElementById("hiddenMenu");
 const hiddenMenuFrame = document.getElementById("hiddenMenuFrame");
 const burgerBtn = document.querySelector(".burger__frame");
+const logoHidden = document.getElementById("logoHidden");
+const sideLinks = document.querySelectorAll(".sideLinks");
 
 let menuOpen = false;
 let flagClicked = false;
@@ -84,8 +86,6 @@ function closeMenuDueResize() {
 }
 
 // & slide ASIDE BAR off if clicking over any link
-let sideLinks = document.querySelectorAll(".sideLinks");
-const logoHidden = document.getElementById("logoHidden");
 
 logoHidden.addEventListener("click", closeMenuDueClick);
 sideLinks[0].onclick = closeMenuDueClick;
