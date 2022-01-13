@@ -85,6 +85,9 @@ function closeMenuDueResize() {
 
 // & slide ASIDE BAR off if clicking over any link
 const sideLinks = document.querySelectorAll(".sideLinks");
+const logoHidden = document.getElementById("logoHidden");
+
+logoHidden.addEventListener("click", closeMenuDueClick);
 
 for (let i = 0; 0 < sideLinks.length; i++) {
   sideLinks[i].addEventListener("click", closeMenuDueClick);
