@@ -10,10 +10,9 @@
   --color-accent-lightest: rgba(255, 175, 122, 0.2);
   --color-accent-darker: rgb(231, 92, 0);
   --color-accent-darkerst: rgb(173, 69, 0);
-  --color-font: rgb(177, 180, 192);
+  --color-font: rgb(255, 255, 255);
   --color-cards-primary: rgb(28, 72, 129);
   --color-footer: rgb(5, 25, 53);
-  --color-bg-lg: rgba(126, 62, 62, 0.3);
   --color-font-lg: rgb(35, 61, 129);
   --color-font-lg-darker: rgb(7, 34, 102);
   --shadow: 1px 1px 2px var(--color-primary-opacity);
@@ -434,6 +433,83 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: var(--color-background);
+}
+
+body h1 .overTitle {
+  color: var(--color-overtitle);
+}
+
+body h1 .title {
+  color: var(--color-title);
+}
+
+body h1 .subTitle {
+  color: var(--color-subtitle);
+}
+
+body .hero .hero__content {
+  color: var(--color-heroContent);
+}
+
+body .credit-content {
+  color: var(--credits);
+}
+
+body .credit-content .credit-r_side::after,
+body .credit-content .credit-l_side::after {
+  border-right: 2px solid var(--credit-line);
+}
+
+body .credit-content:hover {
+  color: var(--credits-hover);
+}
+
+body .btn {
+  color: var(--color-btn);
+  border-color: var(--color-btn-border);
+}
+
+body .btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+body .section-heading {
+  color: var(--section-heading);
+}
+
+body .section-content > p {
+  color: var(--section-content);
+}
+
+body .card-colors {
+  background-color: var(--card-skills);
+  color: var(--card-skills-content);
+}
+
+body .card-colors:hover {
+  color: var(--color-accent);
+}
+
+body.light-theme {
+  --color-background: rgb(228, 229, 241);
+  --color-overtitle: rgb(10, 25, 47);
+  --color-title: rgb(10, 25, 47);
+  --color-subtitle: rgb(147, 148, 165);
+  --color-heroContent: rgb(72, 75, 106);
+  --credits: rgb(72, 75, 106);
+  --credits-hover: rgb(10, 25, 47);
+  --credit-line: rgb(72, 75, 106);
+  --color-btn: rgb(10, 25, 47);
+  --color-btn-border: rgb(10, 25, 47);
+  --color-btn-hover: rgba(255, 175, 122, 0.2);
+  --section-heading: rgb(10, 25, 47);
+  --section-content: rgb(72, 75, 106);
+  --card-skills: rgba(10, 25, 47, 1);
+  --card-skills-content: rgb(147, 148, 165);
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -489,8 +565,7 @@ main {
 }
 
 .section-heading::after {
-  border-bottom: 1px solid var(--color-accent);
-  opacity: 0.3;
+  border-bottom: 2px solid var(--color-accent);
   width: 90px;
   content: "";
   margin-left: 1rem;
@@ -765,9 +840,8 @@ main {
 }
 
 .hero h1 .overTitle {
-  color: var(--color-accent);
   font-size: 5vw;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .hero h1 .title {
@@ -908,13 +982,9 @@ main {
   }
 }
 
-.html-colors,
-.css-colors,
-.js-colors,
-.sql-colors {
+.card-colors {
   -webkit-transform: scale(1);
           transform: scale(1);
-  background-color: var(--color-primary-opacity);
   -webkit-box-shadow: 1px 1px 5px var(--color-primary-opacity);
           box-shadow: 1px 1px 5px var(--color-primary-opacity);
   -webkit-transition: -webkit-transform 0.3s linear;
@@ -923,39 +993,28 @@ main {
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
-.html-colors .group-starts > .fa-star,
-.css-colors .group-starts > .fa-star,
-.js-colors .group-starts > .fa-star,
-.sql-colors .group-starts > .fa-star {
+.card-colors .group-starts > .fa-star {
   color: var(--color-secondary);
 }
 
-.html-colors:hover,
-.css-colors:hover,
-.js-colors:hover,
-.sql-colors:hover {
-  color: var(--color-accent);
+.card-colors:hover {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
-  background-color: var(--color-primary-opacity);
 }
 
-.html-colors:hover .group-starts > .fa-star,
-.css-colors:hover .group-starts > .fa-star,
-.js-colors:hover .group-starts > .fa-star,
-.sql-colors:hover .group-starts > .fa-star {
+.card-colors:hover .group-starts > .fa-star {
   color: var(--color-accent);
 }
 
-.css-colors .fa-sass {
+.card-colors .fa-sass {
   color: #eb58eb;
 }
 
-.css-colors .fa-bootstrap {
+.card-colors .fa-bootstrap {
   color: #a301a3;
 }
 
-.js-colors .fa-react {
+.card-colors .fa-react {
   color: #2473a8;
 }
 
@@ -1781,7 +1840,6 @@ main {
   background-color: transparent;
   border-radius: 10px;
   border: 2px solid var(--color-accent);
-  color: var(--color-accent);
   cursor: pointer;
   display: inline-block;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -1791,11 +1849,6 @@ main {
   margin: 2rem 0;
   max-width: 300px;
   padding: 1.3rem;
-}
-
-.btn:hover {
-  background-color: var(--color-accent-lightest);
-  text-shadow: 1px 1px 5px var(--color-darkest);
 }
 
 .btn-skills {
@@ -1842,7 +1895,7 @@ main {
   }
   .credit-r_side::after,
   .credit-l_side::after {
-    border-right: 2px solid var(--color-font);
+    border-right: 2px solid var(--credit-line);
     height: 90px;
     content: "";
     margin: 2rem 1rem 0 1rem;
@@ -1855,13 +1908,9 @@ main {
   .credit-content:link, .credit-content:visited, .credit-content:active {
     text-decoration: none;
     font-family: monospace;
-    color: var(--color-font);
     letter-spacing: 0.2ch;
     font-size: 1.3rem;
     font-weight: 100;
-  }
-  .credit-content:hover {
-    color: var(--color-accent);
   }
   .fa-github-square,
   .fa-linkedin,

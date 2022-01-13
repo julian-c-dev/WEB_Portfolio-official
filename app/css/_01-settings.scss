@@ -1,9 +1,10 @@
-// * Color palette & global variables
+//  global variables
 :root {
-  // ^ Default colors (Dark Mode)
+  // Default colors
   --color-lightest: rgba(250, 250, 250);
   --color-darkest: rgba(2, 2, 2, 0.8);
 
+  //defatul (Dark Theme)
   --color-primary: rgb(10, 25, 47);
   --color-primary-opacity: rgba(10, 25, 47, 0.85);
   --color-primary-lighter: rgb(13, 50, 98);
@@ -13,14 +14,12 @@
   --color-accent-lightest: rgba(255, 175, 122, 0.2);
   --color-accent-darker: rgb(231, 92, 0);
   --color-accent-darkerst: rgb(173, 69, 0);
-
-  // ^ Components colors
-  --color-font: rgb(177, 180, 192);
+  --color-font: rgb(255, 255, 255);
   --color-cards-primary: rgb(28, 72, 129);
   --color-footer: rgb(5, 25, 53);
 
   // ^ Light theme
-  --color-bg-lg: rgba(126, 62, 62, 0.3);
+
   --color-font-lg: rgb(35, 61, 129);
   --color-font-lg-darker: rgb(7, 34, 102);
 

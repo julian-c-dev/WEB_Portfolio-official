@@ -30,8 +30,7 @@ main {
     margin-right: 1rem;
   }
   &::after {
-    border-bottom: 1px solid var(--color-accent);
-    opacity: 0.3;
+    border-bottom: 2px solid var(--color-accent);
     width: 90px;
     content: "";
     margin-left: 1rem;

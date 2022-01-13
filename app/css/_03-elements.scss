@@ -15,6 +15,75 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: var(--color-background);
+  h1 {
+    .overTitle {
+      color: var(--color-overtitle);
+    }
+    .title {
+      color: var(--color-title);
+    }
+    .subTitle {
+      color: var(--color-subtitle);
+    }
+  }
+  .hero {
+    .hero__content {
+      color: var(--color-heroContent);
+    }
+  }
+  .credit-content {
+    .credit-r_side,
+    .credit-l_side {
+      &::after {
+        border-right: 2px solid var(--credit-line);
+      }
+    }
+    color: var(--credits);
+    &:hover {
+      color: var(--credits-hover);
+    }
+  }
+  .btn {
+    color: var(--color-btn);
+    border-color: var(--color-btn-border);
+    &:hover {
+      background-color: var(--color-btn-hover);
+    }
+  }
+  .section-heading {
+    color: var(--section-heading);
+  }
+  .section-content > p {
+    color: var(--section-content);
+  }
+  .card-colors {
+    background-color: var(--card-skills);
+    color: var(--card-skills-content);
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+body.light-theme {
+  --color-background: rgb(228, 229, 241);
+  --color-overtitle: rgb(10, 25, 47);
+  --color-title: rgb(10, 25, 47);
+  --color-subtitle: rgb(147, 148, 165);
+  --color-heroContent: rgb(72, 75, 106);
+  --credits: rgb(72, 75, 106);
+  --credits-hover: rgb(10, 25, 47);
+  --credit-line: rgb(72, 75, 106);
+  --color-btn: rgb(10, 25, 47);
+  --color-btn-border: rgb(10, 25, 47);
+  --color-btn-hover: rgba(255, 175, 122, 0.2);
+  --section-heading: rgb(10, 25, 47);
+  --section-content: rgb(72, 75, 106);
+  --card-skills: rgba(10, 25, 47, 1);
+  --card-skills-content: rgb(147, 148, 165);
+}
+
 button {
   background-color: transparent;
   border: none;

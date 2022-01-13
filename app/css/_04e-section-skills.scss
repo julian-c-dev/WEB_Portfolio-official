@@ -1,20 +1,15 @@
 // * Table Colors
 
-.html-colors,
-.css-colors,
-.js-colors,
-.sql-colors {
+.card-colors {
   transform: scale(1);
-  background-color: var(--color-primary-opacity);
   & .group-starts > .fa-star {
     color: var(--color-secondary);
   }
   box-shadow: 1px 1px 5px var(--color-primary-opacity);
   transition: transform 0.3s linear;
   &:hover {
-    color: var(--color-accent);
     transform: scale(1.08);
-    background-color: var(--color-primary-opacity);
+
     .group-starts > .fa-star {
       color: var(--color-accent);
     }
@@ -23,16 +18,13 @@
 
 // * Icons
 
-.css-colors {
+.card-colors {
   .fa-sass {
     color: rgb(235, 88, 235);
   }
   .fa-bootstrap {
     color: rgb(163, 1, 163);
   }
-}
-
-.js-colors {
   .fa-react {
     color: rgb(36, 115, 168);
   }
