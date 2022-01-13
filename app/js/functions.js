@@ -5,11 +5,32 @@ const section = document.querySelectorAll(".section");
 const title = document.querySelector(".title");
 const stwch_Theme = document.querySelector("#handlerTheme");
 const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-stwch_Theme.addEventListener("click", themeEvent);
-stwch_ThemeHidden.addEventListener("click", themeEvent);
+stwch_Theme.addEventListener("click", themeEventDesktop);
+stwch_ThemeHidden.addEventListener("click", themeEventMobile);
+console.log("hidden", stwch_Theme.value);
+console.log("hidden", stwch_ThemeHidden.value);
 
-function themeEvent() {
+function themeEventDesktop() {
+  if (stwch_Theme.checked) {
+    stwch_ThemeHidden.checked = true;
+  } else {
+    stwch_ThemeHidden.checked = false;
+  }
+}
+
+function themeEventMobile() {
+  if (stwch_ThemeHidden.checked) {
+    stwch_Theme.checked = true;
+  } else {
+    stwch_Theme.checked = false;
+  }
+}
+
+checkboxes.forEach((element) => element.addEventListener("click", toggleTheme));
+
+function toggleTheme() {
   mobileNav.classList.toggle("dark");
   desktopNav.classList.toggle("dark");
   title.classList.toggle("darkest");
