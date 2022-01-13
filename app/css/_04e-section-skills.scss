@@ -5,18 +5,18 @@
 .js-colors,
 .sql-colors {
   transform: scale(1);
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-primary-opacity);
   & .group-starts > .fa-star {
-    color: var(--color-bg2-lg);
+    color: var(--color-secondary);
   }
-  box-shadow: 1px 1px 5px var(--color-bg-dk);
+  box-shadow: 1px 1px 5px var(--color-primary-opacity);
   transition: transform 0.3s linear;
   &:hover {
-    color: var(--color-font-accent);
+    color: var(--color-accent);
     transform: scale(1.08);
-    background-color: var(--color-bg-dk);
+    background-color: var(--color-primary-opacity);
     .group-starts > .fa-star {
-      color: var(--color-font-accent);
+      color: var(--color-accent);
     }
   }
 }
@@ -42,11 +42,11 @@
 .fa-bootstrap,
 .fa-react {
   font-size: 3.5rem;
-  color: var(--color-font-dk);
+  color: var(--color-font);
   &:link,
   &:visited,
   &:active {
-    color: var(--color-font-dk);
+    color: var(--color-font);
   }
 }
 
@@ -89,7 +89,6 @@
   }
   .fa-star {
     font-size: 1rem;
-    color: var(--color-font-dk2);
   }
 }
 
@@ -136,16 +135,16 @@
     a {
       font-weight: 200;
       &:hover {
-        color: var(--color-font-accent);
+        color: var(--color-accent);
       }
     }
 
     ul > li > a:hover {
-      color: var(--color-font-accent);
+      color: var(--color-accent);
     }
 
     i {
-      color: var(--color-font-dk);
+      color: var(--color-font);
     }
     span {
       font-weight: 300;

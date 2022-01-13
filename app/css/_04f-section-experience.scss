@@ -11,7 +11,7 @@
 }
 .section-exp_subHeading {
   font-size: 2.5rem;
-  border-bottom: 1px solid var(--color-font-accent);
+  border-bottom: 1px solid var(--color-accent);
   margin-bottom: 0;
 }
 
@@ -21,9 +21,9 @@
 }
 
 .job {
-  background-color: var(--color-dark-slate);
+  background-color: var(--color-cards-primary);
   border-radius: 15px;
-  box-shadow: 2px 2px 15px var(--color-light-slate);
+  box-shadow: var(--box-shadow);
   margin: 0 auto 2rem 0;
   padding: 1rem;
   position: relative;
@@ -39,7 +39,7 @@
 .job-overtitle,
 .job-sub-tech {
   font-family: monospace;
-  color: var(--color-font-accent);
+  color: var(--color-accent);
 }
 .job-overtitle {
   margin-top: -1rem;
@@ -105,12 +105,12 @@
 .section-practices-frame {
   max-width: 100%;
   padding: 0 0 15rem 0;
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-primary-opacity);
   & .section-exp_subHeading {
     margin-left: 2rem;
     margin-top: 0;
     display: inline;
-    color: var(--color-font-dk);
+    color: var(--color-font);
   }
 }
 
@@ -129,7 +129,7 @@
 }
 
 .card {
-  background: var(--color-bg-dk);
+  background: var(--color-primary-opacity);
   border-radius: 15px;
   margin: 3rem 0;
   height: 35rem;
@@ -146,7 +146,7 @@
   }
 
   & .card_content {
-    color: var(--color-font-dk);
+    color: var(--color-font);
     padding: 0 1rem 1rem 1rem;
     height: 25rem;
     font-size: 1.5rem;
@@ -380,7 +380,7 @@
   .job-sub-tech {
     font-family: monospace;
     font-size: 1.7rem;
-    color: var(--color-font-accent);
+    color: var(--color-accent);
   }
 
   .job-role,
@@ -396,7 +396,7 @@
   }
 
   .job-description {
-    background-color: var(--color-dark-slate);
+    background-color: var(--color-cards-primary);
     margin-top: 0.5rem;
     padding: 2rem;
     width: 50rem;
@@ -454,7 +454,7 @@
   }
   .fa-github:hover,
   .fa-globe:hover {
-    color: var(--color-font-accent);
+    color: var(--color-accent);
   }
 
   .reversed {
@@ -493,7 +493,7 @@
   }
   .card {
     align-items: center;
-    background: var(--color-bg-dk);
+    background: var(--color-primary-opacity);
     border-radius: 15px;
 
     display: flex;
@@ -516,6 +516,6 @@
   .card:hover {
     transform: translateY(-20px);
 
-    box-shadow: 2px 3px 2px var(--color-font-accent);
+    box-shadow: 2px 3px 2px var(--color-accent);
   }
 }

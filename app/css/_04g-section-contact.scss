@@ -17,7 +17,7 @@
     & > a:visited,
     & > a:hover,
     & > a:active {
-      color: var(--color-font-accent);
+      color: var(--color-accent);
       font-weight: 700;
       text-decoration: none;
     }
@@ -37,7 +37,7 @@
     #e75516
   );
   max-width: 30rem;
-  color: var(--color-bg-dk);
+  color: var(--color-primary-opacity);
   background-size: 300% 100%;
   transition: all 0.5s linear;
   &:hover {

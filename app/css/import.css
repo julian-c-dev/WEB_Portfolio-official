@@ -1,22 +1,23 @@
 :root {
-  --color-font-accent: rgb(251, 120, 32);
-  --color-font-accent-dk: rgb(255, 112, 16);
-  --color-font-accent-lg: rgba(250, 163, 104, 0.3);
-  --color-light: rgba(250, 250, 250, 0.911);
-  --color-bg2-lg: rgba(96, 155, 233, 0.6);
+  --color-lightest: rgba(250, 250, 250);
   --color-darkest: rgba(2, 2, 2, 0.8);
-  --color-light-slate: rgb(13, 50, 98);
-  --color-dark-slate: rgb(28, 72, 129);
-  --color-darker-slate: rgb(5, 25, 53);
-  --color-bg-dk: rgba(10, 25, 47, 0.85);
-  --color-bg-dk-solid: rgb(10, 25, 47);
-  --color-bg2-dk: rgba(24, 49, 83, 0.6);
-  --color-font-dk: rgb(176, 183, 204);
-  --color-font-dk2: rgb(104, 115, 153);
-  --color-bg-lg: rgba(106, 105, 116, 0.5);
+  --color-primary: rgb(10, 25, 47);
+  --color-primary-opacity: rgba(10, 25, 47, 0.85);
+  --color-primary-lighter: rgb(13, 50, 98);
+  --color-secondary: rgba(96, 155, 233, 0.6);
+  --color-accent: rgb(255, 122, 34);
+  --color-accent-lighter: rgb(255, 149, 78);
+  --color-accent-lightest: rgb(255, 175, 122);
+  --color-accent-darker: rgb(231, 92, 0);
+  --color-accent-darkerst: rgb(173, 69, 0);
+  --color-font: rgb(177, 180, 192);
+  --color-cards-primary: rgb(28, 72, 129);
+  --color-footer: rgb(5, 25, 53);
+  --color-bg-lg: rgba(126, 62, 62, 0.3);
   --color-font-lg: rgb(35, 61, 129);
   --color-font-lg-darker: rgb(7, 34, 102);
-  --shadow: 1px 1px 2px var(--color-bg-dk);
+  --shadow: 1px 1px 2px var(--color-primary-opacity);
+  --box-shadow: 2px 2px 15px var(--color-primary-lighter);
 }
 
 /* normalize or reset */
@@ -383,7 +384,7 @@ template {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-font-dk);
+  background-color: var(--color-font);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -403,7 +404,7 @@ template {
 }
 
 input:checked + .slider {
-  background-color: var(--color-bg2-lg);
+  background-color: var(--color-secondary);
 }
 
 input:checked + .slider:before {
@@ -437,7 +438,7 @@ button {
   background-color: transparent;
   border: none;
   margin: 0;
-  color: var(--color-font-dk2);
+  color: var(--color-font);
   cursor: pointer;
 }
 
@@ -481,14 +482,14 @@ main {
 }
 
 .section-heading::before {
-  color: var(--color-font-accent-dk);
+  color: var(--color-accent);
   counter-increment: section;
   content: counters(section, ".") ". ";
   margin-right: 1rem;
 }
 
 .section-heading::after {
-  border-bottom: 1px solid var(--color-font-accent-dk);
+  border-bottom: 1px solid var(--color-accent);
   opacity: 0.3;
   width: 90px;
   content: "";
@@ -513,7 +514,7 @@ main {
 
 .footer {
   height: 9rem;
-  background-color: var(--color-darker-slate);
+  background-color: var(--color-footer);
 }
 
 .footer .footer-content {
@@ -533,7 +534,7 @@ main {
 }
 
 .footer .brittany:hover {
-  color: var(--color-font-accent-dk);
+  color: var(--color-accent);
 }
 
 @media screen and (min-width: 448px) {
@@ -614,7 +615,7 @@ main {
 }
 
 .nav__mobile {
-  background-color: var(--color-bg-dk-solid);
+  background-color: var(--color-primary);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,10 +637,10 @@ main {
     display: inline-block;
     font-size: 2rem;
     margin: 0 0 0 1.5rem;
-    color: var(--color-font-dk);
+    color: var(--color-font);
   }
   .nav__desktop {
-    background-color: var(--color-bg-dk-solid);
+    background-color: var(--color-primary);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -657,7 +658,7 @@ main {
   .nav__desktop .nav__links li::before {
     counter-increment: section;
     content: counters(section, ".") ". ";
-    color: var(--color-font-accent);
+    color: var(--color-accent);
   }
   .nav__desktop .nav__links li:last-child a:hover {
     color: var(--color-font-lg);
@@ -672,10 +673,10 @@ main {
     text-decoration: none;
     -webkit-transition: color 0.4s, smooth;
     transition: color 0.4s, smooth;
-    color: var(--color-font-dk);
+    color: var(--color-font);
   }
   .nav__desktop .nav__links li > a:hover {
-    color: var(--color-font-accent-dk);
+    color: var(--color-accent);
   }
   .nav__desktop--trans {
     background-color: transparent;
@@ -697,7 +698,7 @@ main {
   height: 100vh;
   z-index: 11;
   visibility: initial;
-  background-color: var(--color-bg-dk-solid);
+  background-color: var(--color-primary);
   padding: 3rem;
   z-index: 11;
 }
@@ -714,13 +715,13 @@ main {
 .hidden-menu ul li ::before {
   counter-increment: section;
   content: counters(section, ".") ". ";
-  color: var(--color-font-accent);
+  color: var(--color-accent);
 }
 
 .hidden-menu ul li a {
   font-size: 2.5rem;
   text-decoration: none;
-  color: var(--color-font-dk);
+  color: var(--color-font);
 }
 
 .hidden-menu ul #resumeHidden::before {
@@ -731,7 +732,7 @@ main {
 .hidden-menu ul div {
   margin: 2rem 0 2rem 5rem;
   font-size: 2.5rem;
-  color: var(--color-font-dk);
+  color: var(--color-font);
 }
 
 .hidden-menu ul p label,
@@ -744,7 +745,7 @@ main {
 }
 
 .title {
-  color: var(--color-light);
+  color: var(--color-lightest);
 }
 
 .hero {
@@ -762,7 +763,7 @@ main {
 }
 
 .hero h1 .overTitle {
-  color: var(--color-font-accent);
+  color: var(--color-accent);
   font-size: 5vw;
   font-weight: 400;
 }
@@ -911,9 +912,9 @@ main {
 .sql-colors {
   -webkit-transform: scale(1);
           transform: scale(1);
-  background-color: var(--color-bg-dk);
-  -webkit-box-shadow: 1px 1px 5px var(--color-bg-dk);
-          box-shadow: 1px 1px 5px var(--color-bg-dk);
+  background-color: var(--color-primary-opacity);
+  -webkit-box-shadow: 1px 1px 5px var(--color-primary-opacity);
+          box-shadow: 1px 1px 5px var(--color-primary-opacity);
   -webkit-transition: -webkit-transform 0.3s linear;
   transition: -webkit-transform 0.3s linear;
   transition: transform 0.3s linear;
@@ -924,24 +925,24 @@ main {
 .css-colors .group-starts > .fa-star,
 .js-colors .group-starts > .fa-star,
 .sql-colors .group-starts > .fa-star {
-  color: var(--color-bg2-lg);
+  color: var(--color-secondary);
 }
 
 .html-colors:hover,
 .css-colors:hover,
 .js-colors:hover,
 .sql-colors:hover {
-  color: var(--color-font-accent);
+  color: var(--color-accent);
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-primary-opacity);
 }
 
 .html-colors:hover .group-starts > .fa-star,
 .css-colors:hover .group-starts > .fa-star,
 .js-colors:hover .group-starts > .fa-star,
 .sql-colors:hover .group-starts > .fa-star {
-  color: var(--color-font-accent);
+  color: var(--color-accent);
 }
 
 .css-colors .fa-sass {
@@ -960,7 +961,7 @@ main {
 .fa-bootstrap,
 .fa-react {
   font-size: 3.5rem;
-  color: var(--color-font-dk);
+  color: var(--color-font);
 }
 
 .fa-sass:link, .fa-sass:visited, .fa-sass:active,
@@ -970,7 +971,7 @@ main {
 .fa-react:link,
 .fa-react:visited,
 .fa-react:active {
-  color: var(--color-font-dk);
+  color: var(--color-font);
 }
 
 .container-logos {
@@ -1026,7 +1027,6 @@ main {
 
 .logo-table .fa-star {
   font-size: 1rem;
-  color: var(--color-font-dk2);
 }
 
 .pagination-container {
@@ -1091,13 +1091,13 @@ main {
     font-weight: 200;
   }
   .card-logo_clmLeft a:hover {
-    color: var(--color-font-accent);
+    color: var(--color-accent);
   }
   .card-logo_clmLeft ul > li > a:hover {
-    color: var(--color-font-accent);
+    color: var(--color-accent);
   }
   .card-logo_clmLeft i {
-    color: var(--color-font-dk);
+    color: var(--color-font);
   }
   .card-logo_clmLeft span {
     font-weight: 300;
@@ -1165,7 +1165,7 @@ main {
 
 .section-exp_subHeading {
   font-size: 2.5rem;
-  border-bottom: 1px solid var(--color-font-accent);
+  border-bottom: 1px solid var(--color-accent);
   margin-bottom: 0;
 }
 
@@ -1175,10 +1175,10 @@ main {
 }
 
 .job {
-  background-color: var(--color-dark-slate);
+  background-color: var(--color-cards-primary);
   border-radius: 15px;
-  -webkit-box-shadow: 2px 2px 15px var(--color-light-slate);
-          box-shadow: 2px 2px 15px var(--color-light-slate);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
   margin: 0 auto 2rem 0;
   padding: 1rem;
   position: relative;
@@ -1202,7 +1202,7 @@ main {
 .job-overtitle,
 .job-sub-tech {
   font-family: monospace;
-  color: var(--color-font-accent);
+  color: var(--color-accent);
 }
 
 .job-overtitle {
@@ -1287,14 +1287,14 @@ main {
 .section-practices-frame {
   max-width: 100%;
   padding: 0 0 15rem 0;
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-primary-opacity);
 }
 
 .section-practices-frame .section-exp_subHeading {
   margin-left: 2rem;
   margin-top: 0;
   display: inline;
-  color: var(--color-font-dk);
+  color: var(--color-font);
 }
 
 .section-practices {
@@ -1314,7 +1314,7 @@ main {
 }
 
 .card {
-  background: var(--color-bg-dk);
+  background: var(--color-primary-opacity);
   border-radius: 15px;
   margin: 3rem 0;
   height: 35rem;
@@ -1339,7 +1339,7 @@ main {
 }
 
 .card .card_content {
-  color: var(--color-font-dk);
+  color: var(--color-font);
   padding: 0 1rem 1rem 1rem;
   height: 25rem;
   font-size: 1.5rem;
@@ -1558,7 +1558,7 @@ main {
   .job-sub-tech {
     font-family: monospace;
     font-size: 1.7rem;
-    color: var(--color-font-accent);
+    color: var(--color-accent);
   }
   .job-role,
   .job-overtitle,
@@ -1572,7 +1572,7 @@ main {
     margin: -2rem 0 0 15rem;
   }
   .job-description {
-    background-color: var(--color-dark-slate);
+    background-color: var(--color-cards-primary);
     margin-top: 0.5rem;
     padding: 2rem;
     width: 50rem;
@@ -1632,7 +1632,7 @@ main {
   }
   .fa-github:hover,
   .fa-globe:hover {
-    color: var(--color-font-accent);
+    color: var(--color-accent);
   }
   .reversed .job {
     margin: 8rem 0 0 -10rem;
@@ -1668,7 +1668,7 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: var(--color-bg-dk);
+    background: var(--color-primary-opacity);
     border-radius: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1698,8 +1698,8 @@ main {
   .card:hover {
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
-    -webkit-box-shadow: 2px 3px 2px var(--color-font-accent);
-            box-shadow: 2px 3px 2px var(--color-font-accent);
+    -webkit-box-shadow: 2px 3px 2px var(--color-accent);
+            box-shadow: 2px 3px 2px var(--color-accent);
   }
 }
 
@@ -1725,7 +1725,7 @@ main {
 .section-contact > ul > li > a:visited,
 .section-contact > ul > li > a:hover,
 .section-contact > ul > li > a:active {
-  color: var(--color-font-accent);
+  color: var(--color-accent);
   font-weight: 700;
   text-decoration: none;
 }
@@ -1739,7 +1739,7 @@ main {
   background-image: -webkit-gradient(linear, left top, right top, from(#f07510), color-stop(#ff9a44), color-stop(#ef9d43), to(#e75516));
   background-image: linear-gradient(to right, #f07510, #ff9a44, #ef9d43, #e75516);
   max-width: 30rem;
-  color: var(--color-bg-dk);
+  color: var(--color-primary-opacity);
   background-size: 300% 100%;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
@@ -1778,8 +1778,8 @@ main {
 .btn {
   background-color: transparent;
   border-radius: 10px;
-  border: 2px solid var(--color-font-accent-dk);
-  color: var(--color-font-accent-dk);
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
   cursor: pointer;
   display: inline-block;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -1792,12 +1792,12 @@ main {
 }
 
 .btn:hover {
-  background-color: var(--color-font-accent-lg);
+  background-color: var(--color-accent-lighter);
 }
 
 .btn-skills {
-  border: 1px solid var(--color-bg2-lg);
-  color: var(--color-bg2-lg);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
   font-size: 1.3rem;
   margin: 2rem 0;
   max-width: 300px;
@@ -1805,7 +1805,7 @@ main {
 }
 
 .btn-skills:hover {
-  background-color: var(--color-font-accent-lg);
+  background-color: var(--color-accent-lighter);
 }
 
 .credit-r_side,
@@ -1839,7 +1839,7 @@ main {
   }
   .credit-r_side::after,
   .credit-l_side::after {
-    border-right: 2px solid var(--color-font-dk);
+    border-right: 2px solid var(--color-font);
     height: 90px;
     content: "";
     margin: 2rem 1rem 0 1rem;
@@ -1852,13 +1852,13 @@ main {
   .credit-content:link, .credit-content:visited, .credit-content:active {
     text-decoration: none;
     font-family: monospace;
-    color: var(--color-font-dk);
+    color: var(--color-font);
     letter-spacing: 0.2ch;
     font-size: 1.3rem;
     font-weight: 100;
   }
   .credit-content:hover {
-    color: var(--color-font-accent-dk);
+    color: var(--color-accent);
   }
   .fa-github-square,
   .fa-linkedin,
@@ -1910,7 +1910,7 @@ main {
 .burger__btn {
   width: 25px;
   height: 3px;
-  background-color: var(--color-font-accent-dk);
+  background-color: var(--color-accent);
   border-radius: 2px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -1922,7 +1922,7 @@ main {
   position: absolute;
   width: 25px;
   height: 3px;
-  background-color: var(--color-font-accent-dk);
+  background-color: var(--color-accent);
   border-radius: 2px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -2011,20 +2011,20 @@ main {
 }
 
 .dark {
-  background: var(--color-bg-dk);
-  color: var(--color-font-dk);
+  background: var(--color-primary-opacity);
+  color: var(--color-font);
 }
 
 .dark li > a,
 .dark li > a:link,
 .dark li > a:visited,
 .dark li > a:active {
-  color: var(--color-font-dk);
+  color: var(--color-font);
 }
 
 .overlay {
   position: fixed;
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-primary-opacity);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   width: 100vw;
@@ -2042,11 +2042,11 @@ main {
 }
 
 .solid {
-  background-color: var(--color-bg-dk-solid);
+  background-color: var(--color-primary);
 }
 
 .darkShadow {
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-primary-opacity);
   -webkit-box-shadow: 3px 0 15px var(--color-darkest);
           box-shadow: 3px 0 15px var(--color-darkest);
   -webkit-backdrop-filter: blur(2px);
@@ -2054,7 +2054,7 @@ main {
 }
 
 .blue {
-  background-color: var(--color-bg-dk);
+  background-color: var(--color-primary-opacity);
 }
 
 .darkest {

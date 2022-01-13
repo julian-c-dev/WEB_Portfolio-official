@@ -1,6 +1,6 @@
 // * HERO
 .title {
-  color: var(--color-light);
+  color: var(--color-lightest);
 }
 
 .hero {
@@ -12,7 +12,7 @@
   white-space: initial;
   h1 {
     .overTitle {
-      color: var(--color-font-accent);
+      color: var(--color-accent);
       font-size: 5vw;
       font-weight: 400;
     }

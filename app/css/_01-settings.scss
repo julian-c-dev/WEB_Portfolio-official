@@ -1,28 +1,30 @@
 // * Color palette & global variables
 :root {
-  // global colors
-  --color-font-accent: rgb(251, 120, 32);
-  --color-font-accent-dk: rgb(255, 112, 16);
-  --color-font-accent-lg: rgba(250, 163, 104, 0.3);
-  --color-light: rgba(250, 250, 250, 0.911);
-  --color-bg2-lg: rgba(96, 155, 233, 0.6);
+  // ^ Default colors (Dark Mode)
+  --color-lightest: rgba(250, 250, 250);
   --color-darkest: rgba(2, 2, 2, 0.8);
-  --color-light-slate: rgb(13, 50, 98);
-  --color-dark-slate: rgb(28, 72, 129);
-  --color-darker-slate: rgb(5, 25, 53);
 
-  // dark theme
-  --color-bg-dk: rgba(10, 25, 47, 0.85);
-  --color-bg-dk-solid: rgb(10, 25, 47);
-  --color-bg2-dk: rgba(24, 49, 83, 0.6);
-  --color-font-dk: rgb(176, 183, 204);
-  --color-font-dk2: rgb(104, 115, 153);
+  --color-primary: rgb(10, 25, 47);
+  --color-primary-opacity: rgba(10, 25, 47, 0.85);
+  --color-primary-lighter: rgb(13, 50, 98);
+  --color-secondary: rgba(96, 155, 233, 0.6);
+  --color-accent: rgb(255, 122, 34);
+  --color-accent-lighter: rgb(255, 149, 78);
+  --color-accent-lightest: rgb(255, 175, 122);
+  --color-accent-darker: rgb(231, 92, 0);
+  --color-accent-darkerst: rgb(173, 69, 0);
 
-  // light theme
-  --color-bg-lg: rgba(106, 105, 116, 0.5);
+  // ^ Components colors
+  --color-font: rgb(177, 180, 192);
+  --color-cards-primary: rgb(28, 72, 129);
+  --color-footer: rgb(5, 25, 53);
+
+  // ^ Light theme
+  --color-bg-lg: rgba(126, 62, 62, 0.3);
   --color-font-lg: rgb(35, 61, 129);
   --color-font-lg-darker: rgb(7, 34, 102);
 
   //global variables
-  --shadow: 1px 1px 2px var(--color-bg-dk);
+  --shadow: 1px 1px 2px var(--color-primary-opacity);
+  --box-shadow: 2px 2px 15px var(--color-primary-lighter);
 }
