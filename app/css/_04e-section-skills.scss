@@ -9,7 +9,6 @@
   transition: transform 0.3s linear;
   &:hover {
     transform: scale(1.08);
-
     .group-starts > .fa-star {
       color: var(--color-accent);
     }
@@ -34,7 +33,7 @@
 .fa-bootstrap,
 .fa-react {
   font-size: 3.5rem;
-  color: var(--color-font);
+
   &:link,
   &:visited,
   &:active {
@@ -99,7 +98,7 @@
 }
 
 .card-logo-frame {
-  max-width: 65rem;
+  max-width: 70rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,34 +118,24 @@
   .card-logo_clmLeft {
     display: block;
     margin-top: 3.2rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     .selfTaugh {
-      font-weight: 300;
+      font-weight: 400;
       margin-bottom: -1rem;
     }
     a {
-      font-weight: 200;
-      &:hover {
-        color: var(--color-accent);
-      }
+      font-weight: 400;
     }
 
-    ul > li > a:hover {
-      color: var(--color-accent);
-    }
-
-    i {
-      color: var(--color-font);
-    }
     span {
-      font-weight: 300;
+      font-weight: 400;
       white-space: initial;
     }
     p,
     ul,
     li,
     a {
-      margin: 0.5rem 0;
+      margin: 0.4rem 0;
       white-space: initial;
       text-decoration: none;
     }

@@ -65,30 +65,50 @@ body {
       color: var(--color-accent);
     }
   }
+  .card-logo_clmLeft {
+    h4 {
+      color: var(--clmLeft-headings);
+    }
+    i {
+      color: var(--clmLeft-icons);
+    }
+    a:link,
+    a:visited,
+    a:active {
+      color: var(--clmLeft-links);
+    }
+    a:hover {
+      color: var(--color-links-hover);
+    }
+  }
 }
 body.light-theme {
   --color-background: rgb(228, 229, 241);
-  --color-overtitle: rgb(10, 25, 47);
+  --color-overtitle: rgb(255, 122, 34);
   --color-title: rgb(10, 25, 47);
   --color-subtitle: rgb(147, 148, 165);
   --color-heroContent: rgb(72, 75, 106);
-  --credits: rgb(72, 75, 106);
-  --credits-hover: rgb(10, 25, 47);
-  --credit-line: rgb(72, 75, 106);
-  --color-btn: rgb(10, 25, 47);
+  --credits: rgb(10, 25, 47);
+  --credits-hover: rgb(255, 122, 34);
+  --credit-line: rgb(10, 25, 47);
+  --color-btn: rgb(255, 122, 34);
   --color-btn-border: rgb(10, 25, 47);
   --color-btn-hover: rgba(255, 175, 122, 0.2);
   --section-heading: rgb(10, 25, 47);
   --section-content: rgb(72, 75, 106);
   --card-skills: rgba(10, 25, 47, 1);
   --card-skills-content: rgb(147, 148, 165);
+  --clmLeft-headings: rgb(10, 25, 47);
+  --clmLeft-icons: rgb(10, 25, 47);
+  --clmLeft-links: rgb(72, 75, 106);
+  --color-links-hover: rgb(255, 122, 34);
 }
 
 button {
   background-color: transparent;
   border: none;
   margin: 0;
-  color: var(--color-font);
+  color: rgb(72, 75, 106);
   cursor: pointer;
 }
 

@@ -492,29 +492,51 @@ body .card-colors:hover {
   color: var(--color-accent);
 }
 
+body .card-logo_clmLeft h4 {
+  color: var(--clmLeft-headings);
+}
+
+body .card-logo_clmLeft i {
+  color: var(--clmLeft-icons);
+}
+
+body .card-logo_clmLeft a:link,
+body .card-logo_clmLeft a:visited,
+body .card-logo_clmLeft a:active {
+  color: var(--clmLeft-links);
+}
+
+body .card-logo_clmLeft a:hover {
+  color: var(--color-links-hover);
+}
+
 body.light-theme {
   --color-background: rgb(228, 229, 241);
-  --color-overtitle: rgb(10, 25, 47);
+  --color-overtitle: rgb(255, 122, 34);
   --color-title: rgb(10, 25, 47);
   --color-subtitle: rgb(147, 148, 165);
   --color-heroContent: rgb(72, 75, 106);
-  --credits: rgb(72, 75, 106);
-  --credits-hover: rgb(10, 25, 47);
-  --credit-line: rgb(72, 75, 106);
-  --color-btn: rgb(10, 25, 47);
+  --credits: rgb(10, 25, 47);
+  --credits-hover: rgb(255, 122, 34);
+  --credit-line: rgb(10, 25, 47);
+  --color-btn: rgb(255, 122, 34);
   --color-btn-border: rgb(10, 25, 47);
   --color-btn-hover: rgba(255, 175, 122, 0.2);
   --section-heading: rgb(10, 25, 47);
   --section-content: rgb(72, 75, 106);
   --card-skills: rgba(10, 25, 47, 1);
   --card-skills-content: rgb(147, 148, 165);
+  --clmLeft-headings: rgb(10, 25, 47);
+  --clmLeft-icons: rgb(10, 25, 47);
+  --clmLeft-links: rgb(72, 75, 106);
+  --color-links-hover: rgb(255, 122, 34);
 }
 
 button {
   background-color: transparent;
   border: none;
   margin: 0;
-  color: var(--color-font);
+  color: #484b6a;
   cursor: pointer;
 }
 
@@ -1022,7 +1044,6 @@ main {
 .fa-bootstrap,
 .fa-react {
   font-size: 3.5rem;
-  color: var(--color-font);
 }
 
 .fa-sass:link, .fa-sass:visited, .fa-sass:active,
@@ -1112,7 +1133,7 @@ main {
 }
 
 .card-logo-frame {
-  max-width: 65rem;
+  max-width: 70rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1142,33 +1163,24 @@ main {
   .card-logo_clmLeft {
     display: block;
     margin-top: 3.2rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .card-logo_clmLeft .selfTaugh {
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: -1rem;
   }
   .card-logo_clmLeft a {
-    font-weight: 200;
-  }
-  .card-logo_clmLeft a:hover {
-    color: var(--color-accent);
-  }
-  .card-logo_clmLeft ul > li > a:hover {
-    color: var(--color-accent);
-  }
-  .card-logo_clmLeft i {
-    color: var(--color-font);
+    font-weight: 400;
   }
   .card-logo_clmLeft span {
-    font-weight: 300;
+    font-weight: 400;
     white-space: initial;
   }
   .card-logo_clmLeft p,
   .card-logo_clmLeft ul,
   .card-logo_clmLeft li,
   .card-logo_clmLeft a {
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
     white-space: initial;
     text-decoration: none;
   }
@@ -2126,7 +2138,7 @@ main {
 }
 
 .hlgt {
-  color: var(--color-primary);
+  color: var(--color-accent);
   font-weight: bold;
 }
 
