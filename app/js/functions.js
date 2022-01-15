@@ -4,7 +4,9 @@ const stwch_Theme = document.querySelector("#handlerTheme");
 const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const body = document.getElementsByClassName("dark-theme");
+let iconBulb = document.querySelector(".fa-lightbulb");
 let colorTheme = true;
+console.log(iconBulb);
 
 stwch_Theme.addEventListener("click", themeEventDesktop);
 stwch_ThemeHidden.addEventListener("click", themeEventMobile);
@@ -34,12 +36,24 @@ function toggleTheme() {
       "light-theme"
     );
     colorTheme = false;
+    toggleBulbs();
   } else {
     document.body.className = document.body.className.replace(
       "light-theme",
       "dark-theme"
     );
     colorTheme = true;
+    toggleBulbs();
+  }
+}
+
+function toggleBulbs() {
+  if (colorTheme) {
+    iconBulb.classList.remove("fas");
+    iconBulb.classList.add("far");
+  } else {
+    iconBulb.classList.remove("far");
+    iconBulb.classList.add("fas");
   }
 }
 
