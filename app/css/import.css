@@ -11,6 +11,9 @@
   --color-content: rgb(72, 75, 106);
   --color-content-darker: rgb(147, 148, 165);
   --color-content-lighter: rgb(228, 229, 241);
+  --color-background-lightTheme: rgb(228, 229, 241);
+  --color-background-darkTheme: rgb(60, 64, 67);
+  --color-content-darkness: rgb(191, 191, 195);
   --shadow: 1px 1px 2px var(--color-primary-opacity);
   --box-shadow: 2px 2px 5px var(--color-primary-lighter);
 }
@@ -475,6 +478,10 @@ body .btn:hover {
   background-color: var(--color-btn-hover);
 }
 
+body button {
+  color: var(--button);
+}
+
 body .section-heading {
   color: var(--section-heading);
 }
@@ -513,6 +520,10 @@ body .card-logo_clmLeft a:active {
 
 body .card-logo_clmLeft a:hover {
   color: var(--color-links-hover);
+}
+
+body .card-logo_clmLeft p {
+  color: var(--clmLeft-links);
 }
 
 body .section-exp_subHeading {
@@ -560,38 +571,46 @@ body .section-practices .card .card_footer > a {
   color: var(--practice-card-footer);
 }
 
+body .section-contact p {
+  color: var(--contact-p);
+}
+
+body .section-contact li {
+  color: var(--contact-li);
+}
+
 body .footer .footer-content {
   color: var(--footer);
 }
 
 @media screen and (min-width: 1250px) {
-  body .job {
+  body.light-theme .job {
     color: var(--job-card-content);
     background: var(--color-content-lighter);
   }
-  body .job .job-role {
+  body.light-theme .job .job-role {
     color: var(--job-role);
   }
-  body .job .job-title {
+  body.light-theme .job .job-title {
     color: var(--job-title);
   }
-  body .job .job-description {
+  body.light-theme .job .job-description {
     background-color: var(--job-desc);
   }
-  body .job .job-overtitle {
+  body.light-theme .job .job-overtitle {
     color: var(--job-time);
   }
-  body .job .job-sub-tech {
+  body.light-theme .job .job-sub-tech {
     color: var(--job-tech);
   }
-  body .job .job-sub-icon i {
+  body.light-theme .job .job-sub-icon i {
     color: var(--job-icons);
   }
 }
 
 body.light-theme {
   --nav-icon: var(--color-content-lighter);
-  --color-background: var(--color-content-lighter);
+  --color-background: var(--color-background-lightTheme);
   --color-overtitle: var(--color-accent);
   --color-title: var(--color-primary);
   --color-subtitle: var(--color-primary-lighter);
@@ -600,10 +619,11 @@ body.light-theme {
   --credits-hover: var(--color-accent);
   --credit-line: var(--color-primary);
   --color-btn: var(--color-accent);
-  --color-btn-border: var(--color-primary);
+  --color-btn-border: var(--color-accent);
   --color-btn-hover: var(--color-accent-opacity);
   --section-heading: var(--color-primary);
   --section-content: var(--color-content);
+  --button: var(--color-primary-lighter);
   --card-skills: var(--color-primary);
   --card-skills-hover: var(--color-primary);
   --card-skills-content: var(--color-content-darker);
@@ -617,7 +637,7 @@ body.light-theme {
   --job-title: var(--color-primary);
   --job-card-content: var(--color-content-lighter);
   --job-time: var(--color-accent);
-  --job-desc: var(--color-secondary-trans);
+  --job-desc: var(--color-secondary);
   --job-tech: var(--color-accent-darker);
   --job-icons: var(--color-primary);
   --practice-card: var(--color-primary);
@@ -628,11 +648,77 @@ body.light-theme {
   --footer-bg: var(--color-primary);
 }
 
+body.dark-theme {
+  --nav-icon: var(--color-content-lighter);
+  --color-background: var(--color-background-darkTheme);
+  --color-overtitle: var(--color-accent);
+  --color-title: var(--color-lightest);
+  --color-subtitle: var(--color-content-darker);
+  --color-heroContent: var(--color-content-darkness);
+  --credits: var(--color-content-darkness);
+  --credits-hover: var(--color-accent);
+  --credit-line: var(--color-content-darkness);
+  --color-btn: var(--color-accent);
+  --color-btn-border: var(--color-accent);
+  --color-btn-hover: var(--color-accent-opacity);
+  --section-heading: var(--color-lightest);
+  --section-content: var(--color-content-darkness);
+  --button: var(--color-primary-lighter);
+  --card-skills: var(--color-primary);
+  --card-skills-hover: var(--color-primary);
+  --card-skills-content: var(--color-content-darkness);
+  --stars-color: var(--color-secondary);
+  --clmLeft-headings: var(--color-lightest);
+  --clmLeft-icons: var(--color-content-darkness);
+  --clmLeft-links: var(--color-content-darkness);
+  --color-links-hover: var(--color-accent);
+  --exp-subHeading: var(--color-content-darkness);
+  --job-role: var(--color-content-darkness);
+  --job-title: var(--color-lightest);
+  --job-card-content: var(--color-content-lighter);
+  --job-time: var(--color-accent);
+  --job-desc: var(--color-secondary);
+  --job-tech: var(--color-accent-darker);
+  --job-icons: var(--color-lightest);
+  --practice-card: var(--color-primary);
+  --practice-card-heading: var(--color-content-lighter);
+  --practice-card-content: var(--color-content-darker);
+  --practice-card-footer: var(--color-accent-darker);
+  --contact-p: var(--color-content-darker);
+  --contact-li: var(--color-content-darker);
+  --footer: var(--color-content-darker);
+  --footer-bg: var(--color-primary);
+}
+
+@media screen and (min-width: 1250px) {
+  body.dark-theme .job {
+    color: var(--job-card-content);
+    background: var(--color-background-darkTheme);
+  }
+  body.dark-theme .job .job-role {
+    color: var(--job-role);
+  }
+  body.dark-theme .job .job-title {
+    color: var(--job-title);
+  }
+  body.dark-theme .job .job-description {
+    background-color: var(--job-desc);
+  }
+  body.dark-theme .job .job-overtitle {
+    color: var(--job-time);
+  }
+  body.dark-theme .job .job-sub-tech {
+    color: var(--job-tech);
+  }
+  body.dark-theme .job .job-sub-icon i {
+    color: var(--job-icons);
+  }
+}
+
 button {
   background-color: transparent;
   border: none;
   margin: 0;
-  color: var(--color-content);
   cursor: pointer;
 }
 
@@ -1086,19 +1172,6 @@ main {
   border-radius: 5%;
 }
 
-@media screen and (min-width: 1024px) {
-  .about-image img {
-    -webkit-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-  }
-  .about-image img:hover {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-  }
-}
-
 .card-colors {
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1391,8 +1464,8 @@ main {
 .job-img img {
   width: 100%;
   border-radius: 15px;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -webkit-filter: grayscale(25%);
+          filter: grayscale(25%);
 }
 
 .job-description {
@@ -1641,8 +1714,8 @@ main {
   .job-img img {
     width: 100%;
     border-radius: 15px;
-    -webkit-filter: grayscale(75%);
-            filter: grayscale(75%);
+    -webkit-filter: grayscale(25%);
+            filter: grayscale(25%);
   }
 }
 
@@ -1783,8 +1856,8 @@ main {
   }
   .job-img img {
     border-radius: 15px;
-    -webkit-filter: grayscale(100%) contrast(1);
-            filter: grayscale(100%) contrast(1);
+    -webkit-filter: grayscale(35%) contrast(1);
+            filter: grayscale(35%) contrast(1);
     -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
   }
@@ -2176,22 +2249,6 @@ main {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
-}
-
-.light {
-  background: var(--color-bg-lg);
-  color: var(--color-font-lg);
-}
-
-.light li > a,
-.light li > a:link,
-.light li > a:visited,
-.light li > a:active {
-  color: var(--color-font-lg);
-}
-
-.light li > a:hover {
-  color: var(--color-accent);
 }
 
 .overlay {

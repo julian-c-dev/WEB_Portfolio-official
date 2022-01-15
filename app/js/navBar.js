@@ -101,5 +101,3 @@ function closeMenuDueClick() {
   menuBoolean = true;
   menuOpen = false;
 }
-
-// & switchs checked at same time

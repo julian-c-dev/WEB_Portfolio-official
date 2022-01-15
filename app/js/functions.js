@@ -3,11 +3,11 @@
 const stwch_Theme = document.querySelector("#handlerTheme");
 const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const body = document.getElementsByClassName("dark-theme");
+let colorTheme = true;
 
 stwch_Theme.addEventListener("click", themeEventDesktop);
 stwch_ThemeHidden.addEventListener("click", themeEventMobile);
-console.log("hidden", stwch_Theme.value);
-console.log("hidden", stwch_ThemeHidden.value);
 
 function themeEventDesktop() {
   if (stwch_Theme.checked) {
@@ -27,7 +27,21 @@ function themeEventMobile() {
 
 checkboxes.forEach((element) => element.addEventListener("click", toggleTheme));
 
-function toggleTheme() {}
+function toggleTheme() {
+  if (colorTheme === true) {
+    document.body.className = document.body.className.replace(
+      "dark-theme",
+      "light-theme"
+    );
+    colorTheme = false;
+  } else {
+    document.body.className = document.body.className.replace(
+      "light-theme",
+      "dark-theme"
+    );
+    colorTheme = true;
+  }
+}
 
 // & [Skill Section] Slider
 

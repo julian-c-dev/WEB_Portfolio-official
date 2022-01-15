@@ -21,7 +21,6 @@ body {
       color: var(--nav-icon);
     }
   }
-
   background-color: var(--color-background);
   h1 {
     .overTitle {
@@ -58,6 +57,9 @@ body {
       background-color: var(--color-btn-hover);
     }
   }
+  button {
+    color: var(--button);
+  }
   .section-heading {
     color: var(--section-heading);
   }
@@ -93,6 +95,9 @@ body {
     }
     a:hover {
       color: var(--color-links-hover);
+    }
+    p {
+      color: var(--clmLeft-links);
     }
   }
   .section-exp_subHeading {
@@ -135,6 +140,14 @@ body {
       }
     }
   }
+  .section-contact {
+    p {
+      color: var(--contact-p);
+    }
+    li {
+      color: var(--contact-li);
+    }
+  }
   .footer {
     .footer-content {
       color: var(--footer);
@@ -143,7 +156,7 @@ body {
 }
 
 @media screen and(min-width:1250px) {
-  body {
+  body.light-theme {
     .job {
       color: var(--job-card-content);
       background: var(--color-content-lighter);
@@ -173,10 +186,9 @@ body {
 
 body.light-theme {
   // navBar
-
   --nav-icon: var(--color-content-lighter);
   // main
-  --color-background: var(--color-content-lighter);
+  --color-background: var(--color-background-lightTheme);
   --color-overtitle: var(--color-accent);
   --color-title: var(--color-primary);
   --color-subtitle: var(--color-primary-lighter);
@@ -185,10 +197,11 @@ body.light-theme {
   --credits-hover: var(--color-accent);
   --credit-line: var(--color-primary);
   --color-btn: var(--color-accent);
-  --color-btn-border: var(--color-primary);
+  --color-btn-border: var(--color-accent);
   --color-btn-hover: var(--color-accent-opacity);
   --section-heading: var(--color-primary);
   --section-content: var(--color-content);
+  --button: var(--color-primary-lighter);
   // Skills section
   --card-skills: var(--color-primary);
   --card-skills-hover: var(--color-primary);
@@ -204,7 +217,7 @@ body.light-theme {
   --job-title: var(--color-primary);
   --job-card-content: var(--color-content-lighter);
   --job-time: var(--color-accent);
-  --job-desc: var(--color-secondary-trans);
+  --job-desc: var(--color-secondary);
   --job-tech: var(--color-accent-darker);
   --job-icons: var(--color-primary);
   // practice
@@ -217,11 +230,89 @@ body.light-theme {
   --footer-bg: var(--color-primary);
 }
 
+body.dark-theme {
+  // navBar
+  --nav-icon: var(--color-content-lighter);
+  // main
+  --color-background: var(--color-background-darkTheme);
+  --color-overtitle: var(--color-accent);
+  --color-title: var(--color-lightest);
+  --color-subtitle: var(--color-content-darker);
+  --color-heroContent: var(--color-content-darkness);
+  --credits: var(--color-content-darkness);
+  --credits-hover: var(--color-accent);
+  --credit-line: var(--color-content-darkness);
+  --color-btn: var(--color-accent);
+  --color-btn-border: var(--color-accent);
+  --color-btn-hover: var(--color-accent-opacity);
+  --section-heading: var(--color-lightest);
+  --section-content: var(--color-content-darkness);
+  --button: var(--color-primary-lighter);
+  // Skills section
+  --card-skills: var(--color-primary);
+  --card-skills-hover: var(--color-primary);
+  --card-skills-content: var(--color-content-darkness);
+  --stars-color: var(--color-secondary);
+  --clmLeft-headings: var(--color-lightest);
+  --clmLeft-icons: var(--color-content-darkness);
+  --clmLeft-links: var(--color-content-darkness);
+  --color-links-hover: var(--color-accent);
+  // Experience section
+  --exp-subHeading: var(--color-content-darkness);
+  --job-role: var(--color-content-darkness);
+  --job-title: var(--color-lightest);
+  --job-card-content: var(--color-content-lighter);
+  --job-time: var(--color-accent);
+  --job-desc: var(--color-secondary);
+  --job-tech: var(--color-accent-darker);
+  --job-icons: var(--color-lightest);
+  // practice
+  --practice-card: var(--color-primary);
+  --practice-card-heading: var(--color-content-lighter);
+  --practice-card-content: var(--color-content-darker);
+  --practice-card-footer: var(--color-accent-darker);
+  // contact
+  --contact-p: var(--color-content-darker);
+  --contact-li: var(--color-content-darker);
+
+  // footer
+  --footer: var(--color-content-darker);
+  --footer-bg: var(--color-primary);
+}
+
+@media screen and(min-width:1250px) {
+  body.dark-theme {
+    .job {
+      color: var(--job-card-content);
+      background: var(--color-background-darkTheme);
+      .job-role {
+        color: var(--job-role);
+      }
+      .job-title {
+        color: var(--job-title);
+      }
+      .job-description {
+        background-color: var(--job-desc);
+      }
+      .job-overtitle {
+        color: var(--job-time);
+      }
+      .job-sub-tech {
+        color: var(--job-tech);
+      }
+      .job-sub-icon {
+        i {
+          color: var(--job-icons);
+        }
+      }
+    }
+  }
+}
+
 button {
   background-color: transparent;
   border: none;
   margin: 0;
-  color: var(--color-content);
   cursor: pointer;
 }
 
