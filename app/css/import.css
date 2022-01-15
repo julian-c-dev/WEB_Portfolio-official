@@ -684,8 +684,8 @@ body.dark-theme {
   --practice-card-heading: var(--color-content-lighter);
   --practice-card-content: var(--color-content-darker);
   --practice-card-footer: var(--color-accent-darker);
-  --contact-p: var(--color-content-darker);
-  --contact-li: var(--color-content-darker);
+  --contact-p: var(--color-content-darkness);
+  --contact-li: var(--color-content-darkness);
   --footer: var(--color-content-darker);
   --footer-bg: var(--color-primary);
 }
