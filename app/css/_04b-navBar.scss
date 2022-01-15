@@ -14,7 +14,6 @@
 
 .nav__mobile {
   background-color: var(--color-primary);
-
   display: flex;
   padding: 3rem 4rem 3rem 3rem;
   height: 8rem;
@@ -34,11 +33,10 @@
     display: inline-block;
     font-size: 2rem;
     margin: 0 0 0 1.5rem;
-    color: var(--color-font);
+    color: var(--color-content-lighter);
   }
 
   .nav__desktop {
-    background-color: var(--color-primary);
     display: flex;
     padding: 2rem 3rem;
     height: 7.5rem;
@@ -71,7 +69,7 @@
       li > a:active {
         text-decoration: none;
         transition: color 0.4s, smooth;
-        color: var(--color-font);
+        color: var(--color-content-lighter);
       }
       li > a:hover {
         color: var(--color-accent);
@@ -119,7 +117,7 @@
       & a {
         font-size: 2.5rem;
         text-decoration: none;
-        color: var(--color-font);
+        color: var(--color-content-lighter);
       }
     }
     #resumeHidden::before {
@@ -129,7 +127,7 @@
     div {
       margin: 2rem 0 2rem 5rem;
       font-size: 2.5rem;
-      color: var(--color-font);
+      color: var(--color-content-lighter);
       & label {
         margin-left: 0;
       }

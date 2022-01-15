@@ -19,24 +19,12 @@
   }
 }
 
-.dark {
-  background: var(--color-primary-opacity);
-  color: var(--color-font);
-  li > a,
-  li > a:link,
-  li > a:visited,
-  li > a:active {
-    color: var(--color-font);
-  }
-}
-
 .overlay {
   position: fixed;
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-primary-lighter);
   backdrop-filter: blur(2px);
   width: 100vw;
   height: 100vh;
-
   z-index: 9;
 }
 
@@ -49,13 +37,13 @@
   background-color: var(--color-primary);
 }
 .darkShadow {
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-primary-lighter);
   box-shadow: 3px 0 15px var(--color-darkest);
   backdrop-filter: blur(2px);
 }
 
 .blue {
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-primary-lighter);
 }
 //& FONTS
 .darkest {
@@ -67,7 +55,7 @@
 }
 
 .highlight {
-  border-bottom: 2px dotted var(--color-accent-dk);
+  border-bottom: 2px dotted var(--color-accent);
 }
 
 .hlgt {

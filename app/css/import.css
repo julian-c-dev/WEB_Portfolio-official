@@ -2,21 +2,17 @@
   --color-lightest: rgba(250, 250, 250);
   --color-darkest: rgba(2, 2, 2, 0.8);
   --color-primary: rgb(10, 25, 47);
-  --color-primary-opacity: rgba(10, 25, 47, 0.85);
-  --color-primary-lighter: rgb(13, 50, 98);
-  --color-secondary: rgba(96, 155, 233, 0.6);
+  --color-primary-lighter: rgba(10, 25, 47, 0.9);
+  --color-secondary: rgba(25, 94, 184, 1);
+  --color-secondary-trans: rgba(25, 94, 184, 0.95);
   --color-accent: rgb(255, 122, 34);
-  --color-accent-lighter: rgb(255, 149, 78);
-  --color-accent-lightest: rgba(255, 175, 122, 0.2);
-  --color-accent-darker: rgb(231, 92, 0);
-  --color-accent-darkerst: rgb(173, 69, 0);
-  --color-font: rgb(255, 255, 255);
-  --color-cards-primary: rgb(28, 72, 129);
-  --color-footer: rgb(5, 25, 53);
-  --color-font-lg: rgb(35, 61, 129);
-  --color-font-lg-darker: rgb(7, 34, 102);
+  --color-accent-darker: rgb(255, 113, 19);
+  --color-accent-opacity: rgba(255, 175, 122, 0.2);
+  --color-content: rgb(72, 75, 106);
+  --color-content-darker: rgb(147, 148, 165);
+  --color-content-lighter: rgb(228, 229, 241);
   --shadow: 1px 1px 2px var(--color-primary-opacity);
-  --box-shadow: 2px 2px 15px var(--color-primary-lighter);
+  --box-shadow: 2px 2px 5px var(--color-primary-lighter);
 }
 
 /* normalize or reset */
@@ -383,7 +379,7 @@ template {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-font);
+  background-color: var(--color-content-lighter);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -403,7 +399,7 @@ template {
 }
 
 input:checked + .slider {
-  background-color: var(--color-secondary);
+  background-color: var(--color-content-darker);
 }
 
 input:checked + .slider:before {
@@ -435,6 +431,10 @@ html {
 
 body {
   background-color: var(--color-background);
+}
+
+body .navBar .fa-lightbulb {
+  color: var(--nav-icon);
 }
 
 body h1 .overTitle {
@@ -488,7 +488,12 @@ body .card-colors {
   color: var(--card-skills-content);
 }
 
+body .card-colors .group-starts .fa-star {
+  color: var(--stars-color);
+}
+
 body .card-colors:hover {
+  background-color: var(--card-skills-hover);
   color: var(--color-accent);
 }
 
@@ -510,33 +515,124 @@ body .card-logo_clmLeft a:hover {
   color: var(--color-links-hover);
 }
 
+body .section-exp_subHeading {
+  color: var(--exp-subHeading);
+}
+
+body .job {
+  color: #e4e5f1;
+  background: var(--color-secondary-trans);
+}
+
+body .job .job-role {
+  color: var(--color-lightest);
+}
+
+body .job .job-title {
+  color: var(--color-lightest);
+}
+
+body .job .job-overtitle {
+  color: var(--job-time);
+}
+
+body .job .job-sub-tech {
+  color: var(--color-accent-darker);
+}
+
+body .job .job-sub-icon i {
+  color: var(--color-lightest);
+}
+
+body .section-practices .card {
+  background-color: var(--practice-card);
+}
+
+body .section-practices .card .card_header {
+  color: var(--practice-card-heading);
+}
+
+body .section-practices .card .card_content {
+  color: var(--practice-card-content);
+}
+
+body .section-practices .card .card_footer > a {
+  color: var(--practice-card-footer);
+}
+
+body .footer .footer-content {
+  color: var(--footer);
+}
+
+@media screen and (min-width: 1250px) {
+  body .job {
+    color: var(--job-card-content);
+    background: var(--color-content-lighter);
+  }
+  body .job .job-role {
+    color: var(--job-role);
+  }
+  body .job .job-title {
+    color: var(--job-title);
+  }
+  body .job .job-description {
+    background-color: var(--job-desc);
+  }
+  body .job .job-overtitle {
+    color: var(--job-time);
+  }
+  body .job .job-sub-tech {
+    color: var(--job-tech);
+  }
+  body .job .job-sub-icon i {
+    color: var(--job-icons);
+  }
+}
+
 body.light-theme {
-  --color-background: rgb(228, 229, 241);
-  --color-overtitle: rgb(255, 122, 34);
-  --color-title: rgb(10, 25, 47);
-  --color-subtitle: rgb(147, 148, 165);
-  --color-heroContent: rgb(72, 75, 106);
-  --credits: rgb(10, 25, 47);
-  --credits-hover: rgb(255, 122, 34);
-  --credit-line: rgb(10, 25, 47);
-  --color-btn: rgb(255, 122, 34);
-  --color-btn-border: rgb(10, 25, 47);
-  --color-btn-hover: rgba(255, 175, 122, 0.2);
-  --section-heading: rgb(10, 25, 47);
-  --section-content: rgb(72, 75, 106);
-  --card-skills: rgba(10, 25, 47, 1);
-  --card-skills-content: rgb(147, 148, 165);
-  --clmLeft-headings: rgb(10, 25, 47);
-  --clmLeft-icons: rgb(10, 25, 47);
-  --clmLeft-links: rgb(72, 75, 106);
-  --color-links-hover: rgb(255, 122, 34);
+  --nav-icon: var(--color-content-lighter);
+  --color-background: var(--color-content-lighter);
+  --color-overtitle: var(--color-accent);
+  --color-title: var(--color-primary);
+  --color-subtitle: var(--color-primary-lighter);
+  --color-heroContent: var(--color-content);
+  --credits: var(--color-primary);
+  --credits-hover: var(--color-accent);
+  --credit-line: var(--color-primary);
+  --color-btn: var(--color-accent);
+  --color-btn-border: var(--color-primary);
+  --color-btn-hover: var(--color-accent-opacity);
+  --section-heading: var(--color-primary);
+  --section-content: var(--color-content);
+  --card-skills: var(--color-primary);
+  --card-skills-hover: var(--color-primary);
+  --card-skills-content: var(--color-content-darker);
+  --stars-color: var(--color-secondary);
+  --clmLeft-headings: var(--color-primary);
+  --clmLeft-icons: var(--color-primary);
+  --clmLeft-links: var(--color-content);
+  --color-links-hover: var(--color-accent);
+  --exp-subHeading: var(--color-primary);
+  --job-role: var(--color-primary);
+  --job-title: var(--color-primary);
+  --job-card-content: var(--color-content-lighter);
+  --job-time: var(--color-accent);
+  --job-desc: var(--color-secondary-trans);
+  --job-tech: var(--color-accent-darker);
+  --job-icons: var(--color-primary);
+  --practice-card: var(--color-primary);
+  --practice-card-heading: var(--color-content-lighter);
+  --practice-card-content: var(--color-content-darker);
+  --practice-card-footer: var(--color-accent-darker);
+  --footer: var(--color-content-darker);
+  --footer-bg: var(--color-primary);
 }
 
 button {
   background-color: transparent;
   border: none;
   margin: 0;
-  color: #484b6a;
+  color: var(--color-content);
   cursor: pointer;
 }
 
@@ -611,7 +707,7 @@ main {
 
 .footer {
   height: 9rem;
-  background-color: var(--color-footer);
+  background-color: var(--footer-bg);
 }
 
 .footer .footer-content {
@@ -622,11 +718,11 @@ main {
 
 .footer .footer-content p {
   margin-top: 0;
-  color: var(--color-bg-lg);
+  color: var(--color-content-darker);
 }
 
 .footer .brittany {
-  color: var(--color-bg-lg);
+  color: var(--color-content-darker);
   text-decoration: none;
 }
 
@@ -734,10 +830,9 @@ main {
     display: inline-block;
     font-size: 2rem;
     margin: 0 0 0 1.5rem;
-    color: var(--color-font);
+    color: var(--color-content-lighter);
   }
   .nav__desktop {
-    background-color: var(--color-primary);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -772,7 +867,7 @@ main {
     text-decoration: none;
     -webkit-transition: color 0.4s, smooth;
     transition: color 0.4s, smooth;
-    color: var(--color-font);
+    color: var(--color-content-lighter);
   }
   .nav__desktop .nav__links li > a:hover {
     color: var(--color-accent);
@@ -820,7 +915,7 @@ main {
 .hidden-menu ul li a {
   font-size: 2.5rem;
   text-decoration: none;
-  color: var(--color-font);
+  color: var(--color-content-lighter);
 }
 
 .hidden-menu ul #resumeHidden::before {
@@ -831,7 +926,7 @@ main {
 .hidden-menu ul div {
   margin: 2rem 0 2rem 5rem;
   font-size: 2.5rem;
-  color: var(--color-font);
+  color: var(--color-content-lighter);
 }
 
 .hidden-menu ul p label,
@@ -995,12 +1090,12 @@ main {
   .about-image img {
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
-    -webkit-filter: sepia(100%);
-            filter: sepia(100%);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
   }
   .about-image img:hover {
-    -webkit-filter: sepia(0%);
-            filter: sepia(0%);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
   }
 }
 
@@ -1296,8 +1391,8 @@ main {
 .job-img img {
   width: 100%;
   border-radius: 15px;
-  -webkit-filter: sepia(50%);
-          filter: sepia(50%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .job-description {
@@ -1387,7 +1482,6 @@ main {
 }
 
 .card {
-  background: var(--color-primary-opacity);
   border-radius: 15px;
   margin: 3rem 0;
   height: 35rem;
@@ -1421,9 +1515,23 @@ main {
 }
 
 .card .card_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   height: 5rem;
-  margin: 1rem auto 3rem auto;
-  white-space: initial;
+  margin: 3rem auto;
+}
+
+.card .card_footer > a {
+  margin: 1.5rem;
+}
+
+.card .card-icon {
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 320px) {
@@ -1441,6 +1549,12 @@ main {
   }
   .exp-content {
     margin-left: -2.5rem;
+  }
+  .card {
+    margin: 3rem 5rem;
+  }
+  .card .card_content {
+    font-size: 1.7rem;
   }
 }
 
@@ -1491,12 +1605,14 @@ main {
 @media screen and (min-width: 430px) {
   .card {
     margin: 3rem 4rem;
+    padding: 3rem;
   }
 }
 
 @media screen and (min-width: 490px) {
   .card {
     margin: 3rem 0rem;
+    padding: 0;
   }
 }
 
@@ -1525,8 +1641,8 @@ main {
   .job-img img {
     width: 100%;
     border-radius: 15px;
-    -webkit-filter: sepia(50%);
-            filter: sepia(50%);
+    -webkit-filter: grayscale(75%);
+            filter: grayscale(75%);
   }
 }
 
@@ -1645,9 +1761,9 @@ main {
     margin: -2rem 0 0 15rem;
   }
   .job-description {
-    background-color: var(--color-cards-primary);
     margin-top: 0.5rem;
     padding: 2rem;
+    font-weight: lighter;
     width: 50rem;
     font-size: 1.5rem;
     white-space: initial;
@@ -1667,8 +1783,8 @@ main {
   }
   .job-img img {
     border-radius: 15px;
-    -webkit-filter: blur(0.3px) grayscale(100%) contrast(1) brightness(90%) sepia(100%);
-            filter: blur(0.3px) grayscale(100%) contrast(1) brightness(90%) sepia(100%);
+    -webkit-filter: grayscale(100%) contrast(1);
+            filter: grayscale(100%) contrast(1);
     -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
   }
@@ -1771,8 +1887,8 @@ main {
   .card:hover {
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
-    -webkit-box-shadow: 2px 3px 2px var(--color-accent);
-            box-shadow: 2px 3px 2px var(--color-accent);
+    -webkit-box-shadow: 2px 2px 10px var(--stars-color);
+            box-shadow: 2px 2px 10px var(--stars-color);
   }
 }
 
@@ -2078,21 +2194,9 @@ main {
   color: var(--color-accent);
 }
 
-.dark {
-  background: var(--color-primary-opacity);
-  color: var(--color-font);
-}
-
-.dark li > a,
-.dark li > a:link,
-.dark li > a:visited,
-.dark li > a:active {
-  color: var(--color-font);
-}
-
 .overlay {
   position: fixed;
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-primary-lighter);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   width: 100vw;
@@ -2114,7 +2218,7 @@ main {
 }
 
 .darkShadow {
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-primary-lighter);
   -webkit-box-shadow: 3px 0 15px var(--color-darkest);
           box-shadow: 3px 0 15px var(--color-darkest);
   -webkit-backdrop-filter: blur(2px);
@@ -2122,7 +2226,7 @@ main {
 }
 
 .blue {
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-primary-lighter);
 }
 
 .darkest {
@@ -2134,7 +2238,7 @@ main {
 }
 
 .highlight {
-  border-bottom: 2px dotted var(--color-accent-dk);
+  border-bottom: 2px dotted var(--color-accent);
 }
 
 .hlgt {

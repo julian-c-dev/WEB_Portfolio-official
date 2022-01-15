@@ -55,7 +55,7 @@
   & img {
     width: 100%;
     border-radius: 15px;
-    filter: sepia(50%);
+    filter: grayscale(100%);
   }
 }
 
@@ -129,7 +129,6 @@
 }
 
 .card {
-  background: var(--color-primary-opacity);
   border-radius: 15px;
   margin: 3rem 0;
   height: 35rem;
@@ -154,9 +153,16 @@
     text-align: left;
   }
   & .card_footer {
+    display: flex;
+    flex-flow: row nowrap;
     height: 5rem;
-    margin: 1rem auto 3rem auto;
-    white-space: initial;
+    margin: 3rem auto;
+    & > a {
+      margin: 1.5rem;
+    }
+  }
+  & .card-icon {
+    font-size: 2rem;
   }
 }
 
@@ -176,6 +182,13 @@
 
   .exp-content {
     margin-left: -2.5rem;
+  }
+
+  .card {
+    margin: 3rem 5rem;
+    .card_content {
+      font-size: 1.7rem;
+    }
   }
 }
 
@@ -231,15 +244,15 @@
 @media screen and(min-width:430px) {
   .card {
     margin: 3rem 4rem;
+    padding: 3rem;
   }
 }
-
 @media screen and(min-width:490px) {
   .card {
     margin: 3rem 0rem;
+    padding: 0;
   }
 }
-
 @media screen and(min-width:500px) {
   .exp-content {
     gap: 3rem;
@@ -265,7 +278,7 @@
     & img {
       width: 100%;
       border-radius: 15px;
-      filter: sepia(50%);
+      filter: grayscale(75%);
     }
   }
 }
@@ -396,9 +409,9 @@
   }
 
   .job-description {
-    background-color: var(--color-cards-primary);
     margin-top: 0.5rem;
     padding: 2rem;
+    font-weight: lighter;
     width: 50rem;
     font-size: 1.5rem;
     white-space: initial;
@@ -417,8 +430,7 @@
     z-index: -1;
     & img {
       border-radius: 15px;
-      filter: blur(0.3px) grayscale(100%) contrast(1) brightness(90%)
-        sepia(100%);
+      filter: grayscale(100%) contrast(1);
       transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
       &:hover {
         transform: scale(1.05);
@@ -515,7 +527,6 @@
   }
   .card:hover {
     transform: translateY(-20px);
-
-    box-shadow: 2px 3px 2px var(--color-accent);
+    box-shadow: 2px 2px 10px var(--stars-color);
   }
 }

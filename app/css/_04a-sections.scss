@@ -49,7 +49,7 @@ main {
 
 .footer {
   height: 9rem;
-  background-color: var(--color-footer);
+  background-color: var(--footer-bg);
 
   .footer-content {
     padding-top: 0;
@@ -57,11 +57,11 @@ main {
     padding-top: 3rem;
     & p {
       margin-top: 0;
-      color: var(--color-bg-lg);
+      color: var(--color-content-darker);
     }
   }
   .brittany {
-    color: var(--color-bg-lg);
+    color: var(--color-content-darker);
     text-decoration: none;
     &:hover {
       color: var(--color-accent);

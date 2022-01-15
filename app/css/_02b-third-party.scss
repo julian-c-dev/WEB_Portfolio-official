@@ -23,7 +23,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-font);
+  background-color: var(--color-content-lighter);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -42,7 +42,7 @@
 }
 
 input:checked + .slider {
-  background-color: var(--color-secondary);
+  background-color: var(--color-content-darker);
 }
 
 input:checked + .slider:before {
