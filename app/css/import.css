@@ -1690,14 +1690,18 @@ main {
 @media screen and (min-width: 430px) {
   .card {
     margin: 3rem 4rem;
-    padding: 3rem;
+  }
+  .card .card_content {
+    padding: 0 2rem;
   }
 }
 
 @media screen and (min-width: 490px) {
   .card {
-    margin: 3rem 0rem;
-    padding: 0;
+    margin: 2rem 0rem;
+  }
+  .card .card_content {
+    padding: 0 3rem;
   }
 }
 
@@ -1729,6 +1733,9 @@ main {
     -webkit-filter: grayscale(25%);
             filter: grayscale(25%);
   }
+  .card .card_content {
+    padding: 0 1rem;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -1736,7 +1743,7 @@ main {
     margin: 0 0 0 -10rem;
   }
   .card .card_content {
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 }
 
