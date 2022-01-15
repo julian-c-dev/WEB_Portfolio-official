@@ -1416,7 +1416,6 @@ main {
 }
 
 .job {
-  background-color: var(--color-cards-primary);
   border-radius: 15px;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
@@ -1557,17 +1556,18 @@ main {
 .card {
   border-radius: 15px;
   margin: 3rem 0;
-  height: 35rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  padding: 1rem;
+  height: 36rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .card .card_header {
@@ -1575,16 +1575,27 @@ main {
   font-size: 1.6rem;
   padding: 1rem auto 0 auto;
   white-space: initial;
-  height: 5rem;
+  height: 1.8rem;
 }
 
 .card .card_content {
   color: var(--color-font);
-  padding: 0 1rem 1rem 1rem;
-  height: 25rem;
+  padding: 0 2rem 1rem 2rem;
+  height: 17rem;
   font-size: 1.5rem;
   white-space: initial;
   text-align: left;
+}
+
+.card .card_tech {
+  text-align: center;
+  color: var(--color-lightest);
+  font-size: 1.2rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 1rem;
+  padding: 0 1rem;
 }
 
 .card .card_footer {
@@ -1595,12 +1606,12 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  height: 5rem;
-  margin: 3rem auto;
+  height: 1rem;
+  margin: 0 auto;
 }
 
 .card .card_footer > a {
-  margin: 1.5rem;
+  margin: 1rem;
 }
 
 .card .card-icon {
@@ -1628,6 +1639,7 @@ main {
   }
   .card .card_content {
     font-size: 1.7rem;
+    padding: 0 1rem 1rem 1rem;
   }
 }
 
@@ -1723,6 +1735,9 @@ main {
   .job-swiper-frame {
     margin: 0 0 0 -10rem;
   }
+  .card .card_content {
+    padding: 0 2rem;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -1748,6 +1763,12 @@ main {
   }
   .section-practices-frame .section-container .section-exp_subHeading {
     margin-left: 0;
+  }
+  .card .card_header {
+    padding: 0 1rem;
+  }
+  .card .card_content {
+    padding: 0 1.5rem;
   }
 }
 
@@ -1932,17 +1953,16 @@ main {
             align-items: center;
     background: var(--color-primary-opacity);
     border-radius: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    height: 35rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin: 3rem 0;
     -webkit-transition: -webkit-transform 0.3s linear;
     transition: -webkit-transform 0.3s linear;

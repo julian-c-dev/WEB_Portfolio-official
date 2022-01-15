@@ -21,7 +21,6 @@
 }
 
 .job {
-  background-color: var(--color-cards-primary);
   border-radius: 15px;
   box-shadow: var(--box-shadow);
   margin: 0 auto 2rem 0;
@@ -131,34 +130,44 @@
 .card {
   border-radius: 15px;
   margin: 3rem 0;
-  height: 35rem;
-  display: flex;
-  flex-flow: column nowrap;
+  padding: 1rem;
+  height: 36rem;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
   justify-content: center;
+  align-items: flex-start;
 
   & .card_header {
     text-align: center;
     font-size: 1.6rem;
     padding: 1rem auto 0 auto;
     white-space: initial;
-    height: 5rem;
+    height: 1.8rem;
   }
 
   & .card_content {
     color: var(--color-font);
-    padding: 0 1rem 1rem 1rem;
-    height: 25rem;
+    padding: 0 2rem 1rem 2rem;
+    height: 17rem;
     font-size: 1.5rem;
     white-space: initial;
     text-align: left;
   }
+  & .card_tech {
+    text-align: center;
+    color: var(--color-lightest);
+    font-size: 1.2rem;
+    align-items: flex-end;
+    height: 1rem;
+    padding: 0 1rem;
+  }
   & .card_footer {
     display: flex;
     flex-flow: row nowrap;
-    height: 5rem;
-    margin: 3rem auto;
+    height: 1rem;
+    margin: 0 auto;
     & > a {
-      margin: 1.5rem;
+      margin: 1rem;
     }
   }
   & .card-icon {
@@ -188,6 +197,7 @@
     margin: 3rem 5rem;
     .card_content {
       font-size: 1.7rem;
+      padding: 0 1rem 1rem 1rem;
     }
   }
 }
@@ -286,6 +296,11 @@
   .job-swiper-frame {
     margin: 0 0 0 -10rem;
   }
+  .card {
+    .card_content {
+      padding: 0 2rem;
+    }
+  }
 }
 
 @media screen and(min-width:700px) {
@@ -315,6 +330,15 @@
       & .section-exp_subHeading {
         margin-left: 0;
       }
+    }
+  }
+  .card {
+    .card_header {
+      padding: 0 1rem;
+    }
+
+    .card_content {
+      padding: 0 1.5rem;
     }
   }
 }
@@ -507,11 +531,11 @@
     align-items: center;
     background: var(--color-primary-opacity);
     border-radius: 15px;
-
-    display: flex;
-    flex-flow: column nowrap;
-    height: 35rem;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
     justify-content: center;
+    align-items: flex-start;
+
     margin: 3rem 0;
     transition: transform 0.3s linear;
 
