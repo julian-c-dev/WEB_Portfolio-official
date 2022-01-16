@@ -1,5 +1,5 @@
 // * Fliping logo ANIMATION onmouseOver
-function flipping(element) {
+/*function flipping(element) {
   element.classList.add("flip");
   setTimeout(() => {
     element.setAttribute("src", "/images/logo-acc-lg.svg");
@@ -19,4 +19,4 @@ function flipping(element) {
   setTimeout(() => {
     element.classList.remove("flip");
   }, 1200);
-}
+}*/
