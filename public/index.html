@@ -50,13 +50,14 @@
               onmouseover="flipping(this)"
               src="/images/logo-acc.svg"
               width="55"
+              alt="logo"
             />
           </a>
           <i class="far fa-lightbulb" title="Dark / Light Theme"></i>
 
           <div class="flex flex-clm">
             <div class="flex flex-center">
-              <label id="theme_swith" class="switch mg-x-1">
+              <label class="switch mg-x-1">
                 <input type="checkbox" id="handlerTheme" />
                 <span class="slider round"></span>
               </label>
@@ -85,10 +86,26 @@
     <aside id="hiddenMenuFrame" class="">
       <div id="hiddenMenu" class="hidden-menu solid">
         <ul>
-          <li><a class="sideLinks" href="#sec_About">About</a></li>
-          <li><a class="sideLinks" href="#sec_Skills">Skills</a></li>
-          <li><a class="sideLinks" href="#sec_Experience">Experience</a></li>
-          <li><a class="sideLinks" href="#sec_Contact">Conctact</a></li>
+          <li>
+            <a class="sideLinks" href="#sec_About"
+              ><span class="hlgt">01.</span> About</a
+            >
+          </li>
+          <li>
+            <a class="sideLinks" href="#sec_Skills"
+              ><span class="hlgt">02.</span> Skills</a
+            >
+          </li>
+          <li>
+            <a class="sideLinks" href="#sec_Experience"
+              ><span class="hlgt">03.</span> Experience</a
+            >
+          </li>
+          <li>
+            <a class="sideLinks" href="#sec_Contact"
+              ><span class="hlgt">04.</span> Conctact</a
+            >
+          </li>
           <li>
             <a
               href="/app/downloads/RESUME_Julian_cantera_DEV.pdf"
@@ -98,13 +115,15 @@
               >Resume</a
             >
           </li>
-          <p>Theme Dark / Light</p>
-          <div class="flex flex-st">
-            <label id="theme_swith" class="switch mg-x-1">
-              <input type="checkbox" id="handlerThemeHidden" />
-              <span class="slider round"></span>
-            </label>
-          </div>
+          <li><p>Theme Dark / Light</p></li>
+          <li>
+            <div class="flex flex-st">
+              <label class="switch">
+                <input type="checkbox" id="handlerThemeHidden" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </li>
         </ul>
       </div>
     </aside>
@@ -219,7 +238,7 @@
             <div class="card-logo-frame">
               <div class="card-logo card-colors flex flex-clmn center">
                 <h3>HTML</h3>
-                <img src="/images/logo_html.png" width="61.5" alt="Logo HTML" />
+                <img src="/images/logo_html.png" width="61" alt="Logo HTML" />
                 <table class="logo-table">
                   <tbody>
                     <tr>
@@ -814,7 +833,10 @@
                       href="https://www.amelco.co.uk/en/"
                       target="_blank"
                     >
-                      <img src="/images/amelco-sreenshot.webp" />
+                      <img
+                        src="/images/amelco-sreenshot.webp"
+                        alt="Amelco site company Screenshot"
+                      />
                     </a>
                     <div class="job-description">
                       My first experience working as part of an Agile

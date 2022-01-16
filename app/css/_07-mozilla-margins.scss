@@ -1,5 +1,6 @@
+// ! just for mozilla
+
 @media screen and(min-width:1250px) {
-  // ! just for mozilla
   @-moz-document url-prefix() {
     .section {
       padding: 0 5rem 15rem 0;

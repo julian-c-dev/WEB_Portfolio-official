@@ -118,6 +118,10 @@
   display: none;
 }
 
+.selfTaugh i:hover {
+  color: inherit;
+}
+
 // ^ Media Queries ^
 
 @media screen and(min-width:900px) {

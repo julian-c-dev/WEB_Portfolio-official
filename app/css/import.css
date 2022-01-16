@@ -915,40 +915,18 @@ main {
 }
 
 .hidden-menu ul {
-  counter-reset: section;
+  font-size: 2.5rem;
   padding-left: 0;
 }
 
 .hidden-menu ul li {
   margin: 2rem;
-}
-
-.hidden-menu ul li ::before {
-  counter-increment: section;
-  content: counters(section, ".") ". ";
-  color: var(--color-accent);
+  color: var(--color-content-lighter);
 }
 
 .hidden-menu ul li a {
-  font-size: 2.5rem;
   text-decoration: none;
   color: var(--color-content-lighter);
-}
-
-.hidden-menu ul #resumeHidden::before {
-  content: unset;
-}
-
-.hidden-menu ul p,
-.hidden-menu ul div {
-  margin: 2rem 0 2rem 3rem;
-  font-size: 1.6rem;
-  color: var(--color-content-lighter);
-}
-
-.hidden-menu ul p label,
-.hidden-menu ul div label {
-  margin-left: 0;
 }
 
 .hidden-menu .fa-lightbulb {
@@ -962,11 +940,6 @@ main {
   }
   .hidden-menu li {
     margin: 4rem;
-  }
-  .hidden-menu ul p,
-  .hidden-menu ul div {
-    margin: 2rem 0 2rem 3rem;
-    font-size: 2.5rem;
   }
 }
 
@@ -1324,6 +1297,10 @@ main {
 
 .card-logo_clmLeft {
   display: none;
+}
+
+.selfTaugh i:hover {
+  color: inherit;
 }
 
 @media screen and (min-width: 900px) {
@@ -2324,10 +2301,6 @@ main {
           backdrop-filter: blur(2px);
 }
 
-.primaryShadow {
-  text-shadow: 1px 1px 1px var(--color-secondary);
-}
-
 .blue {
   background-color: var(--color-primary-lighter);
 }
@@ -2488,10 +2461,6 @@ main {
 
 .mg-xl-4 {
   margin-left: 4rem;
-}
-
-.selfTaugh i:hover {
-  color: inherit;
 }
 
 @media screen and (min-width: 1250px) {

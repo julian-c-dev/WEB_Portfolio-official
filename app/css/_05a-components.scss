@@ -1,7 +1,4 @@
-// ! INDEX
-// ^ Btn
-
-// * BTN
+// * Btn
 
 .btn {
   background-color: transparent;
@@ -36,6 +33,8 @@
 .credit-l_side {
   display: none;
 }
+
+// ^ Media Queries ^
 
 @media screen and(min-width:1135px) {
   .credit-r_side,
