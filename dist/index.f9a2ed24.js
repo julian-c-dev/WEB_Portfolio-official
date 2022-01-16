@@ -454,7 +454,7 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}]},["lt4KU"], null, "parcelRequireef8a")
+},{}]},["lt4KU"], null, "parcelRequire8aeb")
 const nav = document.querySelector(".navBar");
 const navDesk = document.querySelector(".nav__desktop");
 const navMobile = document.querySelector(".nav__mobile");

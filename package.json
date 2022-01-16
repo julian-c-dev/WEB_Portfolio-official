@@ -1,5 +1,5 @@
 {
-  "name": "WEB__portfolio-official",
+  "name": "MyPortfolio",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/julian-c-dev/WEB__portfolio-official.git",
@@ -8,5 +8,9 @@
   "devDependencies": {
     "@parcel/transformer-image": "2.0.0-rc.0",
     "parcel": "^2.0.0-rc.0"
+  },
+  "scripts": {
+    "build": "yarn parcel",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
