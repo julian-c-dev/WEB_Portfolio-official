@@ -27,6 +27,9 @@
   box-shadow: 3px 0 15px var(--color-darkest);
   backdrop-filter: blur(2px);
 }
+.primaryShadow {
+  text-shadow: 1px 1px 1px var(--color-secondary);
+}
 
 .blue {
   background-color: var(--color-primary-lighter);

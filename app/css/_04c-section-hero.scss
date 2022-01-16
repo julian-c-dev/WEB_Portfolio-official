@@ -1,4 +1,4 @@
-// * HERO
+// * Hero ---
 .title {
   color: var(--color-lightest);
 }
@@ -33,6 +33,8 @@
     font-size: 3.5vw;
   }
 }
+
+// ^ Media Queries ^
 
 @media screen and (min-width: 448px) {
   .hero {

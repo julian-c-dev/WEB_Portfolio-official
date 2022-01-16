@@ -1,46 +1,7 @@
+// * Section: Skills ---
+
 #sec_Skills {
   margin-top: -1rem;
-}
-// * Table Colors
-.card-colors {
-  transform: scale(1);
-  & .group-starts > .fa-star {
-    color: var(--color-secondary);
-  }
-  box-shadow: 1px 1px 5px var(--color-primary-opacity);
-  transition: transform 0.3s linear;
-  &:hover {
-    transform: scale(1.05);
-    .group-starts > .fa-star {
-      color: var(--color-accent);
-    }
-  }
-}
-
-// * Icons
-
-.card-colors {
-  .fa-sass {
-    color: rgb(235, 88, 235);
-  }
-  .fa-bootstrap {
-    color: rgb(163, 1, 163);
-  }
-  .fa-react {
-    color: rgb(36, 115, 168);
-  }
-}
-
-.fa-sass,
-.fa-bootstrap,
-.fa-react {
-  font-size: 3.5rem;
-
-  &:link,
-  &:visited,
-  &:active {
-    color: var(--color-font);
-  }
 }
 
 // * Cards
@@ -92,12 +53,56 @@
   }
 }
 
+// * Table Colors
+.card-colors {
+  transform: scale(1);
+  & .group-starts > .fa-star {
+    color: var(--color-secondary);
+  }
+  box-shadow: 1px 1px 5px var(--color-primary-opacity);
+  transition: transform 0.3s linear;
+  &:hover {
+    transform: scale(1.05);
+    .group-starts > .fa-star {
+      color: var(--color-accent);
+    }
+  }
+}
+
+// * Icons
+
+.card-colors {
+  .fa-sass {
+    color: rgb(235, 88, 235);
+  }
+  .fa-bootstrap {
+    color: rgb(163, 1, 163);
+  }
+  .fa-react {
+    color: rgb(36, 115, 168);
+  }
+}
+
+.fa-sass,
+.fa-bootstrap,
+.fa-react {
+  font-size: 3.5rem;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: var(--color-font);
+  }
+}
+
 .pagination-container {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
+
+// * paginations and column right
 
 .pagination {
   font-size: 2rem;
@@ -112,6 +117,8 @@
 .card-logo_clmLeft {
   display: none;
 }
+
+// ^ Media Queries ^
 
 @media screen and(min-width:900px) {
   .card-logo-frame {

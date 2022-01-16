@@ -6,7 +6,7 @@
   --color-secondary: rgba(25, 94, 184, 1);
   --color-secondary-trans: rgba(25, 94, 184, 0.95);
   --color-accent: rgb(255, 122, 34);
-  --color-accent-darker: rgb(255, 113, 19);
+  --color-accent-darker: rgb(236, 105, 18);
   --color-accent-opacity: rgba(255, 175, 122, 0.2);
   --color-content: rgb(72, 75, 106);
   --color-content-darker: rgb(147, 148, 165);
@@ -1177,58 +1177,6 @@ main {
   margin-top: -1rem;
 }
 
-.card-colors {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 1px 1px 5px var(--color-primary-opacity);
-          box-shadow: 1px 1px 5px var(--color-primary-opacity);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  transition: -webkit-transform 0.3s linear;
-  transition: transform 0.3s linear;
-  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
-}
-
-.card-colors .group-starts > .fa-star {
-  color: var(--color-secondary);
-}
-
-.card-colors:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.card-colors:hover .group-starts > .fa-star {
-  color: var(--color-accent);
-}
-
-.card-colors .fa-sass {
-  color: #eb58eb;
-}
-
-.card-colors .fa-bootstrap {
-  color: #a301a3;
-}
-
-.card-colors .fa-react {
-  color: #2473a8;
-}
-
-.fa-sass,
-.fa-bootstrap,
-.fa-react {
-  font-size: 3.5rem;
-}
-
-.fa-sass:link, .fa-sass:visited, .fa-sass:active,
-.fa-bootstrap:link,
-.fa-bootstrap:visited,
-.fa-bootstrap:active,
-.fa-react:link,
-.fa-react:visited,
-.fa-react:active {
-  color: var(--color-font);
-}
-
 .container-logos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1295,6 +1243,58 @@ main {
 
 .logo-table .fa-star {
   font-size: 1rem;
+}
+
+.card-colors {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 1px 1px 5px var(--color-primary-opacity);
+          box-shadow: 1px 1px 5px var(--color-primary-opacity);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.card-colors .group-starts > .fa-star {
+  color: var(--color-secondary);
+}
+
+.card-colors:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.card-colors:hover .group-starts > .fa-star {
+  color: var(--color-accent);
+}
+
+.card-colors .fa-sass {
+  color: #eb58eb;
+}
+
+.card-colors .fa-bootstrap {
+  color: #a301a3;
+}
+
+.card-colors .fa-react {
+  color: #2473a8;
+}
+
+.fa-sass,
+.fa-bootstrap,
+.fa-react {
+  font-size: 3.5rem;
+}
+
+.fa-sass:link, .fa-sass:visited, .fa-sass:active,
+.fa-bootstrap:link,
+.fa-bootstrap:visited,
+.fa-bootstrap:active,
+.fa-react:link,
+.fa-react:visited,
+.fa-react:active {
+  color: var(--color-font);
 }
 
 .pagination-container {
@@ -2322,6 +2322,10 @@ main {
           box-shadow: 3px 0 15px var(--color-darkest);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
+}
+
+.primaryShadow {
+  text-shadow: 1px 1px 1px var(--color-secondary);
 }
 
 .blue {
