@@ -1,10 +1,12 @@
 {
-  "scripts": {
-    "start": "parcel serve index.html",
-    "build": "parcel build index.html"
-  },
+  "name": "WEB__portfolio-official",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/julian-c-dev/WEB__portfolio-official.git",
+  "author": "julian-c-dev <78905935+julian-c-dev@users.noreply.github.com>",
+  "license": "MIT",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.48.0"
+    "@parcel/transformer-image": "2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0"
   }
 }
