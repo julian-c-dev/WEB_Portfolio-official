@@ -49,16 +49,23 @@
   align-items: flex-start;
   margin: 0 auto;
   gap: 4rem 2rem;
+}
+.card-logo-frame {
+  max-width: 70rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
 
-  & .card-logo {
-    padding: 1.3rem;
-    border-radius: 20px;
-    margin: 2rem 0 4rem 0;
-    cursor: zoom-in;
-    height: 43rem;
-    & > h3 {
-      font-size: 1.8rem;
-    }
+.card-logo {
+  padding: 1.3rem;
+  border-radius: 20px;
+  margin: 2rem auto 4rem auto;
+  cursor: zoom-in;
+  height: 43rem;
+  & > h3 {
+    font-size: 1.8rem;
   }
 }
 
@@ -97,27 +104,27 @@
   font-size: 1.5rem;
 }
 
-.card-logo-frame {
-  max-width: 70rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-}
-
 .card-logo_clmLeft {
   display: none;
 }
 
 @media screen and(min-width:700px) {
   .card-logo-frame {
-    margin: 0 auto;
-    justify-content: center;
+    margin: 1rem auto 3rem auto;
+    display: grid;
+    grid-template-columns: 32rem 45rem;
+    justify-content: flex-start;
     align-items: flex-start;
+    gap: 3rem;
+    .card-logo {
+      margin: 0 auto;
+      width: 30rem;
+      height: 45rem;
+    }
   }
   .card-logo_clmLeft {
     display: block;
-    margin-top: 3.2rem;
+    margin-top: 1rem;
     font-size: 1.6rem;
     .selfTaugh {
       font-weight: 400;
@@ -135,7 +142,7 @@
     ul,
     li,
     a {
-      margin: 0.4rem 0;
+      margin: 0.6rem 0;
       white-space: initial;
       text-decoration: none;
     }
