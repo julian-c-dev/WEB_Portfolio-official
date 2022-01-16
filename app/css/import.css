@@ -1176,6 +1176,10 @@ main {
   border-radius: 5%;
 }
 
+#sec_Skills {
+  margin-top: -1rem;
+}
+
 .card-colors {
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1192,8 +1196,8 @@ main {
 }
 
 .card-colors:hover {
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .card-colors:hover .group-starts > .fa-star {
@@ -1242,31 +1246,30 @@ main {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 0 auto;
-  gap: 4rem 2rem;
+  margin: 1.8rem auto 0 auto;
 }
 
 .card-logo-frame {
-  max-width: 70rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 42rem;
+      grid-template-rows: 42rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 5rem;
+  gap: rem;
 }
 
 .card-logo {
   padding: 1.3rem;
   border-radius: 20px;
   margin: 2rem auto 4rem auto;
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
-  height: 43rem;
+  width: 25rem;
+  height: 45rem;
 }
 
 .card-logo > h3 {
@@ -1298,6 +1301,7 @@ main {
 }
 
 .pagination-container {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1310,8 +1314,11 @@ main {
 }
 
 .pagination {
-  margin-top: -1rem;
   font-size: 2rem;
+}
+
+.pagination .btn {
+  margin: 1rem 0 0 0;
 }
 
 .disc {
@@ -1322,30 +1329,32 @@ main {
   display: none;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
   .card-logo-frame {
     margin: 1rem auto 3rem auto;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 32rem 45rem;
-        grid-template-columns: 32rem 45rem;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-grid-columns: 30rem 30rem;
+        grid-template-columns: 30rem 30rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 3rem;
+    gap: 1rem;
   }
   .card-logo-frame .card-logo {
     margin: 0 auto;
-    width: 30rem;
-    height: 45rem;
+    width: 25rem;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
   }
   .card-logo_clmLeft {
     display: block;
     margin-top: 1rem;
     font-size: 1.6rem;
+    width: 45rem;
   }
   .card-logo_clmLeft .selfTaugh {
     font-weight: 400;
