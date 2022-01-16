@@ -1177,7 +1177,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: rem;
+  gap: 1rem;
 }
 
 .card-logo {
@@ -1568,7 +1568,7 @@ main {
 .card .card_header {
   text-align: center;
   font-size: 1.6rem;
-  padding: 1rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   white-space: initial;
   height: 1.8rem;
 }
