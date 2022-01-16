@@ -454,7 +454,7 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}]},["8bQBy"], null, "parcelRequire8aeb")
+},{}]},["8bQBy"], null, "parcelRequiref158")
 // * Fliping logo ANIMATION onmouseOver
 function flipping(element) {
     element.classList.add("flip");
