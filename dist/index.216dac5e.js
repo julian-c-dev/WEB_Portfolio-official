@@ -454,7 +454,7 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}]},["1bcN2"], null, "parcelRequiref158")
+},{}]},["1bcN2"], null, "parcelRequire3a1a")
 // & [NavBar] TOGGLE btwn Theme dark/light
 const stwch_Theme = document.querySelector("#handlerTheme");
 const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
