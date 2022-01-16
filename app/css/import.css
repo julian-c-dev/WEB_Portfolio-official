@@ -499,7 +499,6 @@ body .card-colors .group-starts .fa-star {
 
 body .card-colors:hover {
   background-color: var(--card-skills-hover);
-  color: var(--color-accent);
 }
 
 body .card-logo_clmLeft h4 {
@@ -1216,30 +1215,6 @@ main {
   font-size: 1rem;
 }
 
-.card-colors {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 1px 1px 5px var(--color-primary-opacity);
-          box-shadow: 1px 1px 5px var(--color-primary-opacity);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  transition: -webkit-transform 0.3s linear;
-  transition: transform 0.3s linear;
-  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
-}
-
-.card-colors .group-starts > .fa-star {
-  color: var(--color-secondary);
-}
-
-.card-colors:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.card-colors:hover .group-starts > .fa-star {
-  color: var(--color-accent);
-}
-
 .card-colors .fa-sass {
   color: #eb58eb;
 }
@@ -1352,6 +1327,29 @@ main {
   }
   .card-logo_clmLeft .card-logo_clmLeft > ul > li {
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .card-colors {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 1px 1px 5px var(--color-primary-opacity);
+            box-shadow: 1px 1px 5px var(--color-primary-opacity);
+    -webkit-transition: -webkit-transform 0.3s linear;
+    transition: -webkit-transform 0.3s linear;
+    transition: transform 0.3s linear;
+    transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  }
+  .card-colors .group-starts > .fa-star {
+    color: var(--color-secondary);
+  }
+  .card-colors:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .card-colors:hover .group-starts > .fa-star {
+    color: var(--color-accent);
   }
 }
 

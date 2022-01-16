@@ -54,20 +54,6 @@
 }
 
 // * Table Colors
-.card-colors {
-  transform: scale(1);
-  & .group-starts > .fa-star {
-    color: var(--color-secondary);
-  }
-  box-shadow: 1px 1px 5px var(--color-primary-opacity);
-  transition: transform 0.3s linear;
-  &:hover {
-    transform: scale(1.05);
-    .group-starts > .fa-star {
-      color: var(--color-accent);
-    }
-  }
-}
 
 // * Icons
 
@@ -168,6 +154,22 @@
     }
     .card-logo_clmLeft > ul > li {
       margin-bottom: 1rem;
+    }
+  }
+}
+@media screen and(min-width:1250px) {
+  .card-colors {
+    transform: scale(1);
+    & .group-starts > .fa-star {
+      color: var(--color-secondary);
+    }
+    box-shadow: 1px 1px 5px var(--color-primary-opacity);
+    transition: transform 0.3s linear;
+    &:hover {
+      transform: scale(1.05);
+      .group-starts > .fa-star {
+        color: var(--color-accent);
+      }
     }
   }
 }
