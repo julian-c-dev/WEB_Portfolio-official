@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio: Julian C DEV</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.814c6678.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/804d1be908.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/index.6fef92d0.css">
+  </head>
+  <body class="dark-theme">
+    <!-- * NavBars  -->
+
+    <!-- & visible on Phone-->
+    <nav class="navBar">
+      <div class="nav__mobile flex-sb flex-center">
+        <a id="logoHidden" href="#">
+          <img src="/logo-acc.e023b825.svg" width="45" alt="Julian's diamond Logo">
+        </a>
+        <div class="burger__frame">
+          <div class="burger__btn"></div>
+        </div>
+      </div>
+
+      <!-- & visible in DESKTOP-->
+
+      <!-- * Nav-BOTTOM => PRINCIPAL-->
+      <div class="nav__desktop solid flex-sb flex-center">
+        <div class="flex flex-center mg-xl-3">
+          <a href="#">
+            <img id="logo" onmouseover="flipping(this)" src="/logo-acc.e023b825.svg" width="55" alt="logo">
+          </a>
+          <i class="far fa-lightbulb" title="Dark / Light Theme"></i>
+
+          <div class="flex flex-clm">
+            <div class="flex flex-center">
+              <label class="switch mg-x-1">
+                <input type="checkbox" id="handlerTheme">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <ul class="nav__links flex flex-center">
+          <li><a id="navItem1" href="#sec_About">About</a></li>
+          <li><a id="navItem2" href="#sec_Skills">Skills</a></li>
+          <li><a id="navItem3" href="#sec_Experience">Experience</a></li>
+          <li><a id="navItem4" href="#sec_Contact">Contact</a></li>
+          <li>
+            <a href="/up_/app/downloads/RESUME_Julian_cantera_DEV.docx" download="RESUME_Julian_cantera_DEV.pdf" class="btn btn-nav">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- & Side menu after clicking Menu mobile view-->
+    <aside id="hiddenMenuFrame" class="">
+      <div id="hiddenMenu" class="hidden-menu solid">
+        <ul>
+          <li>
+            <a class="sideLinks" href="#sec_About"><span class="hlgt">01.</span> About</a>
+          </li>
+          <li>
+            <a class="sideLinks" href="#sec_Skills"><span class="hlgt">02.</span> Skills</a>
+          </li>
+          <li>
+            <a class="sideLinks" href="#sec_Experience"><span class="hlgt">03.</span> Experience</a>
+          </li>
+          <li>
+            <a class="sideLinks" href="#sec_Contact"><span class="hlgt">04.</span> Contact</a>
+          </li>
+          <li>
+            <a href="/up_/app/downloads/RESUME_Julian_cantera_DEV.docx" download="RESUME_Julian_cantera_DEV.pdf" class="btn" id="resumeHidden">Resume</a>
+          </li>
+          <li><p>Theme Dark / Light</p></li>
+          <li>
+            <div class="flex flex-st">
+              <label class="switch">
+                <input type="checkbox" id="handlerThemeHidden">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ^ MAIN CONTENT ^ -->
+    <!-- * Hero -->
+    <main class="main">
+      <header class="section">
+        <div class="hero">
+          <h1>
+            <span class="overTitle">Welcome to my site, I am</span><br>
+            <span class="title">Julian Cantera </span><br>
+            <span class="subTitle">Junior Web Developer</span>
+          </h1>
+          <p class="hero__content">
+            I specialize in building Web components as an apprentice software
+            engineer. I am a highly motivated and self-taught person. Currently,
+            I am focused on improving my
+            <span class="bold hlgt">JavaScript</span> skills, as well as
+            learning everything about the
+            <span class="bold hlgt">React</span> library.
+          </p>
+
+          <a class="btn" href="#sec_Skills"> Check out all my skills! </a>
+        </div>
+      </header>
+
+      <!-- * Lateral Credits (from 1000px)-->
+      <aside class="credit-r_side">
+        <a class="credit-content" href="mailto:julian.c.dev@gmail.com">julian.c.dev@gmail.com</a>
+      </aside>
+      <aside class="credit-l_side">
+        <a class="credit-content" href="https://github.com/julian-c-dev/" target="_blank"><i class="fab fa-github-square" title="Github"></i>
+        </a>
+
+        <a class="credit-content" href="javascript:void(0)">
+          <i class="fab fa-linkedin" title="Linkedin"></i></a>
+
+        <a class="credit-content" href="https://edabit.com/user/TAMxX5h3LggMLsijj/" target="_blank"><i class="fab fa-js" title="Edabit"></i></a>
+        <a class="credit-content" href="https://stackoverflow.com/users/15646813/julian-c-dev" target="_blank"><i class="fab fa-stack-overflow" title="Stack Overflow"></i></a>
+      </aside>
+      <!-- * Section: About -->
+      <section id="sec_About" class="section">
+        <div class="section-container">
+          <h2 class="section-heading flex">About Me</h2>
+          <div class="section-content-frame">
+            <div class="section-content">
+              <p>
+                Since I had my first PC in 2003, I have always been interested
+                in computers and Web development; despite the fact that my
+                professional career took a different path (History and Tourism).
+              </p>
+              <p>
+                Due to the pandemic, I was not able to work in those fields for
+                a while, giving me a wonderful opportunity to turn something
+                that <span class="bold hlgt">I always did for fun </span>into
+                something more, a new career, a new purpose in life.
+              </p>
+              <p>
+                In May 2020, I began learning all of the
+                <span class="bold hlgt">Front-End technologies</span>
+                I had always wanted to learn on a
+                <span class="bold hlgt">professional level</span>. It seems like
+                a short period of time, but I did not begin from the scratch,
+                and also, since then my entire time has been dedicated to this
+                purpose and I plan to keep updating my skills.
+              </p>
+              <p>
+                Although I know I am at the beginning of a path that will last
+                forever, I also know I will walk along with a smile on my face.
+              </p>
+              <p>
+                For 2022, I have joined a course of
+                <span class="bold hlgt">Advanced JavaScript</span>
+                imparted by the
+                <span class="bold hlgt">City of London School </span>(Jan to
+                Mar), and I will bring new projects made with the React library.
+              </p>
+            </div>
+            <div class="about-image">
+              <img src="/picture.e80157cc.jpg" width="240" alt="Myself picture">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Section: Skills -->
+      <section id="sec_Skills" class="section">
+        <div class="section-container">
+          <h2 class="section-heading skills-title flex">Skills</h2>
+        </div>
+        <div class="container-logos">
+          <!-- ^ HTML -->
+          <article class="mySlides">
+            <div class="card-logo-frame">
+              <div class="card-logo card-colors flex flex-clmn center">
+                <h3>HTML</h3>
+                <img src="/logo_html.2fccb7ab.png" width="61" alt="Logo HTML">
+                <table class="logo-table">
+                  <tbody>
+                    <tr>
+                      <th>Fundamentals</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Semantic tags</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>HTML Forms</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Accessibility</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Best Practices</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Experience</th>
+                      <td>&#62; 1 year</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-logo_clmLeft">
+                <div class="selfTaugh flex flex-center">
+                  <i class="fas fa-globe mg-x-1"></i>
+                  <h4>Resources from:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <a class="web-icon" href="https://www.w3.org/standards/webdesign/htmlcss" target="_blank">
+                      - w3.org
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.w3schools.com.com/html/default.asp" target="_blank">
+                      - w3schools.com
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://codewithmosh.com/p/the-ultimate-html-css-part1p" target="_blank">- codewithmosh.com</a>
+                  </li>
+                </ul>
+
+                <div class="flex flex-center selfTaugh">
+                  <i class="fas fa-award mg-x-1"></i>
+                  <h4>Certificates:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0)" title="Upon request">
+                      - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2
+                      & 3</a>
+                  </li>
+                </ul>
+
+                <div class="flex flex-center selfTaugh">
+                  <i class="fas fa-check-square mg-x-1"></i>
+                  <h4>Next Steps:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <p>
+                      - Continue building websites through the challenges
+                      offered on the
+                      <a class="hlgt" href="https://www.frontendmentor.io/home" target="_blank">Frontend Mentor</a>
+                      platform (Q1 & Q2, 2022).
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <!-- ^ CSS -->
+          <article class="mySlides">
+            <div class="card-logo-frame">
+              <div class="card-logo card-colors flex flex-clmn center">
+                <h3>CSS</h3>
+                <img src="/logo_css.d6352a5c.png" width="70" alt="Logo CSS">
+                <table class="logo-table">
+                  <tbody>
+                    <tr>
+                      <th>Fundamentals</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Flex & CSS Grid</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Responsive Des.</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Animations / trans.</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Experience</th>
+                      <td>&#62; 1 year</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h4 class="frame-subTable">Good knowledge using:</h4>
+                <div class="flex flex-centered">
+                  <a href="https://sass-lang.com/" target="_blank"><i class="fab fa-sass mg-x-1" title="Sass"></i></a>
+                  <a href="https://getbootstrap.com/" target="_blank"><i class="fab fa-bootstrap mg-x-1" title="Bootstrap"></i></a>
+                </div>
+              </div>
+
+              <div class="card-logo_clmLeft">
+                <div class="selfTaugh flex flex-center">
+                  <i class="fas fa-globe mg-x-1"></i>
+                  <h4>Resources from:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <a class="web-icon" href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">
+                      - developer.mozilla.org
+                    </a>
+                  </li>
+                  <li>
+                    <a class="web-icon" href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
+                      - w3.org
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://codewithmosh.com/p/the-ultimate-html-css-part1p" target="_blank">- codewithmosh.com</a>
+                  </li>
+                </ul>
+
+                <div class="selfTaugh flex flex-center">
+                  <i class="fas fa-award mg-x-1"></i>
+                  <h4>Certificates:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0)" title="Upon request">
+                      - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2
+                      & 3</a>
+                  </li>
+                </ul>
+
+                <div class="selfTaugh flex flex-center">
+                  <i class="fas fa-check-square mg-x-1"></i>
+                  <h4>Next Steps:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <p>
+                      - I have begun a short course dedicated to improving my
+                      expertise with grid and flex features (Jan 22).
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      - I will begin to learn and practice with
+                      <a href="https://greensock.com/gsap/" target="_blank" class="hlgt">GSAP</a>
+                      animations (Feb 22).
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <!-- ^ JS -->
+          <article class="mySlides">
+            <div class="card-logo-frame">
+              <div class="card-logo card-colors flex flex-clmn center">
+                <h3>JavaScript</h3>
+                <img src="/logo_js.91e83b4d.png" width="70" alt="Logo JS">
+                <table class="logo-table">
+                  <tbody>
+                    <tr>
+                      <th>JS Basics ES6</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>DOM Control</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Array Methods</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Fetch API & HTTP</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Async JS</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Experience</th>
+                      <td>&#60; 1 year</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h4 class="frame-subTable">Currently learning:</h4>
+                <div class="flex flex-centered">
+                  <a href="https://reactjs.org/" target="_blank"><i class="fab fa-react" title="React"></i></a>
+                </div>
+              </div>
+              <div class="card-logo_clmLeft">
+                <div class="flex flex-center selfTaugh">
+                  <i class="fas fa-globe mg-x-1"></i>
+                  <h4>Resources from:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <a class="web-icon" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                      - developer.mozilla.org
+                    </a>
+                  </li>
+                  <li>
+                    <a class="web-icon" href="https://edabit.com/user/TAMxX5h3LggMLsijj/" target="_blank">
+                      - edabit.com
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://codewithmosh.com/p/object-oriented-programming-in-javascript" target="_blank">- codewithmosh.com</a>
+                  </li>
+                </ul>
+
+                <div class="flex flex-center selfTaugh">
+                  <i class="fas fa-award mg-x-1"></i>
+                  <h4>Certificates:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0)"> - [not yet]</a>
+                  </li>
+                </ul>
+
+                <div class="flex flex-center selfTaugh">
+                  <i class="fas fa-check-square mg-x-1"></i>
+                  <h4>Next Steps:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <p>
+                      - I have begun a course called: JavaScript 2: Advanced
+                      JavaScript for Websites and Web Applications. Imparted by
+                      Aris Markogiannakis, City University of London (Jan -
+                      Mar).
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      - Continue doing
+                      <a href="https://edabit.com/user/TAMxX5h3LggMLsijj/" target="_blank" class="hlgt">
+                        Edabit</a>
+                      challenges, my first milestone is to achieve 5.000 XP in
+                      JS exercises (Q1 2022).
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <!-- ^ SQL -->
+          <article class="mySlides">
+            <div class="card-logo-frame">
+              <div class="card-logo card-colors flex flex-clmn center">
+                <h3>SQL</h3>
+                <img src="/logo_MySQL.9a55b9bd.png" width="135" alt="Logo MySQL">
+                <table class="logo-table">
+                  <tbody>
+                    <tr>
+                      <th>Fundamentals</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>SQL Database</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>Best Practices</th>
+                      <td class="group-starts">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>Experience</th>
+                      <td>&#62; 1 year</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h4 class="frame-subTable">Currently working with:</h4>
+                <div class="flex flex-centered">
+                  <a href="https://www.phpmyadmin.net/" target="_blank"><img width="50" src="/phpmyadmin-icon-5607-Windows.109b678e.ico" title="phpmyadmin"></a>
+                </div>
+              </div>
+              <div class="card-logo_clmLeft">
+                <div class="selfTaugh flex flex-center">
+                  <i class="fas fa-globe mg-x-1"></i>
+                  <h4>Resources from:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <a href="https://www.w3schools.com.com/sql/default.asp" target="_blank">
+                      - w3schools.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.codecademy.com/learn/learn-sql#page-skip-to-content-target" target="_blank">
+                      - codecademy.com
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://codewithmosh.com/p/the-ultimate-html-css-part1p" target="_blank">- codewithmosh.com</a>
+                  </li>
+                </ul>
+
+                <div class="selfTaugh flex flex-center">
+                  <i class="fas fa-award mg-x-1"></i>
+                  <h4>Certificates:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0)"> - [not yet]</a>
+                  </li>
+                </ul>
+
+                <div class="selfTaugh flex flex-center">
+                  <i class="fas fa-check-square mg-x-1"></i>
+                  <h4>Next Steps:</h4>
+                </div>
+                <ul>
+                  <li>
+                    <p>
+                      - Working on a personal project which consist of a UI
+                      system that sorts books from a personal DB (Q1 & Q2,
+                      2022).
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="pagination-container">
+          <div class="pagination">
+            <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
+            <button class="btn" onclick="plusDivs(1)">Next ❯</button>
+          </div>
+        </div>
+        <div class="pagination-container">
+          <div class="pagination">
+            <button class="slide-circle" onclick="currentDiv(1)">
+              <i class="disc fa fa-circle"></i>
+            </button>
+            <button class="slide-circle" onclick="currentDiv(2)">
+              <i class="disc fa fa-circle"></i>
+            </button>
+            <button class="slide-circle" onclick="currentDiv(3)">
+              <i class="disc fa fa-circle"></i>
+            </button>
+            <button class="slide-circle" onclick="currentDiv(4)">
+              <i class="disc fa fa-circle"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Section: Experience -->
+      <section id="sec_Experience" class="section">
+        <div class="section-container">
+          <h2 class="section-heading flex">Experience</h2>
+
+          <h3 class="section-exp_subHeading">IT Jobs:</h3>
+
+          <div class="exp-content">
+            <div class="swiper1 job-swiper-frame">
+              <div class="swiper2 swiper mySwiper">
+                <div class="swiper3 swiper-wrapper">
+                  <article class="job swiper4 swiper-slide">
+                    <p class="job-role">Web Developer Role</p>
+                    <p class="job-overtitle">Sep - Dec <time>2021</time></p>
+                    <h3 class="job-title">Blubale Website</h3>
+                    <a class="job-img" href="https://blubale.com/" target="_blank">
+                      <img src="/blubale-screenshot.059dff80.webp" alt="Blubale screenshot">
+                    </a>
+                    <div class="job-description">
+                      My first job as a professional Web Developer was to build
+                      a landing page from scratch based on a Figma design
+                      provided by the client. It was a freelance project.
+                    </div>
+                    <ul class="job-sub-tech">
+                      <li>HTML5</li>
+                      <li>CSS/Sass</li>
+                      <li>JS(ES6)</li>
+                      <li>VS-Code</li>
+                      <li>Git</li>
+                    </ul>
+                    <ul class="job-sub-icon">
+                      <li>
+                        <a href="https://github.com/julian-c-dev/WEB_Blubale_backup" target="_blank"><i class="fab fa-github" title="Github"></i></a>
+                      </li>
+                      <li>
+                        <a href="https://blubale.com/" target="_blank"><i class="fas fa-globe" title="External link"></i></a>
+                      </li>
+                    </ul>
+                  </article>
+                  <article class="job swiper-slide reversed">
+                    <p class="job-role">QA Tester Role</p>
+                    <p class="job-overtitle">
+                      Oct <time>2018</time> - Apr <time>2019</time>
+                    </p>
+                    <h3 class="job-title">Amelco Ltd.</h3>
+                    <a class="job-img" href="https://www.amelco.co.uk/en/" target="_blank">
+                      <img src="/amelco-sreenshot.72c4ca50.webp" alt="Amelco site company Screenshot">
+                    </a>
+                    <div class="job-description">
+                      My first experience working as part of an Agile
+                      development team involved manual testing on multiple
+                      devices and browsers. I had to apply my technical skills
+                      to a variety of scenarios.
+                    </div>
+                    <ul class="job-sub-tech">
+                      <li>Jira</li>
+                      <li>Browsers dev-tools</li>
+                      <li>pgAdming (postgresql)</li>
+                    </ul>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-container">
+          <h3 class="section-exp_subHeading">Some practices:</h3>
+        </div>
+        <div class="section-practices">
+          <div class="grid-practices">
+            <article class="card">
+              <h4 class="card_header">First Portfolio</h4>
+              <p class="card_content">
+                This is a mandatory project for all software developers. The
+                result of my first one is exactly what you are seeing right now.
+              </p>
+              <code class="card_tech">HTML, CSS/Sass, JS, GIT</code>
+              <div class="card_footer">
+                <a href="https://github.com/julian-c-dev/WEB_Portfolio-official" class="card-icon" target="_blank"><i class="fa fa-github" title="Github"></i></a>
+                <a href="#" class="card-icon"><i class="fa fa-globe" title="External link"></i></a>
+              </div>
+            </article>
+            <article class="card">
+              <h4 class="card_header">Fetch CRUD JS</h4>
+              <p class="card_content">
+                All the books I have read will be displayed and filtered by
+                categories in a UI that talks with a DB through a basic Restful
+                API.
+              </p>
+              <code class="card_tech">HTML, CSS, JS, Node.js</code>
+              <div class="card_footer">
+                <a href="https://github.com/julian-c-dev/practice_JS_fetch_CRUD" class="card-icon" target="_blank"><i class="fa fa-github" title="Github"></i></a>
+              </div>
+            </article>
+            <article class="card">
+              <h4 class="card_header">Productivity Wallpapers</h4>
+              <p class="card_content">
+                UI practice for simulating a Productivity desktop wallpaper tool
+                with the ability to customize wallpaper based on given choices.
+              </p>
+              <code class="card_tech">HTML, CSS/Sass, JS, GIT</code>
+              <div class="card_footer">
+                <a href="https://github.com/julian-c-dev/WEB_tool_productivity_wppr" class="card-icon" target="_blank"><i class="fa fa-github" title="Github"></i></a>
+                <a href="https://productivity-desktop-wallpaper-tool.netlify.app/" class="card-icon" target="_blank"><i class="fa fa-globe" title="External link"></i></a>
+              </div>
+            </article>
+            <article class="card">
+              <h4 class="card_header">Moshify Web Practice</h4>
+              <p class="card_content">
+                The final project for "The Ultimate HTML/CSS Mastery Series 1, 2
+                & 3" of CodewithMosh. A fake provider site for Web deployments.
+              </p>
+              <code class="card_tech">HTML, CSS/Sass, JS, GIT</code>
+
+              <div class="card_footer">
+                <a href="https://github.com/julian-c-dev/practice_web--moshified" class="card-icon" target="_blank"><i class="fa fa-github" title="Github"></i></a>
+                <a href="https://moshified-practice-julian-c-dev.netlify.app/" class="card-icon" target="_blank"><i class="fa fa-globe" title="External link"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Section: Contact -->
+      <section id="sec_Contact" class="section">
+        <div class="section-container">
+          <h2 class="section-heading flex">Contact</h2>
+          <div class="section-content-frame">
+            <div class="section-content section-contact">
+              <p>
+                You might be wondering if I am available to assist with your
+                project at this moment, and the answer is this:
+              </p>
+              <h3 class="contact-banner">Yes, I am available!</h3>
+              <p>
+                Feel free to contact me through one of the following methods:
+              </p>
+              <ul>
+                <li>
+                  Send me an email to:
+                  <code class="bold hlgt">julian.c.dev@gmail.com</code>
+                </li>
+                <li>
+                  Get my
+                  <a href="/up_/app/downloads/RESUME_Julian_cantera_DEV.docx" download="RESUME_Julian_cantera_DEV.pdf">
+                    resume</a>
+
+                  and call to my mobile number (Mon to Fri / 09:00 - 17:00).
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer-content flex flex-clmn flex-centered">
+          <p>This Portfolio was built by Julian Cantera, January 2022.</p>
+          <p>
+            Inspired by
+            <a class="brittany" href="https://brittanychiang.com/" target="_blank">Brittany Chiang's</a>
+            portfolio.
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="/index.eae251a7.js"></script>
+    <script src="/index.216dac5e.js"></script>
+    <script src="/index.f9a2ed24.js"></script>
+    <!-- * Swiper JS [Experience Section] -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
+</html>

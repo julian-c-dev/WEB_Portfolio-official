@@ -1,6 +1,7 @@
 {
   "name": "julian-c-portfolio",
   "version": "1.0.0",
+  "description": "Welcome to my very first Portfolio",
   "main": "index.js",
   "repository": "https://github.com/julian-c-dev/WEB__portfolio-official.git",
   "author": "julian-c-dev <78905935+julian-c-dev@users.noreply.github.com>",
