@@ -2067,6 +2067,11 @@ main {
   text-align: center;
 }
 
+.btn-nav {
+  max-width: 200px;
+  padding: 1.5rem;
+}
+
 .btn-skills {
   border: 1px solid var(--color-secondary);
   color: var(--color-secondary);
