@@ -107,7 +107,7 @@
     counter-reset: section;
     padding-left: 0;
     & li {
-      margin: 4rem;
+      margin: 2rem;
       ::before {
         counter-increment: section;
         content: counters(section, ".") ". ";
@@ -125,8 +125,8 @@
     }
     & p,
     div {
-      margin: 2rem 0 2rem 5rem;
-      font-size: 2.5rem;
+      margin: 2rem 0 2rem 3rem;
+      font-size: 1.6rem;
       color: var(--color-content-lighter);
       & label {
         margin-left: 0;
@@ -135,5 +135,22 @@
   }
   .fa-lightbulb {
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .hidden-menu {
+    width: 70vw;
+    height: 100vh;
+    & li {
+      margin: 4rem;
+    }
+    ul {
+      & p,
+      div {
+        margin: 2rem 0 2rem 3rem;
+        font-size: 2.5rem;
+      }
+    }
   }
 }

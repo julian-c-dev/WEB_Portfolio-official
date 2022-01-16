@@ -984,7 +984,7 @@ main {
 }
 
 .hidden-menu ul li {
-  margin: 4rem;
+  margin: 2rem;
 }
 
 .hidden-menu ul li ::before {
@@ -1005,8 +1005,8 @@ main {
 
 .hidden-menu ul p,
 .hidden-menu ul div {
-  margin: 2rem 0 2rem 5rem;
-  font-size: 2.5rem;
+  margin: 2rem 0 2rem 3rem;
+  font-size: 1.6rem;
   color: var(--color-content-lighter);
 }
 
@@ -1017,6 +1017,21 @@ main {
 
 .hidden-menu .fa-lightbulb {
   margin-left: 0;
+}
+
+@media screen and (min-width: 450px) {
+  .hidden-menu {
+    width: 70vw;
+    height: 100vh;
+  }
+  .hidden-menu li {
+    margin: 4rem;
+  }
+  .hidden-menu ul p,
+  .hidden-menu ul div {
+    margin: 2rem 0 2rem 3rem;
+    font-size: 2.5rem;
+  }
 }
 
 .title {
@@ -2058,8 +2073,9 @@ main {
   font-weight: bold;
   text-decoration: none;
   margin: 2rem 0;
-  max-width: 300px;
+  max-width: 195px;
   padding: 1.3rem;
+  text-align: center;
 }
 
 .btn-skills {
