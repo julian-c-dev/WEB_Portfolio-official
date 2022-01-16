@@ -123,10 +123,4 @@ main {
   .section-heading {
     margin-top: 5rem;
   }
-  // ! just for mozilla
-  @-moz-document url-prefix() {
-    .section {
-      padding: 0 5rem 35rem 10rem;
-    }
-  }
 }

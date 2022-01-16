@@ -871,11 +871,6 @@ main {
   .section-heading {
     margin-top: 5rem;
   }
-  @-moz-document url-prefix() {
-    .section {
-      padding: 0 5rem 35rem 10rem;
-    }
-  }
 }
 
 .navBar {
@@ -1155,12 +1150,6 @@ main {
   .hero {
     margin: 0 0 0 30rem;
     padding-top: 20rem;
-  }
-  @-moz-document url-prefix() {
-    .hero {
-      margin: 0rem 0 0 35rem;
-      padding-top: 5rem;
-    }
   }
 }
 
@@ -1838,12 +1827,6 @@ main {
     position: relative;
     z-index: 1;
   }
-  @-moz-document url-prefix() {
-    .job {
-      padding: 1.5rem 0 3rem 0;
-      margin: 8rem 0 10rem -5rem;
-    }
-  }
   .job-overtitle,
   .job-sub-tech {
     font-family: monospace;
@@ -2473,5 +2456,25 @@ main {
 
 .selfTaugh i:hover {
   color: inherit;
+}
+
+@media screen and (min-width: 1250px) {
+  @-moz-document url-prefix() {
+    .section {
+      padding: 0 5rem 15rem 0;
+    }
+    .hero {
+      padding: 0 0 15rem 20rem;
+      padding-top: 25rem;
+      max-width: 78rem;
+    }
+    .hero .hero__content {
+      max-width: 125%;
+    }
+    .job {
+      padding: 1.5rem 0 3rem 0;
+      margin: 8rem 0 10rem -5rem;
+    }
+  }
 }
 /*# sourceMappingURL=import.css.map */

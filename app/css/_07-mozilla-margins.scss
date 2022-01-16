@@ -1,0 +1,22 @@
+@media screen and(min-width:1250px) {
+  // ! just for mozilla
+  @-moz-document url-prefix() {
+    .section {
+      padding: 0 5rem 15rem 0;
+    }
+
+    .hero {
+      padding: 0 0 15rem 20rem;
+      padding-top: 25rem;
+      max-width: 78rem;
+      .hero__content {
+        max-width: 125%;
+      }
+    }
+
+    .job {
+      padding: 1.5rem 0 3rem 0;
+      margin: 8rem 0 10rem -5rem;
+    }
+  }
+}
