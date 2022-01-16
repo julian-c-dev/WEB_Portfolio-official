@@ -1,9 +1,10 @@
-//* MAIN
+//* MAIN ---
+
 main {
   counter-reset: section;
 }
 
-// * Sections
+// * Sections ---
 
 .section {
   background-color: var(--color-bg-lg);
@@ -47,6 +48,8 @@ main {
   max-width: 95%;
 }
 
+// * Footer ---
+
 .footer {
   height: 9rem;
   background-color: var(--footer-bg);
@@ -68,6 +71,8 @@ main {
     }
   }
 }
+
+// ^ Media Queries ^
 
 @media screen and (min-width: 448px) {
   .section {

@@ -15,6 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 
+// * Body Colors
 body {
   .navBar {
     .fa-lightbulb {
@@ -155,35 +156,6 @@ body {
   }
 }
 
-@media screen and(min-width:1250px) {
-  body.light-theme {
-    .job {
-      color: var(--job-card-content);
-      background: var(--color-content-lighter);
-      .job-role {
-        color: var(--job-role);
-      }
-      .job-title {
-        color: var(--job-title);
-      }
-      .job-description {
-        background-color: var(--job-desc);
-      }
-      .job-overtitle {
-        color: var(--job-time);
-      }
-      .job-sub-tech {
-        color: var(--job-tech);
-      }
-      .job-sub-icon {
-        i {
-          color: var(--job-icons);
-        }
-      }
-    }
-  }
-}
-
 body.light-theme {
   // navBar
   --nav-icon: var(--color-content-lighter);
@@ -281,6 +253,32 @@ body.dark-theme {
 }
 
 @media screen and(min-width:1250px) {
+  body.light-theme {
+    .job {
+      color: var(--job-card-content);
+      background: var(--color-content-lighter);
+      .job-role {
+        color: var(--job-role);
+      }
+      .job-title {
+        color: var(--job-title);
+      }
+      .job-description {
+        background-color: var(--job-desc);
+      }
+      .job-overtitle {
+        color: var(--job-time);
+      }
+      .job-sub-tech {
+        color: var(--job-tech);
+      }
+      .job-sub-icon {
+        i {
+          color: var(--job-icons);
+        }
+      }
+    }
+  }
   body.dark-theme {
     .job {
       color: var(--job-card-content);

@@ -1,4 +1,4 @@
-// * NAVIGATION-BAR
+// * NavBar ---
 .navBar {
   position: fixed;
   top: 0;
@@ -23,6 +23,75 @@
 .nav__desktop,
 .fa-lightbulb {
   display: none;
+}
+
+// * hidden-menu ---
+
+.hidden-menu {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 8rem;
+  width: 70vw;
+  height: 100vh;
+  z-index: 11;
+  visibility: initial;
+  background-color: var(--color-primary);
+  padding: 3rem;
+  z-index: 11;
+
+  & ul {
+    counter-reset: section;
+    padding-left: 0;
+    & li {
+      margin: 2rem;
+      ::before {
+        counter-increment: section;
+        content: counters(section, ".") ". ";
+        color: var(--color-accent);
+      }
+
+      & a {
+        font-size: 2.5rem;
+        text-decoration: none;
+        color: var(--color-content-lighter);
+      }
+    }
+    #resumeHidden::before {
+      content: unset;
+    }
+    & p,
+    div {
+      margin: 2rem 0 2rem 3rem;
+      font-size: 1.6rem;
+      color: var(--color-content-lighter);
+      & label {
+        margin-left: 0;
+      }
+    }
+  }
+  .fa-lightbulb {
+    margin-left: 0;
+  }
+}
+
+// ^ Media Queries ^
+
+@media screen and (min-width: 450px) {
+  .hidden-menu {
+    width: 70vw;
+    height: 100vh;
+    & li {
+      margin: 4rem;
+    }
+    ul {
+      & p,
+      div {
+        margin: 2rem 0 2rem 3rem;
+        font-size: 2.5rem;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -85,72 +154,6 @@
   .nav__desktop {
     .nav__links {
       font-size: 1.7rem;
-    }
-  }
-}
-
-// * hidden-menu
-.hidden-menu {
-  display: none;
-  position: fixed;
-  right: 0;
-  top: 8rem;
-  width: 70vw;
-  height: 100vh;
-  z-index: 11;
-  visibility: initial;
-  background-color: var(--color-primary);
-  padding: 3rem;
-  z-index: 11;
-
-  & ul {
-    counter-reset: section;
-    padding-left: 0;
-    & li {
-      margin: 2rem;
-      ::before {
-        counter-increment: section;
-        content: counters(section, ".") ". ";
-        color: var(--color-accent);
-      }
-
-      & a {
-        font-size: 2.5rem;
-        text-decoration: none;
-        color: var(--color-content-lighter);
-      }
-    }
-    #resumeHidden::before {
-      content: unset;
-    }
-    & p,
-    div {
-      margin: 2rem 0 2rem 3rem;
-      font-size: 1.6rem;
-      color: var(--color-content-lighter);
-      & label {
-        margin-left: 0;
-      }
-    }
-  }
-  .fa-lightbulb {
-    margin-left: 0;
-  }
-}
-
-@media screen and (min-width: 450px) {
-  .hidden-menu {
-    width: 70vw;
-    height: 100vh;
-    & li {
-      margin: 4rem;
-    }
-    ul {
-      & p,
-      div {
-        margin: 2rem 0 2rem 3rem;
-        font-size: 2.5rem;
-      }
     }
   }
 }

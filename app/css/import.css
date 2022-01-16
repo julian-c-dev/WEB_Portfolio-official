@@ -583,31 +583,6 @@ body .footer .footer-content {
   color: var(--footer);
 }
 
-@media screen and (min-width: 1250px) {
-  body.light-theme .job {
-    color: var(--job-card-content);
-    background: var(--color-content-lighter);
-  }
-  body.light-theme .job .job-role {
-    color: var(--job-role);
-  }
-  body.light-theme .job .job-title {
-    color: var(--job-title);
-  }
-  body.light-theme .job .job-description {
-    background-color: var(--job-desc);
-  }
-  body.light-theme .job .job-overtitle {
-    color: var(--job-time);
-  }
-  body.light-theme .job .job-sub-tech {
-    color: var(--job-tech);
-  }
-  body.light-theme .job .job-sub-icon i {
-    color: var(--job-icons);
-  }
-}
-
 body.light-theme {
   --nav-icon: var(--color-content-lighter);
   --color-background: var(--color-background-lightTheme);
@@ -691,6 +666,28 @@ body.dark-theme {
 }
 
 @media screen and (min-width: 1250px) {
+  body.light-theme .job {
+    color: var(--job-card-content);
+    background: var(--color-content-lighter);
+  }
+  body.light-theme .job .job-role {
+    color: var(--job-role);
+  }
+  body.light-theme .job .job-title {
+    color: var(--job-title);
+  }
+  body.light-theme .job .job-description {
+    background-color: var(--job-desc);
+  }
+  body.light-theme .job .job-overtitle {
+    color: var(--job-time);
+  }
+  body.light-theme .job .job-sub-tech {
+    color: var(--job-tech);
+  }
+  body.light-theme .job .job-sub-icon i {
+    color: var(--job-icons);
+  }
   body.dark-theme .job {
     color: var(--job-card-content);
     background: var(--color-background-darkTheme);
@@ -903,67 +900,6 @@ main {
   display: none;
 }
 
-@media screen and (min-width: 700px) {
-  .nav__mobile {
-    display: none;
-  }
-  .fa-lightbulb {
-    display: inline-block;
-    font-size: 2rem;
-    margin: 0 0 0 1.5rem;
-    color: var(--color-content-lighter);
-  }
-  .nav__desktop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 2rem 3rem;
-    height: 7.5rem;
-  }
-  .nav__desktop .nav__links {
-    counter-reset: section;
-    font-size: 1.5rem;
-    list-style-type: none;
-  }
-  .nav__desktop .nav__links li {
-    margin: 0 1rem;
-  }
-  .nav__desktop .nav__links li::before {
-    counter-increment: section;
-    content: counters(section, ".") ". ";
-    color: var(--color-accent);
-  }
-  .nav__desktop .nav__links li:last-child a:hover {
-    -webkit-transition: all 0.05s;
-    transition: all 0.05s;
-    color: var(--color-accent);
-  }
-  .nav__desktop .nav__links li:last-child::before {
-    content: unset;
-  }
-  .nav__desktop .nav__links li > a,
-  .nav__desktop .nav__links li > a:link,
-  .nav__desktop .nav__links li > a:visited,
-  .nav__desktop .nav__links li > a:active {
-    text-decoration: none;
-    -webkit-transition: color 0.4s, smooth;
-    transition: color 0.4s, smooth;
-    color: var(--color-content-lighter);
-  }
-  .nav__desktop .nav__links li > a:hover {
-    color: var(--color-accent);
-  }
-  .nav__desktop--trans {
-    background-color: transparent;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .nav__desktop .nav__links {
-    font-size: 1.7rem;
-  }
-}
-
 .hidden-menu {
   display: none;
   position: fixed;
@@ -1031,6 +967,67 @@ main {
   .hidden-menu ul div {
     margin: 2rem 0 2rem 3rem;
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .nav__mobile {
+    display: none;
+  }
+  .fa-lightbulb {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0 0 0 1.5rem;
+    color: var(--color-content-lighter);
+  }
+  .nav__desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2rem 3rem;
+    height: 7.5rem;
+  }
+  .nav__desktop .nav__links {
+    counter-reset: section;
+    font-size: 1.5rem;
+    list-style-type: none;
+  }
+  .nav__desktop .nav__links li {
+    margin: 0 1rem;
+  }
+  .nav__desktop .nav__links li::before {
+    counter-increment: section;
+    content: counters(section, ".") ". ";
+    color: var(--color-accent);
+  }
+  .nav__desktop .nav__links li:last-child a:hover {
+    -webkit-transition: all 0.05s;
+    transition: all 0.05s;
+    color: var(--color-accent);
+  }
+  .nav__desktop .nav__links li:last-child::before {
+    content: unset;
+  }
+  .nav__desktop .nav__links li > a,
+  .nav__desktop .nav__links li > a:link,
+  .nav__desktop .nav__links li > a:visited,
+  .nav__desktop .nav__links li > a:active {
+    text-decoration: none;
+    -webkit-transition: color 0.4s, smooth;
+    transition: color 0.4s, smooth;
+    color: var(--color-content-lighter);
+  }
+  .nav__desktop .nav__links li > a:hover {
+    color: var(--color-accent);
+  }
+  .nav__desktop--trans {
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav__desktop .nav__links {
+    font-size: 1.7rem;
   }
 }
 
