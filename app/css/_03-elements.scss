@@ -18,6 +18,17 @@ html {
 // * Body Colors
 body {
   .navBar {
+    .nav__mobile {
+      background-color: var(--nav-mobile);
+    }
+    .nav__mobile {
+      background-color: var(--nav-desktop);
+    }
+
+    .hidden-menu {
+      background-color: var(--nav-hidden);
+    }
+
     .fa-lightbulb {
       color: var(--nav-icon);
     }
@@ -146,7 +157,10 @@ body {
   .section-practices {
     .card {
       background-color: var(--practice-card);
-      border: 2px solid var(--card-practice-border);
+      border: 2px solid var(--practice-card-border);
+      &:hover {
+        box-shadow: 2px 2px 10px var(--practice-card-shadow);
+      }
       .card_header {
         color: var(--practice-card-heading);
       }
@@ -177,10 +191,17 @@ body {
       color: var(--footer);
     }
   }
+  .fa-github:hover,
+  .fa-globe:hover {
+    color: var(--icons-hover);
+  }
 }
 
 body.light-theme {
   // navBar
+  --nav-mobile: var(--color-primary);
+  --nav-desktop: var(--color-primary);
+  --nav-hidden: var(--color-primary);
   --nav-icon: var(--color-primary);
   --nav-links: var(--color-primary);
   --nav-links-numbers: var(--color-primary-accent);
@@ -223,12 +244,14 @@ body.light-theme {
   --job-tech: var(--color-primary-accent);
   --job-icons: var(--color-primary);
   // practice
-  --card-practice-border: var(--color-primary-accent);
+  --practice-card-shadow: var(--color-primary);
+  --practice-card-border: var(--color-primary-accent);
   --practice-card: var(--color-primary-accent-opa);
   --practice-card-heading: var(--color-primary);
   --practice-card-content: var(--color-content);
   --practice-card-tech: var(--color-primary-accent);
-  --practice-card-footer: var(--color-primary-accent);
+  --practice-card-footer: var(--color-primary);
+  --icons-hover: var(--color--primary);
   --bg-banner: var(--color-banner-light);
   // footer
   --footer: var(--color-content-darker);
@@ -237,6 +260,9 @@ body.light-theme {
 
 body.dark-theme {
   // navBar
+  --nav-mobile: var(--color-primary);
+  --nav-desktop: var(--color-primary);
+  --nav-hidden: var(--color-primary);
   --nav-icon: var(--color-content-lighter);
   --nav-links: var(--color-content-lighter);
   --nav-links-numbers: var(--color-accent);
@@ -279,10 +305,14 @@ body.dark-theme {
   --job-tech: var(--color-accent-darker);
   --job-icons: var(--color-lightest);
   // practice
-  --practice-card: var(--color-primary);
+  --practice-card-shadow: var(--color-accent);
+  --practice-card-border: var(--color-accent);
+  --practice-card: var(--color-accent-opacity);
   --practice-card-heading: var(--color-content-lighter);
-  --practice-card-content: var(--color-content-darker);
-  --practice-card-footer: var(--color-accent-darker);
+  --practice-card-content: var(--section-content);
+  --practice-card-tech: var(--color-accent);
+  --practice-card-footer: var(--color-content-lighter);
+  --icons-hover: var(--color--accent);
   // contact
   --contact-p: var(--color-content-darkness);
   --contact-li: var(--color-content-darkness);

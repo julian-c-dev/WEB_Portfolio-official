@@ -23,6 +23,12 @@
   background-color: transparent;
 }
 .darkShadow {
+  background-color: var(--color-primary-lighter);
+  box-shadow: 3px 0 15px var(--color-darkest);
+  backdrop-filter: blur(2px);
+}
+
+.lightShadow {
   background-color: var(--color-primary-accent-opa);
   box-shadow: 3px 0 15px var(--color-darkest);
   backdrop-filter: blur(2px);

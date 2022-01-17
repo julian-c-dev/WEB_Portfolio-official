@@ -84,6 +84,36 @@ function toggleLogo() {
     logo.src = "logo.29e49919.svg";
   }
 }
+// ! Hidden bar - BOTH (desk & mobile)
+// ! navDesk => blur effect / while navMobile => solid effect
+
+window.addEventListener("scroll", () => {
+  if (
+    menuOpen === false &&
+    window.scrollY > 150 &&
+    lastScrollY < window.scrollY
+  ) {
+    navDesk.classList.remove("solid");
+  }
+
+  if (window.scrollY > 150 && colorTheme) {
+    navDesk.classList.add("darkShadow");
+  } else {
+    navDesk.classList.remove("darkShadow");
+  }
+  if (window.scrollY > 150 && !colorTheme) {
+    navDesk.classList.add("lightShadow");
+  } else {
+    navDesk.classList.remove("lightShadow");
+  }
+
+  if (window.scrollY <= 150) {
+    navDesk.classList.add("solid");
+    hiddenMenu.classList.add("solid");
+  }
+
+  lastScrollY = window.scrollY;
+});
 
 // & [Skill Section] Slider
 

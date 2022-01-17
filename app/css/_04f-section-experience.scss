@@ -144,7 +144,6 @@
   }
 
   & .card_content {
-    color: var(--color-font);
     padding: 0 2rem 1rem 2rem;
     height: 17rem;
     font-size: 1.5rem;
@@ -153,7 +152,7 @@
   }
   & .card_tech {
     text-align: center;
-    color: var(--color-lightest);
+
     font-size: 1.2rem;
     align-items: flex-end;
     height: 1rem;
@@ -487,10 +486,6 @@
       font-size: 1.9rem;
     }
   }
-  .fa-github:hover,
-  .fa-globe:hover {
-    color: var(--color-accent);
-  }
 
   .reversed {
     .job {
@@ -550,6 +545,5 @@
   }
   .card:hover {
     transform: translateY(-20px);
-    box-shadow: 2px 2px 10px var(--stars-color);
   }
 }
