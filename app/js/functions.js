@@ -4,9 +4,11 @@ const stwch_Theme = document.querySelector("#handlerTheme");
 const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const body = document.getElementsByClassName("dark-theme");
-let iconBulb = document.querySelector(".fa-lightbulb");
+const iconBulb = document.querySelector(".fa-lightbulb");
+const elementsHlgt = document.getElementsByClassName("hlgt");
+const logo = document.getElementById("logo");
+
 let colorTheme = true;
-console.log(iconBulb);
 
 stwch_Theme.addEventListener("click", themeEventDesktop);
 stwch_ThemeHidden.addEventListener("click", themeEventMobile);
@@ -37,6 +39,8 @@ function toggleTheme() {
     );
     colorTheme = false;
     toggleBulbs();
+    toggleHlgt();
+    toggleLogo();
   } else {
     document.body.className = document.body.className.replace(
       "light-theme",
@@ -44,6 +48,8 @@ function toggleTheme() {
     );
     colorTheme = true;
     toggleBulbs();
+    toggleHlgt();
+    toggleLogo();
   }
 }
 
@@ -54,6 +60,28 @@ function toggleBulbs() {
   } else {
     iconBulb.classList.remove("far");
     iconBulb.classList.add("fas");
+  }
+}
+
+function toggleHlgt() {
+  if (colorTheme) {
+    for (let i = 0; i < elementsHlgt.length; i++) {
+      elementsHlgt[i].classList.remove("hlgt-light");
+    }
+  }
+  if (!colorTheme) {
+    for (let i = 0; i < elementsHlgt.length; i++) {
+      elementsHlgt[i].classList.add("hlgt-light");
+    }
+  }
+}
+
+function toggleLogo() {
+  if (colorTheme) {
+    logo.src = "/images/logo-acc.svg";
+  }
+  if (!colorTheme) {
+    logo.src = "/images/logo.svg";
   }
 }
 
@@ -85,10 +113,10 @@ function showDivs(n) {
     x[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" hlgt", "");
+    dots[i].className = dots[i].className.replace(" transparent", "");
   }
   x[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " hlgt";
+  dots[slideIndex - 1].className += " transparent";
 }
 
 // & [Experience Section] REMOVE CLASSES after 1250px (normal => slider cards)

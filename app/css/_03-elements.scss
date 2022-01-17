@@ -21,6 +21,9 @@ body {
     .fa-lightbulb {
       color: var(--nav-icon);
     }
+    .nav__links > li::before {
+      color: var(--nav-links);
+    }
   }
   background-color: var(--color-background);
   h1 {
@@ -64,6 +67,13 @@ body {
   .section-heading {
     color: var(--section-heading);
   }
+  .section-heading::before {
+    color: var(--color-number-Heading);
+  }
+  .section-heading::after {
+    border-bottom: 2px solid var(--color-border-Heading);
+  }
+
   .section-content > p {
     color: var(--section-content);
   }
@@ -100,8 +110,9 @@ body {
       color: var(--clmLeft-links);
     }
   }
+
   .section-exp_subHeading {
-    color: var(--exp-subHeading);
+    color: var(--subHeading);
   }
   .job {
     color: rgb(228, 229, 241);
@@ -148,6 +159,9 @@ body {
       color: var(--contact-li);
     }
   }
+  .contact-banner {
+    background-image: var(--bg-banner);
+  }
   .footer {
     .footer-content {
       color: var(--footer);
@@ -158,19 +172,23 @@ body {
 body.light-theme {
   // navBar
   --nav-icon: var(--color-content-lighter);
+  --nav-links: var(--color-primary-accent);
   // main
   --color-background: var(--color-background-lightTheme);
-  --color-overtitle: var(--color-accent);
+  --color-overtitle: var(--color-primary-accent);
   --color-title: var(--color-primary);
   --color-subtitle: var(--color-primary-lighter);
   --color-heroContent: var(--color-content);
   --credits: var(--color-primary);
-  --credits-hover: var(--color-accent);
+  --credits-hover: var(--color-primary-accent);
   --credit-line: var(--color-primary);
-  --color-btn: var(--color-accent);
-  --color-btn-border: var(--color-accent);
-  --color-btn-hover: var(--color-accent-opacity);
+  --color-btn: var(--color-primary-accent);
+  --color-btn-border: var(--color-primary-accent);
+  --color-btn-hover: var(--color-primary-accent-opa);
   --section-heading: var(--color-primary);
+  --subHeading: var(--color-primary);
+  --color-number-Heading: var(--color-primary-accent);
+  --color-border-Heading: var(--color-primary-accent);
   --section-content: var(--color-content);
   --button: var(--color-primary-lighter);
   // Skills section
@@ -181,21 +199,22 @@ body.light-theme {
   --clmLeft-headings: var(--color-primary);
   --clmLeft-icons: var(--color-primary);
   --clmLeft-links: var(--color-content);
-  --color-links-hover: var(--color-accent);
+  --color-links-hover: var(--color-primary-accent);
   // Experience section
   --exp-subHeading: var(--color-primary);
   --job-role: var(--color-primary);
   --job-title: var(--color-primary);
   --job-card-content: var(--color-content-lighter);
-  --job-time: var(--color-accent);
+  --job-time: var(--color-primary-accent);
   --job-desc: var(--color-secondary);
-  --job-tech: var(--color-accent-darker);
+  --job-tech: var(--color-primary-accent);
   --job-icons: var(--color-primary);
   // practice
   --practice-card: var(--color-primary);
   --practice-card-heading: var(--color-content-lighter);
   --practice-card-content: var(--color-content-darker);
-  --practice-card-footer: var(--color-accent-darker);
+  --practice-card-footer: var(--color-primary-accent);
+  --bg-banner: var(--color-banner-light);
   // footer
   --footer: var(--color-content-darker);
   --footer-bg: var(--color-primary);
@@ -204,6 +223,7 @@ body.light-theme {
 body.dark-theme {
   // navBar
   --nav-icon: var(--color-content-lighter);
+  --nav-links: var(--color-accent);
   // main
   --color-background: var(--color-background-darkTheme);
   --color-overtitle: var(--color-accent);
@@ -217,6 +237,9 @@ body.dark-theme {
   --color-btn-border: var(--color-accent);
   --color-btn-hover: var(--color-accent-opacity);
   --section-heading: var(--color-lightest);
+  --color-number-Heading: var(--color-accent);
+  --color-border-Heading: var(--color-accent);
+  --subHeading: var(--color-content-lighter);
   --section-content: var(--color-content-darkness);
   --button: var(--color-content-lighter);
   // Skills section
@@ -245,6 +268,7 @@ body.dark-theme {
   // contact
   --contact-p: var(--color-content-darkness);
   --contact-li: var(--color-content-darkness);
+  --bg-banner: var(--color-banner-dark);
 
   // footer
   --footer: var(--color-content-darker);

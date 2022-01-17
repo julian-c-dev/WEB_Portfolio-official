@@ -32,10 +32,9 @@
   background-color: var(--color-primary-lighter);
 }
 //& FONTS
-.darkest {
-  color: var(--color-font-lg-darker);
+.transparent {
+  color: var(--color-secondary);
 }
-
 .bold {
   font-weight: bold;
 }
@@ -47,6 +46,10 @@
 .hlgt {
   color: var(--color-accent);
   font-weight: bold;
+}
+
+.hlgt-light {
+  color: var(--color-primary-accent);
 }
 
 .shadow {

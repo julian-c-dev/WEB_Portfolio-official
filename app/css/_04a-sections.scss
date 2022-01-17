@@ -7,7 +7,6 @@ main {
 // * Sections ---
 
 .section {
-  background-color: var(--color-bg-lg);
   padding: 0 2rem 6rem 2rem;
   margin: 0 auto;
 }
@@ -25,13 +24,11 @@ main {
   font-size: 8vw;
   align-items: baseline;
   &::before {
-    color: var(--color-accent);
     counter-increment: section;
     content: counters(section, ".") ". ";
     margin-right: 1rem;
   }
   &::after {
-    border-bottom: 2px solid var(--color-accent);
     width: 90px;
     content: "";
     margin-left: 1rem;

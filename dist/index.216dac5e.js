@@ -460,9 +460,10 @@ const stwch_Theme = document.querySelector("#handlerTheme");
 const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const body = document.getElementsByClassName("dark-theme");
-let iconBulb = document.querySelector(".fa-lightbulb");
+const iconBulb = document.querySelector(".fa-lightbulb");
+const elementsHlgt = document.getElementsByClassName("hlgt");
+const logo = document.getElementById("logo");
 let colorTheme = true;
-console.log(iconBulb);
 stwch_Theme.addEventListener("click", themeEventDesktop);
 stwch_ThemeHidden.addEventListener("click", themeEventMobile);
 function themeEventDesktop() {
@@ -480,10 +481,14 @@ function toggleTheme() {
         document.body.className = document.body.className.replace("dark-theme", "light-theme");
         colorTheme = false;
         toggleBulbs();
+        toggleHlgt();
+        toggleLogo();
     } else {
         document.body.className = document.body.className.replace("light-theme", "dark-theme");
         colorTheme = true;
         toggleBulbs();
+        toggleHlgt();
+        toggleLogo();
     }
 }
 function toggleBulbs() {
@@ -494,6 +499,14 @@ function toggleBulbs() {
         iconBulb.classList.remove("far");
         iconBulb.classList.add("fas");
     }
+}
+function toggleHlgt() {
+    if (colorTheme) for(let i = 0; i < elementsHlgt.length; i++)elementsHlgt[i].classList.remove("hlgt-light");
+    if (!colorTheme) for(let i1 = 0; i1 < elementsHlgt.length; i1++)elementsHlgt[i1].classList.add("hlgt-light");
+}
+function toggleLogo() {
+    if (colorTheme) logo.src = "/images/logo-acc.svg";
+    if (!colorTheme) logo.src = "/images/logo.svg";
 }
 // & [Skill Section] Slider
 let slideIndex = 2;
@@ -511,9 +524,9 @@ function showDivs(n) {
     if (n > x.length) slideIndex = 1;
     if (n < 1) slideIndex = x.length;
     for(i = 0; i < x.length; i++)x[i].style.display = "none";
-    for(i = 0; i < dots.length; i++)dots[i].className = dots[i].className.replace(" hlgt", "");
+    for(i = 0; i < dots.length; i++)dots[i].className = dots[i].className.replace(" transparent", "");
     x[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " hlgt";
+    dots[slideIndex - 1].className += " transparent";
 }
 // & [Experience Section] REMOVE CLASSES after 1250px (normal => slider cards)
 const swiper1 = document.querySelector(".swiper1");

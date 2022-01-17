@@ -22,12 +22,9 @@ window.addEventListener("scroll", () => {
     window.scrollY > 150 &&
     lastScrollY < window.scrollY
   ) {
-    nav.classList.add("navBar--hidden");
     navDesk.classList.remove("solid");
   }
-  if (lastScrollY > window.scrollY) {
-    nav.classList.remove("navBar--hidden");
-  }
+
   if (window.scrollY > 150) {
     navDesk.classList.add("darkShadow");
   } else {
