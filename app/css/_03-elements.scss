@@ -21,8 +21,15 @@ body {
     .fa-lightbulb {
       color: var(--nav-icon);
     }
-    .nav__links > li::before {
+
+    .nav__links > li > a {
       color: var(--nav-links);
+    }
+    .nav__links > li > a:hover {
+      color: var(--nav-links-hover);
+    }
+    .nav__links > li::before {
+      color: var(--nav-links-numbers);
     }
   }
   background-color: var(--color-background);
@@ -78,14 +85,14 @@ body {
     color: var(--section-content);
   }
   .card-colors {
-    background-color: var(--card-skills);
+    background-color: var(--card-skills-bg);
+    border: 2px solid var(--card-skills);
     color: var(--card-skills-content);
     .group-starts {
       & .fa-star {
         color: var(--stars-color);
       }
     }
-
     &:hover {
       background-color: var(--card-skills-hover);
     }
@@ -139,12 +146,15 @@ body {
   .section-practices {
     .card {
       background-color: var(--practice-card);
-
+      border: 2px solid var(--card-practice-border);
       .card_header {
         color: var(--practice-card-heading);
       }
       .card_content {
         color: var(--practice-card-content);
+      }
+      .card_tech {
+        color: var(--practice-card-tech);
       }
       .card_footer > a {
         color: var(--practice-card-footer);
@@ -171,8 +181,10 @@ body {
 
 body.light-theme {
   // navBar
-  --nav-icon: var(--color-content-lighter);
-  --nav-links: var(--color-primary-accent);
+  --nav-icon: var(--color-primary);
+  --nav-links: var(--color-primary);
+  --nav-links-numbers: var(--color-primary-accent);
+  --nav-links-hover: var(--color-primary-accent);
   // main
   --color-background: var(--color-background-lightTheme);
   --color-overtitle: var(--color-primary-accent);
@@ -192,9 +204,10 @@ body.light-theme {
   --section-content: var(--color-content);
   --button: var(--color-primary-lighter);
   // Skills section
-  --card-skills: var(--color-primary);
-  --card-skills-hover: var(--color-primary);
-  --card-skills-content: var(--color-content-darker);
+  --card-skills: var(--color-primary-accent);
+  --card-skills-bg: var(--color-primary-accent-opa);
+  --card-skills-hover: var(--color-primary-accent-opa);
+  --card-skills-content: var(--color-darkest);
   --stars-color: var(--color-secondary);
   --clmLeft-headings: var(--color-primary);
   --clmLeft-icons: var(--color-primary);
@@ -210,9 +223,11 @@ body.light-theme {
   --job-tech: var(--color-primary-accent);
   --job-icons: var(--color-primary);
   // practice
-  --practice-card: var(--color-primary);
-  --practice-card-heading: var(--color-content-lighter);
-  --practice-card-content: var(--color-content-darker);
+  --card-practice-border: var(--color-primary-accent);
+  --practice-card: var(--color-primary-accent-opa);
+  --practice-card-heading: var(--color-primary);
+  --practice-card-content: var(--color-content);
+  --practice-card-tech: var(--color-primary-accent);
   --practice-card-footer: var(--color-primary-accent);
   --bg-banner: var(--color-banner-light);
   // footer
@@ -223,7 +238,10 @@ body.light-theme {
 body.dark-theme {
   // navBar
   --nav-icon: var(--color-content-lighter);
-  --nav-links: var(--color-accent);
+  --nav-links: var(--color-content-lighter);
+  --nav-links-numbers: var(--color-accent);
+  --nav-links-hover: var(--color-accent);
+
   // main
   --color-background: var(--color-background-darkTheme);
   --color-overtitle: var(--color-accent);
@@ -279,7 +297,7 @@ body.dark-theme {
   body.light-theme {
     .job {
       color: var(--job-card-content);
-      background: var(--color-content-lighter);
+      background: transparent;
       .job-role {
         color: var(--job-role);
       }

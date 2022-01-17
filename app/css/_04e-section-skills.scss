@@ -163,13 +163,10 @@
     & .group-starts > .fa-star {
       color: var(--color-secondary);
     }
-    box-shadow: 1px 1px 5px var(--color-primary-opacity);
-    transition: transform 0.3s linear;
+    box-shadow: 1px 1px 15px var(--color-primary-opacity);
+    transition: transform 0.2s linear;
     &:hover {
       transform: scale(1.05);
-      .group-starts > .fa-star {
-        color: var(--color-accent);
-      }
     }
   }
 }
