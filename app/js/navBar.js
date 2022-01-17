@@ -13,31 +13,6 @@ let lastScrollY = window.scrollY;
 let menuTimeout = 800;
 let menuBoolean = true;
 
-// & Hidden bar - BOTH (desk & mobile)
-// ! navDesk => blur effect / while navMobile => solid effect
-
-window.addEventListener("scroll", () => {
-  if (
-    menuOpen === false &&
-    window.scrollY > 150 &&
-    lastScrollY < window.scrollY
-  ) {
-    navDesk.classList.remove("solid");
-  }
-
-  if (window.scrollY > 150) {
-    navDesk.classList.add("darkShadow");
-  } else {
-    navDesk.classList.remove("darkShadow");
-  }
-  if (window.scrollY <= 150) {
-    navDesk.classList.add("solid");
-    hiddenMenu.classList.add("solid");
-  }
-
-  lastScrollY = window.scrollY;
-});
-
 // & burger btn click => animiation icon burger to X
 
 burgerBtn.addEventListener("click", () => {

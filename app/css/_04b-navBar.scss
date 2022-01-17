@@ -35,7 +35,7 @@
   height: 100vh;
   z-index: 11;
   visibility: initial;
-  background-color: var(--color-primary);
+
   padding: 3rem;
   z-index: 11;
 
@@ -44,10 +44,8 @@
     padding-left: 0;
     & li {
       margin: 2rem;
-      color: var(--color-content-lighter);
       & a {
         text-decoration: none;
-        color: var(--color-content-lighter);
       }
     }
   }
