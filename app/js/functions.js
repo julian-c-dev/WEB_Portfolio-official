@@ -78,10 +78,10 @@ function toggleHlgt() {
 
 function toggleLogo() {
   if (colorTheme) {
-    logo.src = "/images/logo-acc.e023b825.svg";
+    logo.src = "logo-acc.e023b825.svg";
   }
   if (!colorTheme) {
-    logo.src = "/images/logo.29e49919.svg";
+    logo.src = "logo.29e49919.svg";
   }
 }
 

@@ -505,8 +505,8 @@ function toggleHlgt() {
     if (!colorTheme) for(let i1 = 0; i1 < elementsHlgt.length; i1++)elementsHlgt[i1].classList.add("hlgt-light");
 }
 function toggleLogo() {
-    if (colorTheme) logo.src = "/images/logo-acc.e023b825.svg";
-    if (!colorTheme) logo.src = "/images/logo.29e49919.svg";
+    if (colorTheme) logo.src = "logo-acc.e023b825.svg";
+    if (!colorTheme) logo.src = "logo.29e49919.svg";
 }
 // & [Skill Section] Slider
 let slideIndex = 2;
