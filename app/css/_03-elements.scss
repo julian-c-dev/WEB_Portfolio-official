@@ -42,6 +42,13 @@ body {
     .nav__links > li::before {
       color: var(--nav-links-numbers);
     }
+    .burger__btn {
+      background-color: var(--nav-burger);
+    }
+    .burger__btn::before,
+    .burger__btn::after {
+      background-color: var(--nav-burger-bars);
+    }
   }
   background-color: var(--color-background);
   h1 {
@@ -206,6 +213,8 @@ body.light-theme {
   --nav-links: var(--color-primary);
   --nav-links-numbers: var(--color-primary-accent);
   --nav-links-hover: var(--color-primary-accent);
+  --nav-burger: var(--color-lightest);
+  --nav-burger-bars: var(--color-lightest);
   // main
   --color-background: var(--color-background-lightTheme);
   --color-overtitle: var(--color-primary-accent);
@@ -267,6 +276,8 @@ body.dark-theme {
   --nav-links: var(--color-content-lighter);
   --nav-links-numbers: var(--color-accent);
   --nav-links-hover: var(--color-accent);
+  --nav-burger: var(--color-accent);
+  --nav-burger-bars: var(--color-accent);
 
   // main
   --color-background: var(--color-background-darkTheme);

@@ -7,6 +7,8 @@ const body = document.getElementsByClassName("dark-theme");
 const iconBulb = document.querySelector(".fa-lightbulb");
 const elementsHlgt = document.getElementsByClassName("hlgt");
 const logo = document.getElementById("logo");
+const logoMobile = document.getElementById("logoHidden");
+const burguer = document.querySelector(".burger__btn");
 
 let colorTheme = true;
 
@@ -79,9 +81,11 @@ function toggleHlgt() {
 function toggleLogo() {
   if (colorTheme) {
     logo.src = "logo-acc.e023b825.svg";
+    logoMobile.src = "logo-acc.e023b825.svg";
   }
   if (!colorTheme) {
     logo.src = "logo.29e49919.svg";
+    logoMobile.src = "logo.29e49919.svg";
   }
 }
 // ! Hidden bar - BOTH (desk & mobile)
