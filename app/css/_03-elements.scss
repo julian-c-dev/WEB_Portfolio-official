@@ -287,10 +287,11 @@ body.dark-theme {
   --section-content: var(--color-content-darkness);
   --button: var(--color-content-lighter);
   // Skills section
-  --card-skills: var(--color-primary);
-  --card-skills-hover: var(--color-primary);
-  --card-skills-content: var(--color-content-darkness);
-  --stars-color: var(--color-secondary);
+  --card-skills: var(--color-accent);
+  --card-skills-bg: transparent;
+  --card-skills-hover: var(--color-accent-opacity);
+  --card-skills-content: var(--color-content-lighter);
+  --stars-color: var(--color-accent-darker);
   --clmLeft-headings: var(--color-lightest);
   --clmLeft-icons: var(--color-content-darkness);
   --clmLeft-links: var(--color-content-darkness);

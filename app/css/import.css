@@ -727,10 +727,11 @@ body.dark-theme {
   --subHeading: var(--color-content-lighter);
   --section-content: var(--color-content-darkness);
   --button: var(--color-content-lighter);
-  --card-skills: var(--color-primary);
-  --card-skills-hover: var(--color-primary);
-  --card-skills-content: var(--color-content-darkness);
-  --stars-color: var(--color-secondary);
+  --card-skills: var(--color-accent);
+  --card-skills-bg: transparent;
+  --card-skills-hover: var(--color-accent-opacity);
+  --card-skills-content: var(--color-content-lighter);
+  --stars-color: var(--color-accent-darker);
   --clmLeft-headings: var(--color-lightest);
   --clmLeft-icons: var(--color-content-darkness);
   --clmLeft-links: var(--color-content-darkness);
@@ -1302,11 +1303,11 @@ main {
 }
 
 .card-colors .fa-bootstrap {
-  color: #a301a3;
+  color: #8664b9;
 }
 
 .card-colors .fa-react {
-  color: #2473a8;
+  color: #044068;
 }
 
 .fa-sass,
@@ -2345,6 +2346,10 @@ main {
   width: 100vw;
   height: 100vh;
   z-index: 9;
+}
+
+.paddingTop {
+  padding-top: 2rem;
 }
 
 .trans {
