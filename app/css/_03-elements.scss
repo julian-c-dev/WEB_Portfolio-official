@@ -50,6 +50,16 @@ body {
       background-color: var(--nav-burger-bars);
     }
   }
+  .sideLinks,
+  .sideLinks:link,
+  .sideLinks:visited,
+  .sideLinks:hover,
+  .sideLinks:active {
+    color: var(--color-content-lighter);
+  }
+  #themeMobile {
+    color: var(--color-content-lighter);
+  }
   background-color: var(--color-background);
   h1 {
     .overTitle {

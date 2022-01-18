@@ -486,6 +486,18 @@ body .navBar .burger__btn::after {
   background-color: var(--nav-burger-bars);
 }
 
+body .sideLinks,
+body .sideLinks:link,
+body .sideLinks:visited,
+body .sideLinks:hover,
+body .sideLinks:active {
+  color: var(--color-content-lighter);
+}
+
+body #themeMobile {
+  color: var(--color-content-lighter);
+}
+
 body h1 .overTitle {
   color: var(--color-overtitle);
 }
@@ -1012,6 +1024,7 @@ main {
   height: 100vh;
   z-index: 11;
   visibility: initial;
+  background: var(--color-primary);
   padding: 3rem;
   z-index: 11;
 }
