@@ -6,19 +6,22 @@
 
 // * Cards
 .container-logos {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 1.8rem auto 0 auto;
+  padding: 0 auto;
+  max-width: 100rem;
+  margin: 3rem auto 15rem auto;
+  display: grid;
+  gap: 8rem;
+  grid-auto-rows: 25rem;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  justify-items: center;
 }
 .card-logo-frame {
   margin-top: 2rem;
-  display: grid;
+  /*display: grid;
   grid-template-rows: 42rem;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem;*/
 }
 
 .card-logo {
@@ -111,7 +114,7 @@
 // ^ Media Queries ^
 
 @media screen and(min-width:900px) {
-  .card-logo-frame {
+  /* .card-logo-frame {
     margin: 1rem auto 3rem auto;
     display: grid;
     grid-template-columns: 30rem 30rem;
@@ -125,7 +128,7 @@
     }
   }
   .card-logo_clmLeft {
-    display: block;
+    display: none;
     margin-top: 1rem;
     font-size: 1.6rem;
     width: 45rem;
@@ -155,7 +158,7 @@
     .card-logo_clmLeft > ul > li {
       margin-bottom: 1rem;
     }
-  }
+  }*/
 }
 @media screen and(min-width:1250px) {
   .card-colors {

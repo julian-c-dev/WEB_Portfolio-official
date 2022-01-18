@@ -117,7 +117,7 @@ window.addEventListener("scroll", () => {
 
 // & [Skill Section] Slider
 
-let slideIndex = 2;
+/*let slideIndex = 2;
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -147,7 +147,7 @@ function showDivs(n) {
   }
   x[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " transparent";
-}
+}*/
 
 // & [Experience Section] REMOVE CLASSES after 1250px (normal => slider cards)
 const swiper1 = document.querySelector(".swiper1");
