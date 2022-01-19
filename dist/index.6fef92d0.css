@@ -441,7 +441,8 @@ input:checked + .slider:before {
 
 html {
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+ Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -536,25 +537,25 @@ body .card-colors .group-starts .fa-star {
 body .card-colors:hover {
   background-color: var(--card-skills-hover);
 }
-
+.card-logo_clmLeft
 body .card-logo_clmLeft h4 {
   color: var(--clmLeft-headings);
 }
-
+.card-logo_clmLeft
 body .card-logo_clmLeft i {
   color: var(--clmLeft-icons);
 }
-
+.card-logo_clmLeft
 body .card-logo_clmLeft a:link,
 body .card-logo_clmLeft a:visited,
 body .card-logo_clmLeft a:active {
   color: var(--clmLeft-links);
 }
-
+.card-logo_clmLeft
 body .card-logo_clmLeft a:hover {
   color: var(--color-links-hover);
 }
-
+.card-logo_clmLeft
 body .card-logo_clmLeft p {
   color: var(--clmLeft-links);
 }
@@ -1318,7 +1319,7 @@ main {
 .disc {
   font-size: 1.5rem;
 }
-
+.card-logo_clmLeft
 .card-logo_clmLeft {
   display: none;
 }
@@ -1346,24 +1347,24 @@ main {
     margin: 0 auto;
     width: 25rem;
     cursor: pointer;
-  }
+  .card-logo_clmLeft
   .card-logo_clmLeft {
     display: block;
     margin-top: 1rem;
     font-size: 1.6rem;
     width: 45rem;
-  }
+  .card-logo_clmLeft
   .card-logo_clmLeft .selfTaugh {
     font-weight: 400;
     margin-bottom: -1rem;
-  }
+  .card-logo_clmLeft
   .card-logo_clmLeft a {
     font-weight: 400;
-  }
+  .card-logo_clmLeft
   .card-logo_clmLeft span {
     font-weight: 400;
     white-space: initial;
-  }
+  .card-logo_clmLeft
   .card-logo_clmLeft p,
   .card-logo_clmLeft ul,
   .card-logo_clmLeft li,
@@ -1371,10 +1372,10 @@ main {
     margin: 0.6rem 0;
     white-space: initial;
     text-decoration: none;
-  }
+  .card-logo_clmLeft
   .card-logo_clmLeft ul {
     padding: 0 0 1.5rem 2rem;
-  }
+  .card-logo_clmLeft.card-logo_clmLeft
   .card-logo_clmLeft .card-logo_clmLeft > ul > li {
     margin-bottom: 1rem;
   }

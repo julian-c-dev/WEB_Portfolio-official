@@ -15,83 +15,133 @@
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   justify-items: center;
 }
-.card-logo-frame {
-  margin-top: 2rem;
-  /*display: grid;
-  grid-template-rows: 42rem;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;*/
-}
 
 .card-logo {
-  padding: 1.3rem;
+  display: grid;
+  grid-template-rows: repeat(4);
+  padding: 0 1.3rem;
   border-radius: 20px;
-  margin: 2rem auto 4rem auto;
+  margin: 0 auto 4rem auto;
   width: 25rem;
   height: 45rem;
-  & > h3 {
-    font-size: 1.8rem;
-  }
-}
 
-.logo-table {
-  margin-top: 1rem;
-  padding: 1rem;
-  th {
-    text-align: end;
-    font-weight: 400;
-  }
-  td {
+  & .card-logo-header {
+    font-size: 1.8rem;
+    padding: 0 0 1rem 0;
+    height: 2rem;
     text-align: center;
   }
-
-  th,
-  td {
-    padding: 0.5rem;
-    font-size: 1.6rem;
+  & .card-logo-img {
+    margin: 0 auto;
+    height: 7rem;
   }
-  .fa-star {
-    font-size: 1rem;
+  & .card-logo-table {
+    padding-top: 1.5rem;
+    height: 20rem;
+    & table tbody {
+      th {
+        text-align: end;
+        font-weight: 400;
+      }
+      td {
+        text-align: center;
+      }
+
+      th,
+      td {
+        padding: 0.5rem;
+        font-size: 1.6rem;
+      }
+      .group-starts {
+        & .fa-star {
+          font-size: 1.2rem;
+          color: var(--stars-color);
+        }
+      }
+    }
+  }
+  & .card-logo-footer {
+    height: 12rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    & h4 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      padding-bottom: 0;
+      margin-bottom: 1.5rem;
+    }
   }
 }
 
-// * Table Colors
+.card-logo_clmLeft {
+  display: block;
+  padding: 1.3rem;
+  border-radius: 25px;
+  margin: 0 auto 4rem auto;
+  width: 25rem;
+  height: 45rem;
+
+  font-size: 1.6rem;
+
+  .selfTaugh {
+    font-weight: 400;
+    margin-bottom: -1rem;
+  }
+  a {
+    font-weight: 400;
+  }
+
+  span {
+    font-weight: 400;
+    white-space: initial;
+  }
+  p,
+  ul,
+  li,
+  a {
+    margin: 0.6rem 0;
+    white-space: initial;
+    text-decoration: none;
+  }
+  ul {
+    padding: 0 0 1.5rem 2rem;
+  }
+  .card-logo_clmLeft > ul > li {
+    margin-bottom: 1rem;
+  }
+}
 
 // * Icons
-
-.card-colors {
-  .fa-sass {
-    color: rgb(235, 88, 235);
-  }
-  .fa-bootstrap {
-    color: #8664b9;
-  }
-  .fa-react {
-    color: rgb(4, 64, 104);
-  }
-}
 
 .fa-sass,
 .fa-bootstrap,
 .fa-react {
   font-size: 3.5rem;
-
   &:link,
   &:visited,
   &:active {
     color: var(--color-font);
   }
 }
+.fa-sass {
+  color: rgb(235, 88, 235);
+}
+.fa-bootstrap {
+  color: #8664b9;
+}
+.fa-react {
+  color: rgb(4, 64, 104);
+}
 
+// * pagination
 .pagination-container {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-
-// * paginations and column right
 
 .pagination {
   font-size: 2rem;
@@ -103,105 +153,4 @@
   font-size: 1.5rem;
 }
 
-.card-logo_clmLeft {
-  display: none;
-}
-
-.selfTaugh i:hover {
-  color: inherit;
-}
-
 // ^ Media Queries ^
-
-@media screen and(min-width:900px) {
-  /* .card-logo-frame {
-    margin: 1rem auto 3rem auto;
-    display: grid;
-    grid-template-columns: 30rem 30rem;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1rem;
-    .card-logo {
-      margin: 0 auto;
-      width: 25rem;
-      cursor: pointer;
-    }
-  }
-  .card-logo_clmLeft {
-    display: none;
-    margin-top: 1rem;
-    font-size: 1.6rem;
-    width: 45rem;
-    .selfTaugh {
-      font-weight: 400;
-      margin-bottom: -1rem;
-    }
-    a {
-      font-weight: 400;
-    }
-
-    span {
-      font-weight: 400;
-      white-space: initial;
-    }
-    p,
-    ul,
-    li,
-    a {
-      margin: 0.6rem 0;
-      white-space: initial;
-      text-decoration: none;
-    }
-    ul {
-      padding: 0 0 1.5rem 2rem;
-    }
-    .card-logo_clmLeft > ul > li {
-      margin-bottom: 1rem;
-    }
-  }*/
-}
-@media screen and(min-width:1250px) {
-  .card-colors {
-    transform: scale(1);
-    & .group-starts > .fa-star {
-      color: var(--color-secondary);
-    }
-    box-shadow: 1px 1px 15px var(--color-primary-opacity);
-    transition: transform 0.2s linear;
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-}
-
-// ! colors of background customize logos
-// HTML
-/*background: linear-gradient(
-      90deg,
-      rgba(218, 73, 18, 1) 0%,
-      rgba(230, 163, 89, 1) 50%,
-      rgba(214, 121, 11, 1) 94%
-    );*/
-
-// CSS
-/*background: linear-gradient(
-      90deg,
-      rgba(18, 135, 218, 1) 0%,
-      rgba(89, 176, 230, 1) 50%,
-      rgba(11, 171, 214, 1) 94%
-    );*/
-
-// JS
-/*background: linear-gradient(
-      90deg,
-      rgba(222, 224, 26, 1) 0%,
-      rgba(243, 255, 85, 1) 38%,
-      rgba(251, 255, 142, 1) 82%
-    );*/
-
-// SQL
-/*   background: linear-gradient(
-      90deg,
-      rgba(168, 188, 214, 1) 0%,
-      rgba(250, 250, 250, 1) 100%
-    ); */

@@ -17,6 +17,7 @@ html {
 
 // * Body Colors
 body {
+  // & navBar
   .navBar {
     .nav__mobile {
       background-color: var(--nav-mobile);
@@ -60,7 +61,11 @@ body {
   #themeMobile {
     color: var(--color-content-lighter);
   }
+
+  // & Main
   background-color: var(--color-background);
+
+  // & Hero
   h1 {
     .overTitle {
       color: var(--color-overtitle);
@@ -77,6 +82,8 @@ body {
       color: var(--color-heroContent);
     }
   }
+
+  // & Credits
   .credit-content {
     .credit-r_side,
     .credit-l_side {
@@ -89,6 +96,8 @@ body {
       color: var(--credits-hover);
     }
   }
+
+  // & Sections
   .btn {
     color: var(--color-btn);
     border-color: var(--color-btn-border);
@@ -99,6 +108,7 @@ body {
   button {
     color: var(--button);
   }
+
   .section-heading {
     color: var(--section-heading);
   }
@@ -112,19 +122,8 @@ body {
   .section-content > p {
     color: var(--section-content);
   }
-  .card-colors {
-    background-color: var(--card-skills-bg);
-    border: 2px solid var(--card-skills);
-    color: var(--card-skills-content);
-    .group-starts {
-      & .fa-star {
-        color: var(--stars-color);
-      }
-    }
-    &:hover {
-      background-color: var(--card-skills-hover);
-    }
-  }
+
+  // & Section - Skills
 
   .card-logo_clmLeft {
     h4 {
@@ -145,6 +144,8 @@ body {
       color: var(--clmLeft-links);
     }
   }
+
+  // & Section - Experience
 
   .section-exp_subHeading {
     color: var(--subHeading);
@@ -192,6 +193,9 @@ body {
       }
     }
   }
+
+  // & Section - Contact
+
   .section-contact {
     p {
       color: var(--contact-p);
@@ -203,6 +207,8 @@ body {
   .contact-banner {
     background-image: var(--bg-banner);
   }
+
+  // & Section - Footer
   .footer {
     .footer-content {
       color: var(--footer);
@@ -213,6 +219,8 @@ body {
     color: var(--icons-hover);
   }
 }
+
+// & Themes Colors
 
 body.light-theme {
   // navBar
@@ -309,8 +317,8 @@ body.dark-theme {
   --button: var(--color-content-lighter);
   // Skills section
   --card-skills: var(--color-accent);
-  --card-skills-bg: transparent;
-  --card-skills-hover: var(--color-accent-opacity);
+  --card-skills-bg: var(--color-accent-opa2);
+  --card-skills-hover: var(--color-accent-opa2);
   --card-skills-content: var(--color-content-lighter);
   --stars-color: var(--color-primary);
   --clmLeft-headings: var(--color-lightest);
