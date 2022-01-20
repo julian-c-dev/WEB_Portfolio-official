@@ -206,7 +206,7 @@ function toggleLogo() {
     logoMobile.src = "logo-acc.e023b825.svg";
   }
   if (!colorTheme) {
-    logo.src = "logo.29e49919.svg";
-    logoMobile.src = "logo.29e49919.svg";
+    logo.src = "logo.svg";
+    logoMobile.src = "logo.svg";
   }
 }
