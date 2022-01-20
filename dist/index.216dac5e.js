@@ -455,7 +455,105 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}]},["1bcN2"], null, "parcelRequire3a1a")
-// & [NavBar] TOGGLE btwn Theme dark/light
+// & [Experience Section] REMOVE CLASSES after 1250px (normal => sliders cards)
+// & sections: skills & experience
+const swiper1 = document.querySelector(".swiper1");
+const swiper2 = document.querySelector(".swiper2");
+const swiper3 = document.querySelector(".swiper3");
+const swiper4 = document.querySelector(".swiper4");
+let swiper = null;
+const flipCard = document.querySelectorAll(".flip-card");
+let slideIndex = 2;
+let dots = document.querySelectorAll(".slide-circle");
+function showDivs(n) {
+    let mySlides = document.querySelectorAll(".mySlides");
+    if (n > mySlides.length) slideIndex = 1;
+    if (n < 1) slideIndex = mySlides.length;
+    for(let i = 0; i < mySlides.length; i++)mySlides[i].style.display = "none";
+    for(let i1 = 0; i1 < dots.length; i1++)dots[i1].className = dots[i1].className.replace(" transparent", "");
+    mySlides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " transparent";
+}
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+function currentDiv(n) {
+    showDivs(slideIndex = n);
+}
+window.onload = function() {
+    if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
+        for(let j = 0; j < flipCard.length; j++)flipCard[j].classList.remove("mySlides");
+        for(let z = 0; z < flipCard.length; z++)flipCard[z].style.display = "block";
+        swiper1.classList.remove("job-swiper-frame");
+        swiper2.classList.remove("swiper");
+        swiper2.classList.remove("mySwiper");
+        swiper3.classList.remove("swiper-wrapper");
+        swiper4.classList.remove("swiper-slide");
+        swiper = null;
+    } else {
+        for(let j = 0; j < flipCard.length; j++)flipCard[j].classList.add("mySlides");
+        swiper1.classList.add("job-swiper-frame");
+        swiper2.classList.add("swiper");
+        swiper2.classList.add("mySwiper");
+        swiper3.classList.add("swiper-wrapper");
+        swiper4.classList.add("swiper-slide");
+        swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 100,
+                depth: 800,
+                modifier: 1,
+                slideShadows: false
+            }
+        });
+        showDivs(slideIndex);
+    }
+};
+window.addEventListener("resize", onResizeFunction);
+function onResizeFunction() {
+    if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
+        flipCard[0].classList.remove("mySlides");
+        flipCard[1].classList.remove("mySlides");
+        flipCard[2].classList.remove("mySlides");
+        flipCard[3].classList.remove("mySlides");
+        for(let z = 0; z < flipCard.length; z++)flipCard[z].style.display = "block";
+        swiper1.classList.remove("job-swiper-frame");
+        swiper2.classList.remove("swiper");
+        swiper2.classList.remove("mySwiper");
+        swiper3.classList.remove("swiper-wrapper");
+        swiper4.classList.remove("swiper-slide");
+        swiper = null;
+    } else {
+        flipCard[0].classList.add("mySlides");
+        flipCard[1].classList.add("mySlides");
+        flipCard[2].classList.add("mySlides");
+        flipCard[3].classList.add("mySlides");
+        swiper1.classList.add("job-swiper-frame");
+        swiper2.classList.add("swiper");
+        swiper2.classList.add("mySwiper");
+        swiper3.classList.add("swiper-wrapper");
+        swiper4.classList.add("swiper-slide");
+        swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 100,
+                depth: 800,
+                modifier: 1,
+                slideShadows: false
+            }
+        });
+        showDivs(slideIndex);
+    }
+}
+// & TOGGLE btwn Theme dark/light
 const stwch_Theme = document.querySelector("#handlerTheme");
 const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -463,6 +561,8 @@ const body = document.getElementsByClassName("dark-theme");
 const iconBulb = document.querySelector(".fa-lightbulb");
 const elementsHlgt = document.getElementsByClassName("hlgt");
 const logo = document.getElementById("logo");
+const logoMobile = document.getElementById("logoHidden");
+const burguer = document.querySelector(".burger__btn");
 let colorTheme = true;
 stwch_Theme.addEventListener("click", themeEventDesktop);
 stwch_ThemeHidden.addEventListener("click", themeEventMobile);
@@ -505,92 +605,13 @@ function toggleHlgt() {
     if (!colorTheme) for(let i1 = 0; i1 < elementsHlgt.length; i1++)elementsHlgt[i1].classList.add("hlgt-light");
 }
 function toggleLogo() {
-    if (colorTheme) logo.src = "logo-acc.e023b825.svg";
-    if (!colorTheme) logo.src = "logo.29e49919.svg";
-}
-// & [Skill Section] Slider
-let slideIndex = 2;
-showDivs(slideIndex);
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-function currentDiv(n) {
-    showDivs(slideIndex = n);
-}
-function showDivs(n) {
-    let i;
-    let x = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("slide-circle");
-    if (n > x.length) slideIndex = 1;
-    if (n < 1) slideIndex = x.length;
-    for(i = 0; i < x.length; i++)x[i].style.display = "none";
-    for(i = 0; i < dots.length; i++)dots[i].className = dots[i].className.replace(" transparent", "");
-    x[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " transparent";
-}
-// & [Experience Section] REMOVE CLASSES after 1250px (normal => slider cards)
-const swiper1 = document.querySelector(".swiper1");
-const swiper2 = document.querySelector(".swiper2");
-const swiper3 = document.querySelector(".swiper3");
-const swiper4 = document.querySelector(".swiper4");
-let swiper = null;
-window.onload = function() {
-    if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
-        swiper1.classList.remove("job-swiper-frame");
-        swiper2.classList.remove("swiper");
-        swiper2.classList.remove("mySwiper");
-        swiper3.classList.remove("swiper-wrapper");
-        swiper4.classList.remove("swiper-slide");
-        swiper = null;
-    } else {
-        swiper1.classList.add("job-swiper-frame");
-        swiper2.classList.add("swiper");
-        swiper2.classList.add("mySwiper");
-        swiper3.classList.add("swiper-wrapper");
-        swiper4.classList.add("swiper-slide");
-        swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 100,
-                depth: 800,
-                modifier: 1,
-                slideShadows: false
-            }
-        });
+    if (colorTheme) {
+        logo.src = "logo-acc.e023b825.svg";
+        logoMobile.src = "logo-acc.e023b825.svg";
     }
-};
-window.addEventListener("resize", onResizeFunction);
-function onResizeFunction() {
-    if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
-        swiper1.classList.remove("job-swiper-frame");
-        swiper2.classList.remove("swiper");
-        swiper2.classList.remove("mySwiper");
-        swiper3.classList.remove("swiper-wrapper");
-        swiper4.classList.remove("swiper-slide");
-        swiper = null;
-    } else {
-        swiper1.classList.add("job-swiper-frame");
-        swiper2.classList.add("swiper");
-        swiper2.classList.add("mySwiper");
-        swiper3.classList.add("swiper-wrapper");
-        swiper4.classList.add("swiper-slide");
-        swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 100,
-                depth: 800,
-                modifier: 1,
-                slideShadows: false
-            }
-        });
+    if (!colorTheme) {
+        logo.src = "logo.29e49919.svg";
+        logoMobile.src = "logo.29e49919.svg";
     }
 }
 
