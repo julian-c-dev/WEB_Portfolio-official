@@ -1464,10 +1464,9 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 50rem;
 }
 
-@media screen and (min-width: 1085px) {
+@media screen and (min-width: 1250px) {
   .container-logos {
     padding: 0 auto;
     margin: 3rem auto 15rem auto;
@@ -1479,6 +1478,9 @@ main {
     -ms-grid-columns: (minmax(20.5rem, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
     justify-items: center;
+  }
+  .pagination-container {
+    display: none;
   }
 }
 
@@ -1506,6 +1508,7 @@ main {
 .section-exp_subHeading {
   font-size: 2.5rem;
   margin-bottom: 0;
+  white-space: initial;
 }
 
 .job,

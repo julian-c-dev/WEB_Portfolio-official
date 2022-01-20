@@ -149,12 +149,11 @@
 .container-logos {
   display: flex;
   justify-content: center;
-  max-width: 50rem;
 }
 
 // ^ Media Queries ^
 
-@media screen and(min-width:1085px) {
+@media screen and(min-width:1250px) {
   .container-logos {
     padding: 0 auto;
     margin: 3rem auto 15rem auto;
@@ -164,5 +163,8 @@
     grid-auto-rows: 25rem;
     grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
     justify-items: center;
+  }
+  .pagination-container {
+    display: none;
   }
 }

@@ -1,12 +1,49 @@
-// & [Experience Section] REMOVE CLASSES after 1250px (normal => slider cards)
+// & [Experience Section] REMOVE CLASSES after 1250px (normal => sliders cards)
+// & sections: skills & experience
 const swiper1 = document.querySelector(".swiper1");
 const swiper2 = document.querySelector(".swiper2");
 const swiper3 = document.querySelector(".swiper3");
 const swiper4 = document.querySelector(".swiper4");
 let swiper = null;
 
+const flipCard = document.querySelectorAll(".flip-card");
+let slideIndex = 2;
+let dots = document.querySelectorAll(".slide-circle");
+
+function showDivs(n) {
+  let mySlides = document.querySelectorAll(".mySlides");
+  if (n > mySlides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = mySlides.length;
+  }
+  for (let i = 0; i < mySlides.length; i++) {
+    mySlides[i].style.display = "none";
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" transparent", "");
+  }
+  mySlides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " transparent";
+}
+function plusDivs(n) {
+  showDivs((slideIndex += n));
+}
+function currentDiv(n) {
+  showDivs((slideIndex = n));
+}
+
 window.onload = function () {
   if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
+    flipCard[0].classList.remove("mySlides");
+    flipCard[1].classList.remove("mySlides");
+    flipCard[2].classList.remove("mySlides");
+    flipCard[3].classList.remove("mySlides");
+    for (let z = 0; z < flipCard.length; z++) {
+      flipCard[z].style.display = "block";
+    }
+
     swiper1.classList.remove("job-swiper-frame");
     swiper2.classList.remove("swiper");
     swiper2.classList.remove("mySwiper");
@@ -14,6 +51,11 @@ window.onload = function () {
     swiper4.classList.remove("swiper-slide");
     swiper = null;
   } else {
+    flipCard[0].classList.add("mySlides");
+    flipCard[1].classList.add("mySlides");
+    flipCard[2].classList.add("mySlides");
+    flipCard[3].classList.add("mySlides");
+
     swiper1.classList.add("job-swiper-frame");
     swiper2.classList.add("swiper");
     swiper2.classList.add("mySwiper");
@@ -32,12 +74,21 @@ window.onload = function () {
         slideShadows: false,
       },
     });
+    showDivs(slideIndex);
   }
 };
 
 window.addEventListener("resize", onResizeFunction);
 function onResizeFunction() {
   if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
+    flipCard[0].classList.remove("mySlides");
+    flipCard[1].classList.remove("mySlides");
+    flipCard[2].classList.remove("mySlides");
+    flipCard[3].classList.remove("mySlides");
+    for (let z = 0; z < flipCard.length; z++) {
+      flipCard[z].style.display = "block";
+    }
+
     swiper1.classList.remove("job-swiper-frame");
     swiper2.classList.remove("swiper");
     swiper2.classList.remove("mySwiper");
@@ -45,6 +96,11 @@ function onResizeFunction() {
     swiper4.classList.remove("swiper-slide");
     swiper = null;
   } else {
+    flipCard[0].classList.add("mySlides");
+    flipCard[1].classList.add("mySlides");
+    flipCard[2].classList.add("mySlides");
+    flipCard[3].classList.add("mySlides");
+
     swiper1.classList.add("job-swiper-frame");
     swiper2.classList.add("swiper");
     swiper2.classList.add("mySwiper");
@@ -63,6 +119,7 @@ function onResizeFunction() {
         slideShadows: false,
       },
     });
+    showDivs(slideIndex);
   }
 }
 
@@ -155,59 +212,4 @@ function toggleLogo() {
     logo.src = "logo.29e49919.svg";
     logoMobile.src = "logo.29e49919.svg";
   }
-}
-
-// & [Skill Section] Slider
-const flipCard = document.querySelectorAll(".flip-car");
-let slideIndex = 2;
-let cardsDeploy = true;
-
-window.onload = function () {
-  if (window.screen.width >= 1085 && window.innerWidth >= 1085) {
-    flipCard[0].classList.remove("mySlides");
-    flipCard[1].classList.remove("mySlides");
-    flipCard[2].classList.remove("mySlides");
-    flipCard[3].classList.remove("mySlides");
-    cardsDeploy = false;
-  }
-  if (window.screen.width < 1250 && window.innerWidth < 1250) {
-    flipCard[0].classList.add("mySlides");
-    flipCard[1].classList.add("mySlides");
-    flipCard[2].classList.add("mySlides");
-    flipCard[3].classList.add("mySlides");
-    cardsDeploy = true;
-  }
-};
-window.addEventListener("resize", onResizeSkills);
-function onResizeSkills() {
-  if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
-  } else {
-    showDivs(slideIndex);
-  }
-}
-
-let mySlides = document.querySelectorAll(".mySlides");
-let dots = document.querySelectorAll(".slide-circle");
-showDivs(slideIndex);
-function showDivs(n) {
-  if (n > mySlides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = mySlides.length;
-  }
-  for (let i = 0; i < mySlides.length; i++) {
-    mySlides[i].style.display = "none";
-  }
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" transparent", "");
-  }
-  mySlides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " transparent";
-}
-function plusDivs(n) {
-  showDivs((slideIndex += n));
-}
-function currentDiv(n) {
-  showDivs((slideIndex = n));
 }
