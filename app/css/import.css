@@ -393,7 +393,6 @@ template {
 
 .slider {
   position: absolute;
-  cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
@@ -1288,15 +1287,7 @@ main {
 
 .container-logos {
   padding: 0 auto;
-  max-width: 100rem;
-  margin: 3rem auto 15rem auto;
-  display: -ms-grid;
-  display: grid;
-  gap: 8rem;
-  grid-auto-rows: 25rem;
-  -ms-grid-columns: (minmax(18rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  justify-items: center;
+  margin: 3rem auto 0 auto;
 }
 
 .card-logo {
@@ -1464,6 +1455,24 @@ main {
 
 .disc {
   font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1250px) {
+  .container-logos {
+    padding: 0 auto;
+    max-width: 100rem;
+    margin: 3rem auto 15rem auto;
+    display: -ms-grid;
+    display: grid;
+    gap: 8rem;
+    grid-auto-rows: 25rem;
+    -ms-grid-columns: (minmax(18rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    justify-items: center;
+  }
+  .pagination-container {
+    display: none;
+  }
 }
 
 .exp-subtitle {
