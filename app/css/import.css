@@ -1457,21 +1457,28 @@ main {
   font-size: 1.5rem;
 }
 
-@media screen and (min-width: 1250px) {
+.container-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 50rem;
+}
+
+@media screen and (min-width: 1085px) {
   .container-logos {
     padding: 0 auto;
-    max-width: 100rem;
     margin: 3rem auto 15rem auto;
+    max-width: 1000px;
     display: -ms-grid;
     display: grid;
-    gap: 8rem;
+    gap: 25rem 5rem;
     grid-auto-rows: 25rem;
-    -ms-grid-columns: (minmax(18rem, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    -ms-grid-columns: (minmax(20.5rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
     justify-items: center;
-  }
-  .pagination-container {
-    display: none;
   }
 }
 

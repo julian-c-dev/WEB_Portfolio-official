@@ -146,20 +146,23 @@
 .disc {
   font-size: 1.5rem;
 }
+.container-logos {
+  display: flex;
+  justify-content: center;
+  max-width: 50rem;
+}
 
 // ^ Media Queries ^
-@media screen and(min-width:1250px) {
+
+@media screen and(min-width:1085px) {
   .container-logos {
     padding: 0 auto;
-    max-width: 100rem;
     margin: 3rem auto 15rem auto;
+    max-width: 1000px;
     display: grid;
-    gap: 8rem;
+    gap: 25rem 5rem;
     grid-auto-rows: 25rem;
-    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
     justify-items: center;
-  }
-  .pagination-container {
-    display: none;
   }
 }

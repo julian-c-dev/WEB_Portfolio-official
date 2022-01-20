@@ -1,4 +1,72 @@
-// & [NavBar] TOGGLE btwn Theme dark/light
+// & [Experience Section] REMOVE CLASSES after 1250px (normal => slider cards)
+const swiper1 = document.querySelector(".swiper1");
+const swiper2 = document.querySelector(".swiper2");
+const swiper3 = document.querySelector(".swiper3");
+const swiper4 = document.querySelector(".swiper4");
+let swiper = null;
+
+window.onload = function () {
+  if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
+    swiper1.classList.remove("job-swiper-frame");
+    swiper2.classList.remove("swiper");
+    swiper2.classList.remove("mySwiper");
+    swiper3.classList.remove("swiper-wrapper");
+    swiper4.classList.remove("swiper-slide");
+    swiper = null;
+  } else {
+    swiper1.classList.add("job-swiper-frame");
+    swiper2.classList.add("swiper");
+    swiper2.classList.add("mySwiper");
+    swiper3.classList.add("swiper-wrapper");
+    swiper4.classList.add("swiper-slide");
+    swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 100,
+        depth: 800,
+        modifier: 1,
+        slideShadows: false,
+      },
+    });
+  }
+};
+
+window.addEventListener("resize", onResizeFunction);
+function onResizeFunction() {
+  if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
+    swiper1.classList.remove("job-swiper-frame");
+    swiper2.classList.remove("swiper");
+    swiper2.classList.remove("mySwiper");
+    swiper3.classList.remove("swiper-wrapper");
+    swiper4.classList.remove("swiper-slide");
+    swiper = null;
+  } else {
+    swiper1.classList.add("job-swiper-frame");
+    swiper2.classList.add("swiper");
+    swiper2.classList.add("mySwiper");
+    swiper3.classList.add("swiper-wrapper");
+    swiper4.classList.add("swiper-slide");
+    swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 100,
+        depth: 800,
+        modifier: 1,
+        slideShadows: false,
+      },
+    });
+  }
+}
+
+// & TOGGLE btwn Theme dark/light
 
 const stwch_Theme = document.querySelector("#handlerTheme");
 const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
@@ -88,136 +156,58 @@ function toggleLogo() {
     logoMobile.src = "logo.29e49919.svg";
   }
 }
-// ! Hidden bar - BOTH (desk & mobile)
-// ! navDesk => blur effect / while navMobile => solid effect
-
-window.addEventListener("scroll", () => {
-  if (
-    menuOpen === false &&
-    window.scrollY > 150 &&
-    lastScrollY < window.scrollY
-  ) {
-    navDesk.classList.remove("solid");
-  }
-
-  if (window.scrollY > 150 && colorTheme) {
-    navDesk.classList.add("darkShadow");
-  } else {
-    navDesk.classList.remove("darkShadow");
-  }
-  if (window.scrollY > 150 && !colorTheme) {
-    navDesk.classList.add("lightShadow");
-  } else {
-    navDesk.classList.remove("lightShadow");
-  }
-
-  if (window.scrollY <= 150) {
-    navDesk.classList.add("solid");
-    hiddenMenu.classList.add("solid");
-  }
-
-  lastScrollY = window.scrollY;
-});
 
 // & [Skill Section] Slider
+const flipCard = document.querySelectorAll(".flip-car");
+let slideIndex = 2;
+let cardsDeploy = true;
 
-/*let slideIndex = 2;
+window.onload = function () {
+  if (window.screen.width >= 1085 && window.innerWidth >= 1085) {
+    flipCard[0].classList.remove("mySlides");
+    flipCard[1].classList.remove("mySlides");
+    flipCard[2].classList.remove("mySlides");
+    flipCard[3].classList.remove("mySlides");
+    cardsDeploy = false;
+  }
+  if (window.screen.width < 1250 && window.innerWidth < 1250) {
+    flipCard[0].classList.add("mySlides");
+    flipCard[1].classList.add("mySlides");
+    flipCard[2].classList.add("mySlides");
+    flipCard[3].classList.add("mySlides");
+    cardsDeploy = true;
+  }
+};
+window.addEventListener("resize", onResizeSkills);
+function onResizeSkills() {
+  if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
+  } else {
+    showDivs(slideIndex);
+  }
+}
+
+let mySlides = document.querySelectorAll(".mySlides");
+let dots = document.querySelectorAll(".slide-circle");
 showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs((slideIndex += n));
-}
-
-function currentDiv(n) {
-  showDivs((slideIndex = n));
-}
-
 function showDivs(n) {
-  let i;
-  let x = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("slide-circle");
-
-  if (n > x.length) {
+  if (n > mySlides.length) {
     slideIndex = 1;
   }
   if (n < 1) {
-    slideIndex = x.length;
+    slideIndex = mySlides.length;
   }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  for (let i = 0; i < mySlides.length; i++) {
+    mySlides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" transparent", "");
   }
-  x[slideIndex - 1].style.display = "block";
+  mySlides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " transparent";
-}*/
-
-// & [Experience Section] REMOVE CLASSES after 1250px (normal => slider cards)
-const swiper1 = document.querySelector(".swiper1");
-const swiper2 = document.querySelector(".swiper2");
-const swiper3 = document.querySelector(".swiper3");
-const swiper4 = document.querySelector(".swiper4");
-let swiper = null;
-
-window.onload = function () {
-  if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
-    swiper1.classList.remove("job-swiper-frame");
-    swiper2.classList.remove("swiper");
-    swiper2.classList.remove("mySwiper");
-    swiper3.classList.remove("swiper-wrapper");
-    swiper4.classList.remove("swiper-slide");
-    swiper = null;
-  } else {
-    swiper1.classList.add("job-swiper-frame");
-    swiper2.classList.add("swiper");
-    swiper2.classList.add("mySwiper");
-    swiper3.classList.add("swiper-wrapper");
-    swiper4.classList.add("swiper-slide");
-
-    swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 100,
-        depth: 800,
-        modifier: 1,
-        slideShadows: false,
-      },
-    });
-  }
-};
-
-window.addEventListener("resize", onResizeFunction);
-function onResizeFunction() {
-  if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
-    swiper1.classList.remove("job-swiper-frame");
-    swiper2.classList.remove("swiper");
-    swiper2.classList.remove("mySwiper");
-    swiper3.classList.remove("swiper-wrapper");
-    swiper4.classList.remove("swiper-slide");
-    swiper = null;
-  } else {
-    swiper1.classList.add("job-swiper-frame");
-    swiper2.classList.add("swiper");
-    swiper2.classList.add("mySwiper");
-    swiper3.classList.add("swiper-wrapper");
-    swiper4.classList.add("swiper-slide");
-    swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 100,
-        depth: 800,
-        modifier: 1,
-        slideShadows: false,
-      },
-    });
-  }
+}
+function plusDivs(n) {
+  showDivs((slideIndex += n));
+}
+function currentDiv(n) {
+  showDivs((slideIndex = n));
 }
