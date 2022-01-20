@@ -960,7 +960,7 @@ main {
 
 @media screen and (min-width: 448px) {
   .section {
-    padding: 1rem 3rem 10rem 3rem;
+    padding: 1rem 3rem 5rem 3rem;
   }
   .section-heading {
     font-size: 3rem;
@@ -1623,6 +1623,10 @@ main {
           justify-content: flex-start;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+}
+
+.swiper-wrapper {
+  margin-bottom: 4rem;
 }
 
 .section-practices-frame {

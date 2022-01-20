@@ -36,10 +36,9 @@ function currentDiv(n) {
 
 window.onload = function () {
   if (window.screen.width >= 1250 && window.innerWidth >= 1250) {
-    flipCard[0].classList.remove("mySlides");
-    flipCard[1].classList.remove("mySlides");
-    flipCard[2].classList.remove("mySlides");
-    flipCard[3].classList.remove("mySlides");
+    for (let j = 0; j < flipCard.length; j++) {
+      flipCard[j].classList.remove("mySlides");
+    }
     for (let z = 0; z < flipCard.length; z++) {
       flipCard[z].style.display = "block";
     }
@@ -51,11 +50,9 @@ window.onload = function () {
     swiper4.classList.remove("swiper-slide");
     swiper = null;
   } else {
-    flipCard[0].classList.add("mySlides");
-    flipCard[1].classList.add("mySlides");
-    flipCard[2].classList.add("mySlides");
-    flipCard[3].classList.add("mySlides");
-
+    for (let j = 0; j < flipCard.length; j++) {
+      flipCard[j].classList.add("mySlides");
+    }
     swiper1.classList.add("job-swiper-frame");
     swiper2.classList.add("swiper");
     swiper2.classList.add("mySwiper");
