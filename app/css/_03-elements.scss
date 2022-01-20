@@ -231,15 +231,15 @@ body {
 
 body.light-theme {
   // navBar
-  --nav-mobile: var(--color-primary);
+  --nav-mobile: var(--color-secondary-trans);
   --nav-desktop: var(--color-primary);
   --nav-hidden: var(--color-primary);
   --nav-icon: var(--color-primary);
   --nav-links: var(--color-primary);
   --nav-links-numbers: var(--color-primary-accent);
   --nav-links-hover: var(--color-primary-accent);
-  --nav-burger: var(--color-lightest);
-  --nav-burger-bars: var(--color-lightest);
+  --nav-burger: var(--color-primary-accent);
+  --nav-burger-bars: var(--color-primary-accent);
   // main
   --color-background: var(--color-background-lightTheme);
   --color-overtitle: var(--color-primary-accent);
