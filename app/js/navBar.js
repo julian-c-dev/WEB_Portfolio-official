@@ -99,7 +99,7 @@ window.addEventListener("scroll", () => {
 
   if (window.scrollY <= 150) {
     navDesk.classList.add("solid");
-    hiddenMenu.classList.add("solid");
+    hiddenMenu.classList.add("purePrimary");
   }
 
   lastScrollY = window.scrollY;

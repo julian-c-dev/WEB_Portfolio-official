@@ -634,16 +634,17 @@ body .job .job-role {
   color: var(--job-role);
 }
 
+body .job .job-overtitle {
+  color: var(--job-time);
+}
+
 body .job .job-title {
   color: var(--job-title);
 }
 
 body .job .job-description {
-  background-color: var(--job-desc);
-}
-
-body .job .job-overtitle {
-  color: var(--job-time);
+  background-color: transparent;
+  color: var(--job-desc);
 }
 
 body .job .job-sub-tech {
@@ -746,12 +747,12 @@ body.light-theme {
   --color-links-hover: var(--color-primary-accent);
   --color-dots: var(--color-primary-accent);
   --exp-subHeading: var(--color-primary);
-  --job-role: var(--color-primary);
-  --job-title: var(--color-primary);
+  --job-role: var(--color-content-darkness);
+  --job-title: var(--color-lightest);
   --job-card-content: var(--color-content-lighter);
-  --job-time: var(--color-primary-accent);
-  --job-desc: var(--color-secondary);
-  --job-tech: var(--color-primary-accent);
+  --job-time: var(--color-primary);
+  --job-desc: var(--color-lightest);
+  --job-tech: var(--color-primary);
   --job-icons: var(--color-primary);
   --job-icons-hover: var(--color-primary-accent);
   --practice-card-shadow: var(--color-primary);
@@ -810,7 +811,7 @@ body.dark-theme {
   --job-title: var(--color-lightest);
   --job-card-content: var(--color-content-lighter);
   --job-time: var(--color-accent);
-  --job-desc: var(--color-secondary);
+  --job-desc: var(--color-lightest);
   --job-tech: var(--color-accent-darker);
   --job-icons: var(--color-lightest);
   --job-icons-hover: var(--color-accent);
@@ -836,13 +837,14 @@ body.dark-theme {
     background: transparent;
   }
   body.light-theme .job .job-role {
-    color: var(--job-role);
+    color: var(--color-primary-lighter);
   }
   body.light-theme .job .job-title {
-    color: var(--job-title);
+    color: var(--color-primary);
   }
   body.light-theme .job .job-description {
-    background-color: var(--job-desc);
+    background-color: var(--color-secondary-trans);
+    color: var(--color-lightest);
   }
   body.light-theme .job .job-overtitle {
     color: var(--job-time);
@@ -861,7 +863,8 @@ body.dark-theme {
     color: var(--job-title);
   }
   body.dark-theme .job .job-description {
-    background-color: var(--job-desc);
+    background-color: var(--color-secondary-trans);
+    color: var(--color-lightest);
   }
   body.dark-theme .job .job-overtitle {
     color: var(--job-time);
@@ -1049,7 +1052,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   padding: 3rem 4rem 3rem 3rem;
-  height: 8rem;
+  height: 7rem;
   z-index: 11;
 }
 
@@ -1062,7 +1065,7 @@ main {
   display: none;
   position: fixed;
   right: 0;
-  top: 8rem;
+  top: 7rem;
   width: 70vw;
   height: 100vh;
   z-index: 11;
@@ -2409,6 +2412,10 @@ main {
 
 .solid {
   background-color: transparent;
+}
+
+.purePrimary {
+  background-attachment: var(--color-primary);
 }
 
 .darkShadow {

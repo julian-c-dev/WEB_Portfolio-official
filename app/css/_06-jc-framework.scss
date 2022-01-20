@@ -26,6 +26,10 @@
 .solid {
   background-color: transparent;
 }
+
+.purePrimary {
+  background-attachment: var(--color-primary);
+}
 .darkShadow {
   background-color: var(--color-primary-lighter);
   box-shadow: 3px 0 15px var(--color-darkest);

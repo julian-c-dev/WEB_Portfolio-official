@@ -156,15 +156,17 @@ body {
     .job-role {
       color: var(--job-role);
     }
+    .job-overtitle {
+      color: var(--job-time);
+    }
     .job-title {
       color: var(--job-title);
     }
     .job-description {
-      background-color: var(--job-desc);
+      background-color: transparent;
+      color: var(--job-desc);
     }
-    .job-overtitle {
-      color: var(--job-time);
-    }
+
     .job-sub-tech {
       color: var(--job-tech);
     }
@@ -271,12 +273,12 @@ body.light-theme {
   --color-dots: var(--color-primary-accent);
   // Experience section
   --exp-subHeading: var(--color-primary);
-  --job-role: var(--color-primary);
-  --job-title: var(--color-primary);
+  --job-role: var(--color-content-darkness);
+  --job-title: var(--color-lightest);
   --job-card-content: var(--color-content-lighter);
-  --job-time: var(--color-primary-accent);
-  --job-desc: var(--color-secondary);
-  --job-tech: var(--color-primary-accent);
+  --job-time: var(--color-primary);
+  --job-desc: var(--color-lightest);
+  --job-tech: var(--color-primary);
   --job-icons: var(--color-primary);
   --job-icons-hover: var(--color-primary-accent);
   // practice
@@ -342,7 +344,7 @@ body.dark-theme {
   --job-title: var(--color-lightest);
   --job-card-content: var(--color-content-lighter);
   --job-time: var(--color-accent);
-  --job-desc: var(--color-secondary);
+  --job-desc: var(--color-lightest);
   --job-tech: var(--color-accent-darker);
   --job-icons: var(--color-lightest);
   --job-icons-hover: var(--color-accent);
@@ -372,13 +374,14 @@ body.dark-theme {
       color: var(--job-card-content);
       background: transparent;
       .job-role {
-        color: var(--job-role);
+        color: var(--color-primary-lighter);
       }
       .job-title {
-        color: var(--job-title);
+        color: var(--color-primary);
       }
       .job-description {
-        background-color: var(--job-desc);
+        background-color: var(--color-secondary-trans);
+        color: var(--color-lightest);
       }
       .job-overtitle {
         color: var(--job-time);
@@ -399,7 +402,8 @@ body.dark-theme {
         color: var(--job-title);
       }
       .job-description {
-        background-color: var(--job-desc);
+        background-color: var(--color-secondary-trans);
+        color: var(--color-lightest);
       }
       .job-overtitle {
         color: var(--job-time);

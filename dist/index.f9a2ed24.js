@@ -529,7 +529,7 @@ window.addEventListener("scroll", ()=>{
     else navDesk.classList.remove("lightShadow");
     if (window.scrollY <= 150) {
         navDesk.classList.add("solid");
-        hiddenMenu.classList.add("solid");
+        hiddenMenu.classList.add("purePrimary");
     }
     lastScrollY = window.scrollY;
 });
