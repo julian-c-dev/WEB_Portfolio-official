@@ -631,11 +631,15 @@ body .job {
 }
 
 body .job .job-role {
-  color: var(--color-lightest);
+  color: var(--job-role);
 }
 
 body .job .job-title {
-  color: var(--color-lightest);
+  color: var(--job-title);
+}
+
+body .job .job-description {
+  background-color: var(--job-desc);
 }
 
 body .job .job-overtitle {
@@ -643,11 +647,15 @@ body .job .job-overtitle {
 }
 
 body .job .job-sub-tech {
-  color: var(--color-accent-darker);
+  color: var(--job-tech);
 }
 
-body .job .job-sub-icon i {
-  color: var(--color-lightest);
+body .job .job-sub-icon > li > a i {
+  color: var(--job-icons);
+}
+
+body .job .job-sub-icon > li > a i:hover {
+  color: var(--job-icons-hover);
 }
 
 body .section-practices .card {
@@ -676,25 +684,28 @@ body .section-practices .card .card_footer > a {
   color: var(--practice-card-footer);
 }
 
-body .section-contact p {
+body .section-practices .card .card-icon {
+  color: var(--practice-card-icons);
+}
+
+body .section-practices .card .card-icon:hover {
+  color: var(--practice-card-icons-hover);
+}
+
+.section-contact p {
   color: var(--contact-p);
 }
 
-body .section-contact li {
+.section-contact li {
   color: var(--contact-li);
 }
 
-body .contact-banner {
+.contact-banner {
   background-image: var(--bg-banner);
 }
 
-body .footer .footer-content {
+.footer .footer-content {
   color: var(--footer);
-}
-
-body .fa-github:hover,
-body .fa-globe:hover {
-  color: var(--icons-hover);
 }
 
 body.light-theme {
@@ -733,6 +744,7 @@ body.light-theme {
   --clmLeft-icons: var(--color-primary);
   --clmLeft-links: var(--color-content);
   --color-links-hover: var(--color-primary-accent);
+  --color-dots: var(--color-primary-accent);
   --exp-subHeading: var(--color-primary);
   --job-role: var(--color-primary);
   --job-title: var(--color-primary);
@@ -741,6 +753,7 @@ body.light-theme {
   --job-desc: var(--color-secondary);
   --job-tech: var(--color-primary-accent);
   --job-icons: var(--color-primary);
+  --job-icons-hover: var(--color-primary-accent);
   --practice-card-shadow: var(--color-primary);
   --practice-card-border: var(--color-primary-accent);
   --practice-card: var(--color-primary-accent-opa);
@@ -748,7 +761,8 @@ body.light-theme {
   --practice-card-content: var(--color-content);
   --practice-card-tech: var(--color-primary-accent);
   --practice-card-footer: var(--color-primary);
-  --icons-hover: var(--color--primary);
+  --practice-card-icons: var(--color--primary);
+  --practice-card-icons-hover: var(--color-primary-accent);
   --bg-banner: var(--color-banner-light);
   --footer: var(--color-content-darker);
   --footer-bg: var(--color-primary);
@@ -790,6 +804,7 @@ body.dark-theme {
   --clmLeft-icons: var(--color-content-darkness);
   --clmLeft-links: var(--color-content-darkness);
   --color-links-hover: var(--color-accent);
+  --color-dots: var(--color-accent);
   --exp-subHeading: var(--color-content-darkness);
   --job-role: var(--color-content-darkness);
   --job-title: var(--color-lightest);
@@ -798,6 +813,7 @@ body.dark-theme {
   --job-desc: var(--color-secondary);
   --job-tech: var(--color-accent-darker);
   --job-icons: var(--color-lightest);
+  --job-icons-hover: var(--color-accent);
   --practice-card-shadow: var(--color-accent);
   --practice-card-border: var(--color-accent);
   --practice-card: var(--color-accent-opacity);
@@ -805,7 +821,8 @@ body.dark-theme {
   --practice-card-content: var(--section-content);
   --practice-card-tech: var(--color-accent);
   --practice-card-footer: var(--color-content-lighter);
-  --icons-hover: var(--color--accent);
+  --practice-card-icons: var(--color--accent);
+  --practice-card-icons-hover: var(--color-accent);
   --contact-p: var(--color-content-darkness);
   --contact-li: var(--color-content-darkness);
   --bg-banner: var(--color-banner-dark);
@@ -832,9 +849,6 @@ body.dark-theme {
   }
   body.light-theme .job .job-sub-tech {
     color: var(--job-tech);
-  }
-  body.light-theme .job .job-sub-icon i {
-    color: var(--job-icons);
   }
   body.dark-theme .job {
     color: var(--job-card-content);
@@ -2418,7 +2432,7 @@ main {
 }
 
 .transparent {
-  color: var(--color-secondary);
+  color: var(--color-dots);
 }
 
 .bold {
