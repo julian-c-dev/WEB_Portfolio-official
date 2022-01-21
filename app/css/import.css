@@ -489,6 +489,18 @@ html {
   scroll-behavior: smooth;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
 body {
   background-color: var(--color-background);
 }
@@ -888,18 +900,6 @@ body.dark-theme {
   body.dark-theme .job .job-sub-icon i {
     color: var(--job-icons);
   }
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  cursor: pointer;
-}
-
-ul,
-li {
-  list-style-type: none;
 }
 
 main {
@@ -2569,64 +2569,12 @@ main {
   text-align: center;
 }
 
-.mg-1 {
-  margin: 1rem;
-}
-
-.mg-y-1 {
-  margin: 1rem 0;
-}
-
 .mg-x-1 {
   margin: 0 1rem;
 }
 
-.mg-2 {
-  margin: 2rem;
-}
-
-.mg-y-2 {
-  margin: 2rem 0;
-}
-
-.mg-x-2 {
-  margin: 0 2rem;
-}
-
-.mg-3 {
-  margin: 3rem;
-}
-
-.mg-y-3 {
-  margin: 3rem 0;
-}
-
-.mg-x-3 {
-  margin: 0 3rem;
-}
-
 .mg-xl-3 {
   margin-left: 3rem;
-}
-
-.mg-4 {
-  margin: 4rem;
-}
-
-.mg-y-4 {
-  margin: 4rem 0;
-}
-
-.mg-x-4 {
-  margin: 0 4rem;
-}
-
-.mg-xr-4 {
-  margin-right: 4rem;
-}
-
-.mg-xl-4 {
-  margin-left: 4rem;
 }
 
 @media screen and (min-width: 1250px) {
