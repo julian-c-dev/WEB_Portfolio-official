@@ -5,6 +5,7 @@
   --color-primary-lighter: rgba(10, 25, 47, 0.9);
   --color-primary-accent: rgb(9, 89, 207);
   --color-primary-accent-opa: rgba(9, 89, 207, 0.2);
+  --color-primary-accent-opacity: rgba(97, 120, 155, 0.8);
   --color-secondary: rgba(25, 94, 184, 1);
   --color-secondary-trans: rgba(25, 94, 184, 0.95);
   --color-accent: rgb(255, 122, 34);
@@ -595,8 +596,12 @@ body .section-heading::after {
   border-bottom: 2px solid var(--color-border-Heading);
 }
 
-body .section-content > p {
+body .section-content p {
   color: var(--section-content);
+}
+
+body .caption {
+  color: var(--color-caption);
 }
 
 body .card-logo_clmLeft h4 {
@@ -619,6 +624,10 @@ body .card-logo_clmLeft a:hover {
 
 body .card-logo_clmLeft p {
   color: var(--clmLeft-links);
+}
+
+body .subSkills {
+  color: var(--sub-skills);
 }
 
 body .section-exp_subHeading {
@@ -724,6 +733,7 @@ body.light-theme {
   --color-title: var(--color-primary);
   --color-subtitle: var(--color-primary-lighter);
   --color-heroContent: var(--color-content);
+  --color-caption: var(--color-content);
   --credits: var(--color-primary);
   --credits-hover: var(--color-primary-accent);
   --credit-line: var(--color-primary);
@@ -736,6 +746,7 @@ body.light-theme {
   --color-border-Heading: var(--color-primary-accent);
   --section-content: var(--color-content);
   --button: var(--color-primary-lighter);
+  --sub-skills: var(--color-content);
   --card-skills: var(--color-primary-accent);
   --card-skills-bg: var(--color-primary-accent-opa);
   --card-skills-hover: var(--color-primary-accent-opa);
@@ -784,6 +795,7 @@ body.dark-theme {
   --color-title: var(--color-lightest);
   --color-subtitle: var(--color-content-darker);
   --color-heroContent: var(--color-content-darkness);
+  --color-caption: var(--color-content-darkness);
   --credits: var(--color-content-darkness);
   --credits-hover: var(--color-accent);
   --credit-line: var(--color-content-darkness);
@@ -796,6 +808,7 @@ body.dark-theme {
   --subHeading: var(--color-content-lighter);
   --section-content: var(--color-content-darkness);
   --button: var(--color-content-lighter);
+  --sub-skills: var(--color-content-lighter);
   --card-skills: var(--color-accent);
   --card-skills-bg: var(--color-accent-opa2);
   --card-skills-hover: var(--color-accent-opa2);
@@ -1298,8 +1311,24 @@ main {
   border-radius: 5%;
 }
 
+.caption {
+  white-space: initial;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 1rem;
+}
+
 #sec_Skills {
   margin-top: -1rem;
+}
+
+.subSkills {
+  margin: 4rem 0 2rem 0;
+  font-size: 1.7rem;
+}
+
+.subSkills p {
+  white-space: initial;
 }
 
 .container-logos {
@@ -2427,7 +2456,7 @@ main {
 }
 
 .lightShadow {
-  background-color: var(--color-primary-accent-opa);
+  background-color: var(--color-primary-accent-opacity);
   -webkit-box-shadow: 3px 0 15px var(--color-darkest);
           box-shadow: 3px 0 15px var(--color-darkest);
   -webkit-backdrop-filter: blur(2px);

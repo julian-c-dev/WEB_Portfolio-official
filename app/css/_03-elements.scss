@@ -119,8 +119,13 @@ body {
     border-bottom: 2px solid var(--color-border-Heading);
   }
 
-  .section-content > p {
-    color: var(--section-content);
+  .section-content {
+    p {
+      color: var(--section-content);
+    }
+  }
+  .caption {
+    color: var(--color-caption);
   }
 
   // & Section - Skills
@@ -143,6 +148,10 @@ body {
     p {
       color: var(--clmLeft-links);
     }
+  }
+
+  .subSkills {
+    color: var(--sub-skills);
   }
 
   // & Section - Experience
@@ -248,6 +257,7 @@ body.light-theme {
   --color-title: var(--color-primary);
   --color-subtitle: var(--color-primary-lighter);
   --color-heroContent: var(--color-content);
+  --color-caption: var(--color-content);
   --credits: var(--color-primary);
   --credits-hover: var(--color-primary-accent);
   --credit-line: var(--color-primary);
@@ -260,6 +270,7 @@ body.light-theme {
   --color-border-Heading: var(--color-primary-accent);
   --section-content: var(--color-content);
   --button: var(--color-primary-lighter);
+  --sub-skills: var(--color-content);
   // Skills section
   --card-skills: var(--color-primary-accent);
   --card-skills-bg: var(--color-primary-accent-opa);
@@ -315,6 +326,7 @@ body.dark-theme {
   --color-title: var(--color-lightest);
   --color-subtitle: var(--color-content-darker);
   --color-heroContent: var(--color-content-darkness);
+  --color-caption: var(--color-content-darkness);
   --credits: var(--color-content-darkness);
   --credits-hover: var(--color-accent);
   --credit-line: var(--color-content-darkness);
@@ -327,6 +339,7 @@ body.dark-theme {
   --subHeading: var(--color-content-lighter);
   --section-content: var(--color-content-darkness);
   --button: var(--color-content-lighter);
+  --sub-skills: var(--color-content-lighter);
   // Skills section
   --card-skills: var(--color-accent);
   --card-skills-bg: var(--color-accent-opa2);

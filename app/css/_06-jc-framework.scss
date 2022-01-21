@@ -37,7 +37,7 @@
 }
 
 .lightShadow {
-  background-color: var(--color-primary-accent-opa);
+  background-color: var(--color-primary-accent-opacity);
   box-shadow: 3px 0 15px var(--color-darkest);
   backdrop-filter: blur(2px);
 }
