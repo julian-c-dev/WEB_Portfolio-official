@@ -212,7 +212,7 @@ function toggleLogo() {
 }
 
 //& flipping flip-card after clicking (for mobiles)
-
+/*
 let flipFront = document.querySelectorAll(".flip-card-front");
 let flipBack = document.querySelectorAll(".flip-card-back");
 let flipInner = document.querySelectorAll(".flip-card-inner");
@@ -232,4 +232,4 @@ for (let h = 0; h < flipCard.length; h++) {
     flipFront[h].style.transform = "rotateY(180deg)";
     flipInner[h].style.transform = "rotateY(0deg)";
   }
-}
+}*/
