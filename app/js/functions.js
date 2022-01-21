@@ -221,7 +221,15 @@ for (let h = 0; h < flipCard.length; h++) {
   flipBack[h].addEventListener("click", clickable);
   function clickable() {
     flipBack[h].style.transform = "rotateY(0)";
-    flipFront[h].style.transform = "rotateY(180deg)";
     flipInner[h].style.transform = "rotateY(180deg)";
+    flipFront[h].style.transform = "rotateY(180deg)";
+  }
+}
+for (let h = 0; h < flipCard.length; h++) {
+  flipFront[h].addEventListener("click", clickable2);
+  function clickable2() {
+    flipBack[h].style.transform = "rotateY(180g)";
+    flipFront[h].style.transform = "rotateY(180deg)";
+    flipInner[h].style.transform = "rotateY(0deg)";
   }
 }

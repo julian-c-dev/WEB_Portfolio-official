@@ -614,5 +614,25 @@ function toggleLogo() {
         logoMobile.src = "logo.29e49919.svg";
     }
 }
+//& flipping flip-card after clicking (for mobiles)
+let flipFront = document.querySelectorAll(".flip-card-front");
+let flipBack = document.querySelectorAll(".flip-card-back");
+let flipInner = document.querySelectorAll(".flip-card-inner");
+for(let h = 0; h < flipCard.length; h++){
+    flipBack[h].addEventListener("click", clickable);
+    function clickable() {
+        flipBack[h].style.transform = "rotateY(0)";
+        flipInner[h].style.transform = "rotateY(180deg)";
+        flipFront[h].style.transform = "rotateY(180deg)";
+    }
+}
+for(let h1 = 0; h1 < flipCard.length; h1++){
+    flipFront[h1].addEventListener("click", clickable2);
+    function clickable2() {
+        flipBack[h1].style.transform = "rotateY(180g)";
+        flipFront[h1].style.transform = "rotateY(180deg)";
+        flipInner[h1].style.transform = "rotateY(0deg)";
+    }
+}
 
 //# sourceMappingURL=index.216dac5e.js.map
