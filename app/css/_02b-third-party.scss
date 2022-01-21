@@ -75,8 +75,8 @@ input:checked + .slider:before {
   border-radius: 25px;
   background-color: var(--card-skills-bg);
   color: var(--card-skills-content);
-  transition: transform 0.6s;
   transform-style: preserve-3d;
+  transition: all 0.5s linear;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -90,6 +90,7 @@ input:checked + .slider:before {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  transition: all 0.5s linear;
 }
 
 .flip-card-back {
