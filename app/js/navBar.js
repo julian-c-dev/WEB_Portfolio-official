@@ -1,5 +1,5 @@
 const nav = document.querySelector(".navBar");
-const navDesk = document.querySelector(".nav__desktop");
+
 const navMobile = document.querySelector(".nav__mobile");
 const hiddenMenu = document.getElementById("hiddenMenu");
 const hiddenMenuFrame = document.getElementById("hiddenMenuFrame");
@@ -104,3 +104,5 @@ window.addEventListener("scroll", () => {
 
   lastScrollY = window.scrollY;
 });
+
+//

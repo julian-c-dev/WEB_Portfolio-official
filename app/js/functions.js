@@ -154,6 +154,7 @@ function themeEventMobile() {
 }
 
 checkboxes.forEach((element) => element.addEventListener("click", toggleTheme));
+const navDesk = document.querySelector(".nav__desktop");
 
 function toggleTheme() {
   if (colorTheme === true) {
@@ -162,6 +163,8 @@ function toggleTheme() {
       "light-theme"
     );
     colorTheme = false;
+    navDesk.classList.add("lightShadow");
+    navDesk.classList.remove("darkShadow");
     toggleBulbs();
     toggleHlgt();
     toggleLogo();
@@ -170,6 +173,8 @@ function toggleTheme() {
       "light-theme",
       "dark-theme"
     );
+    navDesk.classList.add("darkShadow");
+    navDesk.classList.remove("lightShadow");
     colorTheme = true;
     toggleBulbs();
     toggleHlgt();
