@@ -462,7 +462,7 @@ const swiper2 = document.querySelector(".swiper2");
 const swiper3 = document.querySelector(".swiper3");
 const swiper4 = document.querySelector(".swiper4");
 let swiper = null;
-const flipCard = document.querySelectorAll(".flip-card");
+const flipCard = document.querySelectorAll(".card-container");
 let slideIndex = 2;
 let dots = document.querySelectorAll(".slide-circle");
 function showDivs(n) {
@@ -556,7 +556,7 @@ function onResizeFunction() {
 // & TOGGLE btwn Theme dark/light
 const stwch_Theme = document.querySelector("#handlerTheme");
 const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const checkboxes = document.querySelectorAll(".themeCheck");
 const body = document.getElementsByClassName("dark-theme");
 const iconBulb = document.querySelector(".fa-lightbulb");
 const elementsHlgt = document.getElementsByClassName("hlgt");
@@ -576,15 +576,20 @@ function themeEventMobile() {
 }
 checkboxes.forEach((element)=>element.addEventListener("click", toggleTheme)
 );
+const navDesk = document.querySelector(".nav__desktop");
 function toggleTheme() {
     if (colorTheme === true) {
         document.body.className = document.body.className.replace("dark-theme", "light-theme");
         colorTheme = false;
+        navDesk.classList.add("lightShadow");
+        navDesk.classList.remove("darkShadow");
         toggleBulbs();
         toggleHlgt();
         toggleLogo();
     } else {
         document.body.className = document.body.className.replace("light-theme", "dark-theme");
+        navDesk.classList.add("darkShadow");
+        navDesk.classList.remove("lightShadow");
         colorTheme = true;
         toggleBulbs();
         toggleHlgt();

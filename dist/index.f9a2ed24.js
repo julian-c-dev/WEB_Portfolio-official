@@ -456,7 +456,6 @@ function hmrAcceptRun(bundle, id) {
 
 },{}]},["lt4KU"], null, "parcelRequire3a1a")
 const nav = document.querySelector(".navBar");
-const navDesk = document.querySelector(".nav__desktop");
 const navMobile = document.querySelector(".nav__mobile");
 const hiddenMenu = document.getElementById("hiddenMenu");
 const hiddenMenuFrame = document.getElementById("hiddenMenuFrame");
@@ -532,6 +531,6 @@ window.addEventListener("scroll", ()=>{
         hiddenMenu.classList.add("purePrimary");
     }
     lastScrollY = window.scrollY;
-});
+}); //
 
 //# sourceMappingURL=index.f9a2ed24.js.map
