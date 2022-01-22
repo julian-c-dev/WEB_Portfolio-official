@@ -124,13 +124,14 @@ function onResizeFunction() {
 
 const stwch_Theme = document.querySelector("#handlerTheme");
 const stwch_ThemeHidden = document.querySelector("#handlerThemeHidden");
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const checkboxes = document.querySelectorAll(".themeCheck");
 const body = document.getElementsByClassName("dark-theme");
 const iconBulb = document.querySelector(".fa-lightbulb");
 const elementsHlgt = document.getElementsByClassName("hlgt");
 const logo = document.getElementById("logo");
 const logoMobile = document.getElementById("logoHidden");
 const burguer = document.querySelector(".burger__btn");
+console.log(checkboxes);
 
 let colorTheme = true;
 

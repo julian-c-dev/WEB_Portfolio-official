@@ -9,9 +9,10 @@
   position: fixed;
   background-color: var(--color-primary-lighter);
   backdrop-filter: blur(2px);
+  top: 7rem;
   width: 100vw;
-  height: 100vh;
-  z-index: 9;
+  height: 90vh;
+  z-index: 999;
 }
 
 .paddingTop {
@@ -59,7 +60,7 @@
 
 .hlgt {
   color: var(--color-accent);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .hlgt-light {

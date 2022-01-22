@@ -17,27 +17,51 @@
   padding: 0 auto;
   margin: 3rem auto 0 auto;
 }
+.card-container {
+  width: 25rem;
+  height: 45rem;
+  position: relative;
+}
 
-.card-logo {
+label.flipCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.card-flip {
+  display: grid;
+  margin: 0 auto 4rem auto;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: "frontAndBack";
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+}
+
+.card-flip-front {
+  border-radius: 20px;
+  width: 25rem;
+  height: 45rem;
+  grid-area: frontAndBack;
   display: grid;
   grid-template-rows: repeat(4);
   padding: 0 1.3rem;
-  border-radius: 20px;
-  margin: 0 auto 4rem auto;
-  width: 25rem;
-  height: 45rem;
 
-  & .card-logo-header {
+  & .card-flip-front-header {
     font-size: 1.8rem;
     padding: 0 0 1rem 0;
     height: 2rem;
     text-align: center;
   }
-  & .card-logo-img {
+  & .card-flip-front-img {
     margin: 0 auto;
     height: 7rem;
   }
-  & .card-logo-table {
+  & .card-flip-front-table {
     padding-top: 1.5rem;
     height: 20rem;
     & table tbody {
@@ -62,7 +86,7 @@
       }
     }
   }
-  & .card-logo-footer {
+  & .card-flip-front-footer {
     height: 12rem;
     display: flex;
     flex-flow: column nowrap;
@@ -77,11 +101,13 @@
   }
 }
 
-.card-logo_clmLeft {
+.card-flip-back {
+  grid-area: frontAndBack;
+  transform: rotateY(-180deg);
   display: block;
   padding: 1.3rem;
-  border-radius: 25px;
-  margin: 0 auto 4rem auto;
+  border-radius: 20px;
+
   width: 25rem;
   height: 45rem;
   font-size: 1.6rem;
@@ -109,8 +135,13 @@
   ul {
     padding: 0 0 1.5rem 2rem;
   }
-  .card-logo_clmLeft > ul > li {
+  .card-flip-back > ul > li {
     margin-bottom: 1rem;
+  }
+}
+@media screen and(max-width:1250px) {
+  #flipCard:checked + .card-flip {
+    transform: rotateY(180deg);
   }
 }
 
@@ -130,7 +161,7 @@
   color: rgb(235, 88, 235);
 }
 .fa-bootstrap {
-  color: #8664b9;
+  color: #543485;
 }
 .fa-react {
   color: rgb(4, 64, 104);
@@ -170,6 +201,15 @@
     grid-auto-rows: 25rem;
     grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
     justify-items: center;
+  }
+  label.flipCard {
+    z-index: 0;
+  }
+  .card-flip {
+    transition: all 1s ease;
+    &:hover {
+      transform: rotateY(180deg);
+    }
   }
   .pagination-container {
     display: none;

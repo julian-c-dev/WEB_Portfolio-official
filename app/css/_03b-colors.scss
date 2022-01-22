@@ -112,25 +112,17 @@ body {
   }
 
   // & Section - Skills
+  .card-flip {
+    color: var(--skills-card-content);
+  }
 
-  .card-logo_clmLeft {
-    h4 {
-      color: var(--clmLeft-headings);
-    }
-    i {
-      color: var(--clmLeft-icons);
-    }
-    a:link,
-    a:visited,
-    a:active {
-      color: var(--clmLeft-links);
-    }
-    a:hover {
-      color: var(--color-links-hover);
-    }
-    p {
-      color: var(--clmLeft-links);
-    }
+  .card-flip-front {
+    background-color: var(--skills-card-bg);
+    border: 2px solid var(--skills-card-border);
+  }
+  .card-flip-back {
+    background-color: var(--skills-card-back-bg);
+    border: 2px solid var(--skills-card-back-border);
   }
 
   .subSkills {
@@ -255,14 +247,12 @@ body.light-theme {
   --button: var(--color-primary-lighter);
   --sub-skills: var(--color-content);
   // Skills section
-  --card-skills: var(--color-primary-accent);
-  --card-skills-bg: var(--color-primary-accent-opa);
-  --card-skills-hover: var(--color-primary-accent-opa);
-  --card-skills-content: var(--color-darkest);
+  --skills-card-bg: var(--color-cards-bg-light);
+  --skills-card-border: var(--color-primary-accent);
+  --skills-card-back-bg: var(--color-cards-bg-light);
+  --skills-card-back-border: var(--color-primary-accent);
+  --skills-card-content: var(--color-primary);
   --stars-color: var(--color-secondary);
-  --clmLeft-headings: var(--color-primary);
-  --clmLeft-icons: var(--color-primary);
-  --clmLeft-links: var(--color-content);
   --color-links-hover: var(--color-primary-accent);
   --color-dots: var(--color-primary-accent);
   // Experience section
@@ -322,17 +312,14 @@ body.dark-theme {
   --subHeading: var(--color-content-lighter);
   --section-content: var(--color-content-darkness);
   --button: var(--color-content-lighter);
-  --sub-skills: var(--color-content-lighter);
+  --sub-skills: var(--color-content-darkness);
   // Skills section
-  --card-skills: var(--color-accent);
-  --card-skills-bg: var(--color-accent-opa2);
-  --card-skills-hover: var(--color-accent-opa2);
-  --card-skills-content: var(--color-content-lighter);
+  --skills-card-bg: var(--color-cards-bg-dark);
+  --skills-card-border: var(--color-accent);
+  --skills-card-back-bg: var(--color-cards-bg-dark);
+  --skills-card-back-border: var(--color-accent);
+  --skills-card-content: var(--color-content-lighter);
   --stars-color: var(--color-primary);
-  --clmLeft-headings: var(--color-lightest);
-  --clmLeft-icons: var(--color-content-darkness);
-  --clmLeft-links: var(--color-content-darkness);
-  --color-links-hover: var(--color-accent);
   --color-dots: var(--color-accent);
   // Experience section
   --exp-subHeading: var(--color-content-darkness);

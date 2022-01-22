@@ -12,6 +12,8 @@
   --color-accent-darker: rgb(236, 105, 18);
   --color-accent-opacity: rgba(255, 175, 122, 0.2);
   --color-accent-opa2: rgba(255, 175, 122, 0.05);
+  --color-cards-bg-dark: rgb(116, 94, 79);
+  --color-cards-bg-light: rgb(170, 184, 230);
   --color-content: rgb(72, 75, 106);
   --color-content-darker: rgb(147, 148, 165);
   --color-content-lighter: rgb(228, 229, 241);
@@ -432,49 +434,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.flip-card {
-  background-color: transparent;
-  width: 25rem;
-  height: 45rem;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--card-skills);
-  border-radius: 25px;
-  background-color: var(--card-skills-bg);
-  color: var(--card-skills-content);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-
-.flip-card:hover .flip-card-inner {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-
-.flip-card-back {
-  background-color: var(--card-skills-bg);
-  color: var(--card-skills-content);
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
 *,
 *::before,
 *::after {
@@ -616,26 +575,18 @@ body .caption {
   color: var(--color-caption);
 }
 
-body .card-logo_clmLeft h4 {
-  color: var(--clmLeft-headings);
+body .card-flip {
+  color: var(--skills-card-content);
 }
 
-body .card-logo_clmLeft i {
-  color: var(--clmLeft-icons);
+body .card-flip-front {
+  background-color: var(--skills-card-bg);
+  border: 2px solid var(--skills-card-border);
 }
 
-body .card-logo_clmLeft a:link,
-body .card-logo_clmLeft a:visited,
-body .card-logo_clmLeft a:active {
-  color: var(--clmLeft-links);
-}
-
-body .card-logo_clmLeft a:hover {
-  color: var(--color-links-hover);
-}
-
-body .card-logo_clmLeft p {
-  color: var(--clmLeft-links);
+body .card-flip-back {
+  background-color: var(--skills-card-back-bg);
+  border: 2px solid var(--skills-card-back-border);
 }
 
 body .subSkills {
@@ -759,14 +710,12 @@ body.light-theme {
   --section-content: var(--color-content);
   --button: var(--color-primary-lighter);
   --sub-skills: var(--color-content);
-  --card-skills: var(--color-primary-accent);
-  --card-skills-bg: var(--color-primary-accent-opa);
-  --card-skills-hover: var(--color-primary-accent-opa);
-  --card-skills-content: var(--color-darkest);
+  --skills-card-bg: var(--color-cards-bg-light);
+  --skills-card-border: var(--color-primary-accent);
+  --skills-card-back-bg: var(--color-cards-bg-light);
+  --skills-card-back-border: var(--color-primary-accent);
+  --skills-card-content: var(--color-primary);
   --stars-color: var(--color-secondary);
-  --clmLeft-headings: var(--color-primary);
-  --clmLeft-icons: var(--color-primary);
-  --clmLeft-links: var(--color-content);
   --color-links-hover: var(--color-primary-accent);
   --color-dots: var(--color-primary-accent);
   --exp-subHeading: var(--color-primary);
@@ -820,16 +769,13 @@ body.dark-theme {
   --subHeading: var(--color-content-lighter);
   --section-content: var(--color-content-darkness);
   --button: var(--color-content-lighter);
-  --sub-skills: var(--color-content-lighter);
-  --card-skills: var(--color-accent);
-  --card-skills-bg: var(--color-accent-opa2);
-  --card-skills-hover: var(--color-accent-opa2);
-  --card-skills-content: var(--color-content-lighter);
+  --sub-skills: var(--color-content-darkness);
+  --skills-card-bg: var(--color-cards-bg-dark);
+  --skills-card-border: var(--color-accent);
+  --skills-card-back-bg: var(--color-cards-bg-dark);
+  --skills-card-back-border: var(--color-accent);
+  --skills-card-content: var(--color-content-lighter);
   --stars-color: var(--color-primary);
-  --clmLeft-headings: var(--color-lightest);
-  --clmLeft-icons: var(--color-content-darkness);
-  --clmLeft-links: var(--color-content-darkness);
-  --color-links-hover: var(--color-accent);
   --color-dots: var(--color-accent);
   --exp-subHeading: var(--color-content-darkness);
   --job-role: var(--color-content-darkness);
@@ -1050,7 +996,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 11;
+  z-index: 10;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -1066,7 +1012,7 @@ main {
   display: flex;
   padding: 3rem 4rem 3rem 3rem;
   height: 7rem;
-  z-index: 11;
+  z-index: 199;
 }
 
 .nav__desktop,
@@ -1078,14 +1024,14 @@ main {
   display: none;
   position: fixed;
   right: 0;
-  top: 7rem;
+  top: 0;
   width: 70vw;
   height: 100vh;
   z-index: 11;
   visibility: initial;
   background: var(--color-primary);
   padding: 3rem;
-  z-index: 11;
+  z-index: 99;
 }
 
 .hidden-menu ul {
@@ -1098,6 +1044,7 @@ main {
 }
 
 .hidden-menu ul li a {
+  z-index: 999;
   text-decoration: none;
 }
 
@@ -1336,56 +1283,88 @@ main {
   margin: 3rem auto 0 auto;
 }
 
-.card-logo {
+.card-container {
+  width: 25rem;
+  height: 45rem;
+  position: relative;
+}
+
+label.flipCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.card-flip {
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto 4rem auto;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template: 1fr / 1fr;
+      grid-template-areas: "frontAndBack";
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.card-flip-front {
+  border-radius: 20px;
+  width: 25rem;
+  height: 45rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: frontAndBack;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: ()[4];
       grid-template-rows: repeat(4);
   padding: 0 1.3rem;
-  border-radius: 20px;
-  margin: 0 auto 4rem auto;
-  width: 25rem;
-  height: 45rem;
 }
 
-.card-logo .card-logo-header {
+.card-flip-front .card-flip-front-header {
   font-size: 1.8rem;
   padding: 0 0 1rem 0;
   height: 2rem;
   text-align: center;
 }
 
-.card-logo .card-logo-img {
+.card-flip-front .card-flip-front-img {
   margin: 0 auto;
   height: 7rem;
 }
 
-.card-logo .card-logo-table {
+.card-flip-front .card-flip-front-table {
   padding-top: 1.5rem;
   height: 20rem;
 }
 
-.card-logo .card-logo-table table tbody th {
+.card-flip-front .card-flip-front-table table tbody th {
   text-align: end;
   font-weight: 400;
 }
 
-.card-logo .card-logo-table table tbody td {
+.card-flip-front .card-flip-front-table table tbody td {
   text-align: center;
 }
 
-.card-logo .card-logo-table table tbody th,
-.card-logo .card-logo-table table tbody td {
+.card-flip-front .card-flip-front-table table tbody th,
+.card-flip-front .card-flip-front-table table tbody td {
   padding: 0.5rem;
   font-size: 1.6rem;
 }
 
-.card-logo .card-logo-table table tbody .group-starts .fa-star {
+.card-flip-front .card-flip-front-table table tbody .group-starts .fa-star {
   font-size: 1.2rem;
   color: var(--stars-color);
 }
 
-.card-logo .card-logo-footer {
+.card-flip-front .card-flip-front-footer {
   height: 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1402,52 +1381,63 @@ main {
           align-items: center;
 }
 
-.card-logo .card-logo-footer h4 {
+.card-flip-front .card-flip-front-footer h4 {
   font-size: 1.4rem;
   font-weight: 400;
   padding-bottom: 0;
   margin-bottom: 1.5rem;
 }
 
-.card-logo_clmLeft {
+.card-flip-back {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: frontAndBack;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
   display: block;
   padding: 1.3rem;
-  border-radius: 25px;
-  margin: 0 auto 4rem auto;
+  border-radius: 20px;
   width: 25rem;
   height: 45rem;
   font-size: 1.6rem;
 }
 
-.card-logo_clmLeft .selfTaugh {
+.card-flip-back .selfTaugh {
   font-weight: 400;
   margin-bottom: -1rem;
 }
 
-.card-logo_clmLeft a {
+.card-flip-back a {
   font-weight: 400;
 }
 
-.card-logo_clmLeft span {
+.card-flip-back span {
   font-weight: 400;
   white-space: initial;
 }
 
-.card-logo_clmLeft p,
-.card-logo_clmLeft ul,
-.card-logo_clmLeft li,
-.card-logo_clmLeft a {
+.card-flip-back p,
+.card-flip-back ul,
+.card-flip-back li,
+.card-flip-back a {
   margin: 0.6rem 0;
   white-space: initial;
   text-decoration: none;
 }
 
-.card-logo_clmLeft ul {
+.card-flip-back ul {
   padding: 0 0 1.5rem 2rem;
 }
 
-.card-logo_clmLeft .card-logo_clmLeft > ul > li {
+.card-flip-back .card-flip-back > ul > li {
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1250px) {
+  #flipCard:checked + .card-flip {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
 }
 
 .fa-sass,
@@ -1471,7 +1461,7 @@ main {
 }
 
 .fa-bootstrap {
-  color: #8664b9;
+  color: #543485;
 }
 
 .fa-react {
@@ -1524,6 +1514,17 @@ main {
     -ms-grid-columns: (minmax(20.5rem, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
     justify-items: center;
+  }
+  label.flipCard {
+    z-index: 0;
+  }
+  .card-flip {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .card-flip:hover {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
   }
   .pagination-container {
     display: none;
@@ -2421,9 +2422,10 @@ main {
   background-color: var(--color-primary-lighter);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
+  top: 7rem;
   width: 100vw;
-  height: 100vh;
-  z-index: 9;
+  height: 90vh;
+  z-index: 999;
 }
 
 .paddingTop {
@@ -2481,7 +2483,7 @@ main {
 
 .hlgt {
   color: var(--color-accent);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .hlgt-light {

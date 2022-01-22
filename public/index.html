@@ -61,7 +61,7 @@
           <div class="flex flex-clm">
             <div class="flex flex-center">
               <label class="switch mg-x-1">
-                <input type="checkbox" id="handlerTheme" />
+                <input type="checkbox" id="handlerTheme" class="themeCheck" />
                 <span class="slider round"></span>
               </label>
             </div>
@@ -122,7 +122,11 @@
           <li>
             <div class="flex flex-st">
               <label class="switch">
-                <input type="checkbox" id="handlerThemeHidden" />
+                <input
+                  type="checkbox"
+                  id="handlerThemeHidden"
+                  class="themeCheck"
+                />
                 <span class="slider round"></span>
               </label>
             </div>
@@ -239,20 +243,21 @@
         <div class="section-container">
           <h2 class="section-heading skills-title flex">Skills</h2>
         </div>
-
         <div class="container-logos">
           <!-- ^ HTML -->
-          <article class="flip-card">
-            <div class="flip-card-inner">
-              <div class="card-logo flip-card-front">
-                <h3 class="card-logo-header">HTML</h3>
+          <div class="card-container">
+            <label class="flipCard" for="flipCard"></label>
+            <input type="checkbox" id="flipCard" hidden />
+            <div class="card-flip">
+              <div class="card-flip-front">
+                <h3 class="card-flip-front-header">HTML</h3>
                 <img
-                  class="card-logo-img"
+                  class="card-flip-front-img"
                   src="/images/logo_html.png"
                   width="61"
                   alt="Logo HTML"
                 />
-                <div class="card-logo-table">
+                <div class="card-flip-front-table">
                   <table>
                     <tbody>
                       <tr>
@@ -302,20 +307,18 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="card-logo-footer"></div>
+                <div class="card-flip-front-footer"></div>
               </div>
-              <div class="card-logo_clmLeft flip-card-back">
+              <div class="card-flip-back">
                 <div class="selfTaugh">
                   <div class="flex flex-center selfTaugh">
                     <i class="fas fa-award mg-x-1"></i>
                     <h4>Certificates:</h4>
                   </div>
                   <ul>
-                    <li>
-                      <a href="javascript:void(0)" title="Upon request">
-                        - codewithmosh - The Ultimate HTML/CSS Mastery Series 1,
-                        2 & 3</a
-                      >
+                    <li title="Upon request">
+                      - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2
+                      & 3
                     </li>
                   </ul>
 
@@ -328,32 +331,30 @@
                       <p>
                         - Continue building websites through the challenges
                         offered on the
-                        <a
-                          class="hlgt"
-                          href="https://www.frontendmentor.io/home"
-                          target="_blank"
-                          >Frontend Mentor</a
-                        >
-                        platform (Q1 & Q2, 2022).
+                        <span class="hlgt"> Frontend Mentor</span> platform (Q1
+                        & Q2, 2022).
                       </p>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-          </article>
+          </div>
           <!-- ^ CSS -->
-          <article class="flip-card">
-            <div class="flip-card-inner">
-              <div class="card-logo flip-card-front">
-                <h3 class="card-logo-header">CSS</h3>
+
+          <div class="card-container">
+            <label class="flipCard" for="flipCard"></label>
+            <input type="checkbox" id="flipCard" hidden />
+            <div class="card-flip">
+              <div class="card-flip-front">
+                <h3 class="card-flip-front-header">CSS</h3>
                 <img
-                  class="card-logo-img"
+                  class="card-flip-front-img"
                   src="/images/logo_css.png"
                   width="70"
                   alt="Logo CSS"
                 />
-                <div class="card-logo-table">
+                <div class="card-flip-front-table">
                   <table>
                     <tbody>
                       <tr>
@@ -403,7 +404,7 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="card-logo-footer">
+                <div class="card-flip-front-footer">
                   <h4>Good knowledge using:</h4>
                   <div class="flex flex-center">
                     <i class="fab fa-sass mg-x-1" title="Sass"></i>
@@ -412,17 +413,15 @@
                 </div>
               </div>
 
-              <div class="card-logo_clmLeft flex-st flip-card-back">
+              <div class="card-flip-back flex-st flip-card-back">
                 <div class="selfTaugh flex flex-center">
                   <i class="fas fa-award mg-x-1"></i>
                   <h4>Certificates:</h4>
                 </div>
                 <ul>
                   <li>
-                    <a href="javascript:void(0)" title="Upon request">
-                      - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2
-                      & 3</a
-                    >
+                    - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2 &
+                    3
                   </li>
                 </ul>
 
@@ -440,31 +439,28 @@
                   <li>
                     <p>
                       - I will begin to learn and practice with
-                      <a
-                        href="https://greensock.com/gsap/"
-                        target="_blank"
-                        class="hlgt"
-                        >GSAP</a
-                      >
+                      <span class="hlgt">GSAP</span>
                       animations (Feb 22).
                     </p>
                   </li>
                 </ul>
               </div>
             </div>
-          </article>
+          </div>
           <!-- ^ JS -->
-          <article class="flip-card">
-            <div class="flip-card-inner">
-              <div class="card-logo flip-card-front">
-                <h3 class="card-logo-header">JavaScript</h3>
+          <div class="card-container">
+            <label class="flipCard" for="flipCard"></label>
+            <input type="checkbox" id="flipCard" hidden />
+            <div class="card-flip">
+              <div class="card-flip-front">
+                <h3 class="card-flip-front-header">JavaScript</h3>
                 <img
-                  class="card-logo-img"
+                  class="card-flip-front-img"
                   src="/images/logo_js.png"
                   width="70"
                   alt="Logo JS"
                 />
-                <div class="card-logo-table">
+                <div class="card-flip-front-table">
                   <table>
                     <tbody>
                       <tr>
@@ -515,22 +511,20 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="card-logo-footer">
+                <div class="card-flip-front-footer">
                   <h4>Good knowledge using:</h4>
                   <div class="flex flex-centered">
                     <img src="/images/jquery.svg" width="42" alt="jQuery" />
                   </div>
                 </div>
               </div>
-              <div class="card-logo_clmLeft flip-card-back">
+              <div class="card-flip-back flex-st flip-card-back">
                 <div class="flex flex-center selfTaugh">
                   <i class="fas fa-award mg-x-1"></i>
                   <h4>Certificates:</h4>
                 </div>
                 <ul>
-                  <li>
-                    <a href="javascript:void(0)"> - In progress.</a>
-                  </li>
+                  <li>- In progress.</li>
                 </ul>
 
                 <div class="flex flex-center selfTaugh">
@@ -542,20 +536,15 @@
                     <p>
                       - I have begun a course called: JavaScript 2: Advanced JS
                       for Websites and Web Applications. Aris Markogiannakis,
-                      City University of London (Jan - Mar 22).
+                      <span class="hlgt"> City University of London</span> (Jan
+                      - Mar 22).
                     </p>
                   </li>
 
                   <li>
                     <p>
                       - Continue doing
-                      <a
-                        href="https://edabit.com/user/TAMxX5h3LggMLsijj/"
-                        target="_blank"
-                        class="hlgt"
-                      >
-                        Edabit</a
-                      >
+                      <span class="hlgt"> Edabit</span>
                       challenges, my first milestone is to achieve 5.000 XP in
                       JS exercises (Q1 2022).
                     </p>
@@ -563,19 +552,22 @@
                 </ul>
               </div>
             </div>
-          </article>
+          </div>
+
           <!-- ^ SQL -->
-          <article class="flip-card">
-            <div class="flip-card-inner">
-              <div class="card-logo flip-card-front">
-                <h3 class="card-logo-header">SQL</h3>
+          <div class="card-container">
+            <label class="flipCard" for="flipCard"></label>
+            <input type="checkbox" id="flipCard" hidden />
+            <div class="card-flip">
+              <div class="card-flip-front">
+                <h3 class="card-flip-front-header">SQL</h3>
                 <img
-                  class="card-logo-img"
+                  class="card-flip-front-img"
                   src="/images/logo_MySQL.png"
                   width="135"
                   alt="Logo MySQL"
                 />
-                <div class="card-logo-table">
+                <div class="card-flip-front-table">
                   <table>
                     <tbody>
                       <tr>
@@ -609,7 +601,7 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="card-logo-footer">
+                <div class="card-flip-front-footer">
                   <h4>Currently working with:</h4>
                   <img
                     width="52"
@@ -618,15 +610,13 @@
                   />
                 </div>
               </div>
-              <div class="card-logo_clmLeft flip-card-back">
+              <div class="card-flip-back flip-card-back">
                 <div class="selfTaugh flex flex-center">
                   <i class="fas fa-award mg-x-1"></i>
                   <h4>Certificates:</h4>
                 </div>
                 <ul>
-                  <li>
-                    <a href="javascript:void(0)"> - In progress.</a>
-                  </li>
+                  <li>- In progress.</li>
                 </ul>
                 <div class="selfTaugh flex flex-center">
                   <i class="fas fa-check-square mg-x-1"></i>
@@ -642,7 +632,7 @@
                 </ul>
               </div>
             </div>
-          </article>
+          </div>
         </div>
 
         <div class="pagination-container">
@@ -675,8 +665,8 @@
               <i class="fab fa-git-square"> Git</i> -
               <i class="fab fa-github"> Github</i> -
               <i class="fab fa-npm"> NPM</i> -
-              <i class="fas fa-box-open"></i>
-                 <span style="font-weight: 300"> Parcel.js</span></i
+              <i class="fas fa-box-open">
+                <span style="font-weight: 300"> Parcel.js</span></i
               >
               - <i class="fab fa-jira"> Jira</i> -
               <i class="fab fa-figma"> Figma</i>
