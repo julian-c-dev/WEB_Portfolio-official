@@ -6,7 +6,7 @@ const swiper3 = document.querySelector(".swiper3");
 const swiper4 = document.querySelector(".swiper4");
 let swiper = null;
 
-const flipCard = document.querySelectorAll(".flip-card");
+const flipCard = document.querySelectorAll(".card-container");
 let slideIndex = 2;
 let dots = document.querySelectorAll(".slide-circle");
 
@@ -131,7 +131,6 @@ const elementsHlgt = document.getElementsByClassName("hlgt");
 const logo = document.getElementById("logo");
 const logoMobile = document.getElementById("logoHidden");
 const burguer = document.querySelector(".burger__btn");
-console.log(checkboxes);
 
 let colorTheme = true;
 

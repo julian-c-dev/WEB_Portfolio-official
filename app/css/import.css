@@ -511,6 +511,7 @@ body .sideLinks:active {
 
 body #themeMobile {
   color: var(--color-content-lighter);
+  font-size: 2rem;
 }
 
 body h1 .overTitle {
@@ -1434,7 +1435,10 @@ label.flipCard {
 }
 
 @media screen and (max-width: 1250px) {
-  #flipCard:checked + .card-flip {
+  #flipCard1:checked + .card-flip,
+  #flipCard2:checked + .card-flip,
+  #flipCard3:checked + .card-flip,
+  #flipCard4:checked + .card-flip {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
   }

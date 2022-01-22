@@ -140,7 +140,10 @@ label.flipCard {
   }
 }
 @media screen and(max-width:1250px) {
-  #flipCard:checked + .card-flip {
+  #flipCard1:checked + .card-flip,
+  #flipCard2:checked + .card-flip,
+  #flipCard3:checked + .card-flip,
+  #flipCard4:checked + .card-flip {
     transform: rotateY(180deg);
   }
 }
