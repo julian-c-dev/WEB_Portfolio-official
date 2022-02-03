@@ -1,6 +1,6 @@
 .section-contact {
   & > p {
-    max-width: 90%;
+    max-width: 95%;
     white-space: initial;
   }
   & > ul {
@@ -23,21 +23,6 @@
     }
   }
 }
-.contact-banner {
-  margin: 3rem auto;
-  text-align: center;
-  padding: 2rem;
-  font-size: 1.7rem;
-  border-radius: 15px;
-  max-width: 30rem;
-  color: var(--color-primary-opacity);
-  background-size: 300% 100%;
-  transition: all 0.5s linear;
-  &:hover {
-    box-shadow: 0 4px 45px 0 rgba(248, 142, 42, 0.75);
-    color: var(--color-darkest);
-  }
-}
 
 // ^ Media Queries ^
 
@@ -51,6 +36,7 @@
 
 @media screen and(min-width: 1000px) {
   .section-contact {
+    width: 100%;
     padding-bottom: 1rem;
     & > p {
       margin: 1rem 0 3rem 0;
@@ -61,8 +47,5 @@
     & > ul > li {
       margin-bottom: 1rem;
     }
-  }
-  .contact-banner {
-    margin: 4rem auto 5rem auto;
   }
 }

@@ -2134,7 +2134,7 @@ label.flipCard {
 }
 
 .section-contact > p {
-  max-width: 90%;
+  max-width: 95%;
   white-space: initial;
 }
 
@@ -2160,25 +2160,6 @@ label.flipCard {
   text-decoration: none;
 }
 
-.contact-banner {
-  margin: 3rem auto;
-  text-align: center;
-  padding: 2rem;
-  font-size: 1.7rem;
-  border-radius: 15px;
-  max-width: 30rem;
-  color: var(--color-primary-opacity);
-  background-size: 300% 100%;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-
-.contact-banner:hover {
-  -webkit-box-shadow: 0 4px 45px 0 rgba(248, 142, 42, 0.75);
-          box-shadow: 0 4px 45px 0 rgba(248, 142, 42, 0.75);
-  color: var(--color-darkest);
-}
-
 @media screen and (min-width: 420px) {
   .section-contact > ul > li {
     font-size: 1.7rem;
@@ -2187,6 +2168,7 @@ label.flipCard {
 
 @media screen and (min-width: 1000px) {
   .section-contact {
+    width: 100%;
     padding-bottom: 1rem;
   }
   .section-contact > p {
@@ -2197,9 +2179,6 @@ label.flipCard {
   }
   .section-contact > ul > li {
     margin-bottom: 1rem;
-  }
-  .contact-banner {
-    margin: 4rem auto 5rem auto;
   }
 }
 
