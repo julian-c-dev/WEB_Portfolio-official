@@ -39,7 +39,7 @@ label.flipCard {
   grid-template: 1fr / 1fr;
   grid-template-areas: "frontAndBack";
   transform-style: preserve-3d;
-  transition: all 0.7s ease;
+  transition: all 1s ease;
 }
 
 .card-flip-front {
@@ -50,6 +50,8 @@ label.flipCard {
   display: grid;
   grid-template-rows: repeat(4);
   padding: 0 1.3rem;
+  z-index: 1;
+  transition-delay: 0.3s;
 
   & .card-flip-front-header {
     font-size: 1.8rem;
@@ -107,7 +109,6 @@ label.flipCard {
   display: block;
   padding: 1.3rem;
   border-radius: 20px;
-
   width: 25rem;
   height: 45rem;
   font-size: 1.6rem;
@@ -139,12 +140,16 @@ label.flipCard {
     margin-bottom: 1rem;
   }
 }
+
 @media screen and(max-width:1250px) {
   #flipCard1:checked + .card-flip,
   #flipCard2:checked + .card-flip,
   #flipCard3:checked + .card-flip,
   #flipCard4:checked + .card-flip {
     transform: rotateY(180deg);
+    .card-flip-front {
+      z-index: 0;
+    }
   }
 }
 
@@ -213,7 +218,12 @@ label.flipCard {
     &:hover {
       transform: rotateY(180deg);
     }
+
+    &:hover .card-flip-front {
+      z-index: 0;
+    }
   }
+
   .pagination-container {
     display: none;
   }

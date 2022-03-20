@@ -20,6 +20,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/app/css/import.css" />
   </head>
   <body class="dark-theme">
@@ -69,7 +70,9 @@
         </div>
 
         <ul class="nav__links flex flex-center">
-          <li><a id="navItem1" href="#sec_About">About</a></li>
+          <li>
+            <a id="navItem1" href="#sec_About">About</a>
+          </li>
           <li><a id="navItem2" href="#sec_Skills">Skills</a></li>
           <li><a id="navItem3" href="#sec_Experience">Experience</a></li>
           <li><a id="navItem4" href="#sec_Contact">Contact</a></li>
@@ -143,15 +146,13 @@
           <h1>
             <span class="overTitle">Welcome to my site, my name is</span><br />
             <span class="title">Julian Cantera </span><br />
-            <span class="subTitle">Web Developer</span>
+            <span class="subTitle">Front-End Developer</span>
           </h1>
           <p class="hero__content">
-            I am a software engineer specializing in building Web components. I
-            am a fast learner proactive, and highly motivated person. Currently,
-            I am focused on improving my
-            <span class="bold hlgt">JavaScript</span> skills, as well as
-            learning everything about the
-            <span class="bold hlgt">React</span> library.
+            Building things that live in computers is what
+            <span class="bold hlgt"> I love to do</span>. I am a fast learner,
+            proactive, and team player individual with expertise in web
+            development and <span class="bold hlgt">UI components</span>.
           </p>
 
           <a class="btn" href="#sec_Skills"> Check out all my skills! </a>
@@ -195,7 +196,9 @@
       <!-- * Section: About -->
       <section id="sec_About" class="section">
         <div class="section-container">
-          <h2 class="section-heading flex">About Me</h2>
+          <div data-aos="fade-right">
+            <h2 class="section-heading flex">About Me</h2>
+          </div>
           <div class="section-content-frame">
             <div class="section-content">
               <p>
@@ -236,10 +239,16 @@
               </p>
             </div>
             <div class="about-image flex flex-clmn">
-              <img src="/images/picture.jpg" width="240" alt="Myself picture" />
-              <figcaption class="caption">
-                Based in London (UK). Settled Status.
-              </figcaption>
+              <div data-aos="fade-left">
+                <img
+                  src="/images/picture.jpg"
+                  width="240"
+                  alt="Myself picture"
+                />
+                <figcaption class="caption">
+                  Based in London (UK). Settled Status.
+                </figcaption>
+              </div>
             </div>
           </div>
         </div>
@@ -248,84 +257,339 @@
       <!-- * Section: Skills -->
       <section id="sec_Skills" class="section">
         <div class="section-container">
-          <h2 class="section-heading skills-title flex">Skills</h2>
+          <div data-aos="fade-right">
+            <h2 class="section-heading skills-title flex">Skills</h2>
+          </div>
         </div>
         <div class="container-logos">
           <!-- ^ HTML -->
-          <div class="card-container">
-            <label class="flipCard" for="flipCard1"></label>
-            <input type="checkbox" id="flipCard1" hidden />
-            <div class="card-flip">
-              <div class="card-flip-front">
-                <h3 class="card-flip-front-header">HTML</h3>
-                <img
-                  class="card-flip-front-img"
-                  src="/images/logo_html.png"
-                  width="61"
-                  alt="Logo HTML"
-                />
-                <div class="card-flip-front-table">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Fundamentals</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Semantic tags</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>HTML Forms</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Accessibility</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Best Practices</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Experience</th>
-                        <td>&#62; 1 year</td>
-                      </tr>
-                    </tbody>
-                  </table>
+          <div
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="500"
+          >
+            <div class="card-container">
+              <label class="flipCard" for="flipCard1"></label>
+              <input type="checkbox" id="flipCard1" hidden />
+              <div class="card-flip">
+                <div class="card-flip-front">
+                  <h3 class="card-flip-front-header">HTML</h3>
+                  <img
+                    class="card-flip-front-img"
+                    src="/images/logo_html.png"
+                    width="61"
+                    alt="Logo HTML"
+                  />
+                  <div class="card-flip-front-table">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>Fundamentals</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Semantic tags</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>HTML Forms</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Accessibility</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Best Practices</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Experience</th>
+                          <td>&#62; 2 years</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-flip-front-footer"></div>
                 </div>
-                <div class="card-flip-front-footer"></div>
+                <div class="card-flip-back">
+                  <div class="selfTaugh">
+                    <div class="flex flex-center selfTaugh">
+                      <i class="fas fa-award mg-x-1"></i>
+                      <h4>Certificates:</h4>
+                    </div>
+                    <ul>
+                      <li title="Upon request">
+                        - codewithmosh - The Ultimate HTML/CSS Mastery Series 1,
+                        2 & 3
+                      </li>
+                    </ul>
+
+                    <div class="flex flex-center selfTaugh">
+                      <i class="fas fa-check-square mg-x-1"></i>
+                      <h4>Next Steps:</h4>
+                    </div>
+                    <ul>
+                      <li>
+                        <p>
+                          - Continue building websites through the challenges
+                          offered on the
+                          <span class="hlgt"> Frontend Mentor</span> platform
+                          (Q2, 2022).
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="card-flip-back">
-                <div class="selfTaugh">
+            </div>
+          </div>
+          <!-- ^ CSS -->
+          <div
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="500"
+          >
+            <div class="card-container">
+              <label class="flipCard" for="flipCard2"></label>
+              <input type="checkbox" id="flipCard2" hidden />
+              <div class="card-flip">
+                <div class="card-flip-front">
+                  <h3 class="card-flip-front-header">CSS</h3>
+                  <img
+                    class="card-flip-front-img"
+                    src="/images/logo_css.png"
+                    width="70"
+                    alt="Logo CSS"
+                  />
+                  <div class="card-flip-front-table">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>Fundamentals</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Responsive Des.</th>
+
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Flex & CSS Grid</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Transitions</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Animations</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Experience</th>
+                          <td>&#62; 2 years</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-flip-front-footer">
+                    <h4>Good knowledge using:</h4>
+                    <div class="flex flex-center">
+                      <i class="fab fa-sass mg-x-1" title="Sass"></i>
+                      <i class="fab fa-bootstrap mg-x-1" title="Bootstrap"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-flip-back">
+                  <div class="selfTaugh flex flex-center">
+                    <i class="fas fa-award mg-x-1"></i>
+                    <h4>Certificates:</h4>
+                  </div>
+                  <ul>
+                    <li>
+                      - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2
+                      & 3
+                    </li>
+                  </ul>
+
+                  <div class="selfTaugh flex flex-center">
+                    <i class="fas fa-check-square mg-x-1"></i>
+                    <h4>Next Steps:</h4>
+                  </div>
+                  <ul>
+                    <li>
+                      <p></p>
+                    </li>
+                    <li>
+                      <p>
+                        - I will begin to learn and practice with
+                        <span class="hlgt">GSAP</span>
+                        animations (Apr 1st).
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ^ JS -->
+          <div
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="500"
+          >
+            <div class="card-container">
+              <label class="flipCard" for="flipCard3"></label>
+              <input type="checkbox" id="flipCard3" hidden />
+              <div class="card-flip">
+                <div class="card-flip-front">
+                  <h3 class="card-flip-front-header">JavaScript</h3>
+                  <img
+                    class="card-flip-front-img"
+                    src="/images/logo_js.png"
+                    width="70"
+                    alt="Logo JS"
+                  />
+                  <div class="card-flip-front-table">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>JS Basics ES6</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th>DOM Control</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Array Methods</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Fetch API & HTTP</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Algorithms & DS</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Experience</th>
+                          <td>1 year</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-flip-front-footer">
+                    <h4>Good knowledge using:</h4>
+                    <div class="flex flex-centered">
+                      <img src="/images/jquery.svg" width="42" alt="jQuery" />
+                    </div>
+                  </div>
+                </div>
+                <div class="card-flip-back">
                   <div class="flex flex-center selfTaugh">
                     <i class="fas fa-award mg-x-1"></i>
                     <h4>Certificates:</h4>
                   </div>
                   <ul>
-                    <li title="Upon request">
-                      - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2
-                      & 3
+                    <li>
+                      - JavaScript 2: Advanced JS for Websites and Web
+                      Applications. Aris Markogiannakis, City University of
+                      London ( Mar 22).
                     </li>
                   </ul>
 
@@ -335,11 +599,15 @@
                   </div>
                   <ul>
                     <li>
+                      <p></p>
+                    </li>
+
+                    <li>
                       <p>
-                        - Continue building websites through the challenges
-                        offered on the
-                        <span class="hlgt"> Frontend Mentor</span> platform (Q1
-                        & Q2, 2022).
+                        - Continue doing
+                        <span class="hlgt"> Edabit</span>
+                        challenges, my first milestone is to achieve 5.000 XP in
+                        JS exercises (Q2 2022).
                       </p>
                     </li>
                   </ul>
@@ -347,295 +615,108 @@
               </div>
             </div>
           </div>
-          <!-- ^ CSS -->
-          <div class="card-container">
-            <label class="flipCard" for="flipCard2"></label>
-            <input type="checkbox" id="flipCard2" hidden />
-            <div class="card-flip">
-              <div class="card-flip-front">
-                <h3 class="card-flip-front-header">CSS</h3>
-                <img
-                  class="card-flip-front-img"
-                  src="/images/logo_css.png"
-                  width="70"
-                  alt="Logo CSS"
-                />
-                <div class="card-flip-front-table">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Fundamentals</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Flex & CSS Grid</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Responsive Des.</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Transitions</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="far fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Animations</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="far fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Experience</th>
-                        <td>&#62; 1 year</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-flip-front-footer">
-                  <h4>Good knowledge using:</h4>
-                  <div class="flex flex-center">
-                    <i class="fab fa-sass mg-x-1" title="Sass"></i>
-                    <i class="fab fa-bootstrap mg-x-1" title="Bootstrap"></i>
-                  </div>
-                </div>
-              </div>
 
-              <div class="card-flip-back">
-                <div class="selfTaugh flex flex-center">
-                  <i class="fas fa-award mg-x-1"></i>
-                  <h4>Certificates:</h4>
-                </div>
-                <ul>
-                  <li>
-                    - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2 &
-                    3
-                  </li>
-                </ul>
-
-                <div class="selfTaugh flex flex-center">
-                  <i class="fas fa-check-square mg-x-1"></i>
-                  <h4>Next Steps:</h4>
-                </div>
-                <ul>
-                  <li>
-                    <p>
-                      - I have begun a short course dedicated to improving my
-                      expertise with grid and flex features (Jan 22).
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      - I will begin to learn and practice with
-                      <span class="hlgt">GSAP</span>
-                      animations (Feb 22).
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- ^ JS -->
-          <div class="card-container">
-            <label class="flipCard" for="flipCard3"></label>
-            <input type="checkbox" id="flipCard3" hidden />
-            <div class="card-flip">
-              <div class="card-flip-front">
-                <h3 class="card-flip-front-header">JavaScript</h3>
-                <img
-                  class="card-flip-front-img"
-                  src="/images/logo_js.png"
-                  width="70"
-                  alt="Logo JS"
-                />
-                <div class="card-flip-front-table">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>JS Basics ES6</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <th>DOM Control</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Array Methods</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="fas fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Fetch API & HTTP</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Async JS</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Experience</th>
-                        <td>&#60; 1 year</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-flip-front-footer">
-                  <h4>Good knowledge using:</h4>
-                  <div class="flex flex-centered">
-                    <img src="/images/jquery.svg" width="42" alt="jQuery" />
-                  </div>
-                </div>
-              </div>
-              <div class="card-flip-back">
-                <div class="flex flex-center selfTaugh">
-                  <i class="fas fa-award mg-x-1"></i>
-                  <h4>Certificates:</h4>
-                </div>
-                <ul>
-                  <li>- In progress.</li>
-                </ul>
-
-                <div class="flex flex-center selfTaugh">
-                  <i class="fas fa-check-square mg-x-1"></i>
-                  <h4>Next Steps:</h4>
-                </div>
-                <ul>
-                  <li>
-                    <p>
-                      - I have begun a course called: JavaScript 2: Advanced JS
-                      for Websites and Web Applications. Aris Markogiannakis,
-                      <span class="hlgt"> City University of London</span> (Jan
-                      - Mar 22).
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      - Continue doing
-                      <span class="hlgt"> Edabit</span>
-                      challenges, my first milestone is to achieve 5.000 XP in
-                      JS exercises (Q1 2022).
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- ^ SQL -->
-          <div class="card-container">
-            <label class="flipCard" for="flipCard4"></label>
-            <input type="checkbox" id="flipCard4" hidden />
-            <div class="card-flip">
-              <div class="card-flip-front">
-                <h3 class="card-flip-front-header">SQL</h3>
-                <img
-                  class="card-flip-front-img"
-                  src="/images/logo_MySQL.png"
-                  width="135"
-                  alt="Logo MySQL"
-                />
-                <div class="card-flip-front-table">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Fundamentals</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="far fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>SQL Database</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="far fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Best Practices</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i
-                          ><i class="far fa-star"></i><i class="far fa-star"></i
-                          ><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Experience</th>
-                        <td>&#62; 1 year</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-flip-front-footer">
-                  <h4>Currently working with:</h4>
+          <!-- ^ React -->
+          <div
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="500"
+          >
+            <div class="card-container">
+              <label class="flipCard" for="flipCard4"></label>
+              <input type="checkbox" id="flipCard4" hidden />
+              <div class="card-flip">
+                <div class="card-flip-front">
+                  <h3 class="card-flip-front-header">React</h3>
                   <img
-                    width="52"
-                    src="/images/phpmyadmin-icon-5607-Windows.ico"
-                    title="phpmyadmin"
+                    class="card-flip-front-img"
+                    src="/images/logo_react.png"
+                    width="90"
+                    alt="Logo MySQL"
                   />
+                  <div class="card-flip-front-table">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>Fundamentals</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Lifeclycle Methods</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>React Hooks</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Fetch API (Axios)</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Advanced React</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i
+                            ><i class="fas fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i
+                            ><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Experience</th>
+                          <td>&#60; 1 year</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-flip-front-footer"></div>
                 </div>
-              </div>
-              <div class="card-flip-back">
-                <div class="selfTaugh flex flex-center">
-                  <i class="fas fa-award mg-x-1"></i>
-                  <h4>Certificates:</h4>
+                <div class="card-flip-back">
+                  <div class="selfTaugh flex flex-center">
+                    <i class="fas fa-award mg-x-1"></i>
+                    <h4>Certificates:</h4>
+                  </div>
+                  <ul>
+                    <li>- In progress.</li>
+                  </ul>
+                  <div class="selfTaugh flex flex-center">
+                    <i class="fas fa-check-square mg-x-1"></i>
+                    <h4>Next Steps:</h4>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>
+                        - Currently doing the Udemy's Course: Modern React with
+                        Redux.
+                      </p>
+                    </li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>- In progress.</li>
-                </ul>
-                <div class="selfTaugh flex flex-center">
-                  <i class="fas fa-check-square mg-x-1"></i>
-                  <h4>Next Steps:</h4>
-                </div>
-                <ul>
-                  <li>
-                    <p>
-                      - MySql - Personal project - Developing a UI system that
-                      will sort books from a personal DB (Q1 & Q2, 2022).
-                    </p>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -684,15 +765,16 @@
       <!-- * Section: Experience -->
       <section id="sec_Experience" class="section">
         <div class="section-container">
-          <h2 class="section-heading flex">Experience</h2>
-
+          <div data-aos="fade-right">
+            <h2 class="section-heading flex">Experience</h2>
+          </div>
           <h3 class="section-exp_subHeading">Jobs:</h3>
 
           <div class="exp-content">
             <div class="swiper1 job-swiper-frame">
               <div class="swiper2 swiper mySwiper">
                 <div class="swiper3 swiper-wrapper">
-                  <article class="job swiper4 swiper-slide">
+                  <div class="job swiper4 swiper-slide" data-aos="fade-left">
                     <p class="job-role">Web Developer Role</p>
                     <p class="job-overtitle">Sep - Dec <time>2021</time></p>
                     <h3 class="job-title">Blubale Website</h3>
@@ -734,9 +816,9 @@
                         ></a>
                       </li>
                     </ul>
-                  </article>
-                  <article class="job swiper-slide reversed">
-                    <p class="job-role">QA Tester Role</p>
+                  </div>
+                  <div class="job swiper-slide reversed" data-aos="fade-right">
+                    <p class="job-role">Software QA Tester Role</p>
                     <p class="job-overtitle">
                       Oct <time>2018</time> - Apr <time>2019</time>
                     </p>
@@ -762,7 +844,7 @@
                       <li>Browsers dev-tools</li>
                       <li>pgAdming (postgresql)</li>
                     </ul>
-                  </article>
+                  </div>
                 </div>
               </div>
             </div>
@@ -776,7 +858,7 @@
         </div>
         <div class="section-practices">
           <div class="grid-practices">
-            <article class="card">
+            <article class="card" data-aos="zoom-in">
               <h4 class="card_header">First Portfolio</h4>
               <p class="card_content">
                 This is a mandatory project for all software developers. The
@@ -795,7 +877,7 @@
                 ></a>
               </div>
             </article>
-            <article class="card">
+            <article class="card" data-aos="zoom-in">
               <h4 class="card_header">Fetch CRUD JS</h4>
               <p class="card_content">
                 All the books I have read will be displayed and filtered by
@@ -812,7 +894,7 @@
                 ></a>
               </div>
             </article>
-            <article class="card">
+            <article class="card" data-aos="zoom-in">
               <h4 class="card_header">Productivity Wallpapers</h4>
               <p class="card_content">
                 UI practice for simulating a Productivity desktop wallpaper tool
@@ -834,7 +916,7 @@
                 ></a>
               </div>
             </article>
-            <article class="card">
+            <article class="card" data-aos="zoom-in">
               <h4 class="card_header">Moshify Web Practice</h4>
               <p class="card_content">
                 The final project for "The Ultimate HTML/CSS Mastery Series 1, 2
@@ -864,7 +946,9 @@
       <!-- * Section: Contact -->
       <section id="sec_Contact" class="section">
         <div class="section-container">
-          <h2 class="section-heading flex">Contact</h2>
+          <div data-aos="fade-right">
+            <h2 class="section-heading flex">Contact</h2>
+          </div>
           <div class="section-content section-contact">
             <p>Feel free to contact me through one of the following methods:</p>
 
@@ -900,7 +984,11 @@
     <script src="/app/js/functions.js"></script>
     <script src="/app/js/navBar.js"></script>
 
-    <!-- * Swiper JS [Experience Section] -->
+    <!-- * Third parties -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -15,6 +15,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  transition: color 0.4s, smooth;
+}
+
 button {
   background-color: transparent;
   border: none;

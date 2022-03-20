@@ -563,6 +563,7 @@ const elementsHlgt = document.getElementsByClassName("hlgt");
 const logo = document.getElementById("logo");
 const logoMobile = document.getElementById("logoHidden");
 const burguer = document.querySelector(".burger__btn");
+let lastScrollY = window.scrollY;
 let colorTheme = true;
 stwch_Theme.addEventListener("click", themeEventDesktop);
 stwch_ThemeHidden.addEventListener("click", themeEventMobile);
@@ -581,15 +582,19 @@ function toggleTheme() {
     if (colorTheme === true) {
         document.body.className = document.body.className.replace("dark-theme", "light-theme");
         colorTheme = false;
-        navDesk.classList.add("lightShadow");
-        navDesk.classList.remove("darkShadow");
+        if (lastScrollY >= 150) {
+            navDesk.classList.add("lightShadow");
+            navDesk.classList.remove("darkShadow");
+        }
         toggleBulbs();
         toggleHlgt();
         toggleLogo();
     } else {
         document.body.className = document.body.className.replace("light-theme", "dark-theme");
-        navDesk.classList.add("darkShadow");
-        navDesk.classList.remove("lightShadow");
+        if (lastScrollY >= 150) {
+            navDesk.classList.add("darkShadow");
+            navDesk.classList.remove("lightShadow");
+        }
         colorTheme = true;
         toggleBulbs();
         toggleHlgt();

@@ -131,7 +131,7 @@ const elementsHlgt = document.getElementsByClassName("hlgt");
 const logo = document.getElementById("logo");
 const logoMobile = document.getElementById("logoHidden");
 const burguer = document.querySelector(".burger__btn");
-
+let lastScrollY = window.scrollY;
 let colorTheme = true;
 
 stwch_Theme.addEventListener("click", themeEventDesktop);
@@ -163,8 +163,10 @@ function toggleTheme() {
       "light-theme"
     );
     colorTheme = false;
-    navDesk.classList.add("lightShadow");
-    navDesk.classList.remove("darkShadow");
+    if (lastScrollY >= 150) {
+      navDesk.classList.add("lightShadow");
+      navDesk.classList.remove("darkShadow");
+    }
     toggleBulbs();
     toggleHlgt();
     toggleLogo();
@@ -173,8 +175,10 @@ function toggleTheme() {
       "light-theme",
       "dark-theme"
     );
-    navDesk.classList.add("darkShadow");
-    navDesk.classList.remove("lightShadow");
+    if (lastScrollY >= 150) {
+      navDesk.classList.add("darkShadow");
+      navDesk.classList.remove("lightShadow");
+    }
     colorTheme = true;
     toggleBulbs();
     toggleHlgt();

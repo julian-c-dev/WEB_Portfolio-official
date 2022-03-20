@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/804d1be908.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="/index.6fef92d0.css">
   </head>
   <body class="dark-theme">
@@ -49,7 +50,9 @@
         </div>
 
         <ul class="nav__links flex flex-center">
-          <li><a id="navItem1" href="#sec_About">About</a></li>
+          <li>
+            <a id="navItem1" href="#sec_About">About</a>
+          </li>
           <li><a id="navItem2" href="#sec_Skills">Skills</a></li>
           <li><a id="navItem3" href="#sec_Experience">Experience</a></li>
           <li><a id="navItem4" href="#sec_Contact">Contact</a></li>
@@ -100,15 +103,13 @@
           <h1>
             <span class="overTitle">Welcome to my site, my name is</span><br>
             <span class="title">Julian Cantera </span><br>
-            <span class="subTitle">Web Developer</span>
+            <span class="subTitle">Front-End Developer</span>
           </h1>
           <p class="hero__content">
-            I am a software engineer specializing in building Web components. I
-            am a fast learner proactive, and highly motivated person. Currently,
-            I am focused on improving my
-            <span class="bold hlgt">JavaScript</span> skills, as well as
-            learning everything about the
-            <span class="bold hlgt">React</span> library.
+            Building things that live in computers is what
+            <span class="bold hlgt"> I love to do</span>. I am a fast learner,
+            proactive, and team player individual with expertise in web
+            development and <span class="bold hlgt">UI components</span>.
           </p>
 
           <a class="btn" href="#sec_Skills"> Check out all my skills! </a>
@@ -132,7 +133,9 @@
       <!-- * Section: About -->
       <section id="sec_About" class="section">
         <div class="section-container">
-          <h2 class="section-heading flex">About Me</h2>
+          <div data-aos="fade-right">
+            <h2 class="section-heading flex">About Me</h2>
+          </div>
           <div class="section-content-frame">
             <div class="section-content">
               <p>
@@ -173,10 +176,12 @@
               </p>
             </div>
             <div class="about-image flex flex-clmn">
-              <img src="/picture.e80157cc.jpg" width="240" alt="Myself picture">
-              <figcaption class="caption">
-                Based in London (UK). Settled Status.
-              </figcaption>
+              <div data-aos="fade-left">
+                <img src="/picture.e80157cc.jpg" width="240" alt="Myself picture">
+                <figcaption class="caption">
+                  Based in London (UK). Settled Status.
+                </figcaption>
+              </div>
             </div>
           </div>
         </div>
@@ -185,69 +190,252 @@
       <!-- * Section: Skills -->
       <section id="sec_Skills" class="section">
         <div class="section-container">
-          <h2 class="section-heading skills-title flex">Skills</h2>
+          <div data-aos="fade-right">
+            <h2 class="section-heading skills-title flex">Skills</h2>
+          </div>
         </div>
         <div class="container-logos">
           <!-- ^ HTML -->
-          <div class="card-container">
-            <label class="flipCard" for="flipCard1"></label>
-            <input type="checkbox" id="flipCard1" hidden="">
-            <div class="card-flip">
-              <div class="card-flip-front">
-                <h3 class="card-flip-front-header">HTML</h3>
-                <img class="card-flip-front-img" src="/logo_html.2fccb7ab.png" width="61" alt="Logo HTML">
-                <div class="card-flip-front-table">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Fundamentals</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Semantic tags</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>HTML Forms</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Accessibility</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Best Practices</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Experience</th>
-                        <td>&#62; 1 year</td>
-                      </tr>
-                    </tbody>
-                  </table>
+          <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500">
+            <div class="card-container">
+              <label class="flipCard" for="flipCard1"></label>
+              <input type="checkbox" id="flipCard1" hidden="">
+              <div class="card-flip">
+                <div class="card-flip-front">
+                  <h3 class="card-flip-front-header">HTML</h3>
+                  <img class="card-flip-front-img" src="/logo_html.2fccb7ab.png" width="61" alt="Logo HTML">
+                  <div class="card-flip-front-table">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>Fundamentals</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Semantic tags</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>HTML Forms</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Accessibility</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Best Practices</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Experience</th>
+                          <td>&#62; 2 years</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-flip-front-footer"></div>
                 </div>
-                <div class="card-flip-front-footer"></div>
+                <div class="card-flip-back">
+                  <div class="selfTaugh">
+                    <div class="flex flex-center selfTaugh">
+                      <i class="fas fa-award mg-x-1"></i>
+                      <h4>Certificates:</h4>
+                    </div>
+                    <ul>
+                      <li title="Upon request">
+                        - codewithmosh - The Ultimate HTML/CSS Mastery Series 1,
+                        2 & 3
+                      </li>
+                    </ul>
+
+                    <div class="flex flex-center selfTaugh">
+                      <i class="fas fa-check-square mg-x-1"></i>
+                      <h4>Next Steps:</h4>
+                    </div>
+                    <ul>
+                      <li>
+                        <p>
+                          - Continue building websites through the challenges
+                          offered on the
+                          <span class="hlgt"> Frontend Mentor</span> platform
+                          (Q2, 2022).
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="card-flip-back">
-                <div class="selfTaugh">
+            </div>
+          </div>
+          <!-- ^ CSS -->
+          <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500">
+            <div class="card-container">
+              <label class="flipCard" for="flipCard2"></label>
+              <input type="checkbox" id="flipCard2" hidden="">
+              <div class="card-flip">
+                <div class="card-flip-front">
+                  <h3 class="card-flip-front-header">CSS</h3>
+                  <img class="card-flip-front-img" src="/logo_css.d6352a5c.png" width="70" alt="Logo CSS">
+                  <div class="card-flip-front-table">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>Fundamentals</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Responsive Des.</th>
+
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Flex & CSS Grid</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Transitions</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Animations</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Experience</th>
+                          <td>&#62; 2 years</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-flip-front-footer">
+                    <h4>Good knowledge using:</h4>
+                    <div class="flex flex-center">
+                      <i class="fab fa-sass mg-x-1" title="Sass"></i>
+                      <i class="fab fa-bootstrap mg-x-1" title="Bootstrap"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-flip-back">
+                  <div class="selfTaugh flex flex-center">
+                    <i class="fas fa-award mg-x-1"></i>
+                    <h4>Certificates:</h4>
+                  </div>
+                  <ul>
+                    <li>
+                      - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2
+                      & 3
+                    </li>
+                  </ul>
+
+                  <div class="selfTaugh flex flex-center">
+                    <i class="fas fa-check-square mg-x-1"></i>
+                    <h4>Next Steps:</h4>
+                  </div>
+                  <ul>
+                    <li>
+                      <p></p>
+                    </li>
+                    <li>
+                      <p>
+                        - I will begin to learn and practice with
+                        <span class="hlgt">GSAP</span>
+                        animations (Apr 1st).
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ^ JS -->
+          <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500">
+            <div class="card-container">
+              <label class="flipCard" for="flipCard3"></label>
+              <input type="checkbox" id="flipCard3" hidden="">
+              <div class="card-flip">
+                <div class="card-flip-front">
+                  <h3 class="card-flip-front-header">JavaScript</h3>
+                  <img class="card-flip-front-img" src="/logo_js.91e83b4d.png" width="70" alt="Logo JS">
+                  <div class="card-flip-front-table">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>JS Basics ES6</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th>DOM Control</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Array Methods</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Fetch API & HTTP</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Algorithms & DS</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Experience</th>
+                          <td>1 year</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-flip-front-footer">
+                    <h4>Good knowledge using:</h4>
+                    <div class="flex flex-centered">
+                      <img src="/jquery.ba033936.svg" width="42" alt="jQuery">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-flip-back">
                   <div class="flex flex-center selfTaugh">
                     <i class="fas fa-award mg-x-1"></i>
                     <h4>Certificates:</h4>
                   </div>
                   <ul>
-                    <li title="Upon request">
-                      - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2
-                      & 3
+                    <li>
+                      - JavaScript 2: Advanced JS for Websites and Web
+                      Applications. Aris Markogiannakis, City University of
+                      London ( Mar 22).
                     </li>
                   </ul>
 
@@ -257,11 +445,15 @@
                   </div>
                   <ul>
                     <li>
+                      <p></p>
+                    </li>
+
+                    <li>
                       <p>
-                        - Continue building websites through the challenges
-                        offered on the
-                        <span class="hlgt"> Frontend Mentor</span> platform (Q1
-                        & Q2, 2022).
+                        - Continue doing
+                        <span class="hlgt"> Edabit</span>
+                        challenges, my first milestone is to achieve 5.000 XP in
+                        JS exercises (Q2 2022).
                       </p>
                     </li>
                   </ul>
@@ -269,250 +461,79 @@
               </div>
             </div>
           </div>
-          <!-- ^ CSS -->
-          <div class="card-container">
-            <label class="flipCard" for="flipCard2"></label>
-            <input type="checkbox" id="flipCard2" hidden="">
-            <div class="card-flip">
-              <div class="card-flip-front">
-                <h3 class="card-flip-front-header">CSS</h3>
-                <img class="card-flip-front-img" src="/logo_css.d6352a5c.png" width="70" alt="Logo CSS">
-                <div class="card-flip-front-table">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Fundamentals</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Flex & CSS Grid</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Responsive Des.</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Transitions</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Animations</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Experience</th>
-                        <td>&#62; 1 year</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-flip-front-footer">
-                  <h4>Good knowledge using:</h4>
-                  <div class="flex flex-center">
-                    <i class="fab fa-sass mg-x-1" title="Sass"></i>
-                    <i class="fab fa-bootstrap mg-x-1" title="Bootstrap"></i>
+
+          <!-- ^ React -->
+          <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500">
+            <div class="card-container">
+              <label class="flipCard" for="flipCard4"></label>
+              <input type="checkbox" id="flipCard4" hidden="">
+              <div class="card-flip">
+                <div class="card-flip-front">
+                  <h3 class="card-flip-front-header">React</h3>
+                  <img class="card-flip-front-img" src="/logo_react.5070e835.png" width="90" alt="Logo MySQL">
+                  <div class="card-flip-front-table">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>Fundamentals</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Lifeclycle Methods</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>React Hooks</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Fetch API (Axios)</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Advanced React</th>
+                          <td class="group-starts">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Experience</th>
+                          <td>&#60; 1 year</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
+                  <div class="card-flip-front-footer"></div>
                 </div>
-              </div>
-
-              <div class="card-flip-back">
-                <div class="selfTaugh flex flex-center">
-                  <i class="fas fa-award mg-x-1"></i>
-                  <h4>Certificates:</h4>
-                </div>
-                <ul>
-                  <li>
-                    - codewithmosh - The Ultimate HTML/CSS Mastery Series 1, 2 &
-                    3
-                  </li>
-                </ul>
-
-                <div class="selfTaugh flex flex-center">
-                  <i class="fas fa-check-square mg-x-1"></i>
-                  <h4>Next Steps:</h4>
-                </div>
-                <ul>
-                  <li>
-                    <p>
-                      - I have begun a short course dedicated to improving my
-                      expertise with grid and flex features (Jan 22).
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      - I will begin to learn and practice with
-                      <span class="hlgt">GSAP</span>
-                      animations (Feb 22).
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- ^ JS -->
-          <div class="card-container">
-            <label class="flipCard" for="flipCard3"></label>
-            <input type="checkbox" id="flipCard3" hidden="">
-            <div class="card-flip">
-              <div class="card-flip-front">
-                <h3 class="card-flip-front-header">JavaScript</h3>
-                <img class="card-flip-front-img" src="/logo_js.91e83b4d.png" width="70" alt="Logo JS">
-                <div class="card-flip-front-table">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>JS Basics ES6</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <th>DOM Control</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Array Methods</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Fetch API & HTTP</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Async JS</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Experience</th>
-                        <td>&#60; 1 year</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-flip-front-footer">
-                  <h4>Good knowledge using:</h4>
-                  <div class="flex flex-centered">
-                    <img src="/jquery.ba033936.svg" width="42" alt="jQuery">
+                <div class="card-flip-back">
+                  <div class="selfTaugh flex flex-center">
+                    <i class="fas fa-award mg-x-1"></i>
+                    <h4>Certificates:</h4>
                   </div>
+                  <ul>
+                    <li>- In progress.</li>
+                  </ul>
+                  <div class="selfTaugh flex flex-center">
+                    <i class="fas fa-check-square mg-x-1"></i>
+                    <h4>Next Steps:</h4>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>
+                        - Currently doing the Udemy's Course: Modern React with
+                        Redux.
+                      </p>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-              <div class="card-flip-back">
-                <div class="flex flex-center selfTaugh">
-                  <i class="fas fa-award mg-x-1"></i>
-                  <h4>Certificates:</h4>
-                </div>
-                <ul>
-                  <li>- In progress.</li>
-                </ul>
-
-                <div class="flex flex-center selfTaugh">
-                  <i class="fas fa-check-square mg-x-1"></i>
-                  <h4>Next Steps:</h4>
-                </div>
-                <ul>
-                  <li>
-                    <p>
-                      - I have begun a course called: JavaScript 2: Advanced JS
-                      for Websites and Web Applications. Aris Markogiannakis,
-                      <span class="hlgt"> City University of London</span> (Jan
-                      - Mar 22).
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      - Continue doing
-                      <span class="hlgt"> Edabit</span>
-                      challenges, my first milestone is to achieve 5.000 XP in
-                      JS exercises (Q1 2022).
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- ^ SQL -->
-          <div class="card-container">
-            <label class="flipCard" for="flipCard4"></label>
-            <input type="checkbox" id="flipCard4" hidden="">
-            <div class="card-flip">
-              <div class="card-flip-front">
-                <h3 class="card-flip-front-header">SQL</h3>
-                <img class="card-flip-front-img" src="/logo_MySQL.9a55b9bd.png" width="135" alt="Logo MySQL">
-                <div class="card-flip-front-table">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Fundamentals</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>SQL Database</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Best Practices</th>
-                        <td class="group-starts">
-                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Experience</th>
-                        <td>&#62; 1 year</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-flip-front-footer">
-                  <h4>Currently working with:</h4>
-                  <img width="52" src="/phpmyadmin-icon-5607-Windows.109b678e.ico" title="phpmyadmin">
-                </div>
-              </div>
-              <div class="card-flip-back">
-                <div class="selfTaugh flex flex-center">
-                  <i class="fas fa-award mg-x-1"></i>
-                  <h4>Certificates:</h4>
-                </div>
-                <ul>
-                  <li>- In progress.</li>
-                </ul>
-                <div class="selfTaugh flex flex-center">
-                  <i class="fas fa-check-square mg-x-1"></i>
-                  <h4>Next Steps:</h4>
-                </div>
-                <ul>
-                  <li>
-                    <p>
-                      - MySql - Personal project - Developing a UI system that
-                      will sort books from a personal DB (Q1 & Q2, 2022).
-                    </p>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -560,15 +581,16 @@
       <!-- * Section: Experience -->
       <section id="sec_Experience" class="section">
         <div class="section-container">
-          <h2 class="section-heading flex">Experience</h2>
-
+          <div data-aos="fade-right">
+            <h2 class="section-heading flex">Experience</h2>
+          </div>
           <h3 class="section-exp_subHeading">Jobs:</h3>
 
           <div class="exp-content">
             <div class="swiper1 job-swiper-frame">
               <div class="swiper2 swiper mySwiper">
                 <div class="swiper3 swiper-wrapper">
-                  <article class="job swiper4 swiper-slide">
+                  <div class="job swiper4 swiper-slide" data-aos="fade-left">
                     <p class="job-role">Web Developer Role</p>
                     <p class="job-overtitle">Sep - Dec <time>2021</time></p>
                     <h3 class="job-title">Blubale Website</h3>
@@ -597,9 +619,9 @@
                         <a href="https://blubale.com/" target="_blank"><i class="fas fa-globe" title="External link"></i></a>
                       </li>
                     </ul>
-                  </article>
-                  <article class="job swiper-slide reversed">
-                    <p class="job-role">QA Tester Role</p>
+                  </div>
+                  <div class="job swiper-slide reversed" data-aos="fade-right">
+                    <p class="job-role">Software QA Tester Role</p>
                     <p class="job-overtitle">
                       Oct <time>2018</time> - Apr <time>2019</time>
                     </p>
@@ -618,7 +640,7 @@
                       <li>Browsers dev-tools</li>
                       <li>pgAdming (postgresql)</li>
                     </ul>
-                  </article>
+                  </div>
                 </div>
               </div>
             </div>
@@ -632,7 +654,7 @@
         </div>
         <div class="section-practices">
           <div class="grid-practices">
-            <article class="card">
+            <article class="card" data-aos="zoom-in">
               <h4 class="card_header">First Portfolio</h4>
               <p class="card_content">
                 This is a mandatory project for all software developers. The
@@ -644,7 +666,7 @@
                 <a href="#" class="card-icon"><i class="fa fa-globe" title="External link"></i></a>
               </div>
             </article>
-            <article class="card">
+            <article class="card" data-aos="zoom-in">
               <h4 class="card_header">Fetch CRUD JS</h4>
               <p class="card_content">
                 All the books I have read will be displayed and filtered by
@@ -656,7 +678,7 @@
                 <a href="https://github.com/julian-c-dev/practice_JS_fetch_CRUD" class="card-icon" target="_blank"><i class="fa fa-github" title="Github"></i></a>
               </div>
             </article>
-            <article class="card">
+            <article class="card" data-aos="zoom-in">
               <h4 class="card_header">Productivity Wallpapers</h4>
               <p class="card_content">
                 UI practice for simulating a Productivity desktop wallpaper tool
@@ -668,7 +690,7 @@
                 <a href="https://productivity-desktop-wallpaper-tool.netlify.app/" class="card-icon" target="_blank"><i class="fa fa-globe" title="External link"></i></a>
               </div>
             </article>
-            <article class="card">
+            <article class="card" data-aos="zoom-in">
               <h4 class="card_header">Moshify Web Practice</h4>
               <p class="card_content">
                 The final project for "The Ultimate HTML/CSS Mastery Series 1, 2
@@ -688,7 +710,9 @@
       <!-- * Section: Contact -->
       <section id="sec_Contact" class="section">
         <div class="section-container">
-          <h2 class="section-heading flex">Contact</h2>
+          <div data-aos="fade-right">
+            <h2 class="section-heading flex">Contact</h2>
+          </div>
           <div class="section-content section-contact">
             <p>Feel free to contact me through one of the following methods:</p>
 
@@ -721,7 +745,468 @@
     <script src="/index.216dac5e.js"></script>
     <script src="/index.f9a2ed24.js"></script>
 
-    <!-- * Swiper JS [Experience Section] -->
+    <!-- * Third parties -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>// modules are defined as an array
+// [ module function, map of requires ]
+//
+// map of requires is short require name -> numeric require
+//
+// anything defined in a previous bundle is accessed via the
+// orig method which is the require for previous bundles
+
+(function(modules, entry, mainEntry, parcelRequireName, globalName) {
+  /* eslint-disable no-undef */
+  var globalObject =
+    typeof globalThis !== 'undefined'
+      ? globalThis
+      : typeof self !== 'undefined'
+      ? self
+      : typeof window !== 'undefined'
+      ? window
+      : typeof global !== 'undefined'
+      ? global
+      : {};
+  /* eslint-enable no-undef */
+
+  // Save the require from previous bundle to this closure if any
+  var previousRequire =
+    typeof globalObject[parcelRequireName] === 'function' &&
+    globalObject[parcelRequireName];
+
+  var cache = previousRequire.cache || {};
+  // Do not use `require` to prevent Webpack from trying to bundle this call
+  var nodeRequire =
+    typeof module !== 'undefined' &&
+    typeof module.require === 'function' &&
+    module.require.bind(module);
+
+  function newRequire(name, jumped) {
+    if (!cache[name]) {
+      if (!modules[name]) {
+        // if we cannot find the module within our internal map or
+        // cache jump to the current global require ie. the last bundle
+        // that was added to the page.
+        var currentRequire =
+          typeof globalObject[parcelRequireName] === 'function' &&
+          globalObject[parcelRequireName];
+        if (!jumped && currentRequire) {
+          return currentRequire(name, true);
+        }
+
+        // If there are other bundles on this page the require from the
+        // previous one is saved to 'previousRequire'. Repeat this as
+        // many times as there are bundles until the module is found or
+        // we exhaust the require chain.
+        if (previousRequire) {
+          return previousRequire(name, true);
+        }
+
+        // Try the node require function if it exists.
+        if (nodeRequire && typeof name === 'string') {
+          return nodeRequire(name);
+        }
+
+        var err = new Error("Cannot find module '" + name + "'");
+        err.code = 'MODULE_NOT_FOUND';
+        throw err;
+      }
+
+      localRequire.resolve = resolve;
+      localRequire.cache = {};
+
+      var module = (cache[name] = new newRequire.Module(name));
+
+      modules[name][0].call(
+        module.exports,
+        localRequire,
+        module,
+        module.exports,
+        this
+      );
+    }
+
+    return cache[name].exports;
+
+    function localRequire(x) {
+      return newRequire(localRequire.resolve(x));
+    }
+
+    function resolve(x) {
+      return modules[name][1][x] || x;
+    }
+  }
+
+  function Module(moduleName) {
+    this.id = moduleName;
+    this.bundle = newRequire;
+    this.exports = {};
+  }
+
+  newRequire.isParcelRequire = true;
+  newRequire.Module = Module;
+  newRequire.modules = modules;
+  newRequire.cache = cache;
+  newRequire.parent = previousRequire;
+  newRequire.register = function(id, exports) {
+    modules[id] = [
+      function(require, module) {
+        module.exports = exports;
+      },
+      {},
+    ];
+  };
+
+  Object.defineProperty(newRequire, 'root', {
+    get: function() {
+      return globalObject[parcelRequireName];
+    },
+  });
+
+  globalObject[parcelRequireName] = newRequire;
+
+  for (var i = 0; i < entry.length; i++) {
+    newRequire(entry[i]);
+  }
+
+  if (mainEntry) {
+    // Expose entry point to Node, AMD or browser globals
+    // Based on https://github.com/ForbesLindesay/umd/blob/master/template.js
+    var mainExports = newRequire(mainEntry);
+
+    // CommonJS
+    if (typeof exports === 'object' && typeof module !== 'undefined') {
+      module.exports = mainExports;
+
+      // RequireJS
+    } else if (typeof define === 'function' && define.amd) {
+      define(function() {
+        return mainExports;
+      });
+
+      // <script>
+    } else if (globalName) {
+      this[globalName] = mainExports;
+    }
+  }
+})({"6a36B":[function(require,module,exports) {
+var HMR_HOST = null;
+var HMR_PORT = null;
+var HMR_SECURE = false;
+var HMR_ENV_HASH = "4e5dac8afe405db7";
+module.bundle.HMR_BUNDLE_ID = "7dbd0af0688799f7";
+"use strict";
+function _createForOfIteratorHelper(o, allowArrayLike) {
+    var it;
+    if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {
+        if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {
+            if (it) o = it;
+            var i = 0;
+            var F = function F1() {
+            };
+            return {
+                s: F,
+                n: function n() {
+                    if (i >= o.length) return {
+                        done: true
+                    };
+                    return {
+                        done: false,
+                        value: o[i++]
+                    };
+                },
+                e: function e(_e) {
+                    throw _e;
+                },
+                f: F
+            };
+        }
+        throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+    }
+    var normalCompletion = true, didErr = false, err;
+    return {
+        s: function s() {
+            it = o[Symbol.iterator]();
+        },
+        n: function n() {
+            var step = it.next();
+            normalCompletion = step.done;
+            return step;
+        },
+        e: function e(_e2) {
+            didErr = true;
+            err = _e2;
+        },
+        f: function f() {
+            try {
+                if (!normalCompletion && it.return != null) it.return();
+            } finally{
+                if (didErr) throw err;
+            }
+        }
+    };
+}
+function _unsupportedIterableToArray(o, minLen) {
+    if (!o) return;
+    if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) n = o.constructor.name;
+    if (n === "Map" || n === "Set") return Array.from(o);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+function _arrayLikeToArray(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+    for(var i = 0, arr2 = new Array(len); i < len; i++)arr2[i] = arr[i];
+    return arr2;
+}
+/* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE */ /*::
+import type {
+  HMRAsset,
+  HMRMessage,
+} from '@parcel/reporter-dev-server/src/HMRServer.js';
+interface ParcelRequire {
+  (string): mixed;
+  cache: {|[string]: ParcelModule|};
+  hotData: mixed;
+  Module: any;
+  parent: ?ParcelRequire;
+  isParcelRequire: true;
+  modules: {|[string]: [Function, {|[string]: string|}]|};
+  HMR_BUNDLE_ID: string;
+  root: ParcelRequire;
+}
+interface ParcelModule {
+  hot: {|
+    data: mixed,
+    accept(cb: (Function) => void): void,
+    dispose(cb: (mixed) => void): void,
+    // accept(deps: Array<string> | string, cb: (Function) => void): void,
+    // decline(): void,
+    _acceptCallbacks: Array<(Function) => void>,
+    _disposeCallbacks: Array<(mixed) => void>,
+  |};
+}
+declare var module: {bundle: ParcelRequire, ...};
+declare var HMR_HOST: string;
+declare var HMR_PORT: string;
+declare var HMR_ENV_HASH: string;
+declare var HMR_SECURE: boolean;
+*/ var OVERLAY_ID = '__parcel__error__overlay__';
+var OldModule = module.bundle.Module;
+function Module(moduleName) {
+    OldModule.call(this, moduleName);
+    this.hot = {
+        data: module.bundle.hotData,
+        _acceptCallbacks: [],
+        _disposeCallbacks: [],
+        accept: function accept(fn) {
+            this._acceptCallbacks.push(fn || function() {
+            });
+        },
+        dispose: function dispose(fn) {
+            this._disposeCallbacks.push(fn);
+        }
+    };
+    module.bundle.hotData = undefined;
+}
+module.bundle.Module = Module;
+var checkedAssets, acceptedAssets, assetsToAccept;
+function getHostname() {
+    return HMR_HOST || (location.protocol.indexOf('http') === 0 ? location.hostname : 'localhost');
+}
+function getPort() {
+    return HMR_PORT || location.port;
+} // eslint-disable-next-line no-redeclare
+var parent = module.bundle.parent;
+if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
+    var hostname = getHostname();
+    var port = getPort();
+    var protocol = HMR_SECURE || location.protocol == 'https:' && !/localhost|127.0.0.1|0.0.0.0/.test(hostname) ? 'wss' : 'ws';
+    var ws = new WebSocket(protocol + '://' + hostname + (port ? ':' + port : '') + '/'); // $FlowFixMe
+    ws.onmessage = function(event) {
+        checkedAssets = {
+        };
+        acceptedAssets = {
+        };
+        assetsToAccept = [];
+        var data = JSON.parse(event.data);
+        if (data.type === 'update') {
+            // Remove error overlay if there is one
+            removeErrorOverlay();
+            var assets = data.assets.filter(function(asset) {
+                return asset.envHash === HMR_ENV_HASH;
+            }); // Handle HMR Update
+            var handled = assets.every(function(asset) {
+                return asset.type === 'css' || asset.type === 'js' && hmrAcceptCheck(module.bundle.root, asset.id, asset.depsByBundle);
+            });
+            if (handled) {
+                console.clear();
+                assets.forEach(function(asset) {
+                    hmrApply(module.bundle.root, asset);
+                });
+                for(var i = 0; i < assetsToAccept.length; i++){
+                    var id = assetsToAccept[i][1];
+                    if (!acceptedAssets[id]) hmrAcceptRun(assetsToAccept[i][0], id);
+                }
+            } else window.location.reload();
+        }
+        if (data.type === 'error') {
+            // Log parcel errors to console
+            var _iterator = _createForOfIteratorHelper(data.diagnostics.ansi), _step;
+            try {
+                for(_iterator.s(); !(_step = _iterator.n()).done;){
+                    var ansiDiagnostic = _step.value;
+                    var stack = ansiDiagnostic.codeframe ? ansiDiagnostic.codeframe : ansiDiagnostic.stack;
+                    console.error('🚨 [parcel]: ' + ansiDiagnostic.message + '\n' + stack + '\n\n' + ansiDiagnostic.hints.join('\n'));
+                } // Render the fancy html overlay
+            } catch (err) {
+                _iterator.e(err);
+            } finally{
+                _iterator.f();
+            }
+            removeErrorOverlay();
+            var overlay = createErrorOverlay(data.diagnostics.html); // $FlowFixMe
+            document.body.appendChild(overlay);
+        }
+    };
+    ws.onerror = function(e) {
+        console.error(e.message);
+    };
+    ws.onclose = function() {
+        console.warn('[parcel] 🚨 Connection to the HMR server was lost');
+    };
+}
+function removeErrorOverlay() {
+    var overlay = document.getElementById(OVERLAY_ID);
+    if (overlay) {
+        overlay.remove();
+        console.log('[parcel] ✨ Error resolved');
+    }
+}
+function createErrorOverlay(diagnostics) {
+    var overlay = document.createElement('div');
+    overlay.id = OVERLAY_ID;
+    var errorHTML = '<div style="background: black; opacity: 0.85; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0px; left: 0px; padding: 30px; font-family: Menlo, Consolas, monospace; z-index: 9999;">';
+    var _iterator2 = _createForOfIteratorHelper(diagnostics), _step2;
+    try {
+        for(_iterator2.s(); !(_step2 = _iterator2.n()).done;){
+            var diagnostic = _step2.value;
+            var stack = diagnostic.codeframe ? diagnostic.codeframe : diagnostic.stack;
+            errorHTML += "\n      <div>\n        <div style=\"font-size: 18px; font-weight: bold; margin-top: 20px;\">\n          \uD83D\uDEA8 ".concat(diagnostic.message, "\n        </div>\n        <pre>\n          ").concat(stack, "\n        </pre>\n        <div>\n          ").concat(diagnostic.hints.map(function(hint) {
+                return '<div>' + hint + '</div>';
+            }).join(''), "\n        </div>\n      </div>\n    ");
+        }
+    } catch (err) {
+        _iterator2.e(err);
+    } finally{
+        _iterator2.f();
+    }
+    errorHTML += '</div>';
+    overlay.innerHTML = errorHTML;
+    return overlay;
+}
+function getParents(bundle, id) /*: Array<[ParcelRequire, string]> */ {
+    var modules = bundle.modules;
+    if (!modules) return [];
+    var parents = [];
+    var k, d, dep;
+    for(k in modules)for(d in modules[k][1]){
+        dep = modules[k][1][d];
+        if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) parents.push([
+            bundle,
+            k
+        ]);
+    }
+    if (bundle.parent) parents = parents.concat(getParents(bundle.parent, id));
+    return parents;
+}
+function updateLink(link) {
+    var newLink = link.cloneNode();
+    newLink.onload = function() {
+        if (link.parentNode !== null) // $FlowFixMe
+        link.parentNode.removeChild(link);
+    };
+    newLink.setAttribute('href', link.getAttribute('href').split('?')[0] + '?' + Date.now()); // $FlowFixMe
+    link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+var cssTimeout = null;
+function reloadCSS() {
+    if (cssTimeout) return;
+    cssTimeout = setTimeout(function() {
+        var links = document.querySelectorAll('link[rel="stylesheet"]');
+        for(var i = 0; i < links.length; i++){
+            // $FlowFixMe[incompatible-type]
+            var href = links[i].getAttribute('href');
+            var hostname = getHostname();
+            var servedFromHMRServer = hostname === 'localhost' ? new RegExp('^(https?:\\/\\/(0.0.0.0|127.0.0.1)|localhost):' + getPort()).test(href) : href.indexOf(hostname + ':' + getPort());
+            var absolute = /^https?:\/\//i.test(href) && href.indexOf(window.location.origin) !== 0 && !servedFromHMRServer;
+            if (!absolute) updateLink(links[i]);
+        }
+        cssTimeout = null;
+    }, 50);
+}
+function hmrApply(bundle, asset) {
+    var modules = bundle.modules;
+    if (!modules) return;
+    if (asset.type === 'css') {
+        reloadCSS();
+        return;
+    }
+    var deps = asset.depsByBundle[bundle.HMR_BUNDLE_ID];
+    if (deps) {
+        var fn = new Function('require', 'module', 'exports', asset.output);
+        modules[asset.id] = [
+            fn,
+            deps
+        ];
+    } else if (bundle.parent) hmrApply(bundle.parent, asset);
+}
+function hmrAcceptCheck(bundle, id, depsByBundle) {
+    var modules = bundle.modules;
+    if (!modules) return;
+    if (depsByBundle && !depsByBundle[bundle.HMR_BUNDLE_ID]) {
+        // If we reached the root bundle without finding where the asset should go,
+        // there's nothing to do. Mark as "accepted" so we don't reload the page.
+        if (!bundle.parent) return true;
+        return hmrAcceptCheck(bundle.parent, id, depsByBundle);
+    }
+    if (checkedAssets[id]) return;
+    checkedAssets[id] = true;
+    var cached = bundle.cache[id];
+    assetsToAccept.push([
+        bundle,
+        id
+    ]);
+    if (cached && cached.hot && cached.hot._acceptCallbacks.length) return true;
+    return getParents(module.bundle.root, id).some(function(v) {
+        return hmrAcceptCheck(v[0], v[1], null);
+    });
+}
+function hmrAcceptRun(bundle, id) {
+    var cached = bundle.cache[id];
+    bundle.hotData = {
+    };
+    if (cached && cached.hot) cached.hot.data = bundle.hotData;
+    if (cached && cached.hot && cached.hot._disposeCallbacks.length) cached.hot._disposeCallbacks.forEach(function(cb) {
+        cb(bundle.hotData);
+    });
+    delete bundle.cache[id];
+    bundle(id);
+    cached = bundle.cache[id];
+    if (cached && cached.hot && cached.hot._acceptCallbacks.length) cached.hot._acceptCallbacks.forEach(function(cb) {
+        var assetsToAlsoAccept = cb(function() {
+            return getParents(module.bundle.root, id);
+        });
+        if (assetsToAlsoAccept && assetsToAccept.length) // $FlowFixMe[method-unbinding]
+        assetsToAccept.push.apply(assetsToAccept, assetsToAlsoAccept);
+    });
+    acceptedAssets[id] = true;
+}
+
+},{}]},["6a36B"], null, "parcelRequire3a1a")
+AOS.init();
+
+</script>
   </body>
 </html>

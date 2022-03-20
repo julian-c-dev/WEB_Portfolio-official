@@ -9,7 +9,7 @@ const sideLinks = document.querySelectorAll(".sideLinks");
 
 let menuOpen = false;
 let flagClicked = false;
-let lastScrollY = window.scrollY;
+//let lastScrollY = window.scrollY;
 let menuTimeout = 800;
 let menuBoolean = true;
 
