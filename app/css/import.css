@@ -1551,6 +1551,13 @@ label.flipCard {
   .pagination-container {
     display: none;
   }
+  .subSkills .subSkills-skills {
+    margin: 4rem 0 2rem 0;
+    font-size: 2.2rem;
+  }
+  .subSkills .subSkills-skills p {
+    white-space: initial;
+  }
 }
 
 .exp-subtitle {
@@ -2018,13 +2025,13 @@ label.flipCard {
   .job-role,
   .job-overtitle,
   .job-title {
-    margin: 1rem 0 1rem 15rem;
+    margin: 1rem 0 1rem 10rem;
   }
   .job-title {
     margin-top: 0;
   }
   .job-role {
-    margin: -2rem 0 0 15rem;
+    margin: -2rem 0 0 10rem;
   }
   .job-description {
     margin-top: 0.5rem;
@@ -2074,11 +2081,12 @@ label.flipCard {
     margin: 0 2rem 0 0;
   }
   .job-sub-tech {
+    max-width: 40.7rem;
     padding-right: 2rem;
     margin-left: 2rem;
   }
   .job-sub-icon {
-    max-width: 36.7rem;
+    max-width: 30.7rem;
     margin-top: 1rem;
     margin-left: 29rem;
   }

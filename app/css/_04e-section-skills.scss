@@ -227,4 +227,12 @@ label.flipCard {
   .pagination-container {
     display: none;
   }
+
+  .subSkills .subSkills-skills {
+    margin: 4rem 0 2rem 0;
+    font-size: 2.2rem;
+    p {
+      white-space: initial;
+    }
+  }
 }
