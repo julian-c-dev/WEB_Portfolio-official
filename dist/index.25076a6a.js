@@ -195,7 +195,7 @@ function showSlides() {
     slidesIndex++;
     if (slidesIndex > slides.length) slidesIndex = 1;
     slides[slidesIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 
 //# sourceMappingURL=index.25076a6a.js.map

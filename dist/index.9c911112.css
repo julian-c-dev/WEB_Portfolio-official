@@ -759,7 +759,7 @@ main {
   }
 
   .section-content > p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   .section-heading:after {
@@ -1088,6 +1088,10 @@ main {
 
 img {
   vertical-align: middle;
+  -o-object-position: top;
+  object-position: top;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .slideshow-container {
